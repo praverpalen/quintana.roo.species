@@ -1,1 +1,8190 @@
-{}
+{
+ "Abudefduf saxatilis": {
+  "fact": [
+   "Males guard purple egg patches on rocks and turn darker blue while they do.",
+   "Los machos cuidan manchas de huevos morados sobre las rocas y se ponen azul oscuro mientras tanto."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Acanthopleura granulata": {
+  "fact": [
+   "Its eight overlapping shell plates let it curl up like an armadillo.",
+   "Sus ocho placas traslapadas le permiten enrollarse como armadillo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "grey"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Acanthostracion polygonium": {
+  "fact": [
+   "Its hard shell is made of hexagon plates like a honeycomb, and it has two little 'horns'.",
+   "Su caparazón duro está hecho de placas hexagonales como panal, y tiene dos 'cuernitos'."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "green",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Acanthurus coeruleus": {
+  "fact": [
+   "Young fish are bright yellow and turn blue as they grow; a sharp 'scalpel' spine sits by the tail.",
+   "Los jóvenes son amarillo brillante y se vuelven azules al crecer; junto a la cola tienen una espina como bisturí."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "blue",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Acanthurus tractus": {
+  "fact": [
+   "It grazes algae all day, which helps keep the reef clear for corals.",
+   "Come algas todo el día, lo que ayuda a mantener el arrecife libre para los corales."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "grey",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Acoelorraphe wrightii": {
+  "fact": [
+   "It grows in dense clumps in freshwater swamps, often with dozens of trunks.",
+   "Crece en macollos densos en pantanos de agua dulce, a menudo con decenas de troncos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 m",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "mangrove",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Acromyrmex octospinosus": {
+  "fact": [
+   "Like the arriera ants, it farms fungus on cut leaves; its name means 'eight spines'.",
+   "Como la hormiga arriera, cultiva hongos sobre hojas cortadas; su nombre significa 'ocho espinas'."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Adelpha iphicleola": {
+  "fact": [
+   "Called 'sisters' for their neat white and orange wing bands.",
+   "Les dicen 'monjitas' por sus bandas blancas y naranjas bien marcadas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "brown",
+   "white",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Aechmea bracteata": {
+  "fact": [
+   "Its leaf rosette holds rainwater, forming a tiny pond where frogs and insects live.",
+   "Su roseta de hojas guarda agua de lluvia y forma un pequeño estanque donde viven ranas e insectos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "red",
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Agalychnis taylori": {
+  "fact": [
+   "It sleeps with its green body tucked in, then flashes its red eyes to startle predators.",
+   "Duerme con su cuerpo verde recogido y luego abre sus ojos rojos para sorprender a los depredadores."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "green",
+   "red",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Agaricia tenuifolia": {
+  "fact": [
+   "Its thin, upright plates look like lettuce leaves.",
+   "Sus placas delgadas y verticales parecen hojas de lechuga."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Agave fourcroydes": {
+  "fact": [
+   "Around 1900 its fibre, sold worldwide as 'green gold', made Yucatán one of the richest regions of Mexico.",
+   "Hacia 1900 su fibra, vendida al mundo como 'oro verde', hizo de Yucatán una de las regiones más ricas de México."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Agelas tubulata": {
+  "fact": [
+   "A brown tube sponge; like all sponges, it pumps huge amounts of seawater through its body to feed.",
+   "Una esponja de tubo café; como todas las esponjas, bombea muchísima agua de mar por su cuerpo para alimentarse."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ageratum maritimum": {
+  "fact": [
+   "It forms soft lilac cushions on coastal rock and sand.",
+   "Forma cojines suaves color lila sobre la roca y la arena de la costa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "purple",
+   "blue",
+   "green"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Aiolochroia crassa": {
+  "fact": [
+   "This yellow sponge turns dark purple once it's taken out of the water.",
+   "Esta esponja amarilla se vuelve morado oscuro al sacarla del agua."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Aliger gigas": {
+  "fact": [
+   "Queen conch can live around 30 years; fishing for them is regulated in Mexico to protect them.",
+   "El caracol rosa puede vivir unos 30 años; su pesca está regulada en México para protegerlo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "pink",
+   "orange"
+  ],
+  "hab": [
+   "coast",
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Aluterus scriptus": {
+  "fact": [
+   "It often floats head-down among seaweed to hide.",
+   "A menudo flota de cabeza entre las algas para esconderse."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "blue",
+   "brown"
+  ],
+  "hab": [
+   "reef",
+   "sea"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Amazilia rutila": {
+  "fact": [
+   "It fiercely defends its patch of flowers, chasing away much larger birds.",
+   "Defiende con fiereza sus flores y corre a aves mucho más grandes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 cm",
+  "col": [
+   "orange",
+   "green"
+  ],
+  "hab": [
+   "coast",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Amazona albifrons": {
+  "fact": [
+   "The smallest of the amazon parrots, it can learn to mimic human speech.",
+   "Es el loro amazona más pequeño y puede aprender a imitar el habla humana."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "26 cm",
+  "col": [
+   "green",
+   "red",
+   "white"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ambrosia hispida": {
+  "fact": [
+   "A low, aromatic seaside plant; like other ragweeds, its pollen travels on the wind.",
+   "Una planta costera baja y aromática; como otras altamisas, su polen viaja con el viento."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anartia fatima": {
+  "fact": [
+   "It has a bold pale stripe across each wing.",
+   "Tiene una franja clara muy marcada en cada ala."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anartia jatrophae": {
+  "fact": [
+   "It flies low over lawns and roadsides and is one of the most common butterflies here.",
+   "Vuela bajito sobre el pasto y las orillas de los caminos, y es de las mariposas más comunes aquí."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "white",
+   "orange"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anhinga anhinga": {
+  "fact": [
+   "It swims with only its snake-like neck above water, then spreads its wings to dry because its feathers aren't waterproof.",
+   "Nada con solo su cuello de serpiente fuera del agua y luego abre las alas para secarlas, porque sus plumas no son impermeables."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "85 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "cenote",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anisotremus virginicus": {
+  "fact": [
+   "Young fish work as cleaners, picking parasites off bigger fish.",
+   "Los jóvenes trabajan de limpiadores, quitando parásitos a peces más grandes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "yellow",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Annona muricata": {
+  "fact": [
+   "Its spiky green fruit can weigh several kilos and tastes like a mix of pineapple and strawberry.",
+   "Su fruto verde y espinoso puede pesar varios kilos y sabe como una mezcla de piña y fresa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anolis lemurinus": {
+  "fact": [
+   "It can change colour from light brown to almost black.",
+   "Puede cambiar de color, de café claro a casi negro."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anolis rodriguezii": {
+  "fact": [
+   "A small brown anole that lives in leaf litter and on low branches in the forest.",
+   "Un anolis café pequeño que vive en la hojarasca y en ramas bajas de la selva."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anolis sagrei": {
+  "fact": [
+   "Males bob their heads and flash an orange-red throat fan to claim their territory.",
+   "Los machos mueven la cabeza y despliegan un abanico rojo-naranja en la garganta para marcar su territorio."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Anthurium schlechtendalii": {
+  "fact": [
+   "A large bird's-nest anthurium: its leaves form a basket that catches falling leaves, which then feed the plant.",
+   "Un anturio grande tipo nido: sus hojas forman una canasta que atrapa hojas caídas que luego la nutren."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "green",
+   "red"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Apis mellifera": {
+  "fact": [
+   "Honeybees were brought from Europe; the Maya kept their own stingless bees long before.",
+   "La abeja melífera la trajeron de Europa; los mayas criaban sus propias abejas sin aguijón mucho antes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 cm",
+  "col": [
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Aplysia dactylomela": {
+  "fact": [
+   "It squirts purple ink when disturbed.",
+   "Suelta tinta morada cuando lo molestan."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "green",
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "coast",
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ardea alba": {
+  "fact": [
+   "Its plumes were so fashionable on hats that it was hunted nearly to extinction; it became the symbol of the Audubon Society.",
+   "Sus plumas estaban tan de moda en los sombreros que casi la extinguen; se volvió el símbolo de la Sociedad Audubon."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "white",
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "mangrove",
+   "cenote",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ardea herodias": {
+  "fact": [
+   "At over 1 m tall, it's the largest heron in North America.",
+   "Con más de 1 m de altura, es la garza más grande de Norteamérica."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.2 m",
+  "col": [
+   "blue",
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "mangrove",
+   "coast",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Arenaria interpres": {
+  "fact": [
+   "It gets its name from flipping over stones and seaweed to find food, and it migrates here from the Arctic.",
+   "Su nombre viene de voltear piedras y algas para buscar comida, y llega aquí migrando desde el Ártico."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "23 cm",
+  "col": [
+   "orange",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Argia gaumeri": {
+  "fact": [
+   "A damselfly named after George Gaumer, a naturalist who collected across the Yucatán.",
+   "Un caballito del diablo nombrado en honor a George Gaumer, naturalista que recolectó por todo Yucatán."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "blue",
+   "black"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Aristelliger georgeensis": {
+  "fact": [
+   "A large gecko of Caribbean coasts and islands.",
+   "Un geco grande de las costas e islas del Caribe."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "18 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Artibeus jamaicensis": {
+  "fact": [
+   "It carries figs away to eat, dropping seeds that help the forest regrow.",
+   "Se lleva higos para comérselos y deja caer semillas que ayudan a regenerar la selva."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle",
+   "town",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Artibeus lituratus": {
+  "fact": [
+   "It has four white stripes on its face and roosts in the foliage of trees.",
+   "Tiene cuatro rayas blancas en la cara y duerme entre el follaje de los árboles."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "9 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ascalapha odorata": {
+  "fact": [
+   "In Mexican folklore this huge moth is a sign of bad luck or death.",
+   "En la tradición mexicana, esta enorme polilla es señal de mala suerte o de muerte."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Asclepias curassavica": {
+  "fact": [
+   "Monarch caterpillars eat its leaves and store its toxins, which makes them poisonous to birds.",
+   "Las orugas de la monarca comen sus hojas y guardan sus toxinas, lo que las vuelve venenosas para las aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "red",
+   "orange",
+   "yellow"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ateles geoffroyi": {
+  "fact": [
+   "It uses its tail like a fifth hand; the bare tip has ridges like a fingerprint.",
+   "Usa la cola como una quinta mano; la punta pelona tiene surcos como huella digital."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Attalea cohune": {
+  "fact": [
+   "Its hard nuts hold a rich oil that has long been used for cooking and for lamps.",
+   "Sus nueces duras tienen un aceite que se ha usado por mucho tiempo para cocinar y para lámparas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Aulostomus maculatus": {
+  "fact": [
+   "It hides by hanging head-down among sea rods and even shadows bigger fish to ambush prey.",
+   "Se esconde de cabeza entre las gorgonias y hasta se pega a peces más grandes para emboscar presas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Avicennia germinans": {
+  "fact": [
+   "It breathes through pencil-like roots, called pneumatophores, that stick up out of the mud.",
+   "Respira por raíces como lápices, llamadas neumatóforos, que salen del lodo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Azadirachta indica": {
+  "fact": [
+   "Its seeds give neem oil, a natural insecticide used around the world. It comes from India.",
+   "Sus semillas dan el aceite de neem, un insecticida natural usado en todo el mundo. Viene de la India."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 m",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Azurina cyanea": {
+  "fact": [
+   "Schools of these bright blue fish hover above the reef, feeding on plankton.",
+   "Cardúmenes de estos peces azul brillante flotan sobre el arrecife comiendo plancton."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "13 cm",
+  "col": [
+   "blue",
+   "black"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Basiliscus vittatus": {
+  "fact": [
+   "It can sprint across water on its hind legs, earning it the nickname 'Jesus Christ lizard'.",
+   "Puede correr sobre el agua en dos patas; por eso le dicen 'lagartija Jesucristo'."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "cenote",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Battus philenor": {
+  "fact": [
+   "Its caterpillars eat toxic pipevines, making the butterfly poisonous; other butterflies copy its look.",
+   "Sus orugas comen plantas tóxicas de aristoloquia, lo que la vuelve venenosa; otras mariposas imitan su aspecto."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 cm",
+  "col": [
+   "blue",
+   "black"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Bauhinia divaricata": {
+  "fact": [
+   "Its narrow white petals look like an orchid, and its leaves are split in two like a cow's hoof.",
+   "Sus pétalos blancos y angostos parecen de orquídea, y sus hojas se parten en dos como pezuña de vaca."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Bauhinia jenningsii": {
+  "fact": [
+   "Its two-lobed leaves look like a cow's hoofprint, hence the Spanish name pata de vaca.",
+   "Sus hojas de dos lóbulos parecen la huella de una vaca; de ahí su nombre, pata de vaca."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 m",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Bidens alba": {
+  "fact": [
+   "Its seeds have two hooked barbs that hitch rides on clothes and fur.",
+   "Sus semillas tienen dos ganchitos que se pegan a la ropa y al pelo de los animales."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "white",
+   "yellow"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Boa imperator": {
+  "fact": [
+   "It kills by constriction, squeezing tighter each time its prey breathes out.",
+   "Mata por constricción, apretando más cada vez que su presa exhala."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2.5 m",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Bothrops asper": {
+  "fact": [
+   "One of the most dangerous snakes in Central America and responsible for many bites: keep your distance.",
+   "Una de las serpientes más peligrosas de Centroamérica y causa de muchas mordeduras: mantén tu distancia."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.8 m",
+  "col": [
+   "brown",
+   "grey",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Brassavola nodosa": {
+  "fact": [
+   "Its white flowers release a strong citrus scent only at night to attract moths.",
+   "Sus flores blancas sueltan un fuerte aroma cítrico solo de noche para atraer polillas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Brosimum alicastrum": {
+  "fact": [
+   "The Maya ate its nutritious seeds, called ramón nuts, especially in times of drought.",
+   "Los mayas comían sus semillas nutritivas, las nueces de ramón, sobre todo en tiempos de sequía."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Butorides virescens": {
+  "fact": [
+   "One of the few birds that uses bait: it drops insects or crumbs on the water to lure fish.",
+   "Es de las pocas aves que usa carnada: deja caer insectos o migajas al agua para atraer peces."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "mangrove",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Byrsonima crassifolia": {
+  "fact": [
+   "Its small yellow nance fruits are eaten fresh, in desserts or preserved in liquor.",
+   "Sus frutitos amarillos de nance se comen frescos, en postres o curados en licor."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Caesalpinia pulcherrima": {
+  "fact": [
+   "It's the national flower of Barbados and appears on its coat of arms.",
+   "Es la flor nacional de Barbados y aparece en su escudo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "red",
+   "orange",
+   "yellow"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Calidris alba": {
+  "fact": [
+   "It runs back and forth with the waves like a wind-up toy, picking food from the wet sand.",
+   "Corre de ida y vuelta con las olas como juguete de cuerda, picoteando comida en la arena mojada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "white",
+   "grey"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Caligo telamonius": {
+  "fact": [
+   "The huge eyespots under its wings look like owl eyes and scare off predators.",
+   "Sus enormes manchas en forma de ojo bajo las alas parecen ojos de búho y asustan a los depredadores."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "13 cm",
+  "col": [
+   "brown",
+   "blue"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Callicarpa acuminata": {
+  "fact": [
+   "Its clusters of small berries turn glossy dark purple, a favourite of birds.",
+   "Sus racimos de bayitas se vuelven morado oscuro brillante y encantan a las aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "purple",
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Callisia fragrans": {
+  "fact": [
+   "Its small white flowers have a strong sweet scent, especially in the evening.",
+   "Sus florecitas blancas tienen un aroma dulce y fuerte, sobre todo al anochecer."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "green",
+   "purple",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Camponotus planatus": {
+  "fact": [
+   "A small carpenter ant that nests in hollow twigs and stems.",
+   "Una hormiga carpintera pequeña que anida en ramitas y tallos huecos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 mm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Camponotus sericeiventris": {
+  "fact": [
+   "Its golden, silky abdomen shines in the sun.",
+   "Su abdomen dorado y sedoso brilla al sol."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.2 cm",
+  "col": [
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Canis familiaris": {
+  "fact": [
+   "Dogs were domesticated from wolves more than 15,000 years ago, and the Maya kept dogs too.",
+   "El perro se domesticó a partir del lobo hace más de 15,000 años, y los mayas también tenían perros."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "brown",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cantherhines macrocerus": {
+  "fact": [
+   "It feeds on sponges and fire coral.",
+   "Se alimenta de esponjas y coral de fuego."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Canthidermis sufflamen": {
+  "fact": [
+   "It can lock its first dorsal spine upright to wedge itself into holes.",
+   "Puede trabar su primera espina dorsal hacia arriba para atorarse en los huecos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "grey"
+  ],
+  "hab": [
+   "sea",
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Canthigaster rostrata": {
+  "fact": [
+   "Like other puffers it's toxic to eat and can inflate when threatened.",
+   "Como otros peces globo, es tóxico si se come y puede inflarse cuando se siente amenazado."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "orange",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Caranx ruber": {
+  "fact": [
+   "It often follows rays and other fish to snatch the prey they stir up.",
+   "A menudo sigue a rayas y otros peces para atrapar las presas que levantan."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "blue",
+   "black"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cardisoma guanhumi": {
+  "fact": [
+   "Once a year, thousands migrate to the sea to release their eggs.",
+   "Una vez al año miles migran al mar a soltar sus huevos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "blue",
+   "grey"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Caretta caretta": {
+  "fact": [
+   "Loggerheads nest on Quintana Roo's beaches in summer, returning to the region where they hatched.",
+   "La caguama anida en las playas de Quintana Roo en verano, regresando a la región donde nació."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "sea",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Carica papaya": {
+  "fact": [
+   "Technically a giant herb: its trunk isn't true wood, yet it grows up to 10 m tall.",
+   "Técnicamente es una hierba gigante: su tronco no es madera verdadera, aunque llega a 10 m."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "green",
+   "orange"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cascabela gaumeri": {
+  "fact": [
+   "Named after George Gaumer, a naturalist who collected plants across the Yucatán around 1900. Like its relatives, it's poisonous.",
+   "Lleva el nombre de George Gaumer, naturalista que recolectó plantas en Yucatán hacia 1900. Como sus parientes, es venenosa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 m",
+  "col": [
+   "green",
+   "yellow"
+  ],
+  "hab": [
+   "jungle",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cascabela thevetia": {
+  "fact": [
+   "Every part of this plant is poisonous: it contains heart toxins similar to those of oleander.",
+   "Toda la planta es venenosa: contiene toxinas cardíacas parecidas a las de la adelfa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 m",
+  "col": [
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Casuarina equisetifolia": {
+  "fact": [
+   "Its 'needles' are actually thin green twigs; the real leaves are tiny scales. It comes from Australia and Asia.",
+   "Sus 'agujas' son en realidad ramitas verdes; las hojas verdaderas son escamas diminutas. Viene de Australia y Asia."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Catasetum integerrimum": {
+  "fact": [
+   "When a bee touches a trigger on the male flower, it fires its pollen sac onto the bee's back.",
+   "Cuando una abeja toca un gatillo de la flor macho, esta le dispara su saco de polen a la espalda."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "green",
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Catharanthus roseus": {
+  "fact": [
+   "Two cancer drugs, vincristine and vinblastine, were discovered in this plant.",
+   "En esta planta se descubrieron dos medicinas contra el cáncer: la vincristina y la vinblastina."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "pink",
+   "white",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cathartes aura": {
+  "fact": [
+   "It finds carrion by smell, which is rare among birds.",
+   "Encuentra carroña por el olfato, algo raro entre las aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "70 cm",
+  "col": [
+   "black",
+   "red"
+  ],
+  "hab": [
+   "jungle",
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cecropia peltata": {
+  "fact": [
+   "Its hollow stems often house Azteca ants, which defend the tree against leaf-eaters.",
+   "Sus tallos huecos suelen albergar hormigas Azteca, que defienden al árbol de los herbívoros."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 m",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cecropterus dorantes": {
+  "fact": [
+   "A long-tailed skipper that darts between flowers in fast, short hops.",
+   "Una mariposa saltarina de cola larga que va de flor en flor en saltitos rápidos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cedrela odorata": {
+  "fact": [
+   "Its fragrant wood repels insects, making it the traditional wood for cigar boxes.",
+   "Su madera aromática repele insectos; por eso es la madera tradicional de las cajas de puros."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ceiba schottii": {
+  "fact": [
+   "A smaller cousin of the sacred ceiba, it's covered in cone-shaped thorns and releases silky kapok from its pods.",
+   "Un primo más pequeño de la ceiba sagrada: tiene espinas cónicas y sus vainas sueltan kapok sedoso."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 m",
+  "col": [
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cenchritis muricatus": {
+  "fact": [
+   "It can survive for weeks out of water on rocks high above the waves.",
+   "Puede sobrevivir semanas fuera del agua en rocas muy por encima de las olas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 cm",
+  "col": [
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cenostigma gaumeri": {
+  "fact": [
+   "Its Maya name, kitam che', means 'peccary tree'. Its yellow flowers bloom in the dry season.",
+   "Su nombre maya, kitam che', significa 'árbol del pecarí'. Sus flores amarillas brotan en la temporada seca."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 m",
+  "col": [
+   "yellow",
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Centurio senex": {
+  "fact": [
+   "Its bare, wrinkled face looks like an old man's, and it can pull a fold of skin over it like a mask.",
+   "Su cara pelona y arrugada parece de anciano, y puede cubrirla con un pliegue de piel como máscara."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chaetodon capistratus": {
+  "fact": [
+   "The black 'eyespot' near its tail fools predators into attacking the wrong end.",
+   "La 'mancha ocular' negra cerca de su cola engaña a los depredadores para que ataquen el lado equivocado."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "white",
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chaetodon ocellatus": {
+  "fact": [
+   "Butterflyfish often live in pairs and pick tiny animals off corals.",
+   "Los peces mariposa suelen vivir en pareja y picotean animalitos de los corales."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "white",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chaetodon striatus": {
+  "fact": [
+   "Dark bands and a stripe through the eye help hide it from predators.",
+   "Sus bandas oscuras y una raya sobre el ojo le ayudan a esconderse de los depredadores."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "white",
+   "black"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chiton squamosus": {
+  "fact": [
+   "It clamps onto rocks so tightly that waves can't pull it off.",
+   "Se aferra a las rocas con tanta fuerza que las olas no pueden arrancarlo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chiton tuberculatus": {
+  "fact": [
+   "It grazes algae off rocks at night and returns to the same resting spot by day.",
+   "Raspa algas de las rocas de noche y vuelve al mismo lugar de descanso de día."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chlosyne lacinia": {
+  "fact": [
+   "Its wing pattern varies a lot, from mostly black to wide orange or white bands.",
+   "El dibujo de sus alas varía mucho: de casi todo negro a bandas anchas naranjas o blancas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "black",
+   "orange",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chlosyne theona": {
+  "fact": [
+   "Its checkered orange-and-black wings warn birds that it tastes bad.",
+   "Sus alas a cuadros naranja y negro advierten a las aves que sabe mal."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "orange",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Chrotopterus auritus": {
+  "fact": [
+   "One of the largest bats in the Americas, it hunts frogs, lizards and even other bats.",
+   "Uno de los murciélagos más grandes de América: caza ranas, lagartijas y hasta otros murciélagos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "11 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cittarium pica": {
+  "fact": [
+   "A traditional Caribbean food; hermit crabs love to move into its empty shells.",
+   "Es comida tradicional del Caribe, y a los cangrejos ermitaños les encanta mudarse a sus conchas vacías."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Clibanarius tricolor": {
+  "fact": [
+   "Its bright blue legs are banded with red and white.",
+   "Sus patas azul brillante tienen bandas rojas y blancas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 cm",
+  "col": [
+   "blue",
+   "red"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coccoloba uvifera": {
+  "fact": [
+   "Its grape-like fruit clusters are edible and have been made into jam and even wine.",
+   "Sus racimos de frutos parecidos a uvas son comestibles y se usan para hacer mermelada y hasta vino."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "green",
+   "purple"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coccothrinax readii": {
+  "fact": [
+   "This small palm lives only on the Yucatán Peninsula, and its leaves are silvery underneath.",
+   "Esta palma pequeña solo vive en la Península de Yucatán y sus hojas son plateadas por debajo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 m",
+  "col": [
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "coast",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coendou mexicanus": {
+  "fact": [
+   "Its tail can grip branches, and its long fur hides short spines underneath.",
+   "Su cola se agarra a las ramas, y su pelo largo esconde púas cortas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coenobita clypeatus": {
+  "fact": [
+   "It lives on land but returns to the sea to release its eggs, and swaps shells as it grows.",
+   "Vive en tierra pero regresa al mar a soltar sus huevos, y cambia de concha conforme crece."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "red",
+   "purple"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coereba flaveola": {
+  "fact": [
+   "It often pierces the base of flowers to steal nectar without pollinating them.",
+   "A menudo perfora la base de las flores para robar néctar sin polinizarlas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "11 cm",
+  "col": [
+   "yellow",
+   "black",
+   "grey"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coleonyx elegans": {
+  "fact": [
+   "Unlike most geckos, it has movable eyelids and can blink.",
+   "A diferencia de casi todos los gecos, tiene párpados y puede parpadear."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Colobura dirce": {
+  "fact": [
+   "It rests head-down on tree trunks, where its striped underside blends in with the bark.",
+   "Descansa de cabeza en los troncos, donde el rayado de sus alas se confunde con la corteza."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Columba livia": {
+  "fact": [
+   "Originally a cliff-nesting bird of Europe, Asia and North Africa, it was domesticated thousands of years ago.",
+   "Originalmente anidaba en acantilados de Europa, Asia y el norte de África, y fue domesticada hace miles de años."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "33 cm",
+  "col": [
+   "grey",
+   "purple"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Columbina talpacoti": {
+  "fact": [
+   "Tiny doves that walk on the ground in pairs, picking up seeds.",
+   "Palomitas diminutas que caminan en parejas por el suelo, picoteando semillas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "17 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Commelina erecta": {
+  "fact": [
+   "Each flower has two big blue petals and one tiny white one, and lasts just one morning.",
+   "Cada flor tiene dos pétalos azules grandes y uno blanco diminuto, y dura solo una mañana."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "blue",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Condylactis gigantea": {
+  "fact": [
+   "Its tentacles often host cleaner shrimp that are immune to its sting.",
+   "Entre sus tentáculos suelen vivir camarones limpiadores inmunes a su piquete."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "white",
+   "pink"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Conepatus semistriatus": {
+  "fact": [
+   "It can spray its foul-smelling musk a few metres.",
+   "Puede rociar su almizcle apestoso a varios metros."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coniophanes imperialis": {
+  "fact": [
+   "Black stripes run from its head to its tail; it has mild venom.",
+   "Unas rayas negras le recorren de la cabeza a la cola; tiene veneno leve."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Conocarpus erectus": {
+  "fact": [
+   "Called a mangrove, but it has no stilt roots and grows on the landward edge of the swamp.",
+   "Le dicen mangle, pero no tiene raíces zancudas y crece en el borde del manglar más cercano a tierra."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 m",
+  "col": [
+   "green",
+   "grey"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Coragyps atratus": {
+  "fact": [
+   "It has a poor sense of smell, so it follows turkey vultures to find food.",
+   "Tiene mal olfato, así que sigue a los zopilotes aura para encontrar comida."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "65 cm",
+  "col": [
+   "black",
+   "grey"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cordia dodecandra": {
+  "fact": [
+   "Its dark, striped ziricote wood is one of the most prized woods for guitars and fine furniture.",
+   "Su madera oscura y veteada de ciricote es de las más apreciadas para guitarras y muebles finos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 m",
+  "col": [
+   "orange",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cordia sebestena": {
+  "fact": [
+   "Its bright orange flowers attract hummingbirds, and its leaves feel like sandpaper.",
+   "Sus flores anaranjadas atraen colibríes y sus hojas se sienten como lija."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "orange",
+   "green"
+  ],
+  "hab": [
+   "coast",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Craugastor yucatanensis": {
+  "fact": [
+   "A small frog found almost only on the Yucatán Peninsula; its froglets hatch directly from eggs.",
+   "Una ranita que vive casi solo en la Península de Yucatán; sus crías salen directo del huevo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Crescentia cujete": {
+  "fact": [
+   "Its round fruits are dried and hollowed out to make jícaras, traditional drinking bowls.",
+   "Sus frutos redondos se secan y se vacían para hacer jícaras, los recipientes tradicionales para beber."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Crocodylus moreletii": {
+  "fact": [
+   "Mothers guard their nests and carry the hatchlings to the water in their mouths.",
+   "Las madres cuidan el nido y llevan a las crías al agua en el hocico."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "grey",
+   "black"
+  ],
+  "hab": [
+   "cenote",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Crotalus tzabcan": {
+  "fact": [
+   "Its Maya name, tzab can, means 'snake with rattles'. It's highly venomous.",
+   "Su nombre maya, tzab can, significa 'serpiente con cascabeles'. Es muy venenosa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cryptotis mayensis": {
+  "fact": [
+   "A tiny shrew of the Maya lowlands that has to eat almost constantly.",
+   "Una musaraña diminuta de las tierras bajas mayas que tiene que comer casi sin parar."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cuniculus paca": {
+  "fact": [
+   "Its enlarged cheekbones form a sound chamber that amplifies its calls, and it's an excellent swimmer.",
+   "Sus pómulos agrandados forman una cámara que amplifica sus llamados, y es excelente nadador."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "70 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cyanocorax morio": {
+  "fact": [
+   "Besides its loud 'pee-ah' call, it makes a strange popping sound from a small sac in its chest.",
+   "Además de su grito 'pía-pía', hace un curioso chasquido con un saquito en el pecho."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cyanocorax yncas": {
+  "fact": [
+   "It has been seen using sticks as tools to pull insects out of bark.",
+   "Se le ha visto usar varitas como herramientas para sacar insectos de la corteza."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "27 cm",
+  "col": [
+   "green",
+   "blue",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cyanocorax yucatanicus": {
+  "fact": [
+   "Young birds have bright yellow bills and legs that slowly turn black as they grow up.",
+   "Los jóvenes tienen pico y patas amarillo brillante que se vuelven negros al crecer."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "32 cm",
+  "col": [
+   "blue",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cycloneda sanguinea": {
+  "fact": [
+   "A red ladybird without spots that eats aphids in gardens.",
+   "Una catarina roja sin manchas que come pulgones en los jardines."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 mm",
+  "col": [
+   "red"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Cyphoma gibbosum": {
+  "fact": [
+   "The orange spotted pattern isn't its shell but its skin, which it wraps over the shell.",
+   "El patrón anaranjado con manchas no es su concha sino su piel, que la envuelve."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 cm",
+  "col": [
+   "orange",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dactyloctenium aegyptium": {
+  "fact": [
+   "Its seed heads look like a bird's foot with three to five fingers.",
+   "Sus espigas parecen la pata de un ave con tres a cinco dedos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Danaus gilippus": {
+  "fact": [
+   "A close relative of the monarch; its milkweed diet makes it toxic to birds too.",
+   "Pariente cercana de la monarca; su dieta de algodoncillo también la vuelve tóxica para las aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "orange",
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Danaus plexippus": {
+  "fact": [
+   "Monarchs migrate up to 4,000 km to spend the winter in the forests of central Mexico.",
+   "Las monarcas migran hasta 4,000 km para pasar el invierno en los bosques del centro de México."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 cm",
+  "col": [
+   "orange",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dasyprocta punctata": {
+  "fact": [
+   "It buries seeds to eat later and forgets many of them, helping forest trees grow.",
+   "Entierra semillas para después y olvida muchas, lo que ayuda a crecer a los árboles."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "55 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dasypus mexicanus": {
+  "fact": [
+   "Long-nosed armadillos usually give birth to identical quadruplets.",
+   "Los armadillos de nariz larga suelen parir cuatrillizos idénticos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Deamia testudo": {
+  "fact": [
+   "This climbing cactus clings to tree trunks with flat, winged stems that look like a tortoise shell.",
+   "Este cactus trepador se pega a los troncos con tallos planos y alados que parecen caparazón de tortuga."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dermanura phaeotis": {
+  "fact": [
+   "It makes 'tents' by biting leaves so they fold over, then roosts underneath.",
+   "Hace 'tiendas' mordiendo hojas para que se doblen, y duerme debajo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Diadema antillarum": {
+  "fact": [
+   "A mass die-off in 1983 killed most of them, and many reefs became overgrown with algae.",
+   "Una mortandad masiva en 1983 acabó con la mayoría, y muchos arrecifes se llenaron de algas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Didelphis marsupialis": {
+  "fact": [
+   "Opossums can resist the venom of many pit vipers.",
+   "Los tlacuaches resisten el veneno de muchas víboras."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "grey",
+   "black"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Didelphis virginiana": {
+  "fact": [
+   "North America's only marsupial north of Mexico; a mother can carry more than a dozen babies.",
+   "El único marsupial al norte de México; una madre puede cargar más de una docena de crías."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "grey",
+   "white",
+   "black"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Diodon hystrix": {
+  "fact": [
+   "When threatened it gulps water and puffs up into a spiky ball.",
+   "Cuando se siente amenazado traga agua y se infla como una bola de espinas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dione vanillae": {
+  "fact": [
+   "Its caterpillars feed on passionflower leaves, which makes the adults taste bad to birds.",
+   "Sus orugas comen hojas de pasiflora, y eso hace que los adultos les sepan mal a las aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "orange",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dipsas brevifacies": {
+  "fact": [
+   "Its jaws are specialised for pulling snails out of their shells.",
+   "Sus mandíbulas están especializadas en sacar caracoles de su concha."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Distimake dissectus": {
+  "fact": [
+   "Its leaves are cut into deep finger-like lobes, and its white flowers have a purple centre.",
+   "Sus hojas están cortadas en lóbulos profundos como dedos, y sus flores blancas tienen el centro morado."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 m",
+  "col": [
+   "white",
+   "purple",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dives dives": {
+  "fact": [
+   "Pairs sing rich whistled duets, and it has spread as forests were cleared.",
+   "Las parejas cantan duetos silbados, y se ha extendido conforme se abren claros en la selva."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "26 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dryas iulia": {
+  "fact": [
+   "It has been seen drinking the tears of turtles and caimans for their salt.",
+   "Se le ha visto beber las lágrimas de tortugas y caimanes para obtener sal."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "orange"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Drymarchon melanurus": {
+  "fact": [
+   "It eats other snakes, including venomous ones.",
+   "Come otras serpientes, incluso venenosas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Drymobius margaritiferus": {
+  "fact": [
+   "Each of its black scales has a green and yellow dot, like a string of pearls.",
+   "Cada una de sus escamas negras tiene un punto verde y amarillo, como perlas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "black",
+   "green",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Dynamine postverta": {
+  "fact": [
+   "The underside of its wings has fine white and bronze patterns.",
+   "Por debajo, sus alas tienen finos dibujos blancos y bronce."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "white",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Echinometra lucunter": {
+  "fact": [
+   "It bores holes into rock with its spines and teeth, and lives inside them.",
+   "Perfora agujeros en la roca con sus espinas y dientes, y vive dentro de ellos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ectatomma tuberculatum": {
+  "fact": [
+   "Its workers hunt insects and collect sugary nectar, and they can sting.",
+   "Sus obreras cazan insectos y recolectan néctar dulce, y pueden picar."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Egretta caerulea": {
+  "fact": [
+   "Young birds are pure white and turn blue-grey as they grow up.",
+   "Los jóvenes son blancos y se vuelven gris azulado al crecer."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "blue",
+   "purple"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Egretta thula": {
+  "fact": [
+   "It has black legs with bright yellow feet, and stirs the water with them to flush out prey.",
+   "Tiene patas negras con pies amarillo brillante, y agita el agua con ellos para espantar a sus presas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "white",
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eira barbara": {
+  "fact": [
+   "It has been seen picking unripe fruit and hiding it until it ripens.",
+   "Se le ha visto cortar fruta verde y esconderla hasta que madura."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "65 cm",
+  "col": [
+   "brown",
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eleutherodactylus planirostris": {
+  "fact": [
+   "It skips the tadpole stage: tiny froglets hatch straight from eggs laid on land.",
+   "Se salta la etapa de renacuajo: ranitas diminutas salen directo de huevos puestos en tierra."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Enterolobium cyclocarpum": {
+  "fact": [
+   "Its round, curled pods look like ears, and it's Costa Rica's national tree.",
+   "Sus vainas redondas y enroscadas parecen orejas, y es el árbol nacional de Costa Rica."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eretmochelys imbricata": {
+  "fact": [
+   "Its beak-like mouth lets it eat sponges that are toxic to most animals. It's critically endangered.",
+   "Su boca en forma de pico le permite comer esponjas tóxicas para casi todos los animales. Está en peligro crítico."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "90 cm",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Erythrodiplax umbrata": {
+  "fact": [
+   "Males have a dark band across each wing and guard their patch of pond.",
+   "Los machos tienen una banda oscura en cada ala y defienden su pedazo de charca."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eudesmia menea": {
+  "fact": [
+   "A day-flying moth whose bold orange bands warn predators.",
+   "Una polilla que vuela de día; sus bandas naranjas advierten a los depredadores."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "black",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eudocimus albus": {
+  "fact": [
+   "It probes the mud with its long, curved red bill to find crabs and crayfish.",
+   "Busca cangrejos y acociles en el lodo con su largo pico rojo y curvo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "white",
+   "red"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eumaeus toxea": {
+  "fact": [
+   "Its caterpillars eat poisonous cycads and store the toxins, and they wear bright warning colours.",
+   "Sus orugas comen cícadas venenosas y guardan las toxinas, y tienen colores brillantes de advertencia."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "black",
+   "blue",
+   "red"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Euphorbia mesembryanthemifolia": {
+  "fact": [
+   "Like other spurges, it bleeds a milky sap when broken.",
+   "Como otras euforbias, suelta una savia lechosa cuando se rompe."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "green",
+   "red"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eupsittula nana": {
+  "fact": [
+   "Noisy flocks fly screeching through the forest, feeding on fruit and seeds.",
+   "Sus parvadas ruidosas vuelan chillando por la selva, comiendo frutos y semillas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "23 cm",
+  "col": [
+   "green",
+   "yellow"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eurema westwoodii": {
+  "fact": [
+   "A small yellow butterfly often seen in groups sipping from mud puddles.",
+   "Una mariposita amarilla que se ve en grupos bebiendo en charcos de lodo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "yellow"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eurypepla brevilineata": {
+  "fact": [
+   "A tortoise beetle with a see-through shield around its body; it feeds on scarlet cordia leaves.",
+   "Un escarabajo tortuga con un escudo transparente alrededor del cuerpo; come hojas de anacahuite."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eurytides philolaus": {
+  "fact": [
+   "Males gather at wet mud and puddles to sip minerals.",
+   "Los machos se juntan en el lodo y los charcos para beber minerales."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Eusmilia fastigiata": {
+  "fact": [
+   "Its flower-like polyps open at night to feed.",
+   "Sus pólipos en forma de flor se abren de noche para alimentarse."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "white",
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Evenus regalis": {
+  "fact": [
+   "Its underside shines metallic green, and it has two long tails on each hindwing.",
+   "Por debajo brilla verde metálico, y tiene dos colas largas en cada ala trasera."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "green",
+   "blue"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Felis catus": {
+  "fact": [
+   "House cats descend from the African wildcat; outdoors they're a major threat to native birds and lizards.",
+   "El gato doméstico desciende del gato montés africano; fuera de casa es una gran amenaza para aves y lagartijas nativas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "grey",
+   "black",
+   "orange"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Fregata magnificens": {
+  "fact": [
+   "Males inflate a huge red throat pouch like a balloon to attract females, and frigatebirds can stay aloft for days without landing.",
+   "Los machos inflan una enorme bolsa roja en la garganta, como globo, para atraer hembras, y pueden volar días sin posarse."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "black",
+   "red",
+   "white"
+  ],
+  "hab": [
+   "coast",
+   "sea"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Geophis sartorii": {
+  "fact": [
+   "A small, shy snake that specialises in eating snails and slugs.",
+   "Una culebra pequeña y tímida que se especializa en comer caracoles y babosas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "black",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Gerres cinereus": {
+  "fact": [
+   "It shoots out its tube-like mouth to suck worms from the sand.",
+   "Estira su boca como tubo para succionar gusanos de la arena."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "grey",
+   "yellow"
+  ],
+  "hab": [
+   "coast",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ginglymostoma cirratum": {
+  "fact": [
+   "It sucks prey out of crevices like a vacuum cleaner and often rests on the bottom.",
+   "Succiona presas de las grietas como aspiradora y suele descansar en el fondo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Glaucidium brasilianum": {
+  "fact": [
+   "This tiny owl has two black 'false eyes' on the back of its head to confuse attackers.",
+   "Este tecolotito tiene dos 'ojos falsos' negros en la nuca para confundir a sus atacantes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "16 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Gliricidia maculata": {
+  "fact": [
+   "Its pink flowers bloom in the dry season when the tree is bare, and cut branches root easily as living fence posts.",
+   "Sus flores rosas brotan en la temporada seca, cuando el árbol no tiene hojas, y sus ramas cortadas enraízan fácil como postes vivos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "pink",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Glossophaga mutica": {
+  "fact": [
+   "It hovers like a hummingbird to drink nectar with a long, brush-tipped tongue.",
+   "Se queda suspendido como colibrí para beber néctar con una lengua larga en forma de cepillo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Gorgonia ventalina": {
+  "fact": [
+   "It looks like a plant but is a colony of tiny animals that filter food from the current.",
+   "Parece planta, pero es una colonia de animalitos que filtran comida de la corriente."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "purple"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Grapsus grapsus": {
+  "fact": [
+   "It skips from rock to rock so fast it seems to dance across the water.",
+   "Brinca de roca en roca tan rápido que parece bailar sobre el agua."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "red",
+   "orange"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Guaiacum sanctum": {
+  "fact": [
+   "Its wood is so dense it sinks in water, and it was once used for ships' propeller-shaft bearings.",
+   "Su madera es tan densa que se hunde en el agua; antes se usaba para los cojinetes de las hélices de barcos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "blue",
+   "purple",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Guazuma ulmifolia": {
+  "fact": [
+   "Its round, warty seed pods are eaten by cattle, deer and peccaries.",
+   "Sus frutos redondos y verrugosos los comen el ganado, los venados y los pecaríes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 m",
+  "col": [
+   "green",
+   "black",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Gymnopodium floribundum": {
+  "fact": [
+   "Its dzidzilché flowers produce one of the most prized honeys of the Yucatán.",
+   "Sus flores de dzidzilché producen una de las mieles más apreciadas de Yucatán."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Gymnothorax funebris": {
+  "fact": [
+   "Its skin is actually blue-brown; a yellow mucus coat makes it look green.",
+   "Su piel es en realidad café azulado; una capa de moco amarillo lo hace verse verde."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2.5 m",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "reef",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Gymnothorax moringa": {
+  "fact": [
+   "It opens and closes its mouth all the time to breathe, not to threaten you.",
+   "Abre y cierra la boca todo el tiempo para respirar, no para amenazar."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Haemulon flavolineatum": {
+  "fact": [
+   "Grunts get their name from the grunting noise they make by grinding their teeth.",
+   "Los roncos deben su nombre al sonido que hacen al rechinar los dientes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "yellow",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Haemulon plumierii": {
+  "fact": [
+   "Rivals face off and 'kiss' with open mouths to settle territory disputes.",
+   "Los rivales se enfrentan y se 'besan' con la boca abierta para resolver pleitos de territorio."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "white",
+   "yellow",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Haemulon sciurus": {
+  "fact": [
+   "Grunts grind their throat teeth to make sounds, which their swim bladder amplifies.",
+   "Los roncos rechinan los dientes de la garganta y su vejiga natatoria amplifica el sonido."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "yellow",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Halichoeres bivittatus": {
+  "fact": [
+   "At night it buries itself in the sand to sleep.",
+   "De noche se entierra en la arena para dormir."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Halichoeres garnoti": {
+  "fact": [
+   "Young fish are yellow with a blue stripe; big males get a dark bar behind the head.",
+   "Los jóvenes son amarillos con una raya azul; los machos grandes tienen una franja oscura detrás de la cabeza."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "18 cm",
+  "col": [
+   "yellow",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Halichoeres radiatus": {
+  "fact": [
+   "Big males are blue-green with bright stripes, while young fish are orange and brown.",
+   "Los machos grandes son azul verdoso con rayas brillantes; los jóvenes son naranja y café."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "green",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hamadryas februa": {
+  "fact": [
+   "Males make a crackling sound with their wings in flight.",
+   "Los machos hacen un sonido tronador con las alas al volar."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "grey",
+   "blue"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hamadryas guatemalena": {
+  "fact": [
+   "It rests head-down on tree trunks, its grey pattern matching the bark.",
+   "Descansa de cabeza en los troncos, con un patrón gris que se confunde con la corteza."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "grey",
+   "blue"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hamelia patens": {
+  "fact": [
+   "Its tubular red-orange flowers are a hummingbird magnet, and it blooms almost all year.",
+   "Sus flores tubulares rojo-naranja atraen colibríes, y florece casi todo el año."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "red",
+   "orange",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hampea trilobata": {
+  "fact": [
+   "Its bark fibre, called majagua, has long been twisted into rope.",
+   "La fibra de su corteza, llamada majagua, se ha usado por mucho tiempo para hacer cuerdas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hartnollius lateralis": {
+  "fact": [
+   "A small red land crab that digs burrows near beaches and coastal forest.",
+   "Un cangrejito rojo de tierra que cava madrigueras cerca de playas y selvas costeras."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "black",
+   "red"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Heliconius erato": {
+  "fact": [
+   "It can live for months and learns regular routes between its favourite flowers.",
+   "Puede vivir meses y aprende rutas fijas entre sus flores favoritas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "black",
+   "red",
+   "yellow"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hemiargus ceraunus": {
+  "fact": [
+   "Its caterpillars are often tended by ants, which protect them in exchange for sweet secretions.",
+   "Las hormigas suelen cuidar a sus orugas y las protegen a cambio de secreciones dulces."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2.5 cm",
+  "col": [
+   "blue",
+   "grey"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hemidactylus frenatus": {
+  "fact": [
+   "The chirping you hear at night on walls comes from this gecko, originally from Asia.",
+   "El chirrido que se oye de noche en las paredes es de esta besucona, originaria de Asia."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hermetia illucens": {
+  "fact": [
+   "Its larvae recycle food waste and are farmed as animal feed; the adults don't even eat.",
+   "Sus larvas reciclan desechos de comida y se crían como alimento para animales; los adultos ni siquiera comen."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Heterogeomys hispidus": {
+  "fact": [
+   "It spends almost its whole life underground and carries food in fur-lined cheek pouches.",
+   "Pasa casi toda su vida bajo tierra y carga comida en bolsas de piel en los cachetes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hippocampus reidi": {
+  "fact": [
+   "The male carries the eggs in his pouch and gives birth to the babies.",
+   "El macho carga los huevos en su bolsa y da a luz a las crías."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "17 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "reef",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Holcosus undulatus": {
+  "fact": [
+   "Males have bright blue-green sides and a rainbow sheen in the sun.",
+   "Los machos tienen los costados azul verdoso y un brillo de arcoíris al sol."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "green",
+   "blue",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Holothuria mexicana": {
+  "fact": [
+   "Sea cucumbers clean the seabed by swallowing sand and digesting the food in it.",
+   "Los pepinos de mar limpian el fondo tragando arena y digiriendo la comida que contiene."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "coast",
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hymenocallis littoralis": {
+  "fact": [
+   "Its spidery white flowers are fragrant and open towards evening.",
+   "Sus flores blancas como arañas son perfumadas y abren al atardecer."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hypanus americanus": {
+  "fact": [
+   "It hides buried in the sand with only its eyes showing; the barb on its tail is venomous.",
+   "Se esconde enterrada en la arena con solo los ojos afuera; el aguijón de su cola es venenoso."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "reef",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Hypopachus variolosus": {
+  "fact": [
+   "It lives underground most of the year and eats ants and termites; its call sounds like a bleating sheep.",
+   "Vive bajo tierra casi todo el año y come hormigas y termitas; su canto parece el balido de una oveja."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Icterus cucullatus": {
+  "fact": [
+   "It stitches its hanging nest to the underside of palm leaves.",
+   "Cose su nido colgante a la parte de abajo de las hojas de palma."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "orange",
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Icterus gularis": {
+  "fact": [
+   "It weaves a hanging sock-shaped nest that can be over half a metre long.",
+   "Teje un nido colgante en forma de calcetín que puede medir más de medio metro."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "orange",
+   "black"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Iguana iguana": {
+  "fact": [
+   "It can drop from high branches without getting hurt, and it's an excellent swimmer.",
+   "Puede dejarse caer de ramas altas sin lastimarse, y es excelente nadadora."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.7 m",
+  "col": [
+   "green",
+   "grey",
+   "orange"
+  ],
+  "hab": [
+   "mangrove",
+   "coast",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Incilius valliceps": {
+  "fact": [
+   "Its loud trilling chorus fills the night after the first heavy rains.",
+   "Su coro de trinos llena la noche después de las primeras lluvias fuertes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ipomoea indica": {
+  "fact": [
+   "Its blue flowers fade to pink as the day goes on.",
+   "Sus flores azules se vuelven rosas conforme avanza el día."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 m",
+  "col": [
+   "blue",
+   "purple",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ipomoea pes-caprae": {
+  "fact": [
+   "Its leaves are shaped like a goat's hoofprint, and its long runners hold beach sand in place.",
+   "Sus hojas tienen forma de pezuña de cabra y sus guías largas sujetan la arena de la playa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "pink",
+   "green"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Kinosternon creaseri": {
+  "fact": [
+   "It lives only in the Yucatán Peninsula and spends the dry season buried in mud.",
+   "Solo vive en la Península de Yucatán y pasa la temporada seca enterrada en el lodo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Kinosternon cruentatum": {
+  "fact": [
+   "Its lower shell has hinges, so it can close up like a box.",
+   "Su caparazón de abajo tiene bisagras para cerrarse como una caja."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "brown",
+   "red"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Kyphosus vaigiensis": {
+  "fact": [
+   "Chubs gather under boats and piers to eat algae.",
+   "Las chopas se juntan bajo lanchas y muelles para comer algas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "grey",
+   "yellow"
+  ],
+  "hab": [
+   "reef",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Lactophrys triqueter": {
+  "fact": [
+   "Its body is encased in a rigid shell, and it blows jets of water to uncover prey in the sand.",
+   "Su cuerpo está dentro de un caparazón rígido, y sopla chorros de agua para descubrir presas en la arena."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Laemanctus serratus": {
+  "fact": [
+   "It has a flat crown on its head and very long toes for climbing.",
+   "Tiene una corona plana en la cabeza y dedos muy largos para trepar."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "70 cm",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Laguncularia racemosa": {
+  "fact": [
+   "It gets rid of excess salt through two small glands at the base of each leaf.",
+   "Elimina el exceso de sal por dos glándulas pequeñas en la base de cada hoja."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 m",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Lantana camara": {
+  "fact": [
+   "Its flower clusters change colour as they age, often from yellow to orange to red.",
+   "Sus ramilletes cambian de color con la edad, a menudo de amarillo a naranja y luego a rojo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "yellow",
+   "orange",
+   "red"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Latebraria amphipyroides": {
+  "fact": [
+   "A large moth whose wings look like bark or dead leaves.",
+   "Una polilla grande cuyas alas parecen corteza u hojas secas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Leopardus pardalis": {
+  "fact": [
+   "Each ocelot has a unique pattern of spots, like a fingerprint.",
+   "Cada ocelote tiene un patrón de manchas único, como una huella digital."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Leopardus wiedii": {
+  "fact": [
+   "It can rotate its ankles almost 180°, so it can climb down trees head-first like a squirrel.",
+   "Puede girar los tobillos casi 180°, así que baja de los árboles de cabeza como ardilla."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Leptodactylus melanonotus": {
+  "fact": [
+   "It lays its eggs in a floating foam nest.",
+   "Pone sus huevos en un nido de espuma que flota."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Leptodeira frenata": {
+  "fact": [
+   "It hunts frogs at night and even eats the eggs they lay on leaves.",
+   "Caza ranas de noche y hasta se come los huevos que ponen en las hojas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Leptophis mexicanus": {
+  "fact": [
+   "A slim, bright green snake that races through branches; its mild venom is harmless to people.",
+   "Una culebra delgada y verde brillante que corre entre las ramas; su veneno leve es inofensivo para las personas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.2 m",
+  "col": [
+   "green",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Leucaena leucocephala": {
+  "fact": [
+   "It's on the list of the world's 100 worst invasive species, yet it originally comes from southern Mexico.",
+   "Está en la lista de las 100 peores especies invasoras del mundo, aunque es originaria del sur de México."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "green",
+   "white",
+   "brown"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Leucophaeus atricilla": {
+  "fact": [
+   "Its call sounds just like someone laughing.",
+   "Su canto suena igual que una carcajada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "white",
+   "grey",
+   "black"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Lithobates brownorum": {
+  "fact": [
+   "A powerful jumper that can leap many times its own body length.",
+   "Un gran saltador que brinca muchas veces el largo de su cuerpo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 cm",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Lutjanus analis": {
+  "fact": [
+   "Large schools gather at reef spawning sites around the full moon.",
+   "Grandes cardúmenes se reúnen a desovar en el arrecife cerca de la luna llena."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "75 cm",
+  "col": [
+   "grey",
+   "red"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Lutjanus apodus": {
+  "fact": [
+   "Schools hover near mangroves and reefs by day and hunt at night.",
+   "Sus cardúmenes se quedan quietos junto a manglares y arrecifes de día y cazan de noche."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "35 cm",
+  "col": [
+   "yellow",
+   "grey"
+  ],
+  "hab": [
+   "reef",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Lutjanus griseus": {
+  "fact": [
+   "It grows up in the mangroves and moves out to the reef as an adult.",
+   "Crece en los manglares y de adulto se muda al arrecife."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "grey"
+  ],
+  "hab": [
+   "mangrove",
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Lysiloma latisiliquum": {
+  "fact": [
+   "Called tzalam in Maya, its hard reddish wood is one of the most used timbers of the Yucatán Peninsula.",
+   "Llamado tzalam en maya, su madera dura y rojiza es de las más usadas en la Península de Yucatán."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "18 m",
+  "col": [
+   "green",
+   "white",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Maguimithrax spinosissimus": {
+  "fact": [
+   "The largest reef crab in the Caribbean, and it eats algae off the reef.",
+   "El cangrejo de arrecife más grande del Caribe, y come algas del arrecife."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "red"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Malvaviscus arboreus": {
+  "fact": [
+   "Its red flowers never fully open, a shape that suits hummingbirds perfectly.",
+   "Sus flores rojas nunca se abren del todo, una forma perfecta para los colibríes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "red",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Manicaria saccifera": {
+  "fact": [
+   "It has some of the largest undivided leaves of any palm, several metres long.",
+   "Tiene algunas de las hojas enteras más grandes de todas las palmas: miden varios metros."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "mangrove",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Marmosa mexicana": {
+  "fact": [
+   "A tiny opossum with a black 'mask' around its eyes and no pouch.",
+   "Un tlacuache diminuto con 'antifaz' negro y sin marsupio."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "17 cm",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Marpesia chiron": {
+  "fact": [
+   "Males gather in groups to sip minerals from wet sand.",
+   "Los machos se juntan en grupos para beber minerales de la arena mojada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Marpesia petreus": {
+  "fact": [
+   "The long tails on its hindwings look like daggers.",
+   "Las colas largas de sus alas traseras parecen dagas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Mastigodryas melanolomus": {
+  "fact": [
+   "A fast, harmless snake that hunts lizards during the day.",
+   "Una culebra veloz e inofensiva que caza lagartijas de día."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Mayaheros urophthalmus": {
+  "fact": [
+   "A native cichlid of cenotes and lagoons; both parents guard their babies.",
+   "Un cíclido nativo de cenotes y lagunas; ambos padres cuidan a las crías."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "green",
+   "black"
+  ],
+  "hab": [
+   "cenote",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Melanerpes aurifrons": {
+  "fact": [
+   "It stores food in tree crevices and has a golden-orange patch above its bill.",
+   "Guarda comida en las grietas de los árboles y tiene una mancha dorada sobre el pico."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "black",
+   "white",
+   "red"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Melanoptila glabrirostris": {
+  "fact": [
+   "It lives almost only on the Yucatán Peninsula and nearby islands, and it can mimic other birds.",
+   "Vive casi solo en la Península de Yucatán e islas cercanas, y puede imitar a otras aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "coast",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Melanthera nivea": {
+  "fact": [
+   "Its white flower heads are a favourite of butterflies.",
+   "Sus cabezuelas blancas son de las favoritas de las mariposas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Melichthys niger": {
+  "fact": [
+   "It looks black, but thin blue lines shine where its fins meet the body.",
+   "Parece negro, pero brillan líneas azules donde sus aletas se unen al cuerpo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "black",
+   "blue"
+  ],
+  "hab": [
+   "reef",
+   "sea"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Membracis mexicana": {
+  "fact": [
+   "Its strange helmet-shaped body helps it look like a thorn, and ants protect it for the sweet honeydew it makes.",
+   "Su curioso cuerpo en forma de casco lo hace parecer espina, y las hormigas lo cuidan por la mielecilla que produce."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Metopium brownei": {
+  "fact": [
+   "Its sap causes painful blisters like poison ivy. The local antidote is the bark of the chacá tree, which often grows nearby.",
+   "Su savia causa ampollas dolorosas, como la hiedra venenosa. El remedio local es la corteza del chacá, que suele crecer cerca."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 m",
+  "col": [
+   "brown",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Micronycteris microtis": {
+  "fact": [
+   "It plucks insects off leaves in the dark, using very quiet echolocation.",
+   "Atrapa insectos sobre las hojas en la oscuridad, con una ecolocalización muy suave."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Microspathodon chrysurus": {
+  "fact": [
+   "Young fish are dark blue with bright blue spots, like a starry night sky.",
+   "Los jóvenes son azul oscuro con puntos azul brillante, como un cielo estrellado."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "black",
+   "yellow",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Micrurus diastema": {
+  "fact": [
+   "Highly venomous but shy. The rhyme 'red touches yellow' does not reliably work for coral snakes in Mexico, so never handle one.",
+   "Muy venenosa pero tímida. Las rimas sobre el orden de colores no sirven con los coralillos de México: nunca la toques."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "70 cm",
+  "col": [
+   "red",
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Millepora alcicornis": {
+  "fact": [
+   "It isn't a true coral but a hydrozoan, and touching it gives a painful sting.",
+   "No es un coral verdadero sino un hidrozoo, y tocarlo causa un piquete doloroso."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "yellow",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Mimus gilvus": {
+  "fact": [
+   "It can imitate the songs of other birds and sometimes sings through the night in breeding season.",
+   "Imita el canto de otras aves y a veces canta toda la noche en época de cría."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Molossus nigricans": {
+  "fact": [
+   "A fast-flying bat that often roosts in large colonies under house roofs.",
+   "Un murciélago de vuelo rápido que suele dormir en colonias grandes bajo los techos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "black",
+   "brown"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Momordica charantia": {
+  "fact": [
+   "One of the most bitter vegetables in the world, yet widely eaten in Asian cooking.",
+   "Una de las verduras más amargas del mundo, pero muy usada en la cocina asiática."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 m",
+  "col": [
+   "orange",
+   "green",
+   "yellow"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Montastraea cavernosa": {
+  "fact": [
+   "Its polyps open at night to catch plankton, making the coral look fuzzy.",
+   "Sus pólipos se abren de noche para atrapar plancton, y el coral se ve peludito."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Morinda citrifolia": {
+  "fact": [
+   "Its ripe fruit smells like strong cheese, earning it the nickname 'cheese fruit'.",
+   "Su fruto maduro huele a queso fuerte; por eso en inglés le dicen 'fruta de queso'."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 m",
+  "col": [
+   "green",
+   "white",
+   "yellow"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Moringa oleifera": {
+  "fact": [
+   "Its leaves are so nutritious it's nicknamed the 'miracle tree'. It comes from the foothills of the Himalayas.",
+   "Sus hojas son tan nutritivas que le dicen 'árbol milagro'. Es originario de las faldas del Himalaya."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Mormoops megalophylla": {
+  "fact": [
+   "Its strange, leafy face folds help focus its echolocation calls.",
+   "Los extraños pliegues de su cara ayudan a enfocar sus llamados de ecolocalización."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "cenote",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Morpho helenor": {
+  "fact": [
+   "Its brilliant blue isn't pigment: tiny wing scales reflect light to create the colour.",
+   "Su azul brillante no es pigmento: escamas diminutas reflejan la luz y crean el color."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "13 cm",
+  "col": [
+   "blue",
+   "black",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Muntingia calabura": {
+  "fact": [
+   "Its tiny red berries taste like cotton candy, which is why it's also called Jamaican cherry.",
+   "Sus bayitas rojas saben a algodón de azúcar; por eso también le dicen cereza de Jamaica."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "green",
+   "red",
+   "white"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Mus musculus": {
+  "fact": [
+   "It came from Asia and spread around the world with people.",
+   "Llegó desde Asia y se extendió por el mundo junto con las personas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "9 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Myiozetetes similis": {
+  "fact": [
+   "It often builds its domed nest right next to a wasp nest for protection.",
+   "Suele construir su nido techado junto a un avispero para protegerse."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "17 cm",
+  "col": [
+   "yellow",
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "town",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Myotis pilosatibialis": {
+  "fact": [
+   "Named for the hair on its legs, this small bat hunts insects over water and forest.",
+   "Nombrado por el pelo de sus patas, este murcielaguito caza insectos sobre el agua y la selva."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Myrmecophila christinae": {
+  "fact": [
+   "Ants nest inside its hollow pseudobulbs and defend the orchid in return.",
+   "Las hormigas anidan en sus pseudobulbos huecos y, a cambio, defienden a la orquídea."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "purple",
+   "pink"
+  ],
+  "hab": [
+   "coast",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Nannopterum auritum": {
+  "fact": [
+   "Its feathers soak up water, which helps it dive; afterwards it perches with wings spread out to dry.",
+   "Sus plumas se empapan, lo que le ayuda a bucear; después se posa con las alas abiertas para secarlas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "black",
+   "orange"
+  ],
+  "hab": [
+   "coast",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Nannotrigona perilampoides": {
+  "fact": [
+   "A tiny stingless bee kept in the region for its honey, which is valued as medicine.",
+   "Una abejita sin aguijón que se cría en la región por su miel, apreciada como medicina."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 mm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Natalus mexicanus": {
+  "fact": [
+   "Its big funnel-shaped ears help it hunt tiny insects deep in caves.",
+   "Sus grandes orejas en forma de embudo le ayudan a cazar insectos diminutos en las cuevas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "orange",
+   "brown"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Neogale frenata": {
+  "fact": [
+   "It can kill prey larger than itself and hunts by day and by night.",
+   "Puede matar presas más grandes que ella y caza de día y de noche."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "35 cm",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Nerita peloronta": {
+  "fact": [
+   "Its shell opening has white 'teeth' with a bright red stain, like a bleeding tooth.",
+   "La abertura de su concha tiene 'dientes' blancos con una mancha roja, como un diente sangrando."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "white",
+   "red"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Nerita tessellata": {
+  "fact": [
+   "Its black-and-white checkered shell helps it blend in with splash-zone rocks.",
+   "Su concha a cuadros blanco y negro le ayuda a camuflarse en las rocas de la orilla."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Nerita versicolor": {
+  "fact": [
+   "It clusters on splash-zone rocks and seals its shell tight when the tide goes out.",
+   "Se agrupa en las rocas donde revientan las olas y cierra bien su concha cuando baja la marea."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 cm",
+  "col": [
+   "white",
+   "black"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Niphates digitalis": {
+  "fact": [
+   "Small animals like brittle stars often live inside its vase.",
+   "Dentro de su jarrón suelen vivir animalitos como estrellas quebradizas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "pink",
+   "purple"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Nymphaea ampla": {
+  "fact": [
+   "The Maya carved this water lily in their art as a symbol of water and the underworld.",
+   "Los mayas representaron este nenúfar en su arte como símbolo del agua y del inframundo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Octopus briareus": {
+  "fact": [
+   "It changes colour and skin texture in a fraction of a second and hunts at night.",
+   "Cambia de color y de textura de piel en una fracción de segundo, y caza de noche."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "brown",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ocypode quadrata": {
+  "fact": [
+   "It runs sideways very fast and can change colour to match the sand.",
+   "Corre de lado muy rápido y puede cambiar de color para confundirse con la arena."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ocyurus chrysurus": {
+  "fact": [
+   "A bright yellow stripe runs along its body into a deeply forked yellow tail.",
+   "Una raya amarilla brillante le recorre el cuerpo hasta su cola amarilla muy ahorquillada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "yellow",
+   "blue"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Odocoileus pandora": {
+  "fact": [
+   "A small deer found almost only on the Yucatán Peninsula; males have short, simple antlers.",
+   "Un venado pequeño que vive casi solo en la Península de Yucatán; los machos tienen cuernos cortos y sencillos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Odocoileus virginianus": {
+  "fact": [
+   "It raises its tail to flash the white underside as an alarm signal when it runs.",
+   "Al huir levanta la cola y muestra la parte blanca como señal de alarma."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Orbicella annularis": {
+  "fact": [
+   "It grows in stacked lobes and columns, and is a key builder of Caribbean reefs.",
+   "Crece en lóbulos y columnas apiladas, y es clave en la construcción de los arrecifes del Caribe."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Orbicella faveolata": {
+  "fact": [
+   "One of the Caribbean's main reef builders, forming huge mounds over centuries.",
+   "Uno de los principales constructores de arrecifes del Caribe; forma enormes montículos a lo largo de siglos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Oreaster reticulatus": {
+  "fact": [
+   "It can push its stomach out through its mouth to digest food outside its body.",
+   "Puede sacar su estómago por la boca para digerir la comida fuera de su cuerpo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "orange",
+   "red"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ortalis vetula": {
+  "fact": [
+   "Its name echoes its loud 'cha-cha-lac' chorus, often heard at dawn.",
+   "Su nombre imita su ruidoso coro 'cha-cha-lac', que se oye al amanecer."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "55 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Otonyctomys hatti": {
+  "fact": [
+   "A rare tree rat found almost only in the Yucatán Peninsula region.",
+   "Una rata arborícola rara que vive casi solo en la región de la Península de Yucatán."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ototylomys phyllotis": {
+  "fact": [
+   "An agile climbing rat with big ears, often found around Maya ruins.",
+   "Una rata trepadora ágil de orejas grandes, frecuente en las ruinas mayas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Oxybelis fulgidus": {
+  "fact": [
+   "So thin and green that it looks like a vine as it waits motionless for lizards and birds.",
+   "Es tan delgada y verde que parece un bejuco mientras espera inmóvil a lagartijas y aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Oxybelis potosiensis": {
+  "fact": [
+   "A thin brown vine snake that sways like a twig in the breeze to stay hidden.",
+   "Una culebra bejuquillo café y delgada que se mece como ramita con el viento para esconderse."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.3 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pachylis nervosus": {
+  "fact": [
+   "A large leaf-footed bug with flattened leaf-like flaps on its hind legs.",
+   "Una chinche grande con aletas aplanadas como hojas en las patas traseras."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 cm",
+  "col": [
+   "black",
+   "orange"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pachyramphus aglaiae": {
+  "fact": [
+   "It builds a huge, football-shaped nest that hangs from the tip of a branch.",
+   "Construye un nido enorme, como balón, que cuelga de la punta de una rama."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "17 cm",
+  "col": [
+   "grey",
+   "black",
+   "pink"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Palythoa caribaeorum": {
+  "fact": [
+   "It isn't a coral but a zoanthid, and it contains palytoxin, one of the strongest marine toxins.",
+   "No es coral sino un zoántido, y contiene palitoxina, una de las toxinas marinas más potentes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "reef",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pandion haliaetus": {
+  "fact": [
+   "It's the only raptor that plunges feet-first into water, and it can close its nostrils underwater.",
+   "Es la única rapaz que se clava en el agua con las patas por delante, y puede cerrar las narinas bajo el agua."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "57 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "coast",
+   "mangrove",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Panulirus argus": {
+  "fact": [
+   "It has no big claws; to scare predators it rubs its antennae to make a rasping sound.",
+   "No tiene tenazas grandes; para asustar a sus depredadores frota sus antenas y hace un chirrido."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Paratrechina longicornis": {
+  "fact": [
+   "It gets its 'crazy' name from running around erratically; it's one of the most widespread invasive ants.",
+   "Le dicen 'loca' porque corre sin rumbo; es una de las hormigas invasoras más extendidas del mundo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 mm",
+  "col": [
+   "black",
+   "grey"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Parthenium hysterophorus": {
+  "fact": [
+   "A notorious weed: its pollen and sap can cause strong allergies.",
+   "Una maleza famosa: su polen y su savia pueden causar alergias fuertes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "white",
+   "green"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Passiflora ciliata": {
+  "fact": [
+   "Its fruit is wrapped in a lacy cage of feathery bracts.",
+   "Su fruto está envuelto en una jaula de brácteas plumosas, como encaje."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "purple",
+   "white",
+   "green"
+  ],
+  "hab": [
+   "coast",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pecari tajacu": {
+  "fact": [
+   "Herd members recognise each other by a musky scent from a gland on their backs.",
+   "Los miembros de la manada se reconocen por el olor almizclado de una glándula en su lomo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "grey",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pelecanus occidentalis": {
+  "fact": [
+   "It dives headfirst from high above the water to scoop fish into its stretchy throat pouch.",
+   "Se lanza de cabeza desde lo alto para atrapar peces con su bolsa elástica de la garganta."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.3 m",
+  "col": [
+   "brown",
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Periplaneta americana": {
+  "fact": [
+   "Despite its name, it originally comes from Africa, and it's one of the fastest-running insects for its size.",
+   "A pesar de su nombre, viene de África, y es de los insectos más rápidos para su tamaño."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "4 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Peropteryx macrotis": {
+  "fact": [
+   "A small bat that roosts in caves and even inside Maya ruins.",
+   "Un murciélago pequeño que duerme en cuevas y hasta dentro de ruinas mayas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Philander vossi": {
+  "fact": [
+   "The white spots above its eyes look like a second pair of eyes.",
+   "Las manchas blancas sobre sus ojos parecen un segundo par de ojos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "28 cm",
+  "col": [
+   "grey",
+   "white",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Philodendron radiatum": {
+  "fact": [
+   "It climbs up tree trunks, and its leaves get more deeply split as they grow larger.",
+   "Trepa por los troncos, y sus hojas se van partiendo más conforme crecen."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 m",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Phoebis agarithe": {
+  "fact": [
+   "A large, bright orange sulphur butterfly that visits garden flowers.",
+   "Una mariposa grande color naranja brillante que visita las flores de los jardines."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "orange"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Piaya cayana": {
+  "fact": [
+   "It runs along branches like a squirrel, trailing a long rufous tail.",
+   "Corre por las ramas como ardilla, con su larga cola rojiza."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "brown",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Piranga rubra": {
+  "fact": [
+   "It catches wasps and bees in flight and rubs off their stingers before eating them.",
+   "Caza avispas y abejas al vuelo y les quita el aguijón tallándolas antes de comérselas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "17 cm",
+  "col": [
+   "red"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Piscidia piscipula": {
+  "fact": [
+   "Crushed leaves and bark were thrown into water to stun fish, hence its scientific name, 'fish-killer'.",
+   "Sus hojas y corteza machacadas se echaban al agua para aturdir peces; de ahí su nombre científico, 'mata peces'."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 m",
+  "col": [
+   "green",
+   "purple",
+   "grey"
+  ],
+  "hab": [
+   "coast",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pitangus sulphuratus": {
+  "fact": [
+   "Its name comes from its loud call, 'kis-ka-dee'; in Spanish it's heard as 'bien-te-veo', 'I see you well'.",
+   "Su nombre viene de su canto fuerte: en español se oye 'bien-te-veo'."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "22 cm",
+  "col": [
+   "yellow",
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "town",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pithecellobium dulce": {
+  "fact": [
+   "Its twisted pods hold a sweet white pulp that's sold as a snack in Mexican markets.",
+   "Sus vainas enroscadas tienen una pulpa blanca y dulce que se vende como botana en los mercados."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 m",
+  "col": [
+   "green",
+   "pink",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Plumeria obtusa": {
+  "fact": [
+   "Unlike the common frangipani, it keeps its glossy leaves most of the year, and its white flowers smell sweetest at night.",
+   "A diferencia de la flor de mayo común, conserva sus hojas brillantes casi todo el año, y sus flores blancas huelen más de noche."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 m",
+  "col": [
+   "white",
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pluvialis squatarola": {
+  "fact": [
+   "It breeds on the Arctic tundra and spends the winter on beaches as far south as South America.",
+   "Anida en la tundra ártica y pasa el invierno en playas hasta Sudamérica."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "29 cm",
+  "col": [
+   "grey",
+   "white",
+   "black"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pomacanthus arcuatus": {
+  "fact": [
+   "It eats sponges, which few other fish can digest.",
+   "Come esponjas, algo que pocos peces pueden digerir."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "grey"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pomacanthus paru": {
+  "fact": [
+   "French angelfish often swim in pairs that stay together for years.",
+   "Los peces ángel franceses suelen nadar en parejas que duran años."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Porites astreoides": {
+  "fact": [
+   "One of the toughest reef corals, it often survives where others have died.",
+   "Uno de los corales más resistentes: a menudo sobrevive donde otros han muerto."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Porites porites": {
+  "fact": [
+   "Its short, thick branches look like fingers.",
+   "Sus ramas cortas y gruesas parecen dedos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Potos flavus": {
+  "fact": [
+   "It hangs by its tail and licks nectar with its long tongue, helping pollinate flowers.",
+   "Se cuelga de la cola y lame néctar con su larga lengua, ayudando a polinizar flores."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Priva lappulacea": {
+  "fact": [
+   "Its small fruits are covered in hooks that stick to socks and fur.",
+   "Sus frutitos están cubiertos de ganchos que se pegan a los calcetines y al pelo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "purple",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Procyon lotor": {
+  "fact": [
+   "It often dunks its food in water, and its paws are so sensitive it can 'see' with its fingers.",
+   "Suele meter su comida al agua, y sus manos son tan sensibles que 've' con los dedos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "70 cm",
+  "col": [
+   "grey",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "mangrove",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Procyon pygmaeus": {
+  "fact": [
+   "It lives only on Cozumel and is one of the rarest carnivores in the world.",
+   "Solo vive en Cozumel y es uno de los carnívoros más raros del mundo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "grey",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pseudelaphe phaescens": {
+  "fact": [
+   "Found almost only on the Yucatán Peninsula, it hunts rodents and birds.",
+   "Vive casi solo en la Península de Yucatán y caza roedores y aves."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.4 m",
+  "col": [
+   "orange",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pseudobombax ellipticum": {
+  "fact": [
+   "Its flowers look like shaving brushes: hundreds of long pink or white stamens burst out when they open.",
+   "Sus flores parecen brochas de afeitar: cientos de estambres largos, rosas o blancos, salen al abrir."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "pink",
+   "white",
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pseudodiploria strigosa": {
+  "fact": [
+   "Its winding grooves look just like a brain.",
+   "Sus surcos serpenteantes parecen un cerebro."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pseudophoenix sargentii": {
+  "fact": [
+   "A rare, slow-growing coastal palm with bright red fruits; it's protected in Mexico.",
+   "Una palma costera rara y de crecimiento lento, con frutos rojos brillantes; está protegida en México."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "green",
+   "red",
+   "grey"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Psidium guajava": {
+  "fact": [
+   "One guava holds about four times the vitamin C of an orange.",
+   "Una guayaba tiene cerca de cuatro veces la vitamina C de una naranja."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 m",
+  "col": [
+   "green",
+   "yellow",
+   "pink"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Pteroglossus torquatus": {
+  "fact": [
+   "A small toucan that sleeps in groups inside old woodpecker holes, folding its tail over its back.",
+   "Un tucán pequeño que duerme en grupo dentro de huecos de pájaro carpintero, doblando la cola sobre la espalda."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "black",
+   "yellow",
+   "red"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Puma concolor": {
+  "fact": [
+   "It holds the record for the most common names of any animal, and it can leap several metres high.",
+   "Tiene el récord de más nombres comunes de cualquier animal y puede saltar varios metros de alto."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Rattus rattus": {
+  "fact": [
+   "It arrived in the Americas on European ships and is an excellent climber.",
+   "Llegó a América en barcos europeos y es excelente trepadora."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "black",
+   "grey"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Rhabdadenia biflora": {
+  "fact": [
+   "A vine that climbs through the mangroves, with white trumpet-shaped flowers.",
+   "Una enredadera que trepa por los manglares, con flores blancas en forma de trompeta."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "white",
+   "green",
+   "yellow"
+  ],
+  "hab": [
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Rhinella horribilis": {
+  "fact": [
+   "Big glands behind its eyes produce toxins that can kill a dog that bites it.",
+   "Las glándulas grandes detrás de sus ojos producen toxinas que pueden matar a un perro que lo muerda."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Rhinoclemmys areolata": {
+  "fact": [
+   "A land-dwelling turtle that roams forests and savannas eating fruit and plants.",
+   "Una tortuga terrestre que recorre selvas y sabanas comiendo frutos y plantas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "brown",
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Rhogeessa aenea": {
+  "fact": [
+   "A tiny yellowish bat found only in the Yucatán Peninsula and Belize.",
+   "Un murcielaguito amarillento que solo vive en la Península de Yucatán y Belice."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ricinus communis": {
+  "fact": [
+   "Its seeds give castor oil, but they also contain ricin, one of the deadliest natural toxins.",
+   "Sus semillas dan aceite de ricino, pero también contienen ricina, una de las toxinas naturales más letales."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "red",
+   "green"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Rivina humilis": {
+  "fact": [
+   "Its bright red berries were once used as a natural ink and dye.",
+   "Sus bayas rojas brillantes se usaban antes como tinta y tinte natural."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "red",
+   "pink",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Ruellia simplex": {
+  "fact": [
+   "Each purple flower lasts only a day, but new ones open every morning.",
+   "Cada flor morada dura solo un día, pero cada mañana abren nuevas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "purple",
+   "green"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Rupornis magnirostris": {
+  "fact": [
+   "Often seen on roadside poles, watching for lizards and insects.",
+   "Se le ve en postes junto a los caminos, vigilando lagartijas e insectos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "36 cm",
+  "col": [
+   "grey",
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sabal yapa": {
+  "fact": [
+   "Maya houses on the peninsula have long been roofed with its leaves, known locally as guano.",
+   "Con sus hojas, llamadas guano, se han techado por siglos las casas mayas de la península."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Saccopteryx bilineata": {
+  "fact": [
+   "Males keep scent in little pouches on their wings to court females.",
+   "Los machos guardan perfume en bolsitas de las alas para cortejar a las hembras."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sanopus splendidus": {
+  "fact": [
+   "It's found only on Cozumel's reefs, and males hum loudly to attract mates.",
+   "Solo vive en los arrecifes de Cozumel, y los machos zumban fuerte para atraer pareja."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "blue",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Scaevola taccada": {
+  "fact": [
+   "Its flowers look cut in half: all five petals grow on one side.",
+   "Sus flores parecen cortadas a la mitad: los cinco pétalos crecen de un solo lado."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "green",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Scaptotrigona pectoralis": {
+  "fact": [
+   "A stingless bee kept by beekeepers in the region; it defends its nest by biting instead.",
+   "Una abeja sin aguijón que crían los meliponicultores de la región; defiende su nido mordiendo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 mm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Scarus iseri": {
+  "fact": [
+   "Like other parrotfish, it turns coral rock into white sand.",
+   "Como otros peces loro, convierte la roca de coral en arena blanca."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "blue",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sceloporus chrysostictus": {
+  "fact": [
+   "It lives mainly on the Yucatán Peninsula and loves to sunbathe on rocks and ruins.",
+   "Vive sobre todo en la Península de Yucatán y le encanta asolearse en rocas y ruinas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "18 cm",
+  "col": [
+   "brown",
+   "yellow"
+  ],
+  "hab": [
+   "coast",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sceloporus cozumelae": {
+  "fact": [
+   "It lives only on Cozumel and the nearby Caribbean coast of Quintana Roo.",
+   "Solo vive en Cozumel y la costa caribeña cercana de Quintana Roo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "13 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sceloporus lundelli": {
+  "fact": [
+   "A large spiny lizard that lives almost only on the Yucatán Peninsula.",
+   "Una lagartija espinosa grande que vive casi solo en la Península de Yucatán."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Scinax staufferi": {
+  "fact": [
+   "A tiny tree frog whose call rings out after the rain.",
+   "Una ranita arborícola cuyo canto se escucha después de la lluvia."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sciurus deppei": {
+  "fact": [
+   "A small reddish-brown forest squirrel that spends most of its time in trees.",
+   "Una ardilla pequeña café rojiza que pasa casi todo el tiempo en los árboles."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sciurus yucatanensis": {
+  "fact": [
+   "This squirrel lives only on the Yucatán Peninsula and nearby areas.",
+   "Esta ardilla solo vive en la Península de Yucatán y zonas cercanas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "grey",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Scorpaena plumieri": {
+  "fact": [
+   "Its venomous spines and camouflage make it look like a rock; when threatened it flashes bright patches under its fins.",
+   "Sus espinas venenosas y su camuflaje lo hacen parecer roca; cuando se siente amenazado muestra manchas brillantes bajo las aletas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "40 cm",
+  "col": [
+   "brown",
+   "red",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Senticolis triaspis": {
+  "fact": [
+   "Adults are plain green, while the young are blotched with brown.",
+   "Los adultos son verde liso, mientras que las crías tienen manchas cafés."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.2 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sepioteuthis sepioidea": {
+  "fact": [
+   "It changes colour in an instant to communicate with other squid.",
+   "Cambia de color en un instante para comunicarse con otros calamares."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sesuvium portulacastrum": {
+  "fact": [
+   "Its salty, succulent leaves are edible and have been eaten as a sea vegetable.",
+   "Sus hojas saladas y carnosas son comestibles y se han comido como verdura de mar."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "pink",
+   "green",
+   "red"
+  ],
+  "hab": [
+   "coast",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Setophaga dominica": {
+  "fact": [
+   "A winter visitor from the eastern United States that forages high in palm trees.",
+   "Un visitante de invierno del este de Estados Unidos que busca comida en lo alto de las palmas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "13 cm",
+  "col": [
+   "yellow",
+   "grey",
+   "black"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Setophaga palmarum": {
+  "fact": [
+   "It constantly bobs its tail up and down, even while standing still.",
+   "Mueve la cola de arriba abajo todo el tiempo, incluso cuando está quieto."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "13 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "coast",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Setophaga ruticilla": {
+  "fact": [
+   "It flashes its orange tail patches to startle insects into flying out.",
+   "Abre la cola para mostrar sus manchas naranjas y asustar a los insectos para que salgan volando."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "13 cm",
+  "col": [
+   "black",
+   "orange"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Siderastrea siderea": {
+  "fact": [
+   "Its round boulders are covered in tiny star-shaped cups.",
+   "Sus rocas redondas están cubiertas de copitas diminutas en forma de estrella."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Siproeta stelenes": {
+  "fact": [
+   "Its green wings are named after the green mineral malachite.",
+   "Sus alas verdes le dan su nombre, por el mineral verde llamado malaquita."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 cm",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Smilisca baudinii": {
+  "fact": [
+   "It survives the dry season by wrapping itself in a protective cocoon of shed skin.",
+   "Sobrevive la temporada seca envolviéndose en un capullo protector de piel mudada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Solanum donianum": {
+  "fact": [
+   "Its leaves are covered in soft hairs that feel like felt.",
+   "Sus hojas están cubiertas de pelitos suaves que se sienten como fieltro."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "purple",
+   "white",
+   "green"
+  ],
+  "hab": [
+   "coast",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sparisoma aurofrenatum": {
+  "fact": [
+   "It spends the day scraping algae off rocks with its beak-like teeth.",
+   "Pasa el día raspando algas de las rocas con sus dientes en forma de pico."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "28 cm",
+  "col": [
+   "red",
+   "green"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sparisoma rubripinne": {
+  "fact": [
+   "Like other parrotfish, it changes colour and even sex as it grows.",
+   "Como otros peces loro, cambia de color y hasta de sexo al crecer."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "grey",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sparisoma viride": {
+  "fact": [
+   "Parrotfish grind up coral and poop out sand; a big one makes hundreds of kilos of sand a year.",
+   "Los peces loro muelen coral y lo excretan como arena; uno grande produce cientos de kilos al año."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "45 cm",
+  "col": [
+   "green",
+   "red",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sphaerodactylus glaucus": {
+  "fact": [
+   "One of the smallest reptiles around, barely 6 cm long.",
+   "Uno de los reptiles más pequeños de la región: apenas mide 6 cm."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sphagneticola trilobata": {
+  "fact": [
+   "Popular as groundcover, it spreads so fast that it's listed among the world's worst invasive species.",
+   "Se usa mucho como cubresuelos y se extiende tan rápido que está entre las peores especies invasoras del mundo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sphyraena barracuda": {
+  "fact": [
+   "It can burst to over 40 km/h and is attracted to shiny objects.",
+   "Puede acelerar a más de 40 km/h y le atraen los objetos brillantes."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "reef",
+   "sea",
+   "mangrove"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Spilotes pullatus": {
+  "fact": [
+   "It puffs up its throat and vibrates its tail to look threatening, but it's non-venomous.",
+   "Infla la garganta y hace vibrar la cola para asustar, pero no es venenosa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2.5 m",
+  "col": [
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sporophila morelleti": {
+  "fact": [
+   "A tiny seed-eater: males are black and white, females plain brown.",
+   "Un semillero diminuto: los machos son blanco y negro, las hembras café claro."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "11 cm",
+  "col": [
+   "black",
+   "white",
+   "brown"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Stagmomantis fraterna": {
+  "fact": [
+   "Mantises can turn their heads to look over their shoulders at prey.",
+   "Las mantis pueden girar la cabeza para mirar por encima del hombro a sus presas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Stenopus hispidus": {
+  "fact": [
+   "It runs 'cleaning stations' where fish line up to have parasites removed.",
+   "Tiene 'estaciones de limpieza' donde los peces hacen fila para que les quite parásitos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "red",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Stenorhynchus seticornis": {
+  "fact": [
+   "Its triangular body and long, spindly legs make it look like a spider.",
+   "Su cuerpo triangular y sus patas largas y delgadas lo hacen parecer araña."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 cm",
+  "col": [
+   "yellow",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Stichodactyla helianthus": {
+  "fact": [
+   "Its short, sticky tentacles feel like velcro to the touch.",
+   "Sus tentáculos cortos y pegajosos se sienten como velcro."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 cm",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "reef",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Streptopelia decaocto": {
+  "fact": [
+   "Originally from Asia and Europe, it has spread across the Americas since the 1980s.",
+   "Originaria de Asia y Europa, se ha extendido por América desde los años ochenta."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "32 cm",
+  "col": [
+   "grey",
+   "white",
+   "black"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Styracura schmardae": {
+  "fact": [
+   "Unlike most stingrays, it has no venomous spine on its tail.",
+   "A diferencia de casi todas las rayas, no tiene aguijón venenoso en la cola."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "grey",
+   "black"
+  ],
+  "hab": [
+   "reef",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Suriana maritima": {
+  "fact": [
+   "One of the first shrubs to colonise bare beach sand; its seeds float and travel by sea.",
+   "Uno de los primeros arbustos en colonizar la arena desnuda; sus semillas flotan y viajan por el mar."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "yellow",
+   "grey",
+   "green"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Sus scrofa": {
+  "fact": [
+   "Pigs came to the Americas with the Spanish; escaped ones turn into wild boars that damage crops.",
+   "Los cerdos llegaron a América con los españoles; los que escapan se vuelven jabalíes que dañan cultivos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Swartzia cubensis": {
+  "fact": [
+   "Its heartwood is nearly black, which is why it's called Mexican royal ebony.",
+   "El corazón de su madera es casi negro; por eso le dicen ébano real mexicano."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Syntomeida epilais": {
+  "fact": [
+   "This moth mimics a wasp, and its caterpillars feed on poisonous oleander.",
+   "Esta polilla imita a una avispa, y sus orugas comen la venenosa adelfa."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "blue",
+   "black",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tabebuia rosea": {
+  "fact": [
+   "It drops its leaves in the dry season and covers itself in pink flowers. It's El Salvador's national tree.",
+   "En la temporada seca pierde las hojas y se cubre de flores rosas. Es el árbol nacional de El Salvador."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 m",
+  "col": [
+   "pink",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tamandua mexicana": {
+  "fact": [
+   "Its tongue can reach 40 cm, and it eats thousands of ants and termites a day.",
+   "Su lengua mide hasta 40 cm y come miles de hormigas y termitas al día."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "60 cm",
+  "col": [
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tamarindus indica": {
+  "fact": [
+   "Originally from tropical Africa, its sour pods are the base of agua de tamarindo and many Mexican candies.",
+   "Originario de África tropical, sus vainas agrias son la base del agua de tamarindo y de muchos dulces mexicanos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tapirus bairdii": {
+  "fact": [
+   "The largest land mammal in Central America; its short trunk is a flexible nose and upper lip.",
+   "El mamífero terrestre más grande de Centroamérica; su trompa corta es nariz y labio flexible."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "brown",
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tecoma stans": {
+  "fact": [
+   "Its yellow trumpet flowers are the national flower of the Bahamas.",
+   "Sus flores amarillas de trompeta son la flor nacional de las Bahamas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "6 m",
+  "col": [
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Thalasseus maximus": {
+  "fact": [
+   "It dives into the sea for fish, and in winter its black cap shrinks to a shaggy crest.",
+   "Se lanza al mar por peces, y en invierno su gorra negra se reduce a una cresta despeinada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "48 cm",
+  "col": [
+   "white",
+   "grey",
+   "orange"
+  ],
+  "hab": [
+   "coast",
+   "sea"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Thalassoma bifasciatum": {
+  "fact": [
+   "It can change sex: large females can turn into blue-headed males.",
+   "Puede cambiar de sexo: las hembras grandes se convierten en machos de cabeza azul."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "blue",
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Thamnophis proximus": {
+  "fact": [
+   "It hunts frogs and small fish along the water's edge and swims well.",
+   "Caza ranas y peces pequeños en la orilla del agua y nada muy bien."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Thecadactylus rapicauda": {
+  "fact": [
+   "If it loses its tail, the new one grows back fat and shaped like a turnip.",
+   "Si pierde la cola, la nueva le crece gorda y con forma de nabo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "brown",
+   "grey"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Thespesia populnea": {
+  "fact": [
+   "Its flowers open yellow in the morning and turn purple-red by evening.",
+   "Sus flores abren amarillas en la mañana y se vuelven rojo-moradas en la tarde."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Thrinax radiata": {
+  "fact": [
+   "Its fan-shaped leaves have been used for centuries to thatch palapa roofs along the Caribbean coast.",
+   "Sus hojas en forma de abanico se usan desde hace siglos para techar palapas en la costa del Caribe."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "coast",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tournefortia gnaphalodes": {
+  "fact": [
+   "It thrives in salty sand on the first dune, where few other shrubs survive.",
+   "Prospera en la arena salada de la primera duna, donde pocos arbustos sobreviven."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1.5 m",
+  "col": [
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Trachemys scripta": {
+  "fact": [
+   "Popular as a pet, it has become invasive around the world after being released.",
+   "Muy popular como mascota, se ha vuelto invasora en todo el mundo al ser liberada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 cm",
+  "col": [
+   "green",
+   "yellow",
+   "red"
+  ],
+  "hab": [
+   "cenote",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Trachemys venusta": {
+  "fact": [
+   "It basks in rows on logs and slides into the water at the first sign of danger.",
+   "Se asolea en fila sobre los troncos y se lanza al agua a la primera señal de peligro."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "35 cm",
+  "col": [
+   "green",
+   "yellow"
+  ],
+  "hab": [
+   "cenote"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Trachinotus falcatus": {
+  "fact": [
+   "A prized catch-and-release fish on the flats, it feeds mainly on crabs and shellfish.",
+   "Muy buscado para pesca de captura y liberación en los bajos; come sobre todo cangrejos y moluscos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "grey",
+   "yellow"
+  ],
+  "hab": [
+   "coast",
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tradescantia pallida": {
+  "fact": [
+   "A favourite groundcover in towns; its purple colour gets deeper in full sun. It's native to eastern Mexico.",
+   "Un cubresuelos muy usado en las ciudades; su color morado se intensifica al sol. Es nativa del este de México."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "purple",
+   "pink"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tradescantia spathacea": {
+  "fact": [
+   "Its small white flowers hide inside boat-shaped bracts, like a baby in a cradle.",
+   "Sus florecitas blancas se esconden dentro de brácteas en forma de barco, como un bebé en su cuna."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "50 cm",
+  "col": [
+   "purple",
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tridax procumbens": {
+  "fact": [
+   "A tough little daisy that grows in sidewalk cracks; it's a folk remedy to stop bleeding.",
+   "Una margarita resistente que crece entre las banquetas; es remedio popular para detener sangrados."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "30 cm",
+  "col": [
+   "yellow",
+   "white",
+   "green"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Trigona fulviventris": {
+  "fact": [
+   "A stingless bee that builds its nest with tree resin and defends it by biting.",
+   "Una abeja sin aguijón que construye su nido con resina de árboles y lo defiende mordiendo."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "8 mm",
+  "col": [
+   "black",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tripneustes ventricosus": {
+  "fact": [
+   "It covers itself with bits of seagrass and shell, as sunscreen and camouflage.",
+   "Se cubre con pedacitos de pastos marinos y conchas, como protector solar y camuflaje."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "15 cm",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Triprion petasatus": {
+  "fact": [
+   "It plugs the entrance of its hiding place with its bony, shovel-shaped head.",
+   "Tapa la entrada de su escondite con su cabeza huesuda en forma de pala."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "7 cm",
+  "col": [
+   "brown",
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Trogon melanocephalus": {
+  "fact": [
+   "It digs its nest cavity into active termite nests in the trees.",
+   "Excava su nido dentro de termiteros activos en los árboles."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "27 cm",
+  "col": [
+   "yellow",
+   "black",
+   "blue"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tropidacris cristata": {
+  "fact": [
+   "One of the largest grasshoppers in the world, with bright red hindwings.",
+   "Uno de los chapulines más grandes del mundo, con alas traseras rojo brillante."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "12 cm",
+  "col": [
+   "green",
+   "red"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tucetona pectinata": {
+  "fact": [
+   "Its shell has radiating ribs and zigzag reddish bands.",
+   "Su concha tiene costillas en abanico y bandas rojizas en zigzag."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 cm",
+  "col": [
+   "brown",
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Turdus grayi": {
+  "fact": [
+   "It's Costa Rica's national bird, loved for the song that announces the rainy season.",
+   "Es el ave nacional de Costa Rica, querida por el canto que anuncia la temporada de lluvias."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "24 cm",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Turnera ulmifolia": {
+  "fact": [
+   "Its yellow flowers open in the morning and close by midday.",
+   "Sus flores amarillas abren en la mañana y se cierran hacia el mediodía."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "1 m",
+  "col": [
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "coast",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Tursiops truncatus": {
+  "fact": [
+   "Each dolphin has its own signature whistle, which works like a name.",
+   "Cada delfín tiene su propio silbido firma, que funciona como un nombre."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "3 m",
+  "col": [
+   "grey"
+  ],
+  "hab": [
+   "sea",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Urobatis jamaicensis": {
+  "fact": [
+   "It can change shade to blend into sand or seagrass.",
+   "Puede cambiar de tono para confundirse con la arena o los pastos marinos."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "35 cm",
+  "col": [
+   "yellow",
+   "brown"
+  ],
+  "hab": [
+   "reef",
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Urocyon cinereoargenteus": {
+  "fact": [
+   "It's one of the few members of the dog family that can climb trees.",
+   "Es de los pocos miembros de la familia del perro que pueden trepar árboles."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "90 cm",
+  "col": [
+   "grey",
+   "orange",
+   "white"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Vachellia cornigera": {
+  "fact": [
+   "Ants live inside its hollow thorns and fiercely defend the tree; in return it feeds them nectar and protein-rich leaf tips.",
+   "Las hormigas viven en sus espinas huecas y defienden al árbol con fiereza; a cambio les da néctar y puntas de hoja ricas en proteína."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "5 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Vitex gaumeri": {
+  "fact": [
+   "Known in Maya as ya'axnik, its small blue-purple flowers are an important nectar source for local beekeepers.",
+   "En maya se llama ya'axnik; sus florecitas azul-moradas son una fuente importante de néctar para los apicultores."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "20 m",
+  "col": [
+   "green",
+   "purple"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Volutella muricata": {
+  "fact": [
+   "Its heavy, knobbly shell helps it survive pounding waves; it hunts worms and clams.",
+   "Su concha pesada y nudosa le ayuda a resistir las olas; caza gusanos y almejas."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "10 cm",
+  "col": [
+   "white"
+  ],
+  "hab": [
+   "coast"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Washingtonia robusta": {
+  "fact": [
+   "This fan palm comes from the deserts of northwest Mexico but is planted everywhere for its tall, skinny silhouette.",
+   "Esta palma de abanico viene de los desiertos del noroeste de México, pero se planta en todas partes por su silueta alta y delgada."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "25 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Xestospongia muta": {
+  "fact": [
+   "Some giant barrel sponges are estimated to be over 2,000 years old.",
+   "Se calcula que algunas esponjas de barril gigantes tienen más de 2,000 años."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "2 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Zenaida asiatica": {
+  "fact": [
+   "Its cooing call is often written as 'who cooks for you'.",
+   "Su arrullo se suele describir en inglés como 'who cooks for you'."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "29 cm",
+  "col": [
+   "brown",
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ },
+ "Zinnia elegans": {
+  "fact": [
+   "Native to Mexico, it became a garden favourite worldwide and even bloomed on the International Space Station.",
+   "Nativa de México, se volvió favorita en jardines de todo el mundo y hasta floreció en la Estación Espacial Internacional."
+  ],
+  "about": [
+   "",
+   ""
+  ],
+  "size": "80 cm",
+  "col": [
+   "red",
+   "pink",
+   "orange"
+  ],
+  "hab": [
+   "town"
+  ],
+  "model": "claude-opus-5.5 (written in a Claude Code session)",
+  "date": "2026-09-26"
+ }
+}

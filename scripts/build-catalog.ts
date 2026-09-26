@@ -163,7 +163,7 @@ async function main() {
     '| --- | ---: |',
     ...Object.entries(out.stats).map(([k, v]) => `| ${k.replace('cat.', 'Category: ')} | ${v} |`),
     '',
-    `Text sources: **curated** = hand-written in data/curated.json; **claude** = fun fact, size, colours and habitat written by ${opt.model} from Wikipedia (unverified); **wikipedia** = first sentence of the Wikipedia summary only.`,
+    `Text sources: **curated** = hand-written in data/curated.json; **claude** = fun fact, size, colours and habitat written by Claude, grounded in Wikipedia (unverified); **wikipedia** = first sentence of the Wikipedia summary only.`,
     '',
     claude ? `Claude this run: ${claude.usage.input.toLocaleString()} input + ${claude.usage.output.toLocaleString()} output tokens ≈ **$${claude.usage.usd.toFixed(2)}** (batch pricing).` : 'Claude: not run.',
     pending.length ? `\n${pending.length} batch(es) still processing; the next run collects them.` : '',
