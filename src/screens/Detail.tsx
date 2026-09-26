@@ -3,6 +3,7 @@ import type { Lang } from '../data/types';
 import { COLOURS, HABITATS, IUCN, IUCN_SCALE, type Labels } from '../i18n';
 import type { Card } from '../model';
 import { usePhoto } from '../photos';
+import { useDetail } from '../catalog';
 import { IconArrowLeft, IconCheck, IconMapPin } from '../components/Icons';
 import { Dots, SpeciesCard } from '../components/SpeciesCard';
 
@@ -19,7 +20,8 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const back = useRef<HTMLButtonElement>(null);
   const li = lang === 'es' ? 1 : 0;
-  const photo = usePhoto(c?.s, !!c?.unlocked);
+  const det = useDetail(c?.id);
+  const photo = usePhoto(c?.sci, det?.photo, !!c?.unlocked && !!det);
 
   useEffect(() => {
     if (!open) return;
@@ -29,6 +31,11 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
 
   if (!c) return null;
   const s = c.s;
+  const pick = (p?: [string, string]) => (p ? p[li] || p[1 - li] : '');
+  const fact = pick(det?.fact);
+  const desc = pick(det?.desc);
+  const hab = det?.hab ?? [];
+  const where = det?.where ?? [];
   const statusNote = s.iucn === 'NE' ? L.notEvaluated : IUCN[s.iucn][li] + L.onRedList;
 
   return (
@@ -91,20 +98,24 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
           </div>
         )}
 
-        <div className="callout">
+        {fact && (
+          <div className="callout">
           <div style={{ fontSize: 11, letterSpacing: '.1em', fontWeight: 700, marginBottom: 4, color: c.deep }}>{L.fact}</div>
-          <div style={{ fontFamily: 'var(--font-heading)', fontSize: 18, lineHeight: 1.3, textWrap: 'pretty' }}>{c.fact}</div>
-        </div>
+          <div style={{ fontFamily: 'var(--font-heading)', fontSize: 18, lineHeight: 1.3, textWrap: 'pretty' }}>{fact}</div>
+          </div>
+        )}
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-          <h4 style={{ margin: 0 }}>{L.about}</h4>
-          <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, textWrap: 'pretty' }}>{c.desc}</p>
-        </div>
+        {desc && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <h4 style={{ margin: 0 }}>{L.about}</h4>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, textWrap: 'pretty' }}>{desc}</p>
+          </div>
+        )}
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 8 }}>
           <div className="stat">
             <div className="stat-k">{L.size}</div>
-            <div style={{ fontFamily: 'var(--font-heading)', fontSize: 22 }}>{c.size}</div>
+            <div style={{ fontFamily: 'var(--font-heading)', fontSize: 22 }}>{det?.size || '—'}</div>
           </div>
           <div className="stat">
             <div className="stat-k">{L.rarity}</div>
@@ -135,40 +146,68 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
           <span style={{ fontSize: 13, color: 'var(--color-neutral-700)' }}>{statusNote}</span>
         </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          <h4 style={{ margin: 0 }}>{L.colours}</h4>
-          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
-            {s.col.map((k) => (
-              <span key={k} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13.5 }}>
-                <span style={{ width: 22, height: 22, borderRadius: '50%', border: '2px solid var(--color-neutral-100)', boxShadow: 'var(--shadow-sm)', background: COLOURS[k][2] }} />
-                {COLOURS[k][li]}
-              </span>
-            ))}
+        {s.col.length > 0 && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <h4 style={{ margin: 0 }}>{L.colours}</h4>
+            <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+              {s.col.map((k) => (
+                <span key={k} style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 13.5 }}>
+                  <span style={{ width: 22, height: 22, borderRadius: '50%', border: '2px solid var(--color-neutral-100)', boxShadow: 'var(--shadow-sm)', background: COLOURS[k][2] }} />
+                  {COLOURS[k][li]}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          <h4 style={{ margin: 0 }}>{L.habitat}</h4>
-          <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
-            {s.hab.map((h) => (
-              <span key={h} className="tag tag-accent-2" style={{ fontSize: 13, padding: '5px 12px', fontWeight: 400 }}>
-                {HABITATS[h][li]}
-              </span>
-            ))}
+        {hab.length > 0 && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <h4 style={{ margin: 0 }}>{L.habitat}</h4>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+              {hab.map((h) => (
+                <span key={h} className="tag tag-accent-2" style={{ fontSize: 13, padding: '5px 12px', fontWeight: 400 }}>
+                  {HABITATS[h][li]}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          <h4 style={{ margin: 0 }}>{L.where}</h4>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-            {s.where.map((w) => (
-              <div key={w} className="where">
-                <IconMapPin size={17} style={{ color: 'var(--color-accent-700)', flex: 'none' }} />
-                {w}
+        {where.length > 0 && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <h4 style={{ margin: 0 }}>{L.where}</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+              {where.map((w) => (
+                <div key={w} className="where">
+                  <IconMapPin size={17} style={{ color: 'var(--color-accent-700)', flex: 'none' }} />
+                  {w}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {det && (det.src !== 'curated' || det.wiki) && (
+          <div className="credit" style={{ textAlign: 'left', maxWidth: 'none' }}>
+            {det.src === 'claude' && <div>{L.autoNote}</div>}
+            {det.wiki && (
+              <div>
+                {L.text}:{' '}
+                {(['en', 'es'] as const)
+                  .filter((k) => det.wiki?.[k])
+                  .map((k, i) => (
+                    <span key={k}>
+                      {i > 0 && ' · '}
+                      <a href={det.wiki![k]} target="_blank" rel="noreferrer">
+                        Wikipedia ({k.toUpperCase()})
+                      </a>
+                    </span>
+                  ))}{' '}
+                · CC BY-SA 4.0
               </div>
-            ))}
+            )}
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

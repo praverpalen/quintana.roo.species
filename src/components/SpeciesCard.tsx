@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEven
 import type { Labels } from '../i18n';
 import type { Card } from '../model';
 import { usePhoto } from '../photos';
+import { useDetail } from '../catalog';
 import { IconCheck } from './Icons';
 
 const W = 240;
@@ -73,7 +74,11 @@ function untilt(e: PointerEvent<HTMLDivElement>) {
 }
 
 function Unlocked({ c, L, open, onKey, label }: Inner) {
-  const photo = usePhoto(c.s);
+  const detail = useDetail(c.id);
+  const photo = usePhoto(c.sci, detail?.photo, !!detail);
+  const li = L.lang === 'es' ? 1 : 0;
+  const fact = detail ? detail.fact[li] || detail.fact[1 - li] : '';
+  const size = detail?.size || '—';
   return (
     <div className="sc sc-foil" role="button" tabIndex={0} aria-label={label} onClick={open} onKeyDown={onKey} onPointerMove={tilt} onPointerLeave={untilt}>
       <div className="sc-in" style={{ background: c.tint }}>
@@ -81,7 +86,7 @@ function Unlocked({ c, L, open, onKey, label }: Inner) {
           <span className="sc-name" style={{ color: c.deep }}>{c.name}</span>
           <span className="sc-size">
             <span className="sc-size-k" style={{ color: c.deep }}>{L.sizeShort}</span>
-            <span className="sc-size-v" style={{ color: c.deep }}>{c.size}</span>
+            <span className="sc-size-v" style={{ color: c.deep }}>{size}</span>
           </span>
         </div>
         <div className="sc-sci">{c.sci}</div>
@@ -102,7 +107,7 @@ function Unlocked({ c, L, open, onKey, label }: Inner) {
         </div>
         <div className="sc-fact">
           <div className="sc-fact-k" style={{ color: c.deep }}>{L.fact}</div>
-          <div className="sc-fact-v">{c.fact}</div>
+          <div className="sc-fact-v">{fact}</div>
         </div>
         <div className="sc-foot">
           <span className="sc-rar">

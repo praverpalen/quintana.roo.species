@@ -24,6 +24,7 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,woff2}'],
         runtimeCaching: [
+          { urlPattern: ({ url }) => /\/data\/.*\.json$/.test(url.pathname), handler: 'StaleWhileRevalidate', options: { cacheName: 'catalog', expiration: { maxEntries: 400 } } },
           { urlPattern: /^https:\/\/(inaturalist-open-data\.s3\.amazonaws\.com|static\.inaturalist\.org|upload\.wikimedia\.org)\//, handler: 'CacheFirst', options: { cacheName: 'photos', expiration: { maxEntries: 200 }, cacheableResponse: { statuses: [0, 200] } } },
           { urlPattern: /^https:\/\/api\.inaturalist\.org\//, handler: 'StaleWhileRevalidate', options: { cacheName: 'inat-api', expiration: { maxEntries: 100 } } },
         ],
