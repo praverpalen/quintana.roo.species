@@ -8,10 +8,13 @@ import { shardOf } from './data/shard';
  * The service worker caches both for offline use.
  */
 const base = import.meta.env.BASE_URL;
+declare const __BUILD_ID__: string;
+/** Cache-buster: data changes only arrive with a new deploy, and every deploy has a new build id. */
+const v = `?v=${typeof __BUILD_ID__ === 'string' ? __BUILD_ID__ : 'dev'}`;
 
 let catalogPromise: Promise<Catalog> | null = null;
 export function loadCatalog(): Promise<Catalog> {
-  catalogPromise ??= fetch(`${base}data/catalog.json`).then((r) => {
+  catalogPromise ??= fetch(`${base}data/catalog.json${v}`).then((r) => {
     if (!r.ok) throw new Error(`catalog ${r.status}`);
     return r.json() as Promise<Catalog>;
   });
@@ -42,7 +45,7 @@ const loaded = new Map<string, Detail>();
 function loadShard(i: number): Promise<Record<string, Detail>> {
   let pr = shardCache.get(i);
   if (!pr) {
-    pr = fetch(`${base}data/details/${i}.json`)
+    pr = fetch(`${base}data/details/${i}.json${v}`)
       .then((r) => {
         if (!r.ok) throw new Error(`details ${r.status}`);
         return r.json() as Promise<Record<string, Detail>>;
