@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/organic-6e6b9206-9003-4fb8-a53b-416b55b526fb/styles.css">
+<script src="_ds/organic-6e6b9206-9003-4fb8-a53b-416b55b526fb/_ds_bundle.js"></script>
+<script src="species-data.js"></script>
+<style>body{margin:0;background:var(--color-neutral-300)}a{color:var(--color-accent-700)}a:hover{color:var(--color-accent-800)}input::placeholder{color:var(--color-neutral-600)}</style>
+</helmet>
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;gap:48px;padding:32px;box-sizing:border-box;flex-wrap:wrap">
+  <div style="width:390px;height:844px;flex:none;border-radius:56px;padding:10px;background:var(--color-neutral-900);box-shadow:var(--shadow-lg)">
+    <div style="width:100%;height:100%;border-radius:46px;overflow:hidden;position:relative;display:flex;flex-direction:column;background:var(--color-bg)">
+
+      <div style="height:48px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:6px 30px 0;font:600 15px var(--font-body)">
+        <span>9:41</span>
+        <span style="width:110px;height:30px;border-radius:999px;background:var(--color-neutral-900)"></span>
+        <span style="display:flex;align-items:center;gap:5px"><span style="width:17px;height:10px;border-radius:3px;border:1.5px solid var(--color-text);padding:1px;display:flex"><span style="flex:1;border-radius:1px;background:var(--color-text)"></span></span></span>
+      </div>
+
+      <div ref="{{ scroller }}" style="flex:1;overflow-y:auto;overflow-x:hidden;scrollbar-width:none;padding:0 16px 24px">
+
+        <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:22px;padding-top:10px">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+              <div>
+                <div style="font-size:13px;font-weight:600;color:var(--color-accent-700)">¡Hola! · Quintana Roo</div>
+                <h1 style="margin:2px 0 0;font-size:30px;line-height:1.05;text-wrap:balance">{{ L.homeTitle }}</h1>
+              </div>
+              <div style="display:flex;padding:3px;gap:2px;flex:none;background:var(--color-surface);border-radius:999px">
+                <button onClick="{{ setEn }}" style="border:0;cursor:pointer;padding:6px 11px;border-radius:999px;font:700 11px var(--font-body);background:{{ enBg }};color:{{ enFg }}">EN</button>
+                <button onClick="{{ setEs }}" style="border:0;cursor:pointer;padding:6px 11px;border-radius:999px;font:700 11px var(--font-body);background:{{ esBg }};color:{{ esFg }}">ES</button>
+              </div>
+            </div>
+            <button onClick="{{ goSearch }}" style="display:flex;align-items:center;gap:10px;height:48px;padding:0 18px;border:1px solid var(--color-divider);border-radius:999px;background:var(--color-surface);color:var(--color-neutral-600);font:15px var(--font-body);cursor:pointer;text-align:left" style-hover="border-color:var(--color-neutral-500)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>{{ L.searchPh }}
+            </button>
+            <div onClick="{{ goCollection }}" style="position:relative;overflow:hidden;border-radius:32px;padding:20px 22px;background:var(--color-accent);color:var(--color-neutral-100);cursor:pointer">
+              <span style="position:absolute;width:170px;height:170px;border-radius:50%;right:-50px;top:-60px;background:var(--color-accent-400);opacity:.6"></span>
+              <span style="position:absolute;width:90px;height:90px;border-radius:50%;right:40px;bottom:-50px;background:var(--color-accent-600)"></span>
+              <div style="position:relative;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9">{{ L.progressTitle }}</div>
+              <div style="position:relative;display:flex;align-items:baseline;gap:8px;margin-top:4px"><span style="font-family:var(--font-heading);font-size:48px;line-height:1">{{ spottedCount }}</span><span style="font-size:15px;font-weight:600">{{ L.of }} {{ total }} {{ L.spottedWord }}</span></div>
+              <div style="position:relative;height:10px;border-radius:999px;margin-top:14px;background:var(--color-accent-700)"><div style="height:100%;border-radius:999px;background:var(--color-neutral-100);width:{{ totalPct }}"></div></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <h3 style="margin:0;font-size:20px">{{ L.byCat }}</h3>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <sc-for list="{{ catStats }}" as="cs" hint-placeholder-count="8">
+                  <button onClick="{{ cs.open }}" style="display:flex;align-items:center;gap:12px;padding:10px 14px 10px 10px;border:0;border-radius:22px;background:var(--color-neutral-100);cursor:pointer;text-align:left;font-family:var(--font-body);color:var(--color-text)" style-hover="background:var(--color-neutral-200)">
+                    <span style="width:38px;height:38px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:var(--font-heading);font-size:15px;background:{{ cs.tint }};color:{{ cs.deep }}">{{ cs.done }}</span>
+                    <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:6px">
+                      <span style="display:flex;justify-content:space-between;font-size:14px;font-weight:600"><span>{{ cs.label }}</span><span style="font-weight:400;color:var(--color-neutral-700)">{{ cs.done }}/{{ cs.total }}</span></span>
+                      <span style="height:6px;border-radius:999px;background:var(--color-neutral-200)"><span style="display:block;height:100%;border-radius:999px;background:{{ cs.col }};width:{{ cs.pct }}"></span></span>
+                    </span>
+                  </button>
+                </sc-for>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;justify-content:space-between;align-items:baseline"><h3 style="margin:0;font-size:20px">{{ L.recent }}</h3><button class="btn btn-ghost" onClick="{{ goCollection }}" style="font-size:13px">{{ L.seeAll }}</button></div>
+              <div style="display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:4px 16px 10px">
+                <sc-for list="{{ recentCards }}" as="c" hint-placeholder-count="4">
+                  <div style="flex:none"><dc-import name="SpeciesCard" c="{{ c }}" labels="{{ L }}" zoom="0.55" hint-size="132px,187px"></dc-import></div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isCards }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:12px;padding-top:10px">
+            <h1 style="margin:0;font-size:30px">{{ L.cardsTitle }}</h1>
+            <div style="position:relative">
+              <svg style="position:absolute;left:16px;top:15px;color:var(--color-neutral-600)" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+              <input ref="{{ searchRef }}" class="input" value="{{ q }}" onChange="{{ onQ }}" placeholder="{{ L.searchPh }}" style="height:48px;padding-left:44px;padding-right:44px;font-size:15px">
+              <sc-if value="{{ hasQ }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ clearQ }}" style="position:absolute;right:8px;top:8px;width:32px;height:32px;border:0;border-radius:50%;display:grid;place-items:center;cursor:pointer;background:var(--color-neutral-300);color:var(--color-text)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+              </sc-if>
+            </div>
+            <div style="display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px">
+              <sc-for list="{{ catChips }}" as="ch" hint-placeholder-count="6">
+                <button onClick="{{ ch.onClick }}" style="flex:none;display:flex;align-items:center;gap:6px;height:36px;padding:0 14px 0 10px;border:0;border-radius:999px;cursor:pointer;font:600 13px var(--font-body);white-space:nowrap;background:{{ ch.bg }};color:{{ ch.fg }}">
+                  <span style="width:10px;height:10px;border-radius:50%;background:{{ ch.dot }}"></span>{{ ch.label }}
+                </button>
+              </sc-for>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center">
+              <div style="flex:1;display:flex;padding:3px;gap:2px;background:var(--color-surface);border-radius:999px">
+                <sc-for list="{{ statusSeg }}" as="sg" hint-placeholder-count="3">
+                  <button onClick="{{ sg.onClick }}" style="flex:1;height:32px;border:0;border-radius:999px;cursor:pointer;font:600 12.5px var(--font-body);background:{{ sg.bg }};color:{{ sg.fg }}">{{ sg.label }}</button>
+                </sc-for>
+              </div>
+              <button onClick="{{ toggleFilters }}" style="flex:none;display:flex;align-items:center;gap:6px;height:38px;padding:0 14px;border:1px solid var(--color-divider);border-radius:999px;cursor:pointer;font:600 13px var(--font-body);background:{{ filtBtnBg }};color:{{ filtBtnFg }}">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><line x1="21" x2="14" y1="4" y2="4"></line><line x1="10" x2="3" y1="4" y2="4"></line><line x1="21" x2="12" y1="12" y2="12"></line><line x1="8" x2="3" y1="12" y2="12"></line><line x1="21" x2="16" y1="20" y2="20"></line><line x1="12" x2="3" y1="20" y2="20"></line><line x1="14" x2="14" y1="2" y2="6"></line><line x1="8" x2="8" y1="10" y2="14"></line><line x1="16" x2="16" y1="18" y2="22"></line></svg>{{ filtLabel }}
+              </button>
+            </div>
+            <sc-if value="{{ showFilters }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;gap:14px;padding:16px;border-radius:28px;background:var(--color-neutral-100)">
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700)">{{ L.origin }}</span>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ originOpts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="height:32px;padding:0 14px;border:0;border-radius:999px;cursor:pointer;font:600 12.5px var(--font-body);background:{{ o.bg }};color:{{ o.fg }}">{{ o.label }}</button></sc-for></div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700)">{{ L.colour }} <span style="text-transform:none;letter-spacing:0;font-weight:600;color:var(--color-text)">· {{ colourName }}</span></span>
+                  <div style="display:flex;gap:8px;flex-wrap:wrap"><sc-for list="{{ colourOpts }}" as="o" hint-placeholder-count="10"><button onClick="{{ o.onClick }}" title="{{ o.label }}" style="width:30px;height:30px;border-radius:50%;cursor:pointer;border:2px solid var(--color-neutral-100);background:{{ o.sw }};box-shadow:{{ o.ring }}"></button></sc-for></div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:7px">
+                  <span style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-neutral-700)">{{ L.sort }}</span>
+                  <div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ sortOpts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="height:32px;padding:0 14px;border:0;border-radius:999px;cursor:pointer;font:600 12.5px var(--font-body);background:{{ o.bg }};color:{{ o.fg }}">{{ o.label }}</button></sc-for></div>
+                </div>
+              </div>
+            </sc-if>
+            <div style="display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--color-neutral-700)">
+              <span>{{ resultCount }} {{ L.results }}</span>
+              <sc-if value="{{ anyFilter }}" hint-placeholder-val="{{ false }}"><button class="btn btn-ghost" onClick="{{ clearAll }}" style="font-size:13px">{{ L.clear }}</button></sc-if>
+            </div>
+            <div style="display:grid;gap:12px 12px;grid-template-columns:{{ gridCols }}">
+              <sc-for list="{{ gridCards }}" as="c" hint-placeholder-count="6">
+                <dc-import name="SpeciesCard" c="{{ c }}" labels="{{ L }}" zoom="{{ gridZoom }}" hint-size="173px,245px"></dc-import>
+              </sc-for>
+            </div>
+            <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:40px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--color-neutral-700)">
+                <span style="width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-heading);font-size:30px;background:var(--color-surface)">?</span>
+                <span style="font-size:14px;max-width:240px;text-wrap:pretty">{{ L.empty }}</span>
+                <button class="btn btn-secondary" onClick="{{ clearAll }}">{{ L.clear }}</button>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ isCol }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:14px;padding-top:10px">
+            <div>
+              <h1 style="margin:0;font-size:30px">{{ L.colTitle }}</h1>
+              <div style="font-size:14px;color:var(--color-neutral-700)">{{ spottedCount }} {{ L.of }} {{ total }} {{ L.spottedWord }}</div>
+            </div>
+            <div style="display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px">
+              <sc-for list="{{ colChips }}" as="ch" hint-placeholder-count="6">
+                <button onClick="{{ ch.onClick }}" style="flex:none;display:flex;align-items:center;gap:6px;height:36px;padding:0 14px 0 10px;border:0;border-radius:999px;cursor:pointer;font:600 13px var(--font-body);white-space:nowrap;background:{{ ch.bg }};color:{{ ch.fg }}">
+                  <span style="width:10px;height:10px;border-radius:50%;background:{{ ch.dot }}"></span>{{ ch.label }} <span style="opacity:.7">{{ ch.count }}</span>
+                </button>
+              </sc-for>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="font-size:12px;font-weight:700;color:var(--color-neutral-700)">{{ L.sort }}</span>
+              <div style="display:flex;padding:3px;gap:2px;background:var(--color-surface);border-radius:999px">
+                <sc-for list="{{ colSortOpts }}" as="o" hint-placeholder-count="3"><button onClick="{{ o.onClick }}" style="height:30px;padding:0 13px;border:0;border-radius:999px;cursor:pointer;font:600 12.5px var(--font-body);background:{{ o.bg }};color:{{ o.fg }}">{{ o.label }}</button></sc-for>
+              </div>
+            </div>
+            <div style="display:grid;gap:14px 12px;grid-template-columns:{{ gridCols }}">
+              <sc-for list="{{ colCards }}" as="c" hint-placeholder-count="4">
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <dc-import name="SpeciesCard" c="{{ c }}" labels="{{ L }}" zoom="{{ gridZoom }}" hint-size="173px,245px"></dc-import>
+                  <span style="font-size:11.5px;color:var(--color-neutral-700);padding-left:4px">{{ c.spottedOn }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ colEmpty }}" hint-placeholder-val="{{ false }}">
+              <div style="padding:40px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--color-neutral-700)">
+                <span style="width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-heading);font-size:30px;background:var(--color-surface)">?</span>
+                <span style="font-size:14px;max-width:240px;text-wrap:pretty">{{ L.colEmpty }}</span>
+                <button class="btn btn-primary" onClick="{{ goSearch }}">{{ L.explore }}</button>
+              </div>
+            </sc-if>
+          </div>
+        </sc-if>
+      </div>
+
+      <div style="height:84px;flex:none;display:flex;justify-content:space-around;align-items:flex-start;padding:8px 18px 0;background:var(--color-neutral-100);border-top:1px solid var(--color-divider)">
+        <button onClick="{{ goHome }}" style="display:flex;flex-direction:column;align-items:center;gap:3px;width:92px;border:0;background:transparent;cursor:pointer;font:600 11px var(--font-body);color:{{ tabHomeFg }}">
+          <span style="width:56px;height:32px;border-radius:999px;display:grid;place-items:center;background:{{ tabHomeBg }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg></span>{{ L.tabHome }}
+        </button>
+        <button onClick="{{ goCards }}" style="display:flex;flex-direction:column;align-items:center;gap:3px;width:92px;border:0;background:transparent;cursor:pointer;font:600 11px var(--font-body);color:{{ tabCardsFg }}">
+          <span style="width:56px;height:32px;border-radius:999px;display:grid;place-items:center;background:{{ tabCardsBg }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></span>{{ L.tabCards }}
+        </button>
+        <button onClick="{{ goCollection }}" style="display:flex;flex-direction:column;align-items:center;gap:3px;width:92px;border:0;background:transparent;cursor:pointer;font:600 11px var(--font-body);color:{{ tabColFg }}">
+          <span style="width:56px;height:32px;border-radius:999px;display:grid;place-items:center;background:{{ tabColBg }}"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></span>{{ L.tabCol }}
+        </button>
+      </div>
+
+      <div ref="{{ detailScroller }}" style="position:absolute;inset:0;z-index:10;overflow-y:auto;scrollbar-width:none;background:var(--color-bg);transition:transform .38s cubic-bezier(.2,.8,.2,1);transform:{{ detailX }}">
+        <div style="position:relative;padding:58px 16px 26px;display:flex;justify-content:center;background:{{ d.c.tint }}">
+          <span style="position:absolute;width:260px;height:260px;border-radius:50%;left:-90px;bottom:-110px;opacity:.35;background:{{ d.c.col }}"></span>
+          <span style="position:absolute;width:140px;height:140px;border-radius:50%;right:-40px;top:30px;opacity:.25;background:{{ d.c.col }}"></span>
+          <button onClick="{{ closeDetail }}" style="position:absolute;left:16px;top:54px;width:42px;height:42px;border:0;border-radius:50%;display:grid;place-items:center;cursor:pointer;background:var(--color-neutral-100);color:var(--color-text);box-shadow:var(--shadow-sm)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></button>
+          <div style="position:relative"><dc-import name="SpeciesCard" c="{{ d.c }}" labels="{{ L }}" zoom="0.85" hint-size="204px,289px"></dc-import></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:20px;padding:20px 20px 40px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font:600 12px ui-monospace,Menlo,monospace;color:var(--color-neutral-700)">{{ d.c.no }} · {{ d.c.cat }}</div>
+            <h2 style="margin:0;font-size:30px;line-height:1.05;color:{{ d.c.deep }}">{{ d.c.name }}</h2>
+            <div style="font-size:14px;font-style:italic;color:var(--color-neutral-700)">{{ d.c.sci }}{{ d.mayaLine }}</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
+              <span class="tag" style="font-weight:700;background:{{ d.c.originBg }};color:{{ d.c.originFg }}">{{ d.c.origin }}</span>
+              <span class="tag tag-neutral" style="font-weight:700">{{ d.c.rarity }}</span>
+              <span class="tag tag-neutral" style="font-weight:700">{{ d.c.iucn }} · {{ d.c.iucnLabel }}</span>
+            </div>
+          </div>
+          <sc-if value="{{ d.isSpotted }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;align-items:center;gap:12px;padding:12px 12px 12px 16px;border-radius:999px;background:var(--color-accent-2-200);color:var(--color-accent-2-900)">
+              <span style="width:30px;height:30px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--color-accent-2-700);color:var(--color-neutral-100)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+              <span style="flex:1;font-size:14px;font-weight:600">{{ d.spottedOn }}</span>
+              <button class="btn btn-ghost" onClick="{{ d.toggle }}" style="font-size:13px;color:var(--color-accent-2-800)">{{ L.undo }}</button>
+            </div>
+          </sc-if>
+          <sc-if value="{{ d.notSpotted }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <button class="btn btn-primary" onClick="{{ d.toggle }}" style="height:52px;font-size:17px;gap:8px"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>{{ L.markSpotted }}</button>
+              <span style="font-size:12.5px;color:var(--color-neutral-700);text-align:center">{{ L.notYet }}</span>
+            </div>
+          </sc-if>
+          <div style="position:relative;border-radius:28px 28px 28px 8px;padding:16px 18px;background:var(--color-neutral-100)">
+            <div style="font-size:11px;letter-spacing:.1em;font-weight:700;margin-bottom:4px;color:{{ d.c.deep }}">{{ L.fact }}</div>
+            <div style="font-family:var(--font-heading);font-size:18px;line-height:1.3;text-wrap:pretty">{{ d.c.fact }}</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <h4 style="margin:0">{{ L.about }}</h4>
+            <p style="margin:0;font-size:15px;line-height:1.55;text-wrap:pretty">{{ d.desc }}</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+            <div style="padding:12px 14px;border-radius:22px;background:var(--color-surface)"><div style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-700)">{{ L.size }}</div><div style="font-family:var(--font-heading);font-size:22px">{{ d.c.size }}</div></div>
+            <div style="padding:12px 14px;border-radius:22px;background:var(--color-surface)"><div style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--color-neutral-700)">{{ L.rarity }}</div><div style="display:flex;align-items:center;gap:8px;margin-top:4px"><span style="display:flex;gap:4px"><sc-for list="{{ d.c.dots }}" as="dt" hint-placeholder-count="4"><span style="width:10px;height:10px;border-radius:50%;background:{{ dt.bg }}"></span></sc-for></span><span style="font-size:14px;font-weight:700">{{ d.c.rarity }}</span></div></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h4 style="margin:0">{{ L.status }}</h4>
+            <div style="display:flex;gap:4px">
+              <sc-for list="{{ d.scale }}" as="s" hint-placeholder-count="7">
+                <span style="flex:1;height:34px;border-radius:999px;display:grid;place-items:center;font-size:11.5px;font-weight:700;background:{{ s.bg }};color:{{ s.fg }};transform:{{ s.tf }}">{{ s.code }}</span>
+              </sc-for>
+            </div>
+            <span style="font-size:13px;color:var(--color-neutral-700)">{{ d.statusNote }}</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h4 style="margin:0">{{ L.colours }}</h4>
+            <div style="display:flex;gap:12px;flex-wrap:wrap">
+              <sc-for list="{{ d.colours }}" as="k" hint-placeholder-count="2">
+                <span style="display:flex;align-items:center;gap:6px;font-size:13.5px"><span style="width:22px;height:22px;border-radius:50%;border:2px solid var(--color-neutral-100);box-shadow:var(--shadow-sm);background:{{ k.sw }}"></span>{{ k.label }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h4 style="margin:0">{{ L.habitat }}</h4>
+            <div style="display:flex;gap:6px;flex-wrap:wrap"><sc-for list="{{ d.habitats }}" as="h" hint-placeholder-count="2"><span class="tag tag-accent-2" style="font-size:13px;padding:5px 12px">{{ h.label }}</span></sc-for></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h4 style="margin:0">{{ L.where }}</h4>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <sc-for list="{{ d.where }}" as="w" hint-placeholder-count="2">
+                <div style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:999px;background:var(--color-neutral-100);font-size:14px">
+                  <svg style="color:var(--color-accent-700);flex:none" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>{{ w.label }}
+                </div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:50%;bottom:104px;z-index:20;display:flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;white-space:nowrap;font:700 14px var(--font-body);pointer-events:none;background:var(--color-text);color:var(--color-bg);box-shadow:var(--shadow-lg);transition:opacity .25s, transform .25s;opacity:{{ toastO }};transform:{{ toastT }}">{{ toast }}</div>
+    </div>
+  </div>
+  <div style="max-width:300px;display:flex;flex-direction:column;gap:10px;font-size:14px;color:var(--color-neutral-800)">
+    <h3 style="margin:0">Species Explorer</h3>
+    <p style="margin:0;text-wrap:pretty">A working prototype built on card design 1a. Tap a card to open its page, then tap “I spotted it!” to unlock it. Search, filter by category, colour or origin, and switch between EN and ES on Home.</p>
+    <p style="margin:0;text-wrap:pretty;color:var(--color-neutral-700)">Species data lives in <code>species-data.js</code>. The facts are placeholders to verify before real use. Photos are striped placeholders.</p>
+    <button class="btn btn-secondary" onClick="{{ resetDemo }}" style="align-self:flex-start">Reset demo data</button>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;holo&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Cards&quot;},&quot;gridColumns&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;2&quot;,&quot;3&quot;],&quot;default&quot;:&quot;2&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Cards&quot;}}">
+class Component extends DCLogic {
+  scroller = React.createRef();
+  detailScroller = React.createRef();
+  searchRef = React.createRef();
+  state = (() => {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem('qroo-explorer-v1') || '{}'); } catch (e) {}
+    return {
+      tab: 'home', detailId: 'jaguar', detailOpen: false, toast: '', toastOn: false,
+      lang: saved.lang || 'en', spotted: saved.spotted || Component.SEED,
+      q: '', cat: 'all', color: 'all', origin: 'all', status: 'all', sort: 'no', showFilters: false,
+      colCat: 'all', colSort: 'recent', ready: !!window.QROO_SPECIES,
+    };
+  })();
+  static SEED = { chaca: '2026-06-14', coconut: '2026-06-02', grackle: '2026-06-02', coati: '2026-07-19', ctenosaur: '2026-06-20', lionfish: '2026-08-03', turtle: '2026-08-24', zebra: '2026-09-06', jaguar: '2026-09-18', ceiba: '2026-07-05' };
+
+  componentDidMount() {
+    if (!this.state.ready) this._poll = setInterval(() => { if (window.QROO_SPECIES) { clearInterval(this._poll); this.setState({ ready: true }); } }, 50);
+    this._move = (e) => {
+      const el = e.target.closest && e.target.closest('[data-tilt]');
+      if (this._cur && this._cur !== el) this.resetTilt(this._cur);
+      this._cur = el;
+      if (!el || this.props.holo === false) return;
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      el.style.transform = `perspective(700px) rotateY(${(x - .5) * 14}deg) rotateX(${(.5 - y) * 14}deg) scale(1.03)`;
+      const s = el.querySelector('[data-shine]');
+      if (s) { s.style.setProperty('--mx', x * 100 + '%'); s.style.setProperty('--my', y * 100 + '%'); s.style.setProperty('--o', 1); }
+    };
+    document.addEventListener('pointermove', this._move);
+  }
+  componentWillUnmount() { document.removeEventListener('pointermove', this._move); clearInterval(this._poll); clearTimeout(this._tt); }
+  resetTilt(el) { el.style.transform = ''; const s = el.querySelector('[data-shine]'); if (s) s.style.setProperty('--o', 0); }
+  persist(patch) {
+    this.setState(patch, () => { try { localStorage.setItem('qroo-explorer-v1', JSON.stringify({ lang: this.state.lang, spotted: this.state.spotted })); } catch (e) {} });
+  }
+  go(tab, extra) {
+    this.setState({ tab, detailOpen: false, ...(extra || {}) }, () => { if (this.scroller.current) this.scroller.current.scrollTop = 0; });
+  }
+  open(id) {
+    this.setState({ detailId: id, detailOpen: true }, () => { if (this.detailScroller.current) this.detailScroller.current.scrollTop = 0; });
+  }
+  toggleSpot(id) {
+    const sp = { ...this.state.spotted };
+    const es = this.state.lang === 'es';
+    if (sp[id]) { delete sp[id]; this.persist({ spotted: sp }); return; }
+    sp[id] = new Date().toISOString().slice(0, 10);
+    this.persist({ spotted: sp });
+    this.setState({ toast: es ? '¡Carta desbloqueada!' : 'Card unlocked!', toastOn: true });
+    clearTimeout(this._tt); this._tt = setTimeout(() => this.setState({ toastOn: false }), 1800);
+  }
+
+  renderVals() {
+    const st = this.state, es = st.lang === 'es', i = es ? 1 : 0;
+    const L = es ? {
+      homeTitle: '¿Qué descubrirás hoy?', searchPh: 'Busca una especie…', progressTitle: 'Tu colección', of: 'de', spottedWord: 'avistadas',
+      byCat: 'Por categoría', recent: 'Avistadas recientemente', seeAll: 'Ver todo', tabHome: 'Inicio', tabCards: 'Cartas', tabCol: 'Colección',
+      cardsTitle: 'Todas las cartas', all: 'Todas', spottedF: 'Avistadas', toFind: 'Por encontrar', filters: 'Filtros', origin: 'Origen', colour: 'Color', sort: 'Ordenar',
+      results: 'especies', clear: 'Limpiar filtros', empty: 'Ninguna especie coincide. Prueba otra búsqueda.', colTitle: 'Mi colección', colEmpty: 'Aún no hay cartas aquí. ¡Sal a explorar!', explore: 'Explorar cartas',
+      fact: 'DATO CURIOSO', about: 'Acerca de', size: 'Tamaño', rarity: 'Rareza', status: 'Estado de conservación', colours: 'Colores', habitat: 'Hábitat', where: 'Dónde verlo',
+      markSpotted: '¡Lo vi!', undo: 'Deshacer', notYet: 'Aún no lo has visto. Abajo tienes dónde buscarlo.',
+      sizeShort: 'TAMAÑO', spotted: 'Avistado', notSpotted: 'Por descubrir', unlock: 'Aún no lo has visto. ¡Encuéntralo para desbloquear la carta!'
+    } : {
+      homeTitle: 'What will you spot today?', searchPh: 'Search a species…', progressTitle: 'Your collection', of: 'of', spottedWord: 'spotted',
+      byCat: 'By category', recent: 'Recently spotted', seeAll: 'See all', tabHome: 'Home', tabCards: 'Cards', tabCol: 'Collection',
+      cardsTitle: 'All cards', all: 'All', spottedF: 'Spotted', toFind: 'To find', filters: 'Filters', origin: 'Origin', colour: 'Colour', sort: 'Sort',
+      results: 'species', clear: 'Clear filters', empty: 'No species match. Try another search.', colTitle: 'My collection', colEmpty: 'No cards here yet. Go explore!', explore: 'Explore cards',
+      fact: 'FUN FACT', about: 'About', size: 'Size', rarity: 'Rarity', status: 'Conservation status', colours: 'Colours', habitat: 'Habitat', where: 'Where to spot it',
+      markSpotted: 'I spotted it!', undo: 'Undo', notYet: "You haven't seen it yet. See below for where to look.",
+      sizeShort: 'SIZE', spotted: 'Spotted', notSpotted: 'Not yet spotted', unlock: "You haven't seen this one yet. Spot it to unlock the card!"
+    };
+    const CATS = [
+      ['tree', 'Trees', 'Árboles', 140], ['plant', 'Plants & flowers', 'Plantas y flores', 350], ['bird', 'Birds', 'Aves', 185], ['mammal', 'Mammals', 'Mamíferos', 45],
+      ['reptile', 'Reptiles & amphibians', 'Reptiles y anfibios', 105], ['fish', 'Fish', 'Peces', 250], ['marine', 'Other marine', 'Otros marinos', 215], ['insect', 'Insects', 'Insectos', 305],
+    ].map(([key, en, esn, h]) => ({ key, label: es ? esn : en, single: es ? esn : en, h }));
+    const catBy = Object.fromEntries(CATS.map(c => [c.key, c]));
+    const single = es ? { tree: 'Árbol', plant: 'Planta', bird: 'Ave', mammal: 'Mamífero', reptile: 'Reptil', fish: 'Pez', marine: 'Marino', insect: 'Insecto' }
+      : { tree: 'Tree', plant: 'Plant', bird: 'Bird', mammal: 'Mammal', reptile: 'Reptile', fish: 'Fish', marine: 'Marine', insect: 'Insect' };
+    const COLS = { green: ['Green', 'Verde', 'oklch(0.6 0.12 145)'], brown: ['Brown', 'Café', 'oklch(0.5 0.07 60)'], yellow: ['Yellow', 'Amarillo', 'oklch(0.86 0.15 95)'], orange: ['Orange', 'Naranja', 'oklch(0.72 0.15 55)'], red: ['Red', 'Rojo', 'oklch(0.58 0.17 28)'], pink: ['Pink', 'Rosa', 'oklch(0.78 0.11 355)'], purple: ['Purple', 'Morado', 'oklch(0.55 0.13 310)'], blue: ['Blue', 'Azul', 'oklch(0.6 0.12 240)'], black: ['Black', 'Negro', 'oklch(0.25 0.01 60)'], white: ['White', 'Blanco', 'oklch(0.97 0.01 80)'], grey: ['Grey', 'Gris', 'oklch(0.65 0.01 70)'] };
+    const HAB = { jungle: ['Jungle', 'Selva'], coast: ['Coast & beach', 'Costa y playa'], mangrove: ['Mangrove', 'Manglar'], reef: ['Reef', 'Arrecife'], sea: ['Open sea', 'Mar abierto'], town: ['Towns & gardens', 'Pueblos y jardines'], cenote: ['Cenotes & lagoons', 'Cenotes y lagunas'] };
+    const IUCN = { LC: ['Least concern', 'Preocupación menor'], NT: ['Near threatened', 'Casi amenazada'], VU: ['Vulnerable', 'Vulnerable'], EN: ['Endangered', 'En peligro'], CR: ['Critically endangered', 'En peligro crítico'], NE: ['Not evaluated', 'No evaluada'] };
+    const RAR = es ? ['Común', 'Poco común', 'Rara', 'Legendaria'] : ['Common', 'Uncommon', 'Rare', 'Legendary'];
+    const fmt = (iso) => new Date(iso + 'T12:00:00').toLocaleDateString(es ? 'es-MX' : 'en-US', { day: 'numeric', month: 'short', year: 'numeric' });
+
+    const raw = window.QROO_SPECIES || [];
+    const order = CATS.map(c => c.key);
+    const S = raw.slice().sort((a, b) => order.indexOf(a.cat) - order.indexOf(b.cat));
+    const mk = (s, idx) => {
+      const h = catBy[s.cat].h, isSp = !!st.spotted[s.id];
+      return {
+        id: s.id, no: '#' + String(idx + 1).padStart(3, '0'), sci: s.sci, art: s[es ? 'es' : 'en'][0].toLowerCase() + ' photo', size: s.size,
+        iucn: s.iucn, iucnLabel: IUCN[s.iucn][i], name: s[es ? 'es' : 'en'][0], cat: single[s.cat], fact: s[es ? 'es' : 'en'][1], rarity: RAR[s.n], n: s.n,
+        locked: !isSp, unlocked: isSp, spottedISO: st.spotted[s.id] || '', spottedOn: isSp ? fmt(st.spotted[s.id]) : '',
+        origin: s.nat ? (es ? 'Nativa' : 'Native') : (es ? 'Introducida' : 'Introduced'),
+        originBg: s.nat ? 'var(--color-accent-2-200)' : 'var(--color-accent-200)', originFg: s.nat ? 'var(--color-accent-2-800)' : 'var(--color-accent-800)',
+        col: `oklch(0.62 0.11 ${h})`, deep: `oklch(0.42 0.09 ${h})`, tint: `oklch(0.94 0.035 ${h})`, stripe: `oklch(0.87 0.05 ${h})`,
+        dots: [0, 1, 2, 3].map(k => ({ bg: k <= s.n ? `oklch(0.42 0.09 ${h})` : 'var(--color-neutral-300)' })),
+        dotsGrey: [0, 1, 2, 3].map(k => ({ bg: k <= s.n ? 'var(--color-neutral-600)' : 'var(--color-neutral-300)' })),
+        open: () => this.open(s.id), _s: s,
+      };
+    };
+    const all = S.map(mk);
+    const norm = (t) => (t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const q = norm(st.q.trim());
+    const sorters = { no: () => 0, name: (a, b) => a.name.localeCompare(b.name), rarity: (a, b) => b.n - a.n, recent: (a, b) => b.spottedISO.localeCompare(a.spottedISO) };
+
+    let grid = all.filter(c => {
+      const s = c._s;
+      if (q && ![s.en[0], s.es[0], s.sci, s.maya].some(t => norm(t).includes(q))) return false;
+      if (st.cat !== 'all' && s.cat !== st.cat) return false;
+      if (st.color !== 'all' && !s.col.includes(st.color)) return false;
+      if (st.origin !== 'all' && (st.origin === 'native') !== !!s.nat) return false;
+      if (st.status === 'spotted' && c.locked) return false;
+      if (st.status === 'unspotted' && c.unlocked) return false;
+      return true;
+    });
+    if (st.sort !== 'no') grid = grid.slice().sort(sorters[st.sort]);
+
+    const pill = (on) => on ? { bg: 'var(--color-text)', fg: 'var(--color-bg)' } : { bg: 'var(--color-surface)', fg: 'var(--color-text)' };
+    const seg = (on) => on ? { bg: 'var(--color-neutral-100)', fg: 'var(--color-text)' } : { bg: 'transparent', fg: 'var(--color-neutral-700)' };
+    const catChips = [{ key: 'all', label: L.all, h: null }, ...CATS].map(c => ({
+      label: c.label, ...pill(st.cat === c.key), dot: c.h == null ? 'var(--color-neutral-500)' : `oklch(0.62 0.11 ${c.h})`,
+      onClick: () => this.setState({ cat: c.key }),
+    }));
+    const statusSeg = [['all', L.all], ['spotted', L.spottedF], ['unspotted', L.toFind]].map(([k, label]) => ({ label, ...seg(st.status === k), onClick: () => this.setState({ status: k }) }));
+    const originOpts = [['all', L.all], ['native', es ? 'Nativa' : 'Native'], ['introduced', es ? 'Introducida' : 'Introduced']].map(([k, label]) => ({ label, ...pill(st.origin === k), onClick: () => this.setState({ origin: k }) }));
+    const colourOpts = [['all', es ? 'Todos' : 'Any', 'conic-gradient(oklch(0.6 0.12 145), oklch(0.86 0.15 95), oklch(0.58 0.17 28), oklch(0.6 0.12 240), oklch(0.6 0.12 145))'], ...Object.entries(COLS).map(([k, v]) => [k, v[i], v[2]])]
+      .map(([k, label, sw]) => ({ label, sw, ring: st.color === k ? '0 0 0 2.5px var(--color-text)' : 'var(--shadow-sm)', onClick: () => this.setState({ color: k }) }));
+    const sortOpts = [['no', es ? 'Número' : 'Number'], ['name', 'A–Z'], ['rarity', L.rarity]].map(([k, label]) => ({ label, ...pill(st.sort === k), onClick: () => this.setState({ sort: k }) }));
+    const nFilt = (st.origin !== 'all') + (st.color !== 'all') + (st.sort !== 'no');
+    const anyFilter = !!(q || st.cat !== 'all' || st.status !== 'all' || nFilt);
+
+    const spottedAll = all.filter(c => c.unlocked);
+    const catStats = CATS.map(c => {
+      const list = all.filter(x => x._s.cat === c.key), done = list.filter(x => x.unlocked).length;
+      return { label: c.label, done, total: list.length, pct: list.length ? Math.round(done / list.length * 100) + '%' : '0%', col: `oklch(0.62 0.11 ${c.h})`, deep: `oklch(0.42 0.09 ${c.h})`, tint: `oklch(0.92 0.045 ${c.h})`, open: () => this.go('cards', { cat: c.key, status: 'all', q: '' }) };
+    });
+    const colChips = [{ key: 'all', label: L.all, h: null }, ...CATS].map(c => ({
+      label: c.label, count: c.key === 'all' ? spottedAll.length : spottedAll.filter(x => x._s.cat === c.key).length, key: c.key,
+      ...pill(st.colCat === c.key), dot: c.h == null ? 'var(--color-neutral-500)' : `oklch(0.62 0.11 ${c.h})`, onClick: () => this.setState({ colCat: c.key }),
+    })).filter(c => c.key === 'all' || c.count > 0);
+    const colCards = spottedAll.filter(c => st.colCat === 'all' || c._s.cat === st.colCat).slice().sort(sorters[st.colSort]);
+    const colSortOpts = [['recent', es ? 'Recientes' : 'Recent'], ['name', 'A–Z'], ['rarity', L.rarity]].map(([k, label]) => ({ label, ...seg(st.colSort === k), onClick: () => this.setState({ colSort: k }) }));
+
+    const dc = all.find(c => c.id === st.detailId) || all[0] || mk({ id: 'x', cat: 'tree', sci: '', n: 0, nat: 1, iucn: 'LC', size: '', col: [], hab: [], where: [], maya: '', en: ['', '', ''], es: ['', '', ''] }, 0);
+    const ds = dc._s;
+    const scaleCodes = ['LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX'];
+    const d = {
+      c: dc, desc: ds[es ? 'es' : 'en'][2], mayaLine: ds.maya ? (es ? ' · Maya: ' : ' · Maya: ') + ds.maya : '',
+      isSpotted: dc.unlocked, notSpotted: dc.locked, spottedOn: (es ? 'Avistado el ' : 'Spotted on ') + dc.spottedOn,
+      toggle: () => this.toggleSpot(ds.id),
+      scale: scaleCodes.map(code => { const on = code === ds.iucn; return { code, bg: on ? dc.deep : 'var(--color-neutral-200)', fg: on ? 'var(--color-neutral-100)' : 'var(--color-neutral-600)', tf: on ? 'scale(1.08)' : 'none' }; }),
+      statusNote: ds.iucn === 'NE' ? (es ? 'Aún no evaluada por la UICN.' : 'Not yet evaluated by the IUCN.') : IUCN[ds.iucn][i] + (es ? ' según la Lista Roja de la UICN.' : ' on the IUCN Red List.'),
+      colours: ds.col.map(k => ({ label: COLS[k][i], sw: COLS[k][2] })),
+      habitats: ds.hab.map(k => ({ label: HAB[k][i] })), where: ds.where.map(w => ({ label: w })),
+    };
+
+    const cols = this.props.gridColumns === '3' ? 3 : 2;
+    const tab = (t) => st.tab === t ? { bg: 'var(--color-accent-200)', fg: 'var(--color-accent-800)' } : { bg: 'transparent', fg: 'var(--color-neutral-700)' };
+    const lp = (on) => on ? ['var(--color-text)', 'var(--color-bg)'] : ['transparent', 'var(--color-neutral-700)'];
+    return {
+      L, scroller: this.scroller, detailScroller: this.detailScroller, searchRef: this.searchRef,
+      isHome: st.tab === 'home', isCards: st.tab === 'cards', isCol: st.tab === 'collection',
+      enBg: lp(!es)[0], enFg: lp(!es)[1], esBg: lp(es)[0], esFg: lp(es)[1],
+      setEn: () => this.persist({ lang: 'en' }), setEs: () => this.persist({ lang: 'es' }),
+      spottedCount: spottedAll.length, total: all.length, totalPct: all.length ? Math.round(spottedAll.length / all.length * 100) + '%' : '0%',
+      catStats, recentCards: spottedAll.slice().sort(sorters.recent).slice(0, 6),
+      q: st.q, hasQ: !!st.q, onQ: (e) => this.setState({ q: e.target.value }), clearQ: () => this.setState({ q: '' }),
+      catChips, statusSeg, originOpts, colourOpts, sortOpts, showFilters: st.showFilters,
+      toggleFilters: () => this.setState({ showFilters: !st.showFilters }),
+      filtLabel: nFilt ? `${L.filters} · ${nFilt}` : L.filters,
+      filtBtnBg: st.showFilters || nFilt ? 'var(--color-text)' : 'transparent', filtBtnFg: st.showFilters || nFilt ? 'var(--color-bg)' : 'var(--color-text)',
+      colourName: st.color === 'all' ? (es ? 'Todos' : 'Any') : COLS[st.color][i],
+      resultCount: grid.length, anyFilter, noResults: grid.length === 0,
+      clearAll: () => this.setState({ q: '', cat: 'all', color: 'all', origin: 'all', status: 'all', sort: 'no' }),
+      gridCards: grid, gridCols: `repeat(${cols}, minmax(0,1fr))`, gridZoom: cols === 3 ? 0.47 : 0.72,
+      colChips, colCards, colSortOpts, colEmpty: colCards.length === 0,
+      d, detailX: st.detailOpen ? 'translateX(0)' : 'translateX(100%)', closeDetail: () => this.setState({ detailOpen: false }),
+      toast: st.toast, toastO: st.toastOn ? 1 : 0, toastT: st.toastOn ? 'translate(-50%, 0)' : 'translate(-50%, 12px)',
+      goHome: () => this.go('home'), goCards: () => this.go('cards'), goCollection: () => this.go('collection'),
+      goSearch: () => this.go('cards', {}, true) || setTimeout(() => this.searchRef.current && this.searchRef.current.focus(), 60),
+      tabHomeBg: tab('home').bg, tabHomeFg: tab('home').fg, tabCardsBg: tab('cards').bg, tabCardsFg: tab('cards').fg, tabColBg: tab('collection').bg, tabColFg: tab('collection').fg,
+      resetDemo: () => this.persist({ spotted: { ...Component.SEED }, lang: 'en' }),
+    };
+  }
+}
+</script>
+</body>
+</html>

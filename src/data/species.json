@@ -1,0 +1,922 @@
+[
+ {
+  "id": "ceiba",
+  "cat": "tree",
+  "sci": "Ceiba pentandra",
+  "maya": "Ya'axche'",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "70 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "where": [
+   "Cobá",
+   "Punta Laguna",
+   "Town plazas"
+  ],
+  "en": [
+   "Ceiba",
+   "The sacred Maya world tree: its roots reach the underworld and its crown holds up the sky.",
+   "A giant of the lowland jungle with a straight, buttressed trunk and a wide, flat crown. Young trunks are covered in cone-shaped thorns, and in the dry season its pods release fluffy kapok fibre."
+  ],
+  "es": [
+   "Ceiba",
+   "El árbol sagrado maya: sus raíces llegan al inframundo y su copa sostiene el cielo.",
+   "Un gigante de la selva con tronco recto, contrafuertes y copa ancha y plana. Los troncos jóvenes tienen espinas cónicas y en la temporada seca sus vainas sueltan fibra de kapok."
+  ]
+ },
+ {
+  "id": "zapote",
+  "cat": "tree",
+  "sci": "Manilkara zapota",
+  "maya": "Ya'",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "30 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "where": [
+   "Cobá",
+   "Muyil",
+   "Sian Ka'an"
+  ],
+  "en": [
+   "Sapodilla",
+   "Its sap, chicle, was the original chewing gum. Chicleros tapped these trees all over Quintana Roo.",
+   "A tall evergreen with glossy leaves and sweet brown fruit that tastes like brown sugar and pear. The zigzag scars on old trunks are from chicle tapping."
+  ],
+  "es": [
+   "Chicozapote",
+   "Su savia, el chicle, fue el primer chicle de mascar. Los chicleros sangraban estos árboles por todo Quintana Roo.",
+   "Un árbol alto de hojas brillantes y frutos cafés con sabor a piloncillo y pera. Las cicatrices en zigzag de los troncos viejos son de la extracción de chicle."
+  ]
+ },
+ {
+  "id": "chaca",
+  "cat": "tree",
+  "sci": "Bursera simaruba",
+  "maya": "Chakaj",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "25 m",
+  "col": [
+   "red",
+   "green"
+  ],
+  "hab": [
+   "jungle",
+   "coast",
+   "town"
+  ],
+  "where": [
+   "Tulum ruins",
+   "Puerto Morelos",
+   "Everywhere"
+  ],
+  "en": [
+   "Gumbo-limbo",
+   "Nicknamed the 'tourist tree': its red, peeling bark looks like sunburnt skin.",
+   "Easy to recognise by its shiny copper-red bark that peels in papery sheets. Locals use its sap as a remedy for burns from the poisonwood tree (chechén), which often grows nearby."
+  ],
+  "es": [
+   "Chacá",
+   "Le dicen 'árbol del turista': su corteza roja y pelada parece piel quemada por el sol.",
+   "Se reconoce por su corteza rojiza brillante que se desprende en láminas. Su savia se usa como remedio para las quemaduras del chechén, que suele crecer cerca."
+  ]
+ },
+ {
+  "id": "mangrove",
+  "cat": "tree",
+  "sci": "Rhizophora mangle",
+  "maya": "Tapché",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "10 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "where": [
+   "Sian Ka'an",
+   "Bacalar lagoon",
+   "Isla Blanca"
+  ],
+  "en": [
+   "Red mangrove",
+   "Its stilt roots are a nursery: many reef fish spend their childhood hiding between them.",
+   "Grows right in salt water on arching prop roots. Mangroves protect the coast from hurricanes and filter the water that flows out to the reef."
+  ],
+  "es": [
+   "Mangle rojo",
+   "Sus raíces zancudas son una guardería: muchos peces del arrecife pasan su infancia escondidos ahí.",
+   "Crece directamente en agua salada sobre raíces arqueadas. Los manglares protegen la costa de los huracanes y filtran el agua que llega al arrecife."
+  ]
+ },
+ {
+  "id": "coconut",
+  "cat": "tree",
+  "sci": "Cocos nucifera",
+  "maya": "",
+  "n": 0,
+  "nat": 0,
+  "iucn": "NE",
+  "size": "25 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "coast",
+   "town"
+  ],
+  "where": [
+   "Every beach"
+  ],
+  "en": [
+   "Coconut palm",
+   "Coconuts float and can survive months at sea. That's how palms spread across the tropics.",
+   "The palm on every postcard, but it isn't originally from here. It was brought to the Caribbean coast for copra plantations in the 1800s and 1900s."
+  ],
+  "es": [
+   "Palma de coco",
+   "El coco flota y sobrevive meses en el mar. Así se extendió por los trópicos.",
+   "La palmera de todas las postales, pero no es de aquí: se trajo a la costa del Caribe para plantaciones de copra en los siglos XIX y XX."
+  ]
+ },
+ {
+  "id": "flamboyan",
+  "cat": "tree",
+  "sci": "Delonix regia",
+  "maya": "",
+  "n": 0,
+  "nat": 0,
+  "iucn": "LC",
+  "size": "12 m",
+  "col": [
+   "red",
+   "orange",
+   "green"
+  ],
+  "hab": [
+   "town"
+  ],
+  "where": [
+   "Chetumal streets",
+   "Playa del Carmen"
+  ],
+  "en": [
+   "Flame tree",
+   "It comes from Madagascar, and in May and June it turns whole streets red.",
+   "An umbrella-shaped ornamental tree with fern-like leaves and long, woody seed pods that rattle like maracas."
+  ],
+  "es": [
+   "Flamboyán",
+   "Viene de Madagascar y en mayo y junio pinta de rojo calles enteras.",
+   "Árbol ornamental en forma de sombrilla, con hojas como helecho y largas vainas leñosas que suenan como maracas."
+  ]
+ },
+ {
+  "id": "plumeria",
+  "cat": "plant",
+  "sci": "Plumeria rubra",
+  "maya": "Nikte'",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "8 m",
+  "col": [
+   "white",
+   "pink",
+   "yellow"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "where": [
+   "Tulum ruins",
+   "Gardens"
+  ],
+  "en": [
+   "Frangipani",
+   "Its scent is strongest at night to lure sphinx moths, but it tricks them because it has no nectar.",
+   "A small tree with thick branches and waxy, five-petalled flowers. To the Maya, nikte' flowers were a symbol of love and beauty."
+  ],
+  "es": [
+   "Flor de mayo",
+   "Su aroma es más fuerte de noche para atraer polillas esfinge, pero las engaña: no tiene néctar.",
+   "Arbolito de ramas gruesas y flores cerosas de cinco pétalos. Para los mayas, la flor de nikte' simbolizaba el amor y la belleza."
+  ]
+ },
+ {
+  "id": "chaya",
+  "cat": "plant",
+  "sci": "Cnidoscolus aconitifolius",
+  "maya": "Chaay",
+  "n": 0,
+  "nat": 1,
+  "iucn": "NE",
+  "size": "3 m",
+  "col": [
+   "green"
+  ],
+  "hab": [
+   "town",
+   "jungle"
+  ],
+  "where": [
+   "Backyards",
+   "Local markets"
+  ],
+  "en": [
+   "Chaya",
+   "Known as 'Maya spinach'. Always cook it: the raw leaves contain toxic compounds.",
+   "A fast-growing shrub with large, maple-like leaves. It's rich in protein, iron and calcium, and you'll find it in tamales, eggs and agua de chaya."
+  ],
+  "es": [
+   "Chaya",
+   "La 'espinaca maya'. Hay que cocinarla siempre: cruda tiene compuestos tóxicos.",
+   "Arbusto de crecimiento rápido con hojas grandes. Rica en proteína, hierro y calcio; se come en tamales, huevos y agua de chaya."
+  ]
+ },
+ {
+  "id": "orchid",
+  "cat": "plant",
+  "sci": "Myrmecophila tibicinis",
+  "maya": "",
+  "n": 2,
+  "nat": 1,
+  "iucn": "NE",
+  "size": "1.5 m",
+  "col": [
+   "pink",
+   "purple"
+  ],
+  "hab": [
+   "jungle",
+   "mangrove"
+  ],
+  "where": [
+   "Jardín Botánico Puerto Morelos",
+   "Sian Ka'an"
+  ],
+  "en": [
+   "Cow-horn orchid",
+   "Its hollow pseudobulbs house ant colonies, and the ants guard the orchid in return.",
+   "A large epiphytic orchid that grows on trees and sends up flower spikes up to 1.5 m tall with ruffled pink-purple blooms."
+  ],
+  "es": [
+   "Orquídea cuerno de toro",
+   "Sus pseudobulbos huecos albergan colonias de hormigas que, a cambio, la defienden.",
+   "Orquídea epífita grande que crece sobre árboles y lanza varas florales de hasta 1.5 m con flores rosa-morado."
+  ]
+ },
+ {
+  "id": "motmot",
+  "cat": "bird",
+  "sci": "Eumomota superciliosa",
+  "maya": "Toh",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "34 cm",
+  "col": [
+   "blue",
+   "green",
+   "orange"
+  ],
+  "hab": [
+   "jungle",
+   "cenote"
+  ],
+  "where": [
+   "Cenotes near Tulum",
+   "Cobá"
+  ],
+  "en": [
+   "Turquoise-browed motmot",
+   "It swings its racket-shaped tail like a clock pendulum to tell predators 'I've seen you'.",
+   "Locals call it pájaro reloj. It nests in burrows in the soft walls of cenotes and limestone quarries, and it's the symbol bird of the Yucatán Peninsula."
+  ],
+  "es": [
+   "Pájaro reloj",
+   "Mueve su cola en forma de raqueta como péndulo para decir al depredador 'ya te vi'.",
+   "Anida en túneles en las paredes de cenotes y sascaberas. Es el ave emblema de la Península de Yucatán."
+  ]
+ },
+ {
+  "id": "turkey",
+  "cat": "bird",
+  "sci": "Meleagris ocellata",
+  "maya": "Kuutz",
+  "n": 1,
+  "nat": 1,
+  "iucn": "NT",
+  "size": "90 cm",
+  "col": [
+   "blue",
+   "green",
+   "orange"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "where": [
+   "Cobá",
+   "Punta Laguna"
+  ],
+  "en": [
+   "Ocellated turkey",
+   "It lives only on the Yucatán Peninsula and nowhere else in the world.",
+   "A spectacular wild turkey with iridescent bronze-green feathers, peacock-like eye spots on the tail and a blue head dotted with orange warts."
+  ],
+  "es": [
+   "Pavo ocelado",
+   "Solo existe en la Península de Yucatán, en ningún otro lugar del mundo.",
+   "Un pavo silvestre espectacular con plumas iridiscentes bronce-verde, ocelos en la cola y cabeza azul con verrugas naranjas."
+  ]
+ },
+ {
+  "id": "toucan",
+  "cat": "bird",
+  "sci": "Ramphastos sulfuratus",
+  "maya": "Pan",
+  "n": 1,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "50 cm",
+  "col": [
+   "black",
+   "yellow",
+   "green"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "where": [
+   "Punta Laguna",
+   "Sian Ka'an"
+  ],
+  "en": [
+   "Keel-billed toucan",
+   "Its huge rainbow beak is mostly hollow and light, and it helps the bird cool down.",
+   "Look for small flocks hopping through the canopy and listen for a croaking, frog-like call. It eats mostly fruit but will also take eggs."
+  ],
+  "es": [
+   "Tucán pico canoa",
+   "Su enorme pico multicolor es casi hueco y ligero, y le sirve para regular su temperatura.",
+   "Busca grupitos saltando en el dosel y escucha su canto parecido al de una rana. Come sobre todo fruta, pero también huevos."
+  ]
+ },
+ {
+  "id": "flamingo",
+  "cat": "bird",
+  "sci": "Phoenicopterus ruber",
+  "maya": "",
+  "n": 1,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "1.4 m",
+  "col": [
+   "pink"
+  ],
+  "hab": [
+   "mangrove",
+   "coast"
+  ],
+  "where": [
+   "Holbox",
+   "Yum Balam"
+  ],
+  "en": [
+   "American flamingo",
+   "It's born grey. The pink comes from the carotene in the tiny shrimp it eats.",
+   "It feeds upside-down, filtering mud through its bent beak. Large flocks gather in the shallow lagoons of northern Quintana Roo."
+  ],
+  "es": [
+   "Flamenco rosado",
+   "Nace gris; el rosa viene del caroteno de los camaroncitos que come.",
+   "Se alimenta de cabeza, filtrando lodo con su pico curvo. Se reúne en grandes grupos en las lagunas someras del norte de Quintana Roo."
+  ]
+ },
+ {
+  "id": "grackle",
+  "cat": "bird",
+  "sci": "Quiscalus mexicanus",
+  "maya": "K'au",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "46 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "town",
+   "coast"
+  ],
+  "where": [
+   "Every plaza"
+  ],
+  "en": [
+   "Great-tailed grackle",
+   "The noisy zanate of every plaza. It can make more than a dozen different calls, including whistles and clicks.",
+   "Males are glossy blue-black with a long, keel-shaped tail. Females are smaller and brown. They roost in huge, loud groups at sunset."
+  ],
+  "es": [
+   "Zanate",
+   "El ruidoso de cada plaza: tiene más de una docena de cantos, con silbidos y chasquidos.",
+   "Los machos son negro-azulado brillante con cola larga; las hembras, cafés y más pequeñas. Al atardecer duermen en grupos enormes y ruidosos."
+  ]
+ },
+ {
+  "id": "jaguar",
+  "cat": "mammal",
+  "sci": "Panthera onca",
+  "maya": "Balam",
+  "n": 2,
+  "nat": 1,
+  "iucn": "NT",
+  "size": "1.8 m",
+  "col": [
+   "yellow",
+   "black"
+  ],
+  "hab": [
+   "jungle",
+   "mangrove"
+  ],
+  "where": [
+   "Sian Ka'an",
+   "Selva Maya"
+  ],
+  "en": [
+   "Jaguar",
+   "The Maya called it Balam. Its bite is strong enough to crack a turtle's shell.",
+   "The largest cat in the Americas. Unlike most cats it loves water and swims well. The Yucatán Peninsula holds one of Mexico's most important populations."
+  ],
+  "es": [
+   "Jaguar",
+   "Los mayas lo llamaban Balam. Su mordida puede romper el caparazón de una tortuga.",
+   "El felino más grande de América. A diferencia de otros gatos, ama el agua y nada muy bien. La península alberga una de las poblaciones más importantes de México."
+  ]
+ },
+ {
+  "id": "coati",
+  "cat": "mammal",
+  "sci": "Nasua narica",
+  "maya": "Chi'ik",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "1.2 m",
+  "col": [
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "where": [
+   "Cobá",
+   "Tulum ruins"
+  ],
+  "en": [
+   "White-nosed coati",
+   "It walks with its striped tail straight up like an antenna so the group can keep track of each other.",
+   "Locals call it tejón. Females and young travel in noisy bands of up to 20, sniffing out insects and fruit with their long, flexible snout."
+  ],
+  "es": [
+   "Tejón",
+   "Camina con la cola rayada bien parada, como antena, para que el grupo no se pierda.",
+   "Hembras y crías andan en bandas ruidosas de hasta 20, buscando insectos y fruta con su hocico largo y flexible."
+  ]
+ },
+ {
+  "id": "howler",
+  "cat": "mammal",
+  "sci": "Alouatta pigra",
+  "maya": "Baatz'",
+  "n": 2,
+  "nat": 1,
+  "iucn": "EN",
+  "size": "65 cm",
+  "col": [
+   "black"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "where": [
+   "Punta Laguna",
+   "Chacchoben"
+  ],
+  "en": [
+   "Yucatán black howler",
+   "Its roar can be heard up to 5 km away, one of the loudest calls of any land animal.",
+   "Lives in small family troops high in the canopy and eats mostly leaves, so it spends much of the day resting. You'll usually hear it long before you see it."
+  ],
+  "es": [
+   "Mono aullador negro",
+   "Su rugido se escucha hasta a 5 km: uno de los más fuertes del mundo animal.",
+   "Vive en tropas familiares en lo alto del dosel y come sobre todo hojas, por eso descansa mucho. Casi siempre lo oyes antes de verlo."
+  ]
+ },
+ {
+  "id": "manatee",
+  "cat": "mammal",
+  "sci": "Trichechus manatus",
+  "maya": "",
+  "n": 3,
+  "nat": 1,
+  "iucn": "EN",
+  "size": "3.5 m",
+  "col": [
+   "grey"
+  ],
+  "hab": [
+   "mangrove",
+   "cenote",
+   "coast"
+  ],
+  "where": [
+   "Chetumal Bay",
+   "Sian Ka'an"
+  ],
+  "en": [
+   "Antillean manatee",
+   "Its closest living relatives are elephants. It eats up to 10% of its body weight in seagrass every day.",
+   "Chetumal Bay is a manatee sanctuary. Look for a nose breaking the surface to breathe every few minutes in calm, shallow water."
+  ],
+  "es": [
+   "Manatí antillano",
+   "Su pariente vivo más cercano es el elefante. Come hasta 10% de su peso en pastos marinos al día.",
+   "La Bahía de Chetumal es santuario de manatíes. Busca una nariz que sale a respirar cada pocos minutos en aguas tranquilas."
+  ]
+ },
+ {
+  "id": "ctenosaur",
+  "cat": "reptile",
+  "sci": "Ctenosaura similis",
+  "maya": "Tolok",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "1.3 m",
+  "col": [
+   "grey",
+   "black"
+  ],
+  "hab": [
+   "coast",
+   "town"
+  ],
+  "where": [
+   "Tulum ruins",
+   "Beach rocks"
+  ],
+  "en": [
+   "Black spiny-tailed iguana",
+   "The world's fastest lizard, clocked at about 35 km/h.",
+   "You'll see them sunbathing on every ruin and beach wall. Young ones are bright green, and adults turn grey with dark bands and a spiky tail."
+  ],
+  "es": [
+   "Iguana negra",
+   "La lagartija más rápida del mundo: alcanza unos 35 km/h.",
+   "Toman el sol en cada ruina y muro de playa. Las crías son verde brillante; los adultos, grises con bandas oscuras y cola espinosa."
+  ]
+ },
+ {
+  "id": "croc",
+  "cat": "reptile",
+  "sci": "Crocodylus acutus",
+  "maya": "Aayin",
+  "n": 1,
+  "nat": 1,
+  "iucn": "VU",
+  "size": "4 m",
+  "col": [
+   "grey",
+   "green"
+  ],
+  "hab": [
+   "mangrove",
+   "cenote"
+  ],
+  "where": [
+   "Sian Ka'an",
+   "Nichupté lagoon"
+  ],
+  "en": [
+   "American crocodile",
+   "It can live in both salt water and fresh water and is shy compared to its Nile cousin.",
+   "Rests with only its eyes and nostrils above the water. It's protected in Mexico, so keep your distance and never feed it."
+  ],
+  "es": [
+   "Cocodrilo de río",
+   "Vive en agua salada y dulce, y es tímido comparado con su primo del Nilo.",
+   "Descansa con solo ojos y nariz fuera del agua. Está protegido en México: guarda distancia y nunca lo alimentes."
+  ]
+ },
+ {
+  "id": "lionfish",
+  "cat": "fish",
+  "sci": "Pterois volitans",
+  "maya": "",
+  "n": 0,
+  "nat": 0,
+  "iucn": "LC",
+  "size": "38 cm",
+  "col": [
+   "red",
+   "white"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "where": [
+   "Puerto Morelos",
+   "Cozumel",
+   "Restaurant menus"
+  ],
+  "en": [
+   "Lionfish",
+   "An invader from the Indo-Pacific. Locals help control it by eating it, e.g. in lionfish ceviche.",
+   "It has no natural predators here and eats huge numbers of young reef fish. Its spines are venomous, but the meat is delicious and safe."
+  ],
+  "es": [
+   "Pez león",
+   "Invasor del Indo-Pacífico. Aquí se combate comiéndolo, ¡prueba el ceviche de pez león!",
+   "Aquí no tiene depredadores y devora muchísimos peces juveniles. Sus espinas son venenosas, pero su carne es deliciosa y segura."
+  ]
+ },
+ {
+  "id": "angelfish",
+  "cat": "fish",
+  "sci": "Holacanthus ciliaris",
+  "maya": "",
+  "n": 0,
+  "nat": 1,
+  "iucn": "LC",
+  "size": "45 cm",
+  "col": [
+   "blue",
+   "yellow"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "where": [
+   "Cozumel",
+   "Puerto Morelos reef"
+  ],
+  "en": [
+   "Queen angelfish",
+   "It wears a blue 'crown' spot on its forehead, which gave it its royal name.",
+   "Often seen in pairs gliding over the reef. Young ones work as cleaners, picking parasites off bigger fish."
+  ],
+  "es": [
+   "Pez ángel reina",
+   "Lleva una 'corona' azul en la frente, de ahí su nombre real.",
+   "Suele verse en parejas sobre el arrecife. Los juveniles son limpiadores: quitan parásitos a peces más grandes."
+  ]
+ },
+ {
+  "id": "whaleshark",
+  "cat": "fish",
+  "sci": "Rhincodon typus",
+  "maya": "",
+  "n": 3,
+  "nat": 1,
+  "iucn": "EN",
+  "size": "12 m",
+  "col": [
+   "grey",
+   "white"
+  ],
+  "hab": [
+   "sea"
+  ],
+  "where": [
+   "Holbox",
+   "Isla Mujeres (Jun–Sep)"
+  ],
+  "en": [
+   "Whale shark",
+   "The biggest fish on Earth eats only plankton and tiny fish, which it filters through its huge mouth.",
+   "Every summer hundreds gather off Holbox and Isla Mujeres. Each shark's pattern of white spots is unique, like a fingerprint."
+  ],
+  "es": [
+   "Tiburón ballena",
+   "El pez más grande del planeta solo come plancton, que filtra con su enorme boca.",
+   "Cada verano cientos se reúnen frente a Holbox e Isla Mujeres. Su patrón de manchas es único, como una huella digital."
+  ]
+ },
+ {
+  "id": "turtle",
+  "cat": "marine",
+  "sci": "Chelonia mydas",
+  "maya": "Áak",
+  "n": 1,
+  "nat": 1,
+  "iucn": "EN",
+  "size": "1.2 m",
+  "col": [
+   "green",
+   "brown"
+  ],
+  "hab": [
+   "coast",
+   "reef"
+  ],
+  "where": [
+   "Akumal",
+   "Xcalak"
+  ],
+  "en": [
+   "Green sea turtle",
+   "Akumal means 'place of the turtles' in Maya. Females return to the beach where they hatched to lay eggs.",
+   "Named for the green colour of its fat, not its shell. Adults graze on seagrass in shallow bays, and nesting season runs from May to October."
+  ],
+  "es": [
+   "Tortuga verde",
+   "Akumal significa 'lugar de tortugas' en maya. Las hembras regresan a desovar a la playa donde nacieron.",
+   "Su nombre viene del color verde de su grasa, no del caparazón. Los adultos pastan en bahías someras; anidan de mayo a octubre."
+  ]
+ },
+ {
+  "id": "eagleray",
+  "cat": "marine",
+  "sci": "Aetobatus narinari",
+  "maya": "",
+  "n": 2,
+  "nat": 1,
+  "iucn": "EN",
+  "size": "3 m",
+  "col": [
+   "black",
+   "white"
+  ],
+  "hab": [
+   "reef",
+   "sea"
+  ],
+  "where": [
+   "Playa del Carmen",
+   "Cozumel"
+  ],
+  "en": [
+   "Spotted eagle ray",
+   "It sometimes leaps clean out of the water, and nobody is quite sure why.",
+   "A graceful ray with a dark back covered in white spots and a duck-like snout for digging up clams. It 'flies' through the water in small groups."
+  ],
+  "es": [
+   "Raya águila",
+   "A veces salta por completo fuera del agua, y nadie sabe bien por qué.",
+   "Raya elegante de dorso oscuro con puntos blancos y hocico de pato para desenterrar almejas. 'Vuela' en pequeños grupos."
+  ]
+ },
+ {
+  "id": "elkhorn",
+  "cat": "marine",
+  "sci": "Acropora palmata",
+  "maya": "",
+  "n": 2,
+  "nat": 1,
+  "iucn": "CR",
+  "size": "3.7 m",
+  "col": [
+   "brown",
+   "orange"
+  ],
+  "hab": [
+   "reef"
+  ],
+  "where": [
+   "Puerto Morelos reef",
+   "Xcalak"
+  ],
+  "en": [
+   "Elkhorn coral",
+   "It's an animal, not a plant, and each branch is made of thousands of tiny polyps.",
+   "It once built most of the shallow Caribbean reef crest, but it has lost most of its cover since the 1980s. Restoration projects in Puerto Morelos are replanting it."
+  ],
+  "es": [
+   "Coral cuerno de alce",
+   "Es un animal, no una planta: cada rama son miles de pólipos diminutos.",
+   "Formaba la cresta de los arrecifes someros del Caribe, pero ha perdido gran parte de su cobertura desde los 80. En Puerto Morelos se está replantando."
+  ]
+ },
+ {
+  "id": "zebra",
+  "cat": "insect",
+  "sci": "Heliconius charithonia",
+  "maya": "",
+  "n": 0,
+  "nat": 1,
+  "iucn": "NE",
+  "size": "8 cm",
+  "col": [
+   "black",
+   "yellow"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "where": [
+   "Gardens everywhere"
+  ],
+  "en": [
+   "Zebra longwing",
+   "One of the few butterflies that eats pollen, which lets it live for up to six months.",
+   "Slow, floating flight on long black wings with yellow stripes. At night they roost together in groups on the same branch."
+  ],
+  "es": [
+   "Mariposa cebra",
+   "Una de las pocas mariposas que come polen, así que vive hasta seis meses.",
+   "Vuelo lento y flotante con alas negras de rayas amarillas. De noche duermen juntas en la misma rama."
+  ]
+ },
+ {
+  "id": "leafcutter",
+  "cat": "insect",
+  "sci": "Atta mexicana",
+  "maya": "Sa'akal",
+  "n": 0,
+  "nat": 1,
+  "iucn": "NE",
+  "size": "1.5 cm",
+  "col": [
+   "red",
+   "brown"
+  ],
+  "hab": [
+   "jungle"
+  ],
+  "where": [
+   "Jungle trails"
+  ],
+  "en": [
+   "Leafcutter ant",
+   "They don't eat the leaves. They use them to grow a fungus garden, and the fungus is their food.",
+   "Follow the green 'river' of leaf pieces across the trail. A single colony can hold millions of ants in several castes."
+  ],
+  "es": [
+   "Hormiga arriera",
+   "No se comen las hojas: con ellas cultivan un hongo, que es su alimento.",
+   "Sigue el 'río' verde de hojitas por el sendero. Una colonia puede tener millones de hormigas de varias castas."
+  ]
+ },
+ {
+  "id": "melipona",
+  "cat": "insect",
+  "sci": "Melipona beecheii",
+  "maya": "Xunáan kab",
+  "n": 1,
+  "nat": 1,
+  "iucn": "NE",
+  "size": "1 cm",
+  "col": [
+   "orange",
+   "brown"
+  ],
+  "hab": [
+   "jungle",
+   "town"
+  ],
+  "where": [
+   "Felipe Carrillo Puerto",
+   "Cobá"
+  ],
+  "en": [
+   "Maya stingless bee",
+   "The Maya have kept this stingless bee for over 3,000 years. Its honey was used as medicine.",
+   "Xunáan kab means 'royal lady bee'. Colonies live in hollow logs called jobones, and each produces only about a litre of honey a year."
+  ],
+  "es": [
+   "Abeja melipona",
+   "Los mayas la crían desde hace más de 3,000 años; su miel se usaba como medicina.",
+   "Xunáan kab significa 'señora abeja real'. Vive en troncos huecos llamados jobones y cada colonia da apenas un litro de miel al año."
+  ]
+ }
+]
