@@ -32,7 +32,7 @@ The app loads its catalog at runtime from `public/data/`:
 
 `scripts/build-catalog.ts` generates both. For every species with research-grade iNaturalist observations in Quintana Roo, it:
 
-1. Takes the species list, observation counts, EN/ES names, a CC-licensed photo, the native/introduced flag and the global IUCN status from **iNaturalist**.
+1. Takes the species list, observation counts, EN/ES names, the native/introduced flag and the global IUCN status from **iNaturalist**, plus an openly licensed (CC) photo: the default photo, else another of the taxon's photos, else the most-voted research-grade observation photo from Quintana Roo.
 2. Takes the EN and ES summaries (CC BY-SA, credited in the app) from **Wikipedia**.
 3. Uses **Claude** (Batches API, half price) in two jobs:
    - It classifies plants as tree or not, 100 names per request.
@@ -59,6 +59,10 @@ npm run build-catalog -- --offline        # rebuild from data/ and the local cac
 Claude batches usually finish within an hour but can take up to 24. If a run stops waiting, the batch id is saved in `data/pending-batches.json` and the next run collects it. The report lists the tokens used and the cost at batch prices.
 
 To correct or improve a species, add it to `data/curated.json`, matched by scientific name. Curated entries always win.
+
+## Your own photos
+
+On a species page, **Add my photo** opens the camera or photo library. Photos are downscaled to 1600 px and stored **only on this phone** (IndexedDB); they are never uploaded. Adding a photo marks the species as spotted, and your newest photo replaces the stock photo on the card. Deleting the app or clearing its site data deletes them.
 
 ## Storage
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { Photo } from './data/types';
+import { photoUrl } from './data/shard';
 
 /**
  * Species photos. Baked-in photos (from `npm run fetch-species`) win. Otherwise the
@@ -33,31 +34,44 @@ function writeCache(sci: string, p: Photo | null) {
   }
 }
 
+interface InatPhotoJson {
+  url?: string;
+  medium_url?: string;
+  attribution?: string;
+  license_code?: string | null;
+}
 interface InatTaxon {
   name: string;
   rank: string;
-  default_photo?: { medium_url?: string; attribution?: string; license_code?: string | null } | null;
+  default_photo?: InatPhotoJson | null;
+  taxon_photos?: { photo: InatPhotoJson }[];
+}
+
+function toPhoto(p: InatPhotoJson | null | undefined): Photo | null {
+  const url = p?.medium_url || p?.url?.replace(/\/(square|small|thumb)\./, '/medium.');
+  if (!url || !p?.license_code) return null;
+  return { url, attribution: p.attribution || '', license: p.license_code.toUpperCase(), source: 'iNaturalist' };
 }
 
 /** Pick the exact-name species match and turn its default photo into a Photo, if openly licensed. */
 export function photoFromInat(sci: string, results: InatTaxon[]): Photo | null {
   const t = results.find((r) => r.name.toLowerCase() === sci.toLowerCase());
-  const dp = t?.default_photo;
-  if (!dp?.medium_url || !dp.license_code) return null;
-  return { url: dp.medium_url, attribution: dp.attribution || '', license: dp.license_code.toUpperCase(), source: 'iNaturalist' };
+  if (!t) return null;
+  // The default photo is often all-rights-reserved; fall back to the taxon's other photos.
+  return toPhoto(t.default_photo) ?? (t.taxon_photos || []).map((tp) => toPhoto(tp.photo)).find(Boolean) ?? null;
 }
 
-export async function fetchInatPhoto(sci: string, fetcher: typeof fetch = fetch): Promise<Photo | null> {
-  const res = await fetcher(`https://api.inaturalist.org/v1/taxa?q=${encodeURIComponent(sci)}&per_page=5`);
+export async function fetchInatPhoto(sci: string, taxonId?: number, fetcher: typeof fetch = fetch): Promise<Photo | null> {
+  const res = await fetcher(taxonId ? `https://api.inaturalist.org/v1/taxa/${taxonId}` : `https://api.inaturalist.org/v1/taxa?q=${encodeURIComponent(sci)}&per_page=5`);
   if (!res.ok) throw new Error(`iNaturalist ${res.status}`);
   const json = (await res.json()) as { results: InatTaxon[] };
   return photoFromInat(sci, json.results || []);
 }
 
-function loadPhoto(sci: string): Promise<Photo | null> {
+function loadPhoto(sci: string, taxonId?: number): Promise<Photo | null> {
   let p = inflight.get(sci);
   if (!p) {
-    p = fetchInatPhoto(sci)
+    p = fetchInatPhoto(sci, taxonId)
       .then((photo) => {
         writeCache(sci, photo);
         return photo;
@@ -70,7 +84,7 @@ function loadPhoto(sci: string): Promise<Photo | null> {
 }
 
 /** A species photo: the one baked into the catalog, else an openly licensed iNaturalist photo fetched at runtime. */
-export function usePhoto(sci: string | undefined, preset: Photo | undefined, enabled = true): Photo | null {
+export function usePhoto(sci: string | undefined, preset: Photo | undefined, enabled = true, taxonId?: number): Photo | null {
   const cached = sci ? readCache()[sci] : undefined;
   const initial = preset || (cached && Date.now() - cached.t < TTL ? cached.p : null);
   const [photo, setPhoto] = useState<Photo | null>(initial);
@@ -81,7 +95,7 @@ export function usePhoto(sci: string | undefined, preset: Photo | undefined, ena
     const c = readCache()[sci];
     if (c && Date.now() - c.t < TTL) return;
     let live = true;
-    loadPhoto(sci).then((p) => live && p && setPhoto(p));
+    loadPhoto(sci, taxonId).then((p) => live && p && setPhoto(p));
     return () => {
       live = false;
     };
@@ -89,4 +103,20 @@ export function usePhoto(sci: string | undefined, preset: Photo | undefined, ena
   }, [sci, preset?.url, enabled]);
 
   return photo;
+}
+
+/** The photo a card or detail page shows: your newest photo, else the catalog photo, else a runtime iNaturalist photo. */
+export function useSpeciesPhoto(
+  s: { sci: string; t?: number; p?: string } | undefined,
+  detailPhoto: Photo | undefined,
+  mine: Blob | undefined,
+  mineUrl: string | undefined,
+  opts: { runtime: boolean; size?: 'medium' | 'large' },
+): { url: string; credit?: Photo; own: boolean } | null {
+  const catalog = s?.p ? photoUrl(s.p, opts.size) : undefined;
+  const fallback = usePhoto(s?.sci, detailPhoto, opts.runtime && !catalog && !mine, s?.t);
+  if (mine && mineUrl) return { url: mineUrl, own: true };
+  if (catalog) return { url: catalog, credit: detailPhoto, own: false };
+  if (fallback) return { url: opts.size === 'large' ? photoUrl(fallback.url, 'large') : fallback.url, credit: fallback, own: false };
+  return null;
 }

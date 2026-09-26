@@ -10,6 +10,12 @@ describe('photoFromInat', () => {
     ]);
     expect(p).toEqual({ url: 'https://x/medium.jpg', attribution: photo.attribution, license: 'CC-BY', source: 'iNaturalist' });
   });
+  it('falls back to an openly licensed taxon photo', () => {
+    const p = photoFromInat('Sphyraena barracuda', [
+      { name: 'Sphyraena barracuda', rank: 'species', default_photo: { ...photo, license_code: null }, taxon_photos: [{ photo: { url: 'https://x/2/square.jpg', attribution: 'b', license_code: 'cc-by-nc' } }] },
+    ]);
+    expect(p).toMatchObject({ url: 'https://x/2/medium.jpg', license: 'CC-BY-NC' });
+  });
   it('rejects all-rights-reserved photos and non-matches', () => {
     expect(photoFromInat('Panthera onca', [{ name: 'Panthera onca', rank: 'species', default_photo: { ...photo, license_code: null } }])).toBeNull();
     expect(photoFromInat('Panthera onca', [{ name: 'Panthera leo', rank: 'species', default_photo: photo }])).toBeNull();

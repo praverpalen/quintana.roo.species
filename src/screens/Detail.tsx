@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import type { Lang } from '../data/types';
 import { COLOURS, HABITATS, IUCN, IUCN_SCALE, type Labels } from '../i18n';
 import type { Card } from '../model';
-import { usePhoto } from '../photos';
+import { useSpeciesPhoto } from '../photos';
+import { addMyPhoto, deleteMyPhoto, useBlobUrl, useMyPhotos, type MyPhoto } from '../myPhotos';
 import { useDetail } from '../catalog';
-import { IconArrowLeft, IconCheck, IconMapPin } from '../components/Icons';
+import { IconArrowLeft, IconCamera, IconCheck, IconMapPin, IconTrash, IconX } from '../components/Icons';
 import { Dots, SpeciesCard } from '../components/SpeciesCard';
 
 interface Props {
@@ -21,7 +23,13 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
   const back = useRef<HTMLButtonElement>(null);
   const li = lang === 'es' ? 1 : 0;
   const det = useDetail(c?.id);
-  const photo = usePhoto(c?.sci, det?.photo, !!c?.unlocked && !!det);
+  const photo = useSpeciesPhoto(c?.s, det?.photo, undefined, undefined, { runtime: !!det, size: 'large' });
+  const mine = useMyPhotos(c?.id);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [viewer, setViewer] = useState<{ url: string; caption: string; own?: MyPhoto } | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => setViewer(null), [c?.id, open]);
 
   useEffect(() => {
     if (!open) return;
@@ -36,6 +44,7 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
   const desc = pick(det?.desc);
   const hab = det?.hab ?? [];
   const where = det?.where ?? [];
+  const credit = photo?.credit ? `${L.photo}: ${photo.credit.attribution} · ${photo.credit.license} · ${photo.credit.source}` : '';
   const statusNote = s.iucn === 'NE' ? L.notEvaluated : IUCN[s.iucn][li] + L.onRedList;
 
   return (
@@ -49,11 +58,6 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
         <div style={{ position: 'relative' }}>
           <SpeciesCard c={c} L={L} scale={0.85} />
         </div>
-        {c.unlocked && photo && (
-          <div className="credit">
-            {L.photo}: {photo.attribution} · {photo.license} · {photo.source}
-          </div>
-        )}
       </div>
 
       <div className="d-body">
@@ -97,6 +101,49 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
             <span style={{ fontSize: 12.5, color: 'var(--color-neutral-700)', textAlign: 'center' }}>{L.notYet}</span>
           </div>
         )}
+
+        {photo && (
+          <div>
+            <button className={'d-photo' + (c.unlocked ? '' : ' grey')} onClick={() => setViewer({ url: photo.url, caption: credit })} aria-label={L.enlarge}>
+              <img src={photo.url} alt={c.name} loading="lazy" />
+            </button>
+            {credit && <div className="d-photo-credit">{credit}</div>}
+          </div>
+        )}
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+          <h4 style={{ margin: 0 }}>{L.myPhotos}</h4>
+          {mine.length > 0 && (
+            <div className="mine-grid">
+              {mine.map((m) => (
+                <MineThumb key={m.key} m={m} L={L} onOpen={(url) => setViewer({ url, caption: `${L.yourPhoto} · ${m.date}`, own: m })} />
+              ))}
+            </div>
+          )}
+          <button className="add-photo" disabled={busy} onClick={() => fileRef.current?.click()}>
+            <IconCamera size={18} />
+            {L.addPhoto}
+          </button>
+          <input
+            ref={fileRef}
+            type="file"
+            accept="image/*"
+            hidden
+            onChange={async (e) => {
+              const file = e.target.files?.[0];
+              e.target.value = '';
+              if (!file) return;
+              setBusy(true);
+              try {
+                await addMyPhoto(c.id, file);
+                if (!c.unlocked) onToggle(c.id);
+              } finally {
+                setBusy(false);
+              }
+            }}
+          />
+          <span style={{ fontSize: 12, color: 'var(--color-neutral-700)' }}>{L.photoLocal}</span>
+        </div>
 
         {fact && (
           <div className="callout">
@@ -209,6 +256,41 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
           </div>
         )}
       </div>
+
+      {viewer &&
+        createPortal(
+        <div className="lightbox" role="dialog" aria-modal="true" aria-label={c.name} onClick={() => setViewer(null)}>
+          <button className="lb-close" onClick={() => setViewer(null)} aria-label={L.close}>
+            <IconX size={18} />
+          </button>
+          <img src={viewer.url} alt={c.name} onClick={(e) => e.stopPropagation()} />
+          <div className="lightbox-bar" onClick={(e) => e.stopPropagation()}>
+            <span style={{ flex: 1 }}>{viewer.caption}</span>
+            {viewer.own && (
+              <button
+                className="lb-btn"
+                onClick={async () => {
+                  if (!confirm(L.confirmDelete)) return;
+                  await deleteMyPhoto(viewer.own!.key);
+                  setViewer(null);
+                }}
+              >
+                <IconTrash size={15} /> {L.deletePhoto}
+              </button>
+            )}
+          </div>
+        </div>,
+          document.querySelector('.shell') ?? document.body,
+        )}
     </div>
+  );
+}
+
+function MineThumb({ m, L, onOpen }: { m: MyPhoto; L: Labels; onOpen: (url: string) => void }) {
+  const url = useBlobUrl(m.blob);
+  return (
+    <button onClick={() => url && onOpen(url)} aria-label={`${L.yourPhoto} ${m.date}`}>
+      {url && <img src={url} alt="" />}
+    </button>
   );
 }

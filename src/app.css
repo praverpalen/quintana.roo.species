@@ -170,7 +170,7 @@ input::placeholder { color: var(--color-neutral-600); }
   height: 112px; flex: none; border-radius: 8px; border: 3px solid var(--color-accent-300); display: flex; align-items: flex-end; padding: 6px;
   position: relative; overflow: hidden;
 }
-.sc-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; max-width: none; }
+.sc-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; max-width: none; }
 .sc-art-label { font: 10px ui-monospace, Menlo, monospace; color: var(--color-neutral-700); background: var(--color-neutral-100); padding: 2px 6px; border-radius: 6px; line-height: 1.55; }
 .sc-meta { display: flex; justify-content: space-between; align-items: center; gap: 6px; font-size: 10px; color: var(--color-neutral-800); }
 .sc-no { font-size: 10px; font-weight: 600; white-space: nowrap; }
@@ -211,3 +211,24 @@ input::placeholder { color: var(--color-neutral-600); }
 
 /* Our own clear button replaces the native one. */
 .search input::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/* Locked card: the photo shows through greyed out, with a small "?" badge. */
+.sc-art-grey { filter: grayscale(1) contrast(0.85) brightness(1.08); opacity: 0.6; }
+.sc-art-q { position: relative; z-index: 1; }
+.sc-art-q-small { width: 30px; height: 30px; font-size: 17px; position: absolute; right: 6px; bottom: 6px; box-shadow: var(--shadow-sm); }
+
+/* Detail: the full photo, uncropped, plus your own photos */
+.d-photo { position: relative; width: 100%; border: 0; padding: 0; border-radius: 28px; overflow: hidden; background: var(--color-surface); cursor: zoom-in; display: block; }
+.d-photo img { display: block; width: 100%; max-height: 62vh; object-fit: contain; }
+.d-photo.grey img { filter: grayscale(1) contrast(0.9); opacity: 0.75; }
+.d-photo-credit { font-size: 11px; color: var(--color-neutral-700); line-height: 1.35; margin-top: 6px; }
+.mine-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.mine-grid button { border: 0; padding: 0; aspect-ratio: 1; border-radius: 16px; overflow: hidden; background: var(--color-surface); cursor: zoom-in; }
+.mine-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.add-photo { display: flex; align-items: center; justify-content: center; gap: 8px; height: 46px; border-radius: 999px; border: 1.5px dashed var(--color-neutral-500); background: transparent; color: var(--color-text); font: 600 14px var(--font-body); cursor: pointer; width: 100%; }
+.add-photo:hover { background: color-mix(in srgb, var(--color-text) 6%, transparent); }
+.lightbox { position: absolute; inset: 0; z-index: 30; background: rgba(18, 16, 14, 0.94); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: calc(16px + env(safe-area-inset-top)) 12px calc(16px + env(safe-area-inset-bottom)); }
+.lightbox img { max-width: 100%; max-height: calc(100% - 90px); object-fit: contain; border-radius: 12px; }
+.lightbox-bar { display: flex; gap: 8px; margin-top: 12px; align-items: center; color: #f5ead8; font-size: 11.5px; text-align: center; max-width: 340px; }
+.lightbox .lb-btn { display: inline-flex; align-items: center; gap: 6px; border: 0; border-radius: 999px; padding: 10px 16px; font: 600 14px var(--font-body); cursor: pointer; background: #f5ead8; color: var(--color-text); }
+.lightbox .lb-close { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: 12px; width: 42px; height: 42px; border-radius: 50%; border: 0; display: grid; place-items: center; background: #f5ead8; color: var(--color-text); cursor: pointer; }
