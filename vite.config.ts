@@ -6,6 +6,8 @@ import { VitePWA } from 'vite-plugin-pwa';
 // BASE is set by the GitHub Pages workflow (e.g. /quintana.roo.species/).
 export default defineConfig({
   base: process.env.BASE || '/',
+  // Each build gets its own id; data URLs carry it so no HTTP or service-worker cache can serve an older catalog.
+  define: { __BUILD_ID__: JSON.stringify(Date.now().toString(36)) },
   plugins: [
     react(),
     VitePWA({
