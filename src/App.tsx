@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import raw from './data/species.json';
-import type { CatKey, Species } from './data/types';
+import type { Catalog, CatKey } from './data/types';
 import { LABELS } from './i18n';
-import { buildCards, EMPTY_FILTERS, orderSpecies, type ColSort, type Filters } from './model';
+import { buildCards, EMPTY_FILTERS, type ColSort, type Filters } from './model';
+import { useCatalog } from './catalog';
 import { usePersisted } from './store';
 import { Home } from './screens/Home';
 import { CardsScreen } from './screens/Cards';
@@ -10,12 +10,31 @@ import { Collection } from './screens/Collection';
 import { Detail } from './screens/Detail';
 import { TabBar, type Tab } from './components/TabBar';
 
-const SPECIES = orderSpecies(raw as Species[]);
-
 export default function App() {
-  const { lang, spotted, setLang, toggleSpotted } = usePersisted();
+  const persisted = usePersisted();
+  const { catalog, error, retry } = useCatalog();
+  const L = LABELS[persisted.lang];
+  if (!catalog) {
+    return (
+      <div className="shell">
+        <div className="empty" style={{ margin: 'auto' }}>
+          <span className="empty-q">{error ? '!' : '?'}</span>
+          <span className="empty-msg">{error ? L.loadError : L.loading}</span>
+          {error && (
+            <button className="btn btn-secondary" onClick={retry}>
+              {L.retry}
+            </button>
+          )}
+        </div>
+      </div>
+    );
+  }
+  return <Explorer catalog={catalog} {...persisted} />;
+}
+
+function Explorer({ catalog, lang, spotted, setLang, toggleSpotted }: { catalog: Catalog } & ReturnType<typeof usePersisted>) {
   const L = LABELS[lang];
-  const cards = useMemo(() => buildCards(SPECIES, spotted, lang), [spotted, lang]);
+  const cards = useMemo(() => buildCards(catalog.species, spotted, lang), [catalog, spotted, lang]);
 
   const [tab, setTab] = useState<Tab>('home');
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
@@ -23,7 +42,7 @@ export default function App() {
   const [colCat, setColCat] = useState<CatKey | 'all'>('all');
   const [colSort, setColSort] = useState<ColSort>('recent');
   const [detailId, setDetailId] = useState<string | null>(null);
-  const [lastDetail, setLastDetail] = useState(SPECIES[0]?.id);
+  const [lastDetail, setLastDetail] = useState(catalog.species[0]?.id);
   const [toast, setToast] = useState({ text: '', on: false });
 
   const scroller = useRef<HTMLDivElement>(null);

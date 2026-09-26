@@ -3,6 +3,7 @@ export type Iucn = 'LC' | 'NT' | 'VU' | 'EN' | 'CR' | 'EW' | 'EX' | 'NE' | 'DD';
 export type ColourKey = 'green' | 'brown' | 'yellow' | 'orange' | 'red' | 'pink' | 'purple' | 'blue' | 'black' | 'white' | 'grey';
 export type HabitatKey = 'jungle' | 'coast' | 'mangrove' | 'reef' | 'sea' | 'town' | 'cenote';
 export type Lang = 'en' | 'es';
+export type Pair = [en: string, es: string];
 
 /** Photo credit as returned by iNaturalist / Wikimedia. Always show attribution. */
 export interface Photo {
@@ -12,14 +13,16 @@ export interface Photo {
   source: string;
 }
 
-export interface Species {
+/**
+ * A hand-written species from the design handoff (data/curated.json).
+ * The catalog pipeline merges these over the generated data.
+ */
+export interface CuratedSpecies {
   id: string;
   cat: CatKey;
   sci: string;
   maya: string;
-  /** Rarity 0 common … 3 legendary */
   n: 0 | 1 | 2 | 3;
-  /** 1 native, 0 introduced */
   nat: 0 | 1;
   iucn: Iucn;
   size: string;
@@ -29,6 +32,48 @@ export interface Species {
   /** [name, fun fact, description] */
   en: [string, string, string];
   es: [string, string, string];
+}
+
+/** One row of public/data/catalog.json: everything the grid, search and filters need. */
+export interface IndexEntry {
+  id: string;
+  cat: CatKey;
+  sci: string;
+  /** Common names */
+  en: string;
+  es: string;
+  maya?: string;
+  /** Rarity 0 common … 3 legendary */
+  n: 0 | 1 | 2 | 3;
+  /** 1 native, 0 introduced */
+  nat: 0 | 1;
+  iucn: Iucn;
+  col: ColourKey[];
+  /** Research-grade iNaturalist observations in Quintana Roo */
+  obs?: number;
+  /** iNaturalist taxon id */
+  t?: number;
+  /** 1 when hand-curated */
+  cur?: 1;
+}
+
+export interface Catalog {
+  generated: string;
+  /** Number of detail shards in public/data/details/ */
+  shards: number;
+  species: IndexEntry[];
+}
+
+/** Heavier per-species content, loaded on demand from a detail shard. */
+export interface Detail {
+  fact: Pair;
+  desc: Pair;
+  size?: string;
+  hab?: HabitatKey[];
+  where?: string[];
   photo?: Photo;
-  inat?: { id: number; obsQRoo?: number };
+  /** Wikipedia article URLs used as the text source */
+  wiki?: { en?: string; es?: string };
+  /** Where fact/size/colours/habitat came from */
+  src: 'curated' | 'claude' | 'wikipedia';
 }

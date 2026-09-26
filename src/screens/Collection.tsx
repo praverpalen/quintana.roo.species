@@ -2,6 +2,7 @@ import type { CatKey, Lang } from '../data/types';
 import { CATS, catColours, type Labels } from '../i18n';
 import { sortCards, type Card, type ColSort } from '../model';
 import { SpeciesCard } from '../components/SpeciesCard';
+import { Paged } from '../components/Paged';
 
 interface Props {
   cards: Card[];
@@ -56,12 +57,17 @@ export function Collection({ cards, L, lang, cat, setCat, sort, setSort, onExplo
       </div>
 
       <div className="grid" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: '14px 12px' }}>
-        {list.map((c) => (
-          <div key={c.id} style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
-            <SpeciesCard c={c} L={L} scale="fill" onOpen={onOpen} />
-            <span style={{ fontSize: 11.5, color: 'var(--color-neutral-700)', paddingLeft: 4 }}>{c.spottedOn}</span>
-          </div>
-        ))}
+        <Paged
+          items={list}
+          resetKey={`${activeCat}|${sort}`}
+          label={L.showMore}
+          render={(c) => (
+            <div key={c.id} style={{ display: 'flex', flexDirection: 'column', gap: 5 }}>
+              <SpeciesCard c={c} L={L} scale="fill" onOpen={onOpen} />
+              <span style={{ fontSize: 11.5, color: 'var(--color-neutral-700)', paddingLeft: 4 }}>{c.spottedOn}</span>
+            </div>
+          )}
+        />
       </div>
 
       {list.length === 0 && (

@@ -1,9 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import raw from './data/species.json';
-import type { Species } from './data/types';
-import { anyFilter, buildCards, EMPTY_FILTERS, filterCards, orderSpecies, panelFilterCount, sortCards } from './model';
+import curated from '../data/curated.json';
+import type { CuratedSpecies } from './data/types';
+import { buildCatalog } from '../scripts/catalog/pure';
+import { anyFilter, buildCards, EMPTY_FILTERS, filterCards, panelFilterCount, sortCards } from './model';
 
-const SPECIES = orderSpecies(raw as Species[]);
+const SPECIES = buildCatalog({ gathered: [], curated: curated as CuratedSpecies[], enrichment: {}, trees: {}, generated: '' }).index;
 const cards = (spotted = {}) => buildCards(SPECIES, spotted, 'en');
 
 describe('ordering and numbering', () => {
@@ -71,11 +72,11 @@ describe('localisation', () => {
   });
 });
 
-describe('seed data', () => {
+describe('curated data', () => {
   it('has unique ids and valid enums', () => {
-    const ids = SPECIES.map((s) => s.id);
+    const ids = (curated as CuratedSpecies[]).map((s) => s.id);
     expect(new Set(ids).size).toBe(ids.length);
-    for (const s of SPECIES) {
+    for (const s of curated as CuratedSpecies[]) {
       expect(['LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX', 'NE', 'DD']).toContain(s.iucn);
       expect(s.en).toHaveLength(3);
       expect(s.es).toHaveLength(3);

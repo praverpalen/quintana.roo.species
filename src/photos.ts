@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import type { Photo, Species } from './data/types';
+import type { Photo } from './data/types';
 
 /**
  * Species photos. Baked-in photos (from `npm run fetch-species`) win. Otherwise the
@@ -69,24 +69,24 @@ function loadPhoto(sci: string): Promise<Photo | null> {
   return p;
 }
 
-export function usePhoto(s: Species | undefined, enabled = true): Photo | null {
-  const sci = s?.sci || '';
+/** A species photo: the one baked into the catalog, else an openly licensed iNaturalist photo fetched at runtime. */
+export function usePhoto(sci: string | undefined, preset: Photo | undefined, enabled = true): Photo | null {
   const cached = sci ? readCache()[sci] : undefined;
-  const initial = s?.photo || (cached && Date.now() - cached.t < TTL ? cached.p : null);
+  const initial = preset || (cached && Date.now() - cached.t < TTL ? cached.p : null);
   const [photo, setPhoto] = useState<Photo | null>(initial);
 
   useEffect(() => {
     setPhoto(initial);
-    if (!s || s.photo || !enabled) return;
-    const c = readCache()[s.sci];
+    if (!sci || preset || !enabled) return;
+    const c = readCache()[sci];
     if (c && Date.now() - c.t < TTL) return;
     let live = true;
-    loadPhoto(s.sci).then((p) => live && p && setPhoto(p));
+    loadPhoto(sci).then((p) => live && p && setPhoto(p));
     return () => {
       live = false;
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [sci, enabled]);
+  }, [sci, preset?.url, enabled]);
 
   return photo;
 }

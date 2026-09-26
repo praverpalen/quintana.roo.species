@@ -1,4 +1,4 @@
-import type { CatKey, ColourKey, Lang, Species } from './data/types';
+import type { CatKey, ColourKey, IndexEntry, Lang } from './data/types';
 import { CATS, COLOURS, IUCN, RARITY, catColours, fmtDate } from './i18n';
 
 export type Spotted = Record<string, string>;
@@ -7,21 +7,18 @@ export type Origin = 'all' | 'native' | 'introduced';
 export type Sort = 'no' | 'name' | 'rarity';
 export type ColSort = 'recent' | 'name' | 'rarity';
 
-/** Everything a card or the detail screen needs, already localised. */
+/** Everything a card face or list needs, already localised. Text content lives in the lazily loaded Detail. */
 export interface Card {
   id: string;
-  s: Species;
+  s: IndexEntry;
   no: string;
   name: string;
   sci: string;
   cat: string;
   catKey: CatKey;
-  fact: string;
-  desc: string;
-  size: string;
   n: number;
   rarity: string;
-  iucn: Species['iucn'];
+  iucn: IndexEntry['iucn'];
   iucnLabel: string;
   native: boolean;
   origin: string;
@@ -34,26 +31,18 @@ export interface Card {
   stripe: string;
 }
 
-const CAT_ORDER = CATS.map((c) => c.key);
 const catBy = Object.fromEntries(CATS.map((c) => [c.key, c])) as Record<CatKey, (typeof CATS)[number]>;
 
-/** Stable species order: grouped by category, source order within a category. */
-export function orderSpecies(raw: Species[]): Species[] {
-  return raw
-    .map((s, i) => ({ s, i }))
-    .sort((a, b) => CAT_ORDER.indexOf(a.s.cat) - CAT_ORDER.indexOf(b.s.cat) || a.i - b.i)
-    .map((x) => x.s);
-}
-
-export function buildCards(ordered: Species[], spotted: Spotted, lang: Lang): Card[] {
+/** Entries arrive from the catalog already in card-number order. */
+export function buildCards(entries: IndexEntry[], spotted: Spotted, lang: Lang): Card[] {
   const li = lang === 'es' ? 1 : 0;
-  return ordered.map((s, idx) => {
+  const width = Math.max(3, String(entries.length).length);
+  return entries.map((s, idx) => {
     const c = catBy[s.cat];
     const iso = spotted[s.id] || '';
-    const t = s[lang];
     return {
-      id: s.id, s, no: '#' + String(idx + 1).padStart(3, '0'), name: t[0], sci: s.sci, cat: c.one[li], catKey: s.cat,
-      fact: t[1], desc: t[2], size: s.size, n: s.n, rarity: RARITY[lang][s.n], iucn: s.iucn, iucnLabel: IUCN[s.iucn][li],
+      id: s.id, s, no: '#' + String(idx + 1).padStart(width, '0'), name: s[lang], sci: s.sci, cat: c.one[li], catKey: s.cat,
+      n: s.n, rarity: RARITY[lang][s.n], iucn: s.iucn, iucnLabel: IUCN[s.iucn][li],
       native: !!s.nat, origin: s.nat ? (li ? 'Nativa' : 'Native') : (li ? 'Introducida' : 'Introduced'),
       unlocked: !!iso, spottedISO: iso, spottedOn: iso ? fmtDate(iso, lang) : '',
       ...catColours(c.h),
@@ -63,6 +52,14 @@ export function buildCards(ordered: Species[], spotted: Spotted, lang: Lang): Ca
 
 /** Lower-case and strip accents so "tucan" finds "Tucán". */
 export const norm = (t: string) => (t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+// Normalised search text per species, computed once.
+const hay = new WeakMap<IndexEntry, string>();
+function haystack(s: IndexEntry): string {
+  let h = hay.get(s);
+  if (h == null) hay.set(s, (h = [s.en, s.es, s.sci, s.maya ?? ''].map(norm).join('|')));
+  return h;
+}
 
 export interface Filters {
   q: string;
@@ -89,7 +86,7 @@ export function sortCards(cards: Card[], by: Sort | ColSort): Card[] {
 export function filterCards(cards: Card[], f: Filters): Card[] {
   const q = norm(f.q.trim());
   const out = cards.filter(({ s, unlocked }) => {
-    if (q && ![s.en[0], s.es[0], s.sci, s.maya].some((t) => norm(t).includes(q))) return false;
+    if (q && !haystack(s).includes(q)) return false;
     if (f.cat !== 'all' && s.cat !== f.cat) return false;
     if (f.color !== 'all' && !s.col.includes(f.color)) return false;
     if (f.origin !== 'all' && (f.origin === 'native') !== !!s.nat) return false;

@@ -1,9 +1,10 @@
-import type { RefObject } from 'react';
+import { useDeferredValue, useMemo, type RefObject } from 'react';
 import type { ColourKey, Lang } from '../data/types';
 import { ANY_SWATCH, CATS, COLOURS, catColours, type Labels } from '../i18n';
 import { anyFilter, colourName, EMPTY_FILTERS, filterCards, panelFilterCount, type Card, type Filters, type Origin, type Sort, type Status } from '../model';
 import { IconSearch, IconSliders, IconX } from '../components/Icons';
 import { SpeciesCard } from '../components/SpeciesCard';
+import { Paged } from '../components/Paged';
 
 interface Props {
   cards: Card[];
@@ -19,7 +20,9 @@ interface Props {
 
 export function CardsScreen({ cards, L, lang, f, setF, showFilters, setShowFilters, searchRef, onOpen }: Props) {
   const li = lang === 'es' ? 1 : 0;
-  const grid = filterCards(cards, f);
+  // Filtering thousands of cards on every keystroke is deferred so typing never lags.
+  const deferred = useDeferredValue(f);
+  const grid = useMemo(() => filterCards(cards, deferred), [cards, deferred]);
   const nFilt = panelFilterCount(f);
   const pill = (on: boolean) => 'pill-btn ' + (on ? 'on' : 'off');
 
@@ -110,9 +113,7 @@ export function CardsScreen({ cards, L, lang, f, setF, showFilters, setShowFilte
       </div>
 
       <div className="grid" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' }}>
-        {grid.map((c) => (
-          <SpeciesCard key={c.id} c={c} L={L} scale="fill" onOpen={onOpen} />
-        ))}
+        <Paged items={grid} resetKey={JSON.stringify(deferred)} label={L.showMore} render={(c) => <SpeciesCard key={c.id} c={c} L={L} scale="fill" onOpen={onOpen} />} />
       </div>
 
       {grid.length === 0 && (

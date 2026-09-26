@@ -1,0 +1,63 @@
+name: Update species data
+
+# Rebuilds the species catalog from iNaturalist + Wikipedia, has Claude write content
+# for the next batch of species, and opens a pull request with the result.
+on:
+  workflow_dispatch:
+    inputs:
+      max_enrich:
+        description: 'How many more species Claude writes content for this run (0 = none)'
+        default: '300'
+      model:
+        description: 'Claude model'
+        default: 'claude-opus-5'
+        type: choice
+        options: [claude-opus-5, claude-sonnet-5, claude-haiku-4-5]
+      wait_minutes:
+        description: 'Minutes to wait for Claude batches before leaving them for the next run'
+        default: '240'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-data
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Restore iNaturalist / Wikipedia cache
+        uses: actions/cache@v4
+        with:
+          path: data/.cache
+          key: species-cache-${{ github.run_id }}
+          restore-keys: species-cache-
+      - name: Build catalog
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: >
+          npm run build-catalog --
+          --max-enrich "${{ inputs.max_enrich }}"
+          --model "${{ inputs.model }}"
+          --wait-minutes "${{ inputs.wait_minutes }}"
+      - run: npm test
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data/update-species
+          commit-message: 'Update species catalog'
+          title: 'Update species catalog'
+          body-path: data/catalog-report.md
+          add-paths: |
+            data/*.json
+            data/catalog-report.md
+            public/data/**

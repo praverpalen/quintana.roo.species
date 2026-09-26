@@ -26,20 +26,43 @@ npx playwright test               # screenshots land in test-results/shots/
 
 ## Species data
 
-- `src/data/species.json` is the catalogue: 29 seed species taken from the design handoff. Its schema is in `src/data/types.ts`.
-- **The fun facts and descriptions are placeholders written during design and must be verified.**
-- `npm run fetch-species` checks every species against **iNaturalist** and **GBIF**. It needs internet access to `api.inaturalist.org` and `api.gbif.org`.
-  - It adds a CC-licensed photo with its attribution and the iNaturalist taxon id.
-  - It counts research-grade observations in Quintana Roo.
-  - It writes `scripts/verification-report.md` listing IUCN, name, rarity and taxonomy differences.
-  - It never overwrites names, facts or rarity. `--apply` updates only the IUCN status. `--only jaguar,ceiba` limits the run to the species you list.
-- Until photos are baked in, the app fetches each spotted species' iNaturalist default photo in the browser. It only uses CC-licensed photos, caches them for 30 days and shows the credit on the detail screen.
+The app loads its catalog at runtime from `public/data/`:
+- `catalog.json` holds every species' names, category, rarity, IUCN status and colours. It's small enough to search instantly.
+- `details/*.json` holds fun facts, descriptions, sizes, photos and sources, split into shards of about 40 species that load on demand.
 
-To add a species, append an entry to `species.json`. Card numbers are derived from the category order (tree, plant, bird, mammal, reptile, fish, marine, insect), so adding a tree renumbers every card after it.
+`scripts/build-catalog.ts` generates both. For every species with research-grade iNaturalist observations in Quintana Roo, it:
+
+1. Takes the species list, observation counts, EN/ES names, a CC-licensed photo, the native/introduced flag and the global IUCN status from **iNaturalist**.
+2. Takes the EN and ES summaries (CC BY-SA, credited in the app) from **Wikipedia**.
+3. Uses **Claude** (Batches API, half price) in two jobs:
+   - It classifies plants as tree or not, 100 names per request.
+   - It writes a fun fact, size, colours and habitat for the most-observed species that don't have them yet, up to `--max-enrich` per run. Results are saved in `data/enrichment.json`, so every run continues where the last one stopped.
+4. Computes rarity from observation counts within each category: the top 40% are Common, then 30% Uncommon, 20% Rare and 10% Legendary.
+5. Merges `data/curated.json` on top. These are the 29 hand-written species; they keep their text, Maya names and rarity, but take the IUCN status from iNaturalist.
+
+Species without Claude content show the first sentence of their Wikipedia summary as the card text. Claude-written content is marked in the app as automatic and may contain mistakes.
+
+### Running it
+
+**GitHub (recommended):** go to **Actions → Update species data → Run workflow**. It opens a pull request with the new data and a report (`data/catalog-report.md`); merging it deploys the new catalog. It needs:
+- An `ANTHROPIC_API_KEY` repository secret (**Settings → Secrets and variables → Actions**). Without it the run still works but skips Claude.
+- **Settings → Actions → General → Workflow permissions → "Allow GitHub Actions to create and approve pull requests"** turned on.
+
+**Locally:**
+
+```bash
+ANTHROPIC_API_KEY=... npm run build-catalog -- --max-enrich 300
+npm run build-catalog -- --no-claude      # iNaturalist + Wikipedia only
+npm run build-catalog -- --offline        # rebuild from data/ and the local cache, no network
+```
+
+Claude batches usually finish within an hour but can take up to 24. If a run stops waiting, the batch id is saved in `data/pending-batches.json` and the next run collects it. The report lists the tokens used and the cost at batch prices.
+
+To correct or improve a species, add it to `data/curated.json`, matched by scientific name. Curated entries always win.
 
 ## Storage
 
-Spotted dates and the language are stored in `localStorage` under the key `qroo-explorer-v1`. They stay on the device. Clearing site data resets the collection.
+Spotted dates and the language are stored in `localStorage` under the key `qroo-explorer-v1`, keyed by species id. Curated species keep their short ids (`jaguar`); generated ones use their scientific name (`quiscalus-mexicanus`), so ids stay stable when the catalog is rebuilt. They stay on the device. Clearing site data resets the collection.
 
 ## Design
 
