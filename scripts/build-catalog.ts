@@ -14,7 +14,7 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { Catalog, CatKey, CuratedSpecies } from '../src/data/types';
+import type { Catalog, CatKey, CuratedSpecies, Detail } from '../src/data/types';
 import { buildCatalog, type Enrichment, type Gathered } from './catalog/pure';
 import { addWikipedia, gatherInat, type WikiCache } from './catalog/sources';
 import { ClaudeContent, DEFAULT_MODEL, type Pending } from './catalog/claude';
@@ -42,6 +42,36 @@ function args() {
     waitMinutes: Number(val('--wait-minutes') ?? 300),
     only: val('--only')?.split(',') as CatKey[] | undefined,
   };
+}
+
+/**
+ * Reconstructs the gathered species from the published catalog, so an offline rebuild
+ * (e.g. after editing data/trees.json or data/enrichment.json) works without the network cache.
+ */
+function gatheredFromPublished(): Gathered[] {
+  const cat = readJSON<Catalog | null>(p('public/data/catalog.json'), null);
+  if (!cat) return [];
+  const details: Record<string, Detail> = {};
+  for (let i = 0; i < cat.shards; i++) Object.assign(details, readJSON<Record<string, Detail>>(p(`public/data/details/${i}.json`), {}));
+  return cat.species
+    .filter((e) => e.t != null)
+    .map((e) => {
+      const d = details[e.id];
+      const wiki = (lang: 'en' | 'es', i: 0 | 1) => (d?.wiki?.[lang] && d.desc[i] ? { title: e.sci, extract: d.desc[i], url: d.wiki[lang]! } : undefined);
+      return {
+        taxonId: e.t!,
+        sci: e.sci,
+        // Trees are re-derived from data/trees.json; curated categories are re-applied from data/curated.json.
+        cat: e.cat === 'tree' ? 'plant' : e.cat,
+        obs: e.obs ?? 0,
+        ...(e.cur ? {} : { nameEn: e.en !== e.sci ? e.en : undefined, nameEs: e.es !== e.en ? e.es : undefined }),
+        introduced: !e.nat,
+        iucn: e.iucn === 'NE' ? null : e.iucn,
+        ...(d?.photo ? { photo: d.photo } : {}),
+        ...(wiki('en', 0) ? { wikiEn: wiki('en', 0) } : {}),
+        ...(wiki('es', 1) ? { wikiEs: wiki('es', 1) } : {}),
+      } as Gathered;
+    });
 }
 
 async function main() {
@@ -82,7 +112,8 @@ async function main() {
   const cacheFile = p('data/.cache/gathered.json');
   if (opt.offline) {
     gathered = readJSON<Gathered[]>(cacheFile, []);
-    log(gathered.length ? `Offline: using ${gathered.length} cached species` : 'Offline: no cache, building from curated data only');
+    if (!gathered.length) gathered = gatheredFromPublished();
+    log(gathered.length ? `Offline: rebuilding ${gathered.length} species without network` : 'Offline: nothing cached, building from curated data only');
   } else {
     const wikiCache = readJSON<WikiCache>(p('data/.cache/wiki.json'), {});
     const raw = await gatherInat({ only: opt.only, log });

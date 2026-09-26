@@ -1,6 +1,6 @@
 # Catalog build report
 
-Built 2026-09-26 02:25 UTC from iNaturalist research-grade observations in Quintana Roo + Wikipedia.
+Built 2026-09-26 02:32 UTC from cached data (offline).
 
 | | Species |
 | --- | ---: |
@@ -8,8 +8,8 @@ Built 2026-09-26 02:25 UTC from iNaturalist research-grade observations in Quint
 | claude | 0 |
 | wikipedia | 3851 |
 | noText | 1486 |
-| Category: tree | 6 |
-| Category: plant | 1359 |
+| Category: tree | 251 |
+| Category: plant | 1114 |
 | Category: bird | 503 |
 | Category: mammal | 112 |
 | Category: reptile | 129 |

@@ -56,12 +56,13 @@ export function firstSentence(text: string | undefined): string {
  * Rarity from observation counts, ranked within each category:
  * top 40% common, next 30% uncommon, next 20% rare, last 10% legendary.
  */
-export function rarityByRank<T extends { cat: CatKey; obs?: number }>(items: T[]): Map<T, 0 | 1 | 2 | 3> {
+export function rarityByRank<T extends { cat: CatKey; obs?: number; sci?: string }>(items: T[]): Map<T, 0 | 1 | 2 | 3> {
   const out = new Map<T, 0 | 1 | 2 | 3>();
   const byCat = new Map<CatKey, T[]>();
   for (const it of items) byCat.set(it.cat, [...(byCat.get(it.cat) || []), it]);
   for (const list of byCat.values()) {
-    const sorted = list.slice().sort((a, b) => (b.obs ?? 0) - (a.obs ?? 0));
+    // Ties (many species share a count) break on scientific name so rebuilds are deterministic.
+    const sorted = list.slice().sort((a, b) => (b.obs ?? 0) - (a.obs ?? 0) || (a.sci ?? '').localeCompare(b.sci ?? ''));
     sorted.forEach((it, i) => {
       const r = i / sorted.length;
       out.set(it, r < 0.4 ? 0 : r < 0.7 ? 1 : r < 0.9 ? 2 : 3);
