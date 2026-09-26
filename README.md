@@ -64,6 +64,10 @@ To correct or improve a species, add it to `data/curated.json`, matched by scien
 
 On a species page, **Add my photo** opens the camera or photo library. Photos are downscaled to 1600 px and stored **only on this phone** (IndexedDB); they are never uploaded. Adding a photo marks the species as spotted, and your newest photo replaces the stock photo on the card. Deleting the app or clearing its site data deletes them.
 
+## Backup
+
+**Collection → Backup → Export backup** saves one `qroo-species-backup-YYYY-MM-DD.json` file with your spotted dates and all your own photos (on phones via the share sheet, so you can pick *Save to Files* → iCloud Drive). **Import backup** merges such a file back in: species you already spotted keep their date, photos already present are skipped, nothing is deleted.
+
 ## Storage
 
 Spotted dates and the language are stored in `localStorage` under the key `qroo-explorer-v1`, keyed by species id. Curated species keep their short ids (`jaguar`); generated ones use their scientific name (`quiscalus-mexicanus`), so ids stay stable when the catalog is rebuilt. They stay on the device. Clearing site data resets the collection.

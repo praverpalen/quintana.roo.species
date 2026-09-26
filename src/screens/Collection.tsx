@@ -3,6 +3,7 @@ import { CATS, catColours, type Labels } from '../i18n';
 import { sortCards, type Card, type ColSort } from '../model';
 import { SpeciesCard } from '../components/SpeciesCard';
 import { Paged } from '../components/Paged';
+import { BackupPanel } from '../components/BackupPanel';
 
 interface Props {
   cards: Card[];
@@ -14,9 +15,11 @@ interface Props {
   setSort: (s: ColSort) => void;
   onExplore: () => void;
   onOpen: (id: string) => void;
+  onExport: () => Promise<boolean>;
+  onImport: (file: File) => Promise<void>;
 }
 
-export function Collection({ cards, L, lang, cat, setCat, sort, setSort, onExplore, onOpen }: Props) {
+export function Collection({ cards, L, lang, cat, setCat, sort, setSort, onExplore, onOpen, onExport, onImport }: Props) {
   const spotted = cards.filter((c) => c.unlocked);
   const chips = [
     { key: 'all' as const, label: L.all, dot: 'var(--color-neutral-500)', count: spotted.length },
@@ -79,6 +82,8 @@ export function Collection({ cards, L, lang, cat, setCat, sort, setSort, onExplo
           </button>
         </div>
       )}
+
+      <BackupPanel L={L} onExport={onExport} onImport={onImport} />
     </div>
   );
 }

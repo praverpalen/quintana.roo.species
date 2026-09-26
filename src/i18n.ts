@@ -13,6 +13,10 @@ const en = {
   sizeShort: 'SIZE', spotted: 'Spotted', notSpotted: 'Not yet spotted', unlock: "You haven't seen this one yet. Spot it to unlock the card!",
   unlocked: 'Card unlocked!', spottedOn: 'Spotted on ', notEvaluated: 'Not yet evaluated by the IUCN.', onRedList: ' on the IUCN Red List.',
   back: 'Back', clearSearch: 'Clear search', photo: 'Photo', text: 'Text', autoNote: 'Fun fact, size, colours and habitat were written by Claude (AI) and may contain mistakes.', loading: 'Loading species…', loadError: "Couldn't load the species list. Check your connection.", retry: 'Try again', showMore: 'Show more', myPhotos: 'My photos', addPhoto: 'Add my photo', yourPhoto: 'Your photo', deletePhoto: 'Delete', close: 'Close', confirmDelete: 'Delete this photo?', photoLocal: 'Saved only on this phone. Adding a photo marks the species as spotted.', enlarge: 'Show photo full screen',
+  backupTitle: 'Backup', backupText: 'Your spotted cards and your own photos are stored only on this phone. Export a backup file and keep it in iCloud Drive or Google Drive; import it to restore.',
+  backupLast: 'Last backup:', backupNever: 'No backup yet.', exportBtn: 'Export backup', importBtn: 'Import backup',
+  exported: 'Backup saved', importConfirm: 'Import this backup from {date}? It adds {spotted} spotted cards and {photos} photos. Nothing already in the app is removed.',
+  imported: 'Imported {spotted} cards and {photos} photos', importBad: "That file isn't a Species Explorer backup.", exportFail: "Couldn't create the backup.",
 };
 export type Labels = typeof en;
 
@@ -29,6 +33,10 @@ const es: Labels = {
   sizeShort: 'TAMAÑO', spotted: 'Avistado', notSpotted: 'Por descubrir', unlock: 'Aún no lo has visto. ¡Encuéntralo para desbloquear la carta!',
   unlocked: '¡Carta desbloqueada!', spottedOn: 'Avistado el ', notEvaluated: 'Aún no evaluada por la UICN.', onRedList: ' según la Lista Roja de la UICN.',
   back: 'Volver', clearSearch: 'Borrar búsqueda', photo: 'Foto', text: 'Texto', autoNote: 'El dato curioso, tamaño, colores y hábitat los escribió Claude (IA) y pueden tener errores.', loading: 'Cargando especies…', loadError: 'No se pudo cargar la lista de especies. Revisa tu conexión.', retry: 'Reintentar', showMore: 'Ver más', myPhotos: 'Mis fotos', addPhoto: 'Agregar mi foto', yourPhoto: 'Tu foto', deletePhoto: 'Borrar', close: 'Cerrar', confirmDelete: '¿Borrar esta foto?', photoLocal: 'Se guarda solo en este teléfono. Agregar una foto marca la especie como avistada.', enlarge: 'Ver foto en pantalla completa',
+  backupTitle: 'Respaldo', backupText: 'Tus cartas avistadas y tus fotos se guardan solo en este teléfono. Exporta un archivo de respaldo y guárdalo en iCloud Drive o Google Drive; impórtalo para recuperarlo.',
+  backupLast: 'Último respaldo:', backupNever: 'Aún no hay respaldo.', exportBtn: 'Exportar respaldo', importBtn: 'Importar respaldo',
+  exported: 'Respaldo guardado', importConfirm: '¿Importar este respaldo del {date}? Agrega {spotted} cartas avistadas y {photos} fotos. No se borra nada de lo que ya tienes.',
+  imported: 'Se importaron {spotted} cartas y {photos} fotos', importBad: 'Ese archivo no es un respaldo de Species Explorer.', exportFail: 'No se pudo crear el respaldo.',
 };
 
 export const LABELS: Record<Lang, Labels> = { en, es };

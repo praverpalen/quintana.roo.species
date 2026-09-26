@@ -3,6 +3,9 @@ import type { Catalog, CatKey } from './data/types';
 import { LABELS } from './i18n';
 import { buildCards, EMPTY_FILTERS, type ColSort, type Filters } from './model';
 import { useCatalog } from './catalog';
+import { buildBackup, readBackup, saveBackup } from './backup';
+import { importMyPhotos } from './myPhotos';
+import { fmtDate } from './i18n';
 import { usePersisted } from './store';
 import { Home } from './screens/Home';
 import { CardsScreen } from './screens/Cards';
@@ -32,7 +35,7 @@ export default function App() {
   return <Explorer catalog={catalog} {...persisted} />;
 }
 
-function Explorer({ catalog, lang, spotted, setLang, toggleSpotted }: { catalog: Catalog } & ReturnType<typeof usePersisted>) {
+function Explorer({ catalog, lang, spotted, setLang, toggleSpotted, mergeSpotted }: { catalog: Catalog } & ReturnType<typeof usePersisted>) {
   const L = LABELS[lang];
   const cards = useMemo(() => buildCards(catalog.species, spotted, lang), [catalog, spotted, lang]);
 
@@ -76,12 +79,39 @@ function Explorer({ catalog, lang, spotted, setLang, toggleSpotted }: { catalog:
     return () => window.removeEventListener('popstate', onPop);
   }, []);
 
+  const showToast = (text: string, ms = 1800) => {
+    setToast({ text, on: true });
+    clearTimeout(toastTimer.current);
+    toastTimer.current = window.setTimeout(() => setToast((t) => ({ ...t, on: false })), ms);
+  };
   const onToggle = (id: string) => {
-    if (toggleSpotted(id)) {
-      setToast({ text: L.unlocked, on: true });
-      clearTimeout(toastTimer.current);
-      toastTimer.current = window.setTimeout(() => setToast((t) => ({ ...t, on: false })), 1800);
+    if (toggleSpotted(id)) showToast(L.unlocked);
+  };
+
+  const onExport = async () => {
+    try {
+      const ok = await saveBackup(await buildBackup(spotted, lang));
+      if (ok) showToast(L.exported);
+      return ok;
+    } catch {
+      showToast(L.exportFail, 3000);
+      return false;
     }
+  };
+  const onImport = async (file: File) => {
+    let b;
+    try {
+      b = await readBackup(file);
+    } catch {
+      showToast(L.importBad, 3000);
+      return;
+    }
+    const newSpotted = Object.keys(b.spotted).filter((id) => !spotted[id]).length;
+    const msg = L.importConfirm.replace('{date}', fmtDate(b.exported.slice(0, 10), lang)).replace('{spotted}', String(newSpotted)).replace('{photos}', String(b.photos.length));
+    if (!confirm(msg)) return;
+    const s = mergeSpotted(b.spotted);
+    const p = await importMyPhotos(b.photos);
+    showToast(L.imported.replace('{spotted}', String(s)).replace('{photos}', String(p)), 2600);
   };
 
   const goSearch = () => {
@@ -120,7 +150,7 @@ function Explorer({ catalog, lang, spotted, setLang, toggleSpotted }: { catalog:
           />
         )}
         {tab === 'collection' && (
-          <Collection cards={cards} L={L} lang={lang} cat={colCat} setCat={setColCat} sort={colSort} setSort={setColSort} onExplore={goSearch} onOpen={openDetail} />
+          <Collection cards={cards} L={L} lang={lang} cat={colCat} setCat={setColCat} sort={colSort} setSort={setColSort} onExplore={goSearch} onOpen={openDetail} onExport={onExport} onImport={onImport} />
         )}
       </div>
       <TabBar tab={tab} L={L} go={go} />

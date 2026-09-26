@@ -118,3 +118,51 @@ test('photos: greyed on locked cards, large on the species page, and your own', 
   await expect(page.getByRole('button', { name: /^Great Kiskadee, #/ }).locator('img')).toBeVisible();
   await page.screenshot({ path: 'test-results/shots/10-collection-own-photo.png' });
 });
+
+test('backup: export, wipe, import restores spotted cards and photos', async ({ page, browser }) => {
+  const img = await (async () => {
+    await page.setContent('<meta name="viewport" content="width=device-width,initial-scale=1"><body style="margin:0"><div style="width:200px;height:150px;background:#7a8a5e"></div>');
+    return page.screenshot({ clip: { x: 0, y: 0, width: 200, height: 150 } });
+  })();
+  await page.goto('/');
+  // Spot the jaguar by adding a photo.
+  await page.getByRole('button', { name: 'Cards', exact: true }).click();
+  await page.getByRole('searchbox').fill('jaguar');
+  await page.getByRole('button', { name: /^Jaguar, #/ }).click();
+  await page.locator('.detail.open input[type=file]').setInputFiles({ name: 'j.png', mimeType: 'image/png', buffer: img });
+  await expect(page.locator('.detail.open .mine-grid img')).toHaveCount(1);
+  await page.goBack();
+
+  await page.getByRole('button', { name: 'Collection', exact: true }).click();
+  await expect(page.getByText('No backup yet.')).toBeVisible();
+  const [download] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Export backup' }).click()]);
+  expect(download.suggestedFilename()).toMatch(/^qroo-species-backup-\d{4}-\d{2}-\d{2}\.json$/);
+  const file = await download.path();
+  await expect(page.getByText(/Last backup:/)).toBeVisible();
+  await page.screenshot({ path: 'test-results/shots/11-backup.png', fullPage: false });
+
+  // A fresh browser profile = a new phone.
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const fresh = await ctx.newPage();
+  await fresh.goto('/');
+  await fresh.getByRole('button', { name: 'Collection', exact: true }).click();
+  await expect(fresh.getByText(/^0 of \d+ spotted$/)).toBeVisible();
+  fresh.once('dialog', (d) => {
+    expect(d.message()).toContain('1 spotted cards and 1 photos');
+    d.accept();
+  });
+  await fresh.locator('input[type=file][accept*="json"]').setInputFiles(file!);
+  await expect(fresh.getByRole('status')).toHaveText('Imported 1 cards and 1 photos');
+  await expect(fresh.getByText(/^1 of \d+ spotted$/)).toBeVisible();
+  await expect(fresh.getByRole('button', { name: /^Jaguar, #/ }).locator('img')).toBeVisible();
+
+  // Importing the same file again adds nothing.
+  fresh.once('dialog', (d) => d.accept());
+  await fresh.locator('input[type=file][accept*="json"]').setInputFiles(file!);
+  await expect(fresh.getByRole('status')).toHaveText('Imported 0 cards and 0 photos');
+
+  // A random file is rejected.
+  await fresh.locator('input[type=file][accept*="json"]').setInputFiles({ name: 'x.json', mimeType: 'application/json', buffer: Buffer.from('{"hello":1}') });
+  await expect(fresh.getByRole('status')).toHaveText("That file isn't a Species Explorer backup.");
+  await ctx.close();
+});

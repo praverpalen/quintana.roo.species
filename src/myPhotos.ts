@@ -116,3 +116,26 @@ export function useBlobUrl(blob: Blob | undefined): string | undefined {
   }, [blob]);
   return url;
 }
+
+/** Every stored photo, for backups. */
+export async function allMyPhotos(): Promise<MyPhoto[]> {
+  return tx<MyPhoto[]>('readonly', (s) => s.getAll());
+}
+
+/** Adds photos from a backup, skipping ones already here (same species, date and size). Returns how many were added. */
+export async function importMyPhotos(items: { speciesId: string; date: string; blob: Blob }[]): Promise<number> {
+  const existing = await allMyPhotos();
+  const seen = new Set(existing.map((p) => `${p.speciesId}|${p.date}|${p.blob.size}`));
+  let added = 0;
+  for (const it of items) {
+    const k = `${it.speciesId}|${it.date}|${it.blob.size}`;
+    if (seen.has(k)) continue;
+    seen.add(k);
+    await tx('readwrite', (s) => s.add({ speciesId: it.speciesId, date: it.date, blob: it.blob }));
+    added++;
+  }
+  if (added) navigator.storage?.persist?.().catch(() => {});
+  loading = null;
+  await loadAll();
+  return added;
+}

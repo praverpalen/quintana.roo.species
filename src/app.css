@@ -11,7 +11,8 @@ input::placeholder { color: var(--color-neutral-600); }
 
 /* Phone shell: full screen on phones, a centred 430px column on larger screens. */
 .shell {
-  position: relative; height: 100%; max-width: 430px; margin: 0 auto; overflow: hidden;
+  /* clip (not just hidden) so nothing can scroll the shell sideways to the off-screen detail panel */
+  position: relative; height: 100%; max-width: 430px; margin: 0 auto; overflow: hidden; overflow: clip;
   display: flex; flex-direction: column; background: var(--color-bg);
 }
 @media (min-width: 600px) {
