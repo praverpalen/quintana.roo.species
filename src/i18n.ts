@@ -12,7 +12,7 @@ const en = {
   markSpotted: 'I spotted it!', undo: 'Undo', notYet: "You haven't seen it yet. See below for where to look.",
   sizeShort: 'SIZE', spotted: 'Spotted', notSpotted: 'Not yet spotted', unlock: "You haven't seen this one yet. Spot it to unlock the card!",
   unlocked: 'Card unlocked!', spottedOn: 'Spotted on ', notEvaluated: 'Not yet evaluated by the IUCN.', onRedList: ' on the IUCN Red List.',
-  back: 'Back', clearSearch: 'Clear search', photo: 'Photo', text: 'Text', autoNote: 'Fun fact, size, colours and habitat were written automatically from Wikipedia and may contain mistakes.', loading: 'Loading species…', loadError: "Couldn't load the species list. Check your connection.", retry: 'Try again', showMore: 'Show more',
+  back: 'Back', clearSearch: 'Clear search', photo: 'Photo', text: 'Text', autoNote: 'Fun fact, size, colours and habitat were written automatically from Wikipedia and may contain mistakes.', loading: 'Loading species…', loadError: "Couldn't load the species list. Check your connection.", retry: 'Try again', showMore: 'Show more', myPhotos: 'My photos', addPhoto: 'Add my photo', yourPhoto: 'Your photo', deletePhoto: 'Delete', close: 'Close', confirmDelete: 'Delete this photo?', photoLocal: 'Saved only on this phone. Adding a photo marks the species as spotted.', enlarge: 'Show photo full screen',
 };
 export type Labels = typeof en;
 
@@ -28,7 +28,7 @@ const es: Labels = {
   markSpotted: '¡Lo vi!', undo: 'Deshacer', notYet: 'Aún no lo has visto. Abajo tienes dónde buscarlo.',
   sizeShort: 'TAMAÑO', spotted: 'Avistado', notSpotted: 'Por descubrir', unlock: 'Aún no lo has visto. ¡Encuéntralo para desbloquear la carta!',
   unlocked: '¡Carta desbloqueada!', spottedOn: 'Avistado el ', notEvaluated: 'Aún no evaluada por la UICN.', onRedList: ' según la Lista Roja de la UICN.',
-  back: 'Volver', clearSearch: 'Borrar búsqueda', photo: 'Foto', text: 'Texto', autoNote: 'El dato curioso, tamaño, colores y hábitat se escribieron automáticamente a partir de Wikipedia y pueden tener errores.', loading: 'Cargando especies…', loadError: 'No se pudo cargar la lista de especies. Revisa tu conexión.', retry: 'Reintentar', showMore: 'Ver más',
+  back: 'Volver', clearSearch: 'Borrar búsqueda', photo: 'Foto', text: 'Texto', autoNote: 'El dato curioso, tamaño, colores y hábitat se escribieron automáticamente a partir de Wikipedia y pueden tener errores.', loading: 'Cargando especies…', loadError: 'No se pudo cargar la lista de especies. Revisa tu conexión.', retry: 'Reintentar', showMore: 'Ver más', myPhotos: 'Mis fotos', addPhoto: 'Agregar mi foto', yourPhoto: 'Tu foto', deletePhoto: 'Borrar', close: 'Cerrar', confirmDelete: '¿Borrar esta foto?', photoLocal: 'Se guarda solo en este teléfono. Agregar una foto marca la especie como avistada.', enlarge: 'Ver foto en pantalla completa',
 };
 
 export const LABELS: Record<Lang, Labels> = { en, es };

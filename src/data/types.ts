@@ -55,6 +55,8 @@ export interface IndexEntry {
   t?: number;
   /** 1 when hand-curated */
   cur?: 1;
+  /** Photo: "<id>.<ext>" on iNaturalist open data, or a full URL. Credit lives in the Detail. */
+  p?: string;
 }
 
 export interface Catalog {

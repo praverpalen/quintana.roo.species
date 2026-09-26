@@ -1,6 +1,6 @@
 /** Pure catalog logic, kept free of network access so it can be unit-tested. */
 import type { CatKey, ColourKey, CuratedSpecies, Detail, HabitatKey, IndexEntry, Iucn, Pair, Photo } from '../../src/data/types';
-import { shardOf } from '../../src/data/shard';
+import { compactPhoto, shardOf } from '../../src/data/shard';
 
 /**
  * How iNaturalist taxa map onto the app's 8 categories. Taxon names are resolved to ids at run time.
@@ -204,6 +204,11 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
   for (const r of rows) {
     if (ids.has(r.entry.id)) r.entry.id = `${r.entry.id}-${r.entry.t ?? ids.size}`;
     ids.add(r.entry.id);
+  }
+
+  for (const r of rows) {
+    const p = compactPhoto(r.detail.photo?.url);
+    if (p) r.entry.p = p;
   }
 
   const shards = Math.max(1, Math.ceil(rows.length / speciesPerShard));

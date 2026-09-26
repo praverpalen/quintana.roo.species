@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { CuratedSpecies } from '../../src/data/types';
-import { shardOf } from '../../src/data/shard';
+import { compactPhoto, photoUrl, shardOf } from '../../src/data/shard';
 import { buildCatalog, firstSentence, iucnFromStatuses, rarityByRank, slug, type Gathered } from './pure';
 
 const g = (over: Partial<Gathered>): Gathered => ({ taxonId: 1, sci: 'X y', cat: 'bird', obs: 1, introduced: false, iucn: null, ...over });
@@ -18,6 +18,13 @@ describe('helpers', () => {
   it('slugs scientific names', () => {
     expect(slug('Quiscalus mexicanus')).toBe('quiscalus-mexicanus');
     expect(slug('Ceiba × pentandra')).toBe('ceiba-pentandra');
+  });
+  it('compacts and expands iNaturalist photo URLs', () => {
+    const url = 'https://inaturalist-open-data.s3.amazonaws.com/photos/1766279/medium.jpg';
+    expect(compactPhoto(url)).toBe('1766279.jpg');
+    expect(photoUrl('1766279.jpg')).toBe(url);
+    expect(photoUrl('1766279.jpg', 'large')).toBe('https://inaturalist-open-data.s3.amazonaws.com/photos/1766279/large.jpg');
+    expect(compactPhoto('https://example.org/a.png')).toBe('https://example.org/a.png');
   });
   it('takes the first sentence', () => {
     expect(firstSentence('The jaguar is a large cat. It lives in forests.')).toBe('The jaguar is a large cat.');

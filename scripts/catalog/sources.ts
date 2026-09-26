@@ -23,13 +23,23 @@ async function inat<T>(path: string): Promise<T> {
   }
 }
 
+interface InatPhoto {
+  id?: number;
+  url?: string;
+  square_url?: string;
+  medium_url?: string;
+  attribution?: string;
+  license_code?: string | null;
+}
+
 interface InatTaxon {
   id: number;
   name: string;
   rank: string;
   is_active?: boolean;
   preferred_common_name?: string;
-  default_photo?: { square_url?: string; medium_url?: string; attribution?: string; license_code?: string | null } | null;
+  default_photo?: InatPhoto | null;
+  taxon_photos?: { photo: InatPhoto }[];
   conservation_statuses?: ConservationStatus[];
   wikipedia_url?: string | null;
 }
@@ -48,12 +58,25 @@ async function resolveTaxon(name: string): Promise<number> {
   return t.id;
 }
 
-export function photoOf(t: InatTaxon): Photo | undefined {
-  const dp = t.default_photo;
-  const url = dp?.medium_url || dp?.square_url?.replace('/square.', '/medium.');
-  if (!url || !dp?.license_code) return undefined; // only openly licensed photos
-  return { url, attribution: dp.attribution || '', license: dp.license_code.toUpperCase(), source: `iNaturalist taxon ${t.id}` };
+/** An openly licensed iNaturalist photo as a medium-size Photo, or undefined. */
+export function photoFrom(p: InatPhoto | null | undefined, source: string): Photo | undefined {
+  const url = p?.medium_url || (p?.square_url || p?.url)?.replace(/\/(square|small|thumb)\./, '/medium.');
+  if (!url || !p?.license_code) return undefined; // only openly licensed photos
+  return { url, attribution: p.attribution || '', license: p.license_code.toUpperCase(), source };
 }
+
+export const photoOf = (t: InatTaxon) => photoFrom(t.default_photo, `iNaturalist taxon ${t.id}`);
+
+/** First openly licensed photo among the taxon's curated photos (the default photo is often all-rights-reserved). */
+export function taxonPhoto(t: InatTaxon): Photo | undefined {
+  for (const tp of t.taxon_photos || []) {
+    const p = photoFrom(tp.photo, `iNaturalist taxon ${t.id}`);
+    if (p) return p;
+  }
+  return undefined;
+}
+
+const OPEN_LICENSES = 'cc0,cc-by,cc-by-sa,cc-by-nc,cc-by-nc-sa,cc-by-nd,cc-by-nc-nd';
 
 /** Every leaf taxon with research-grade observations under the given taxa. Paginated, 500 per page. */
 async function speciesCounts(placeId: number, include: number[], exclude: number[], extra: string): Promise<{ count: number; taxon: InatTaxon }[]> {
@@ -112,10 +135,32 @@ export async function gatherInat(opts: GatherOptions = {}): Promise<Omit<Gathere
       const g = byId.get(t.id);
       if (!g) continue;
       g.iucn = iucnFromStatuses(t.conservation_statuses);
+      g.photo ??= taxonPhoto(t);
       if (t.wikipedia_url) g.wiki = t.wikipedia_url;
     }
     if ((i / 30) % 20 === 0) log(`taxon details ${Math.min(i + 30, ids.length)}/${ids.length}`);
   }
+  // Last resort for photos: the most-voted openly licensed research-grade observation photo in Quintana Roo.
+  const noPhoto = [...byId.values()].filter((g) => !g.photo);
+  log(`${noPhoto.length} species without an open taxon photo; trying observation photos`);
+  for (const [i, g] of noPhoto.entries()) {
+    try {
+      const r = await inat<{ results: { photos?: InatPhoto[]; id: number }[] }>(
+        `/observations?taxon_id=${g.taxonId}&place_id=${placeId}&quality_grade=research&photo_license=${OPEN_LICENSES}&order_by=votes&per_page=3`,
+      );
+      for (const o of r.results) {
+        const p = (o.photos || []).map((ph) => photoFrom(ph, `iNaturalist observation ${o.id}`)).find(Boolean);
+        if (p) {
+          g.photo = p;
+          break;
+        }
+      }
+    } catch (e) {
+      log(`  ! ${(e as Error).message}`);
+    }
+    if (i % 200 === 199) log(`observation photos ${i + 1}/${noPhoto.length}`);
+  }
+  log(`${[...byId.values()].filter((g) => !g.photo).length} species still without a photo`);
   return [...byId.values()];
 }
 

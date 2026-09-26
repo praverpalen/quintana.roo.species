@@ -1,8 +1,10 @@
 import { useLayoutEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
 import type { Labels } from '../i18n';
 import type { Card } from '../model';
-import { usePhoto } from '../photos';
+import { useSpeciesPhoto } from '../photos';
+import { useBlobUrl, useMyPhotos } from '../myPhotos';
 import { useDetail } from '../catalog';
+import { photoUrl } from '../data/shard';
 import { IconCheck } from './Icons';
 
 const W = 240;
@@ -75,7 +77,9 @@ function untilt(e: PointerEvent<HTMLDivElement>) {
 
 function Unlocked({ c, L, open, onKey, label }: Inner) {
   const detail = useDetail(c.id);
-  const photo = usePhoto(c.sci, detail?.photo, !!detail);
+  const mine = useMyPhotos(c.id)[0]?.blob;
+  const mineUrl = useBlobUrl(mine);
+  const photo = useSpeciesPhoto(c.s, detail?.photo, mine, mineUrl, { runtime: !!detail });
   const li = L.lang === 'es' ? 1 : 0;
   const fact = detail ? detail.fact[li] || detail.fact[1 - li] : '';
   const size = detail?.size || '—';
@@ -92,7 +96,7 @@ function Unlocked({ c, L, open, onKey, label }: Inner) {
         <div className="sc-sci">{c.sci}</div>
         <div className="sc-art" style={{ background: `repeating-linear-gradient(135deg, ${c.stripe} 0 6px, transparent 6px 12px), var(--color-neutral-100)` }}>
           {photo ? (
-            <img className="washed" src={photo.url} alt="" loading="lazy" draggable={false} />
+            <img className={photo.own ? undefined : 'washed'} src={photo.url} alt="" loading="lazy" draggable={false} />
           ) : (
             <span className="sc-art-label">{c.name.toLowerCase()} photo</span>
           )}
@@ -126,6 +130,8 @@ function Unlocked({ c, L, open, onKey, label }: Inner) {
 }
 
 function Locked({ c, L, open, onKey, label }: Inner) {
+  // Locked cards show the species photo greyed out so you know what to look for.
+  const photo = c.s.p ? photoUrl(c.s.p) : undefined;
   return (
     <div className="sc sc-locked" role="button" tabIndex={0} aria-label={label} onClick={open} onKeyDown={onKey}>
       <div className="sc-in">
@@ -135,7 +141,8 @@ function Locked({ c, L, open, onKey, label }: Inner) {
         </div>
         <div className="sc-sci">{c.sci}</div>
         <div className="sc-art sc-art-locked">
-          <span className="sc-art-q">?</span>
+          {photo && <img className="sc-art-grey" src={photo} alt="" loading="lazy" draggable={false} />}
+          <span className={photo ? 'sc-art-q sc-art-q-small' : 'sc-art-q'}>?</span>
         </div>
         <div className="sc-no">{c.no} · {c.cat}</div>
         <div className="sc-unlock">{L.unlock}</div>

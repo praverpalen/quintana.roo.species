@@ -76,3 +76,45 @@ test('search, filters and language', async ({ page }) => {
   await expect(page.getByText(`6 de ${total} avistadas`)).toBeVisible();
   await page.screenshot(shot('7-collection-es'));
 });
+
+test('photos: greyed on locked cards, large on the species page, and your own', async ({ page }) => {
+  // Serve a stand-in for every iNaturalist photo (the test runner may be offline).
+  const fake = await (async () => {
+    await page.setContent('<meta name="viewport" content="width=device-width,initial-scale=1"><body style="margin:0"><div style="width:360px;height:240px;background:radial-gradient(circle at 60% 45%,#f6a06b 0 22%,#7a8a5e 23% 60%,#3d472b 61%)"></div>');
+    return page.screenshot({ clip: { x: 0, y: 0, width: 360, height: 240 } });
+  })();
+  await page.route(/inaturalist-open-data|static\.inaturalist/, (r) => r.fulfill({ body: fake, contentType: 'image/png' }));
+
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Cards', exact: true }).click();
+  await page.getByRole('searchbox').fill('great kiskadee');
+  const card = page.getByRole('button', { name: /^Great Kiskadee, #/ });
+  await expect(card.locator('img.sc-art-grey')).toBeVisible();
+  await card.click();
+  const bigPhoto = page.locator('.detail.open .d-photo img');
+  await expect(bigPhoto).toBeVisible();
+  await expect(bigPhoto).toHaveAttribute('src', /\/large\./);
+  await page.waitForTimeout(450);
+  await page.screenshot({ path: 'test-results/shots/8-detail-photo.png' });
+
+  // Add your own photo: it unlocks the card and appears in "My photos".
+  await page.locator('.detail.open input[type=file]').setInputFiles({ name: 'mine.png', mimeType: 'image/png', buffer: fake });
+  await expect(page.getByRole('status')).toHaveText('Card unlocked!');
+  await expect(page.locator('.detail.open .mine-grid img')).toHaveCount(1);
+  await page.locator('.detail.open .mine-grid button').first().click();
+  await expect(page.locator('.lightbox img')).toBeVisible();
+  await page.screenshot({ path: 'test-results/shots/9-lightbox.png' });
+  await page.keyboard.press('Escape');
+  page.once('dialog', (d) => d.accept());
+  await page.getByRole('button', { name: 'Delete' }).click();
+  await expect(page.locator('.detail.open .mine-grid img')).toHaveCount(0);
+
+  // Photo survives a reload (IndexedDB) — add again, reload, check.
+  await page.locator('.detail.open input[type=file]').setInputFiles({ name: 'mine.png', mimeType: 'image/png', buffer: fake });
+  await expect(page.locator('.detail.open .mine-grid img')).toHaveCount(1);
+  await page.goBack();
+  await page.reload();
+  await page.getByRole('button', { name: 'Collection', exact: true }).click();
+  await expect(page.getByRole('button', { name: /^Great Kiskadee, #/ }).locator('img')).toBeVisible();
+  await page.screenshot({ path: 'test-results/shots/10-collection-own-photo.png' });
+});
