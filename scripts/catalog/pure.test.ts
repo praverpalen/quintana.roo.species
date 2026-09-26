@@ -28,6 +28,14 @@ describe('helpers', () => {
     const r = rarityByRank(items);
     expect(items.map((i) => r.get(i))).toEqual([0, 0, 0, 0, 1, 1, 1, 2, 2, 3]);
   });
+  it('breaks rarity ties deterministically', () => {
+    const mk = () => ['c', 'a', 'd', 'b', 'e'].map((sci) => ({ cat: 'bird' as const, obs: 1, sci }));
+    const x = mk();
+    const y = mk().reverse();
+    const rx = rarityByRank(x);
+    const ry = rarityByRank(y);
+    for (const sci of 'abcde') expect(rx.get(x.find((i) => i.sci === sci)!)).toBe(ry.get(y.find((i) => i.sci === sci)!));
+  });
 });
 
 describe('buildCatalog', () => {
