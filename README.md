@@ -36,7 +36,7 @@ The app loads its catalog at runtime from `public/data/`:
 2. Takes the EN and ES summaries (CC BY-SA, credited in the app) from **Wikipedia**.
 3. Uses **Claude** (Batches API, half price) in two jobs:
    - It classifies plants as tree or not, 100 names per request.
-   - It writes a fun fact, size, colours and habitat for the most-observed species that don't have them yet, up to `--max-enrich` per run. Results are saved in `data/enrichment.json`, so every run continues where the last one stopped.
+   - It writes a fun fact, size, colours, habitat and how to tell males from females for the most-observed species that don't have them yet, up to `--max-enrich` per run. Results are saved in `data/enrichment.json`, so every run continues where the last one stopped.
 4. Computes rarity from observation counts within each category: the top 40% are Common, then 30% Uncommon, 20% Rare and 10% Legendary.
 5. Merges `data/curated.json` on top. These are the 29 hand-written species; they keep their text, Maya names and rarity, but take the IUCN status from iNaturalist.
 

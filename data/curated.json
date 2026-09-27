@@ -7,7 +7,7 @@
   "n": 0,
   "nat": 1,
   "iucn": "LC",
-  "size": "70 m",
+  "size": "50 m",
   "col": [
    "green",
    "brown"
@@ -15,11 +15,6 @@
   "hab": [
    "jungle",
    "town"
-  ],
-  "where": [
-   "Cobá",
-   "Punta Laguna",
-   "Town plazas"
   ],
   "en": [
    "Ceiba",
@@ -48,19 +43,14 @@
   "hab": [
    "jungle"
   ],
-  "where": [
-   "Cobá",
-   "Muyil",
-   "Sian Ka'an"
-  ],
   "en": [
    "Sapodilla",
-   "Its sap, chicle, was the original chewing gum. Chicleros tapped these trees all over Quintana Roo.",
+   "Its sap, chicle, was the base of the first modern chewing gums. Chicleros tapped these trees all over Quintana Roo.",
    "A tall evergreen with glossy leaves and sweet brown fruit that tastes like brown sugar and pear. The zigzag scars on old trunks are from chicle tapping."
   ],
   "es": [
    "Chicozapote",
-   "Su savia, el chicle, fue el primer chicle de mascar. Los chicleros sangraban estos árboles por todo Quintana Roo.",
+   "Su savia, el chicle, fue la base de los primeros chicles modernos. Los chicleros sangraban estos árboles por todo Quintana Roo.",
    "Un árbol alto de hojas brillantes y frutos cafés con sabor a piloncillo y pera. Las cicatrices en zigzag de los troncos viejos son de la extracción de chicle."
   ]
  },
@@ -81,11 +71,6 @@
    "jungle",
    "coast",
    "town"
-  ],
-  "where": [
-   "Tulum ruins",
-   "Puerto Morelos",
-   "Everywhere"
   ],
   "en": [
    "Gumbo-limbo",
@@ -115,11 +100,6 @@
    "mangrove",
    "coast"
   ],
-  "where": [
-   "Sian Ka'an",
-   "Bacalar lagoon",
-   "Isla Blanca"
-  ],
   "en": [
    "Red mangrove",
    "Its stilt roots are a nursery: many reef fish spend their childhood hiding between them.",
@@ -148,9 +128,6 @@
    "coast",
    "town"
   ],
-  "where": [
-   "Every beach"
-  ],
   "en": [
    "Coconut palm",
    "Coconuts float and can survive months at sea. That's how palms spread across the tropics.",
@@ -178,10 +155,6 @@
   ],
   "hab": [
    "town"
-  ],
-  "where": [
-   "Chetumal streets",
-   "Playa del Carmen"
   ],
   "en": [
    "Flame tree",
@@ -212,10 +185,6 @@
    "jungle",
    "town"
   ],
-  "where": [
-   "Tulum ruins",
-   "Gardens"
-  ],
   "en": [
    "Frangipani",
    "Its scent is strongest at night to lure sphinx moths, but it tricks them because it has no nectar.",
@@ -242,10 +211,6 @@
   "hab": [
    "town",
    "jungle"
-  ],
-  "where": [
-   "Backyards",
-   "Local markets"
   ],
   "en": [
    "Chaya",
@@ -275,19 +240,15 @@
    "jungle",
    "mangrove"
   ],
-  "where": [
-   "Jardín Botánico Puerto Morelos",
-   "Sian Ka'an"
-  ],
   "en": [
    "Cow-horn orchid",
    "Its hollow pseudobulbs house ant colonies, and the ants guard the orchid in return.",
-   "A large epiphytic orchid that grows on trees and sends up flower spikes up to 1.5 m tall with ruffled pink-purple blooms."
+   "A large epiphytic orchid that grows on trees and sends up flower spikes that can be several metres long with ruffled pink-purple blooms."
   ],
   "es": [
    "Orquídea cuerno de toro",
    "Sus pseudobulbos huecos albergan colonias de hormigas que, a cambio, la defienden.",
-   "Orquídea epífita grande que crece sobre árboles y lanza varas florales de hasta 1.5 m con flores rosa-morado."
+   "Orquídea epífita grande que crece sobre árboles y lanza varas florales que pueden medir varios metros con flores rosa-morado."
   ]
  },
  {
@@ -308,10 +269,6 @@
    "jungle",
    "cenote"
   ],
-  "where": [
-   "Cenotes near Tulum",
-   "Cobá"
-  ],
   "en": [
    "Turquoise-browed motmot",
    "It swings its racket-shaped tail like a clock pendulum to tell predators 'I've seen you'.",
@@ -321,6 +278,10 @@
    "Pájaro reloj",
    "Mueve su cola en forma de raqueta como péndulo para decir al depredador 'ya te vi'.",
    "Anida en túneles en las paredes de cenotes y sascaberas. Es el ave emblema de la Península de Yucatán."
+  ],
+  "sex": [
+   "Males and females look alike.",
+   "Machos y hembras se ven iguales."
   ]
  },
  {
@@ -340,19 +301,19 @@
   "hab": [
    "jungle"
   ],
-  "where": [
-   "Cobá",
-   "Punta Laguna"
-  ],
   "en": [
    "Ocellated turkey",
-   "It lives only on the Yucatán Peninsula and nowhere else in the world.",
+   "It lives only in the Yucatán Peninsula region, including Belize and northern Guatemala, and nowhere else in the world.",
    "A spectacular wild turkey with iridescent bronze-green feathers, peacock-like eye spots on the tail and a blue head dotted with orange warts."
   ],
   "es": [
    "Pavo ocelado",
-   "Solo existe en la Península de Yucatán, en ningún otro lugar del mundo.",
+   "Solo existe en la región de la Península de Yucatán, incluidos Belice y el norte de Guatemala, y en ningún otro lugar del mundo.",
    "Un pavo silvestre espectacular con plumas iridiscentes bronce-verde, ocelos en la cola y cabeza azul con verrugas naranjas."
+  ],
+  "sex": [
+   "Males are bigger, with a larger blue head covered in more orange-red knobs and a fleshy crown on top; females are smaller and duller.",
+   "Los machos son más grandes, con la cabeza azul más grande, más verrugas rojo-naranja y una corona carnosa; las hembras son más pequeñas y opacas."
   ]
  },
  {
@@ -372,19 +333,19 @@
   "hab": [
    "jungle"
   ],
-  "where": [
-   "Punta Laguna",
-   "Sian Ka'an"
-  ],
   "en": [
    "Keel-billed toucan",
-   "Its huge rainbow beak is mostly hollow and light, and it helps the bird cool down.",
+   "Its huge rainbow beak is light, with a spongy inside, and it helps the bird shed heat.",
    "Look for small flocks hopping through the canopy and listen for a croaking, frog-like call. It eats mostly fruit but will also take eggs."
   ],
   "es": [
    "Tucán pico canoa",
-   "Su enorme pico multicolor es casi hueco y ligero, y le sirve para regular su temperatura.",
+   "Su enorme pico multicolor es ligero, esponjoso por dentro, y le ayuda a liberar calor.",
    "Busca grupitos saltando en el dosel y escucha su canto parecido al de una rana. Come sobre todo fruta, pero también huevos."
+  ],
+  "sex": [
+   "Males and females look alike; males tend to have slightly longer bills.",
+   "Machos y hembras se ven iguales; los machos suelen tener el pico un poco más largo."
   ]
  },
  {
@@ -403,19 +364,19 @@
    "mangrove",
    "coast"
   ],
-  "where": [
-   "Holbox",
-   "Yum Balam"
-  ],
   "en": [
    "American flamingo",
-   "It's born grey. The pink comes from the carotene in the tiny shrimp it eats.",
+   "It's born grey. The pink comes from pigments in the algae and tiny shrimp it eats.",
    "It feeds upside-down, filtering mud through its bent beak. Large flocks gather in the shallow lagoons of northern Quintana Roo."
   ],
   "es": [
    "Flamenco rosado",
-   "Nace gris; el rosa viene del caroteno de los camaroncitos que come.",
+   "Nace gris; el rosa viene de los pigmentos de las algas y camaroncitos que come.",
    "Se alimenta de cabeza, filtrando lodo con su pico curvo. Se reúne en grandes grupos en las lagunas someras del norte de Quintana Roo."
+  ],
+  "sex": [
+   "Males and females look alike; males are usually a little taller.",
+   "Machos y hembras se ven iguales; los machos suelen ser un poco más altos."
   ]
  },
  {
@@ -434,18 +395,19 @@
    "town",
    "coast"
   ],
-  "where": [
-   "Every plaza"
-  ],
   "en": [
    "Great-tailed grackle",
    "The noisy zanate of every plaza. It can make more than a dozen different calls, including whistles and clicks.",
-   "Males are glossy blue-black with a long, keel-shaped tail. Females are smaller and brown. They roost in huge, loud groups at sunset."
+   "A bold, clever bird that forages for scraps in plazas and on beaches. At sunset they gather in huge, loud roosts."
   ],
   "es": [
    "Zanate",
    "El ruidoso de cada plaza: tiene más de una docena de cantos, con silbidos y chasquidos.",
-   "Los machos son negro-azulado brillante con cola larga; las hembras, cafés y más pequeñas. Al atardecer duermen en grupos enormes y ruidosos."
+   "Un ave atrevida y lista que busca sobras en plazas y playas. Al atardecer se juntan a dormir en grupos enormes y ruidosos."
+  ],
+  "sex": [
+   "Easy: males are glossy blue-black with a very long, keel-shaped tail; females are smaller and brown.",
+   "Fácil: los machos son negro-azulado brillante con cola muy larga en forma de quilla; las hembras son más pequeñas y cafés."
   ]
  },
  {
@@ -465,10 +427,6 @@
    "jungle",
    "mangrove"
   ],
-  "where": [
-   "Sian Ka'an",
-   "Selva Maya"
-  ],
   "en": [
    "Jaguar",
    "The Maya called it Balam. Its bite is strong enough to crack a turtle's shell.",
@@ -478,6 +436,10 @@
    "Jaguar",
    "Los mayas lo llamaban Balam. Su mordida puede romper el caparazón de una tortuga.",
    "El felino más grande de América. A diferencia de otros gatos, ama el agua y nada muy bien. La península alberga una de las poblaciones más importantes de México."
+  ],
+  "sex": [
+   "Males are noticeably bigger and heavier, with a broader head; the coat is the same.",
+   "Los machos son notablemente más grandes y pesados, con la cabeza más ancha; el pelaje es igual."
   ]
  },
  {
@@ -496,10 +458,6 @@
    "jungle",
    "town"
   ],
-  "where": [
-   "Cobá",
-   "Tulum ruins"
-  ],
   "en": [
    "White-nosed coati",
    "It walks with its striped tail straight up like an antenna so the group can keep track of each other.",
@@ -509,6 +467,10 @@
    "Tejón",
    "Camina con la cola rayada bien parada, como antena, para que el grupo no se pierda.",
    "Hembras y crías andan en bandas ruidosas de hasta 20, buscando insectos y fruta con su hocico largo y flexible."
+  ],
+  "sex": [
+   "Adult males are larger and usually live alone; the noisy groups you see are females with their young.",
+   "Los machos adultos son más grandes y suelen andar solos; los grupos ruidosos son hembras con sus crías."
   ]
  },
  {
@@ -526,10 +488,6 @@
   "hab": [
    "jungle"
   ],
-  "where": [
-   "Punta Laguna",
-   "Chacchoben"
-  ],
   "en": [
    "Yucatán black howler",
    "Its roar can be heard up to 5 km away, one of the loudest calls of any land animal.",
@@ -539,6 +497,10 @@
    "Mono aullador negro",
    "Su rugido se escucha hasta a 5 km: uno de los más fuertes del mundo animal.",
    "Vive en tropas familiares en lo alto del dosel y come sobre todo hojas, por eso descansa mucho. Casi siempre lo oyes antes de verlo."
+  ],
+  "sex": [
+   "Adult males are clearly bigger than females; babies ride on their mother's back.",
+   "Los machos adultos son claramente más grandes que las hembras; las crías viajan en la espalda de su madre."
   ]
  },
  {
@@ -558,10 +520,6 @@
    "cenote",
    "coast"
   ],
-  "where": [
-   "Chetumal Bay",
-   "Sian Ka'an"
-  ],
   "en": [
    "Antillean manatee",
    "Its closest living relatives are elephants. It eats up to 10% of its body weight in seagrass every day.",
@@ -571,6 +529,10 @@
    "Manatí antillano",
    "Su pariente vivo más cercano es el elefante. Come hasta 10% de su peso en pastos marinos al día.",
    "La Bahía de Chetumal es santuario de manatíes. Busca una nariz que sale a respirar cada pocos minutos en aguas tranquilas."
+  ],
+  "sex": [
+   "Males and females look alike; a female's genital opening sits close to the tail, a male's near the navel.",
+   "Machos y hembras se ven iguales; la abertura genital de la hembra está cerca de la cola y la del macho cerca del ombligo."
   ]
  },
  {
@@ -590,19 +552,19 @@
    "coast",
    "town"
   ],
-  "where": [
-   "Tulum ruins",
-   "Beach rocks"
-  ],
   "en": [
    "Black spiny-tailed iguana",
-   "The world's fastest lizard, clocked at about 35 km/h.",
+   "Often called the world's fastest lizard: it has been clocked at about 35 km/h.",
    "You'll see them sunbathing on every ruin and beach wall. Young ones are bright green, and adults turn grey with dark bands and a spiky tail."
   ],
   "es": [
    "Iguana negra",
-   "La lagartija más rápida del mundo: alcanza unos 35 km/h.",
+   "Se le considera la lagartija más rápida del mundo: alcanza unos 35 km/h.",
    "Toman el sol en cada ruina y muro de playa. Las crías son verde brillante; los adultos, grises con bandas oscuras y cola espinosa."
+  ],
+  "sex": [
+   "Males are larger, with a bigger head and a taller crest of spines along the back.",
+   "Los machos son más grandes, con la cabeza más grande y una cresta de espinas más alta en el lomo."
   ]
  },
  {
@@ -622,10 +584,6 @@
    "mangrove",
    "cenote"
   ],
-  "where": [
-   "Sian Ka'an",
-   "Nichupté lagoon"
-  ],
   "en": [
    "American crocodile",
    "It can live in both salt water and fresh water and is shy compared to its Nile cousin.",
@@ -635,6 +593,10 @@
    "Cocodrilo de río",
    "Vive en agua salada y dulce, y es tímido comparado con su primo del Nilo.",
    "Descansa con solo ojos y nariz fuera del agua. Está protegido en México: guarda distancia y nunca lo alimentes."
+  ],
+  "sex": [
+   "Males grow bigger with a heavier head; otherwise they are hard to tell apart.",
+   "Los machos crecen más y tienen la cabeza más robusta; por lo demás es difícil distinguirlos."
   ]
  },
  {
@@ -653,20 +615,19 @@
   "hab": [
    "reef"
   ],
-  "where": [
-   "Puerto Morelos",
-   "Cozumel",
-   "Restaurant menus"
-  ],
   "en": [
    "Lionfish",
    "An invader from the Indo-Pacific. Locals help control it by eating it, e.g. in lionfish ceviche.",
-   "It has no natural predators here and eats huge numbers of young reef fish. Its spines are venomous, but the meat is delicious and safe."
+   "It has few natural predators here and eats huge numbers of young reef fish. Its spines are venomous, but the meat is delicious and safe."
   ],
   "es": [
    "Pez león",
    "Invasor del Indo-Pacífico. Aquí se combate comiéndolo, ¡prueba el ceviche de pez león!",
-   "Aquí no tiene depredadores y devora muchísimos peces juveniles. Sus espinas son venenosas, pero su carne es deliciosa y segura."
+   "Aquí tiene pocos depredadores y devora muchísimos peces juveniles. Sus espinas son venenosas, pero su carne es deliciosa y segura."
+  ],
+  "sex": [
+   "Males and females look alike; during courtship males turn darker.",
+   "Machos y hembras se ven iguales; en el cortejo los machos se oscurecen."
   ]
  },
  {
@@ -685,10 +646,6 @@
   "hab": [
    "reef"
   ],
-  "where": [
-   "Cozumel",
-   "Puerto Morelos reef"
-  ],
   "en": [
    "Queen angelfish",
    "It wears a blue 'crown' spot on its forehead, which gave it its royal name.",
@@ -698,6 +655,10 @@
    "Pez ángel reina",
    "Lleva una 'corona' azul en la frente, de ahí su nombre real.",
    "Suele verse en parejas sobre el arrecife. Los juveniles son limpiadores: quitan parásitos a peces más grandes."
+  ],
+  "sex": [
+   "Males and females look alike.",
+   "Machos y hembras se ven iguales."
   ]
  },
  {
@@ -716,10 +677,6 @@
   "hab": [
    "sea"
   ],
-  "where": [
-   "Holbox",
-   "Isla Mujeres (Jun–Sep)"
-  ],
   "en": [
    "Whale shark",
    "The biggest fish on Earth eats only plankton and tiny fish, which it filters through its huge mouth.",
@@ -729,6 +686,10 @@
    "Tiburón ballena",
    "El pez más grande del planeta solo come plancton, que filtra con su enorme boca.",
    "Cada verano cientos se reúnen frente a Holbox e Isla Mujeres. Su patrón de manchas es único, como una huella digital."
+  ],
+  "sex": [
+   "Males have two claspers, finger-like organs behind the pelvic fins, sometimes visible when snorkelling.",
+   "Los machos tienen dos 'claspers', órganos como dedos detrás de las aletas pélvicas, a veces visibles al hacer snorkel."
   ]
  },
  {
@@ -748,10 +709,6 @@
    "coast",
    "reef"
   ],
-  "where": [
-   "Akumal",
-   "Xcalak"
-  ],
   "en": [
    "Green sea turtle",
    "Akumal means 'place of the turtles' in Maya. Females return to the beach where they hatched to lay eggs.",
@@ -761,6 +718,10 @@
    "Tortuga verde",
    "Akumal significa 'lugar de tortugas' en maya. Las hembras regresan a desovar a la playa donde nacieron.",
    "Su nombre viene del color verde de su grasa, no del caparazón. Los adultos pastan en bahías someras; anidan de mayo a octubre."
+  ],
+  "sex": [
+   "Adult males have a long, thick tail that reaches well past the shell and a curved claw on each front flipper.",
+   "Los machos adultos tienen una cola larga y gruesa que sobresale del caparazón y una garra curva en cada aleta delantera."
   ]
  },
  {
@@ -780,10 +741,6 @@
    "reef",
    "sea"
   ],
-  "where": [
-   "Playa del Carmen",
-   "Cozumel"
-  ],
   "en": [
    "Spotted eagle ray",
    "It sometimes leaps clean out of the water, and nobody is quite sure why.",
@@ -793,6 +750,10 @@
    "Raya águila",
    "A veces salta por completo fuera del agua, y nadie sabe bien por qué.",
    "Raya elegante de dorso oscuro con puntos blancos y hocico de pato para desenterrar almejas. 'Vuela' en pequeños grupos."
+  ],
+  "sex": [
+   "Males have a pair of claspers near the base of the tail.",
+   "Los machos tienen un par de 'claspers' cerca de la base de la cola."
   ]
  },
  {
@@ -811,10 +772,6 @@
   "hab": [
    "reef"
   ],
-  "where": [
-   "Puerto Morelos reef",
-   "Xcalak"
-  ],
   "en": [
    "Elkhorn coral",
    "It's an animal, not a plant, and each branch is made of thousands of tiny polyps.",
@@ -824,6 +781,10 @@
    "Coral cuerno de alce",
    "Es un animal, no una planta: cada rama son miles de pólipos diminutos.",
    "Formaba la cresta de los arrecifes someros del Caribe, pero ha perdido gran parte de su cobertura desde los 80. En Puerto Morelos se está replantando."
+  ],
+  "sex": [
+   "Each colony is both male and female: once a year it releases bundles of eggs and sperm together.",
+   "Cada colonia es macho y hembra a la vez: una vez al año suelta paquetes de óvulos y esperma juntos."
   ]
  },
  {
@@ -843,9 +804,6 @@
    "jungle",
    "town"
   ],
-  "where": [
-   "Gardens everywhere"
-  ],
   "en": [
    "Zebra longwing",
    "One of the few butterflies that eats pollen, which lets it live for up to six months.",
@@ -855,6 +813,10 @@
    "Mariposa cebra",
    "Una de las pocas mariposas que come polen, así que vive hasta seis meses.",
    "Vuelo lento y flotante con alas negras de rayas amarillas. De noche duermen juntas en la misma rama."
+  ],
+  "sex": [
+   "Males and females look alike.",
+   "Machos y hembras se ven iguales."
   ]
  },
  {
@@ -873,9 +835,6 @@
   "hab": [
    "jungle"
   ],
-  "where": [
-   "Jungle trails"
-  ],
   "en": [
    "Leafcutter ant",
    "They don't eat the leaves. They use them to grow a fungus garden, and the fungus is their food.",
@@ -885,6 +844,10 @@
    "Hormiga arriera",
    "No se comen las hojas: con ellas cultivan un hongo, que es su alimento.",
    "Sigue el 'río' verde de hojitas por el sendero. Una colonia puede tener millones de hormigas de varias castas."
+  ],
+  "sex": [
+   "The large winged ants that swarm after rain are queens and males; the workers on the trail are all sterile females.",
+   "Las hormigas grandes con alas que salen después de la lluvia son reinas y machos; las obreras del sendero son todas hembras estériles."
   ]
  },
  {
@@ -904,19 +867,19 @@
    "jungle",
    "town"
   ],
-  "where": [
-   "Felipe Carrillo Puerto",
-   "Cobá"
-  ],
   "en": [
    "Maya stingless bee",
-   "The Maya have kept this stingless bee for over 3,000 years. Its honey was used as medicine.",
-   "Xunáan kab means 'royal lady bee'. Colonies live in hollow logs called jobones, and each produces only about a litre of honey a year."
+   "The Maya kept this stingless bee long before the Spanish arrived. Its honey was used as medicine.",
+   "Xunáan kab means 'royal lady bee'. Colonies live in hollow logs called jobones, and each produces only a litre or two of honey a year."
   ],
   "es": [
    "Abeja melipona",
-   "Los mayas la crían desde hace más de 3,000 años; su miel se usaba como medicina.",
-   "Xunáan kab significa 'señora abeja real'. Vive en troncos huecos llamados jobones y cada colonia da apenas un litro de miel al año."
+   "Los mayas ya la criaban mucho antes de la llegada de los españoles; su miel se usaba como medicina.",
+   "Xunáan kab significa 'señora abeja real'. Vive en troncos huecos llamados jobones y cada colonia da apenas uno o dos litros de miel al año."
+  ],
+  "sex": [
+   "The bees you see flying are female workers; males are rarely seen.",
+   "Las abejas que ves volando son obreras hembras; los machos casi no se ven."
   ]
  }
 ]
