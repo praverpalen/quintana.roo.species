@@ -28,10 +28,11 @@ export interface CuratedSpecies {
   size: string;
   col: ColourKey[];
   hab: HabitatKey[];
-  where: string[];
   /** [name, fun fact, description] */
   en: [string, string, string];
   es: [string, string, string];
+  /** How to tell males from females [en, es] */
+  sex?: Pair;
 }
 
 /** One row of public/data/catalog.json: everything the grid, search and filters need. */
@@ -72,7 +73,8 @@ export interface Detail {
   desc: Pair;
   size?: string;
   hab?: HabitatKey[];
-  where?: string[];
+  /** How to tell males from females [en, es] */
+  sex?: Pair;
   photo?: Photo;
   /** Wikipedia article URLs used as the text source */
   wiki?: { en?: string; es?: string };

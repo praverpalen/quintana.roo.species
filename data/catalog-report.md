@@ -1,13 +1,13 @@
 # Catalog build report
 
-Built 2026-09-26 03:38 UTC from cached data (offline).
+Built 2026-09-27 16:10 UTC from cached data (offline).
 
 | | Species |
 | --- | ---: |
 | curated | 29 |
-| claude | 400 |
-| wikipedia | 3468 |
-| noText | 1469 |
+| claude | 800 |
+| wikipedia | 3107 |
+| noText | 1430 |
 | Category: tree | 251 |
 | Category: plant | 1114 |
 | Category: bird | 503 |

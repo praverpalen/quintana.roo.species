@@ -6,7 +6,7 @@ import { buildCatalog, firstSentence, iucnFromStatuses, rarityByRank, slug, type
 const g = (over: Partial<Gathered>): Gathered => ({ taxonId: 1, sci: 'X y', cat: 'bird', obs: 1, introduced: false, iucn: null, ...over });
 
 const jaguar: CuratedSpecies = {
-  id: 'jaguar', cat: 'mammal', sci: 'Panthera onca', maya: 'Balam', n: 2, nat: 1, iucn: 'LC', size: '1.8 m', col: ['yellow'], hab: ['jungle'], where: ['Sian Ka\'an'],
+  id: 'jaguar', cat: 'mammal', sci: 'Panthera onca', maya: 'Balam', n: 2, nat: 1, iucn: 'LC', size: '1.8 m', col: ['yellow'], hab: ['jungle'], sex: ['Males are bigger.', 'Los machos son más grandes.'],
   en: ['Jaguar', 'Fact', 'Desc'], es: ['Jaguar', 'Dato', 'Desc es'],
 };
 
@@ -64,6 +64,7 @@ describe('buildCatalog', () => {
   it('merges curated data over iNaturalist, keeping the curated id but taking the verified IUCN status', () => {
     expect(byId.jaguar).toMatchObject({ cur: 1, iucn: 'NT', n: 2, t: 41944, maya: 'Balam' });
     expect(detail('jaguar').src).toBe('curated');
+    expect(detail('jaguar').sex).toEqual(['Males are bigger.', 'Los machos son más grandes.']);
   });
   it('splits trees from plants and orders by category', () => {
     expect(byId['ceiba-pentandra'].cat).toBe('tree');

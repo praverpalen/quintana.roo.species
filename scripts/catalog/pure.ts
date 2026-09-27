@@ -93,6 +93,8 @@ export interface Enrichment {
   size: string;
   col: ColourKey[];
   hab: HabitatKey[];
+  /** How to tell males from females [en, es] */
+  sex?: Pair;
   model: string;
   date: string;
 }
@@ -148,7 +150,7 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
           n: cur.n, nat: cur.nat, iucn: g.iucn ?? cur.iucn, col: cur.col, obs: g.obs, t: g.taxonId, cur: 1,
         },
         detail: {
-          fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, where: cur.where,
+          fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, ...(cur.sex ? { sex: cur.sex } : {}),
           ...(g.photo ? { photo: g.photo } : {}), ...(Object.keys(wiki).length ? { wiki } : {}), src: 'curated',
         },
       });
@@ -160,7 +162,7 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
     let detail: Detail;
     if (enr) {
       stats.claude++;
-      detail = { fact: enr.fact, desc: [descEn, descEs], ...(enr.size ? { size: enr.size } : {}), hab: enr.hab, src: 'claude' };
+      detail = { fact: enr.fact, desc: [descEn, descEs], ...(enr.size ? { size: enr.size } : {}), hab: enr.hab, ...(enr.sex ? { sex: enr.sex } : {}), src: 'claude' };
     } else {
       if (descEn || descEs) stats.wikipedia++;
       else stats.noText++;
@@ -180,7 +182,7 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
     stats.curated++;
     rows.push({
       entry: { id: cur.id, cat: cur.cat, sci: cur.sci, en: cur.en[0], es: cur.es[0], ...(cur.maya ? { maya: cur.maya } : {}), n: cur.n, nat: cur.nat, iucn: cur.iucn, col: cur.col, cur: 1 },
-      detail: { fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, where: cur.where, src: 'curated' },
+      detail: { fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, ...(cur.sex ? { sex: cur.sex } : {}), src: 'curated' },
     });
   }
 

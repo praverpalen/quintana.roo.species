@@ -29,14 +29,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 350
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
       - run: npm ci
       - name: Restore iNaturalist / Wikipedia cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: data/.cache
           key: species-cache-${{ github.run_id }}
@@ -51,7 +51,7 @@ jobs:
           --wait-minutes "${{ inputs.wait_minutes }}"
       - run: npm test
       - name: Open pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: data/update-species
           commit-message: 'Update species catalog'

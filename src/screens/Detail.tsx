@@ -6,7 +6,7 @@ import type { Card } from '../model';
 import { useSpeciesPhoto } from '../photos';
 import { addMyPhoto, deleteMyPhoto, useBlobUrl, useMyPhotos, type MyPhoto } from '../myPhotos';
 import { useDetail } from '../catalog';
-import { IconArrowLeft, IconCamera, IconCheck, IconMapPin, IconTrash, IconX } from '../components/Icons';
+import { IconArrowLeft, IconCamera, IconCheck, IconTrash, IconX } from '../components/Icons';
 import { Dots, SpeciesCard } from '../components/SpeciesCard';
 
 interface Props {
@@ -43,7 +43,7 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
   const fact = pick(det?.fact);
   const desc = pick(det?.desc);
   const hab = det?.hab ?? [];
-  const where = det?.where ?? [];
+  const sex = pick(det?.sex);
   const credit = photo?.credit ? `${L.photo}: ${photo.credit.attribution} · ${photo.credit.license} · ${photo.credit.source}` : '';
   const statusNote = s.iucn === 'NE' ? L.notEvaluated : IUCN[s.iucn][li] + L.onRedList;
 
@@ -159,6 +159,18 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
           </div>
         )}
 
+        {sex && (
+          <div className="sex-box">
+            <div className="sex-title">
+              <span className="sex-sym" style={{ background: c.tint, color: c.deep }} aria-hidden="true">
+                ♂♀
+              </span>
+              <h4 style={{ margin: 0 }}>{L.sexTitle}</h4>
+            </div>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, textWrap: 'pretty' }}>{sex}</p>
+          </div>
+        )}
+
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 8 }}>
           <div className="stat">
             <div className="stat-k">{L.size}</div>
@@ -215,20 +227,6 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
                 <span key={h} className="tag tag-accent-2" style={{ fontSize: 13, padding: '5px 12px', fontWeight: 400 }}>
                   {HABITATS[h][li]}
                 </span>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {where.length > 0 && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            <h4 style={{ margin: 0 }}>{L.where}</h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-              {where.map((w) => (
-                <div key={w} className="where">
-                  <IconMapPin size={17} style={{ color: 'var(--color-accent-700)', flex: 'none' }} />
-                  {w}
-                </div>
               ))}
             </div>
           </div>

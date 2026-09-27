@@ -42,12 +42,13 @@ Rules:
 - about_en / about_es: leave as an empty string when Wikipedia text in that language was provided. Otherwise write 2-3 sentences in that language, based only on the text you have.
 - size: the typical adult size with a unit, like "34 cm", "1.2 m" or "25 m" (height for trees and plants, length for animals, wingspan only for butterflies). Use the Wikipedia text or well-established reference values. Use an empty string if you are not sure.
 - colours: the 1-3 most visible colours of the organism as seen in the field.
-- habitats: where in Quintana Roo it is found, from the allowed list only. Use an empty list if unclear.`;
+- habitats: where in Quintana Roo it is found, from the allowed list only. Use an empty list if unclear.
+- sex_en / sex_es: for animals, one or two sentences on how to tell a male from a female in the field (size, colour, shape, behaviour). If they look alike, say so. Use an empty string for plants, and when you are not sure.`;
 
 const ENRICH_SCHEMA = {
   type: 'object',
   additionalProperties: false,
-  required: ['fact_en', 'fact_es', 'about_en', 'about_es', 'size', 'colours', 'habitats'],
+  required: ['fact_en', 'fact_es', 'about_en', 'about_es', 'size', 'colours', 'habitats', 'sex_en', 'sex_es'],
   properties: {
     fact_en: { type: 'string' },
     fact_es: { type: 'string' },
@@ -56,6 +57,8 @@ const ENRICH_SCHEMA = {
     size: { type: 'string' },
     colours: { type: 'array', items: { type: 'string', enum: COLOUR_KEYS } },
     habitats: { type: 'array', items: { type: 'string', enum: HABITAT_KEYS } },
+    sex_en: { type: 'string' },
+    sex_es: { type: 'string' },
   },
 };
 
@@ -202,13 +205,14 @@ export class ClaudeContent {
         const allowed = new Set(names);
         for (const it of (json as { items: { sci: string; tree: boolean }[] }).items) if (allowed.has(it.sci)) trees[it.sci] = it.tree;
       } else {
-        const j = json as { fact_en: string; fact_es: string; about_en: string; about_es: string; size: string; colours: ColourKey[]; habitats: HabitatKey[] };
+        const j = json as { fact_en: string; fact_es: string; about_en: string; about_es: string; size: string; colours: ColourKey[]; habitats: HabitatKey[]; sex_en?: string; sex_es?: string };
         enrichment[names[0]] = {
           fact: [j.fact_en.trim(), j.fact_es.trim()],
           about: [j.about_en.trim(), j.about_es.trim()],
           size: j.size.trim(),
           col: [...new Set(j.colours)].slice(0, 3),
           hab: [...new Set(j.habitats)],
+          ...(j.sex_en?.trim() ? { sex: [j.sex_en.trim(), (j.sex_es || '').trim()] as [string, string] } : {}),
           model: p.model,
           date,
         };
