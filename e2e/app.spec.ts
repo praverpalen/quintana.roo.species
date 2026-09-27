@@ -172,10 +172,21 @@ test('species page shows how to tell male from female', async ({ page }) => {
   await page.getByRole('button', { name: 'Cards', exact: true }).click();
   await page.getByRole('searchbox').fill('great-tailed grackle');
   await page.getByRole('button', { name: /^Great-tailed grackle, #/ }).click();
-  const box = page.locator('.detail.open .sex-box');
+  const box = page.locator('.detail.open .sex-box').filter({ hasText: 'Male or female?' });
   await expect(box).toContainText('Male or female?');
   await expect(box).toContainText('females are smaller and brown');
   await expect(page.locator('.detail.open')).not.toContainText('Where to spot it');
   await box.scrollIntoViewIfNeeded();
   await page.screenshot({ path: 'test-results/shots/12-sex.png' });
+});
+
+test('species page explains its role in nature', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Cards', exact: true }).click();
+  await page.getByRole('searchbox').fill('elkhorn');
+  await page.getByRole('button', { name: /^Elkhorn coral, #/ }).click();
+  const role = page.locator('.detail.open .sex-box').filter({ hasText: 'Role in nature' });
+  await expect(role).toContainText('reef builder');
+  await role.scrollIntoViewIfNeeded();
+  await page.screenshot({ path: 'test-results/shots/13-role.png' });
 });

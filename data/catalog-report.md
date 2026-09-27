@@ -1,6 +1,6 @@
 # Catalog build report
 
-Built 2026-09-27 16:10 UTC from cached data (offline).
+Built 2026-09-27 16:24 UTC from cached data (offline).
 
 | | Species |
 | --- | ---: |
@@ -17,6 +17,7 @@ Built 2026-09-27 16:10 UTC from cached data (offline).
 | Category: marine | 783 |
 | Category: insect | 2044 |
 | total | 5366 |
+| groups | 0 |
 
 Text sources: **curated** = hand-written in data/curated.json; **claude** = fun fact, size, colours and habitat written by Claude, grounded in Wikipedia (unverified); **wikipedia** = first sentence of the Wikipedia summary only.
 

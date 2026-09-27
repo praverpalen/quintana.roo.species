@@ -50,7 +50,8 @@ describe('buildCatalog', () => {
     g({ taxonId: 41944, sci: 'Panthera onca', cat: 'mammal', obs: 12, iucn: 'NT', nameEn: 'Jaguar' }),
     g({ taxonId: 2, sci: 'Ceiba pentandra', cat: 'plant', obs: 50, nameEn: 'Kapok', wikiEn: { title: 'Ceiba pentandra', extract: 'Ceiba pentandra is a tropical tree. More.', url: 'https://en.wikipedia.org/wiki/Ceiba_pentandra' } }),
     g({ taxonId: 3, sci: 'Pterois volitans', cat: 'fish', obs: 5, introduced: true, wikiEs: { title: 'Pez león', extract: 'El pez león es venenoso. Más.', url: 'https://es.wikipedia.org/wiki/Pez_le%C3%B3n' } }),
-    g({ taxonId: 4, sci: 'Aus bus', cat: 'bird', obs: 3 }),
+    g({ taxonId: 4, sci: 'Aus bus', cat: 'bird', obs: 3, lineage: [{ t: 3, n: 'Aves', r: 'class', en: 'Birds' }, { t: 90, n: 'Ausidae', r: 'family', en: 'Aus birds' }] }),
+    g({ taxonId: 5, sci: 'Aus cus', cat: 'bird', obs: 2, lineage: [{ t: 3, n: 'Aves', r: 'class', en: 'Birds' }, { t: 90, n: 'Ausidae', r: 'family', en: 'Aus birds' }] }),
   ];
   const out = buildCatalog({
     gathered, curated: [jaguar], generated: '',
@@ -79,8 +80,17 @@ describe('buildCatalog', () => {
     expect(byId['aus-bus'].col).toEqual(['red']);
     expect(detail('aus-bus')).toMatchObject({ src: 'claude', fact: ['F', 'D'], desc: ['A', 'B'], size: '10 cm' });
   });
+  it('builds one shared group table with parent links', () => {
+    expect(out.groups).toEqual([
+      { t: 3, n: 'Aves', r: 'class', en: 'Birds' },
+      { t: 90, n: 'Ausidae', r: 'family', en: 'Aus birds', p: 0 },
+    ]);
+    expect(byId['aus-bus'].g).toBe(1);
+    expect(byId['aus-cus'].g).toBe(1);
+    expect(byId['jaguar'].g).toBeUndefined();
+  });
   it('shards every detail exactly once', () => {
-    expect(out.shards).toBe(2);
+    expect(out.shards).toBe(3);
     expect(out.details.flatMap((d) => Object.keys(d)).sort()).toEqual(out.index.map((e) => e.id).sort());
   });
 });

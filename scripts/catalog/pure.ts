@@ -1,5 +1,5 @@
 /** Pure catalog logic, kept free of network access so it can be unit-tested. */
-import type { CatKey, ColourKey, CuratedSpecies, Detail, HabitatKey, IndexEntry, Iucn, Pair, Photo } from '../../src/data/types';
+import type { CatKey, ColourKey, CuratedSpecies, Detail, Group, HabitatKey, IndexEntry, Iucn, Pair, Photo } from '../../src/data/types';
 import { compactPhoto, shardOf } from '../../src/data/shard';
 
 /**
@@ -84,6 +84,17 @@ export interface Gathered {
   photo?: Photo;
   wikiEn?: { title: string; extract: string; url: string };
   wikiEs?: { title: string; extract: string; url: string };
+  /** Named ancestor taxa, from the top (phylum) down to the genus */
+  lineage?: Lineage[];
+}
+
+/** One ancestor taxon with a common name, used for group search. */
+export interface Lineage {
+  t: number;
+  n: string;
+  r: string;
+  en?: string;
+  es?: string;
 }
 
 /** Claude-written content for one species (data/enrichment.json, keyed by scientific name). */
@@ -95,6 +106,8 @@ export interface Enrichment {
   hab: HabitatKey[];
   /** How to tell males from females [en, es] */
   sex?: Pair;
+  /** Its role in nature [en, es] */
+  role?: Pair;
   model: string;
   date: string;
 }
@@ -113,6 +126,7 @@ export interface BuildOutput {
   index: IndexEntry[];
   details: Record<string, Detail>[];
   shards: number;
+  groups: Group[];
   stats: Record<string, number>;
 }
 
@@ -125,6 +139,7 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
   interface Row {
     entry: IndexEntry;
     detail: Detail;
+    lineage?: Lineage[];
   }
   const rows: Row[] = [];
   const stats: Record<string, number> = { curated: 0, claude: 0, wikipedia: 0, noText: 0 };
@@ -150,9 +165,10 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
           n: cur.n, nat: cur.nat, iucn: g.iucn ?? cur.iucn, col: cur.col, obs: g.obs, t: g.taxonId, cur: 1,
         },
         detail: {
-          fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, ...(cur.sex ? { sex: cur.sex } : {}),
+          fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, ...(cur.sex ? { sex: cur.sex } : {}), ...(cur.role ? { role: cur.role } : {}),
           ...(g.photo ? { photo: g.photo } : {}), ...(Object.keys(wiki).length ? { wiki } : {}), src: 'curated',
         },
+        lineage: g.lineage,
       });
       continue;
     }
@@ -162,7 +178,7 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
     let detail: Detail;
     if (enr) {
       stats.claude++;
-      detail = { fact: enr.fact, desc: [descEn, descEs], ...(enr.size ? { size: enr.size } : {}), hab: enr.hab, ...(enr.sex ? { sex: enr.sex } : {}), src: 'claude' };
+      detail = { fact: enr.fact, desc: [descEn, descEs], ...(enr.size ? { size: enr.size } : {}), hab: enr.hab, ...(enr.sex ? { sex: enr.sex } : {}), ...(enr.role ? { role: enr.role } : {}), src: 'claude' };
     } else {
       if (descEn || descEs) stats.wikipedia++;
       else stats.noText++;
@@ -173,6 +189,7 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
     rows.push({
       entry: { id: slug(g.sci), cat, sci: g.sci, en: nameEn, es: nameEs, n: 0, nat: g.introduced ? 0 : 1, iucn: g.iucn ?? 'NE', col: enr?.col ?? [], obs: g.obs, t: g.taxonId },
       detail,
+      lineage: g.lineage,
     });
   }
 
@@ -182,7 +199,7 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
     stats.curated++;
     rows.push({
       entry: { id: cur.id, cat: cur.cat, sci: cur.sci, en: cur.en[0], es: cur.es[0], ...(cur.maya ? { maya: cur.maya } : {}), n: cur.n, nat: cur.nat, iucn: cur.iucn, col: cur.col, cur: 1 },
-      detail: { fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, ...(cur.sex ? { sex: cur.sex } : {}), src: 'curated' },
+      detail: { fact: [cur.en[1], cur.es[1]], desc: [cur.en[2], cur.es[2]], size: cur.size, hab: cur.hab, ...(cur.sex ? { sex: cur.sex } : {}), ...(cur.role ? { role: cur.role } : {}), src: 'curated' },
     });
   }
 
@@ -208,6 +225,23 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
     ids.add(r.entry.id);
   }
 
+  // Taxonomic groups: one table of named ancestors, each pointing to its parent; a species points to its lowest group.
+  const groups: Group[] = [];
+  const groupIdx = new Map<number, number>();
+  for (const r of rows) {
+    let parent: number | undefined;
+    for (const l of r.lineage || []) {
+      let i = groupIdx.get(l.t);
+      if (i == null) {
+        i = groups.length;
+        groupIdx.set(l.t, i);
+        groups.push({ t: l.t, n: l.n, r: l.r, ...(l.en ? { en: l.en } : {}), ...(l.es ? { es: l.es } : {}), ...(parent != null ? { p: parent } : {}) });
+      }
+      parent = i;
+    }
+    if (parent != null) r.entry.g = parent;
+  }
+
   for (const r of rows) {
     const p = compactPhoto(r.detail.photo?.url);
     if (p) r.entry.p = p;
@@ -219,5 +253,6 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
   for (const c of CAT_ORDER) stats[`cat.${c}`] = rows.filter((r) => r.entry.cat === c).length;
   stats.total = rows.length;
 
-  return { index: rows.map((r) => r.entry), details, shards, stats };
+  stats.groups = groups.length;
+  return { index: rows.map((r) => r.entry), details, shards, groups, stats };
 }

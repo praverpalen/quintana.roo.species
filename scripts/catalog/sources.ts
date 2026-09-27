@@ -1,6 +1,6 @@
 /** iNaturalist and Wikipedia clients for the catalog pipeline. Both are polite: throttled, retried, cached. */
 import type { CatKey, Photo } from '../../src/data/types';
-import { CATEGORY_TAXA, iucnFromStatuses, type ConservationStatus, type Gathered } from './pure';
+import { CATEGORY_TAXA, iucnFromStatuses, type ConservationStatus, type Gathered, type Lineage } from './pure';
 
 const UA = 'quintana-roo-species-explorer/0.2 (https://github.com/praverpalen/quintana.roo.species)';
 const INAT = 'https://api.inaturalist.org/v1';
@@ -42,7 +42,11 @@ interface InatTaxon {
   taxon_photos?: { photo: InatPhoto }[];
   conservation_statuses?: ConservationStatus[];
   wikipedia_url?: string | null;
+  ancestor_ids?: number[];
 }
+
+/** Ranks whose common names are useful search groups ("sharks", "crabs", "iguanas"). */
+const GROUP_RANKS = new Set(['phylum', 'subphylum', 'class', 'subclass', 'infraclass', 'superorder', 'order', 'suborder', 'infraorder', 'superfamily', 'epifamily', 'family', 'subfamily', 'tribe', 'subtribe', 'genus']);
 
 export async function quintanaRooPlaceId(): Promise<number> {
   const r = await inat<{ results: { id: number; name: string; admin_level: number | null }[] }>(`/places/autocomplete?q=Quintana%20Roo`);
@@ -104,7 +108,7 @@ export async function gatherInat(opts: GatherOptions = {}): Promise<Omit<Gathere
   const taxonIds = new Map<string, number>();
   for (const name of new Set(CATEGORY_TAXA.flatMap((c) => [...c.include, ...(c.exclude || [])]))) taxonIds.set(name, await resolveTaxon(name));
 
-  const byId = new Map<number, Omit<Gathered, 'wikiEn' | 'wikiEs'> & { wiki?: string }>();
+  const byId = new Map<number, Omit<Gathered, 'wikiEn' | 'wikiEs'> & { wiki?: string; ancestorIds?: number[] }>();
   for (const def of CATEGORY_TAXA) {
     if (opts.only && !opts.only.includes(def.cat) && !(def.cat === 'plant' && opts.only.includes('tree'))) continue;
     const inc = def.include.map((n) => taxonIds.get(n)!);
@@ -137,9 +141,30 @@ export async function gatherInat(opts: GatherOptions = {}): Promise<Omit<Gathere
       g.iucn = iucnFromStatuses(t.conservation_statuses);
       g.photo ??= taxonPhoto(t);
       if (t.wikipedia_url) g.wiki = t.wikipedia_url;
+      if (t.ancestor_ids) g.ancestorIds = t.ancestor_ids.filter((a) => a !== t.id);
     }
     if ((i / 30) % 20 === 0) log(`taxon details ${Math.min(i + 30, ids.length)}/${ids.length}`);
   }
+  // Group search: names of every ancestor taxon (order, family, genus…) in English and Spanish.
+  const ancIds = [...new Set([...byId.values()].flatMap((g) => g.ancestorIds || []))];
+  const anc = new Map<number, Lineage>();
+  for (const locale of ['en', 'es-MX'] as const) {
+    for (let i = 0; i < ancIds.length; i += 30) {
+      const r = await inat<{ results: InatTaxon[] }>(`/taxa/${ancIds.slice(i, i + 30).join(',')}?locale=${locale}`);
+      for (const t of r.results) {
+        if (!GROUP_RANKS.has(t.rank)) continue;
+        const l = anc.get(t.id) ?? { t: t.id, n: t.name, r: t.rank };
+        if (t.preferred_common_name) l[locale === 'en' ? 'en' : 'es'] = t.preferred_common_name;
+        anc.set(t.id, l);
+      }
+    }
+    log(`ancestor names (${locale}): ${anc.size} groups`);
+  }
+  for (const g of byId.values()) {
+    g.lineage = (g.ancestorIds || []).map((id) => anc.get(id)).filter((l): l is Lineage => !!l && !!(l.en || l.es));
+    delete g.ancestorIds;
+  }
+
   // Last resort for photos: the most-voted openly licensed research-grade observation photo in Quintana Roo.
   const noPhoto = [...byId.values()].filter((g) => !g.photo);
   log(`${noPhoto.length} species without an open taxon photo; trying observation photos`);

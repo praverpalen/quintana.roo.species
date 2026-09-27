@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import type { Lang } from '../data/types';
 import { COLOURS, HABITATS, IUCN, IUCN_SCALE, type Labels } from '../i18n';
-import type { Card } from '../model';
+import { familyOf, type Card } from '../model';
 import { useSpeciesPhoto } from '../photos';
 import { addMyPhoto, deleteMyPhoto, useBlobUrl, useMyPhotos, type MyPhoto } from '../myPhotos';
 import { useDetail } from '../catalog';
@@ -44,6 +44,8 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
   const desc = pick(det?.desc);
   const hab = det?.hab ?? [];
   const sex = pick(det?.sex);
+  const role = pick(det?.role);
+  const fam = familyOf(s, lang);
   const credit = photo?.credit ? `${L.photo}: ${photo.credit.attribution} · ${photo.credit.license} · ${photo.credit.source}` : '';
   const statusNote = s.iucn === 'NE' ? L.notEvaluated : IUCN[s.iucn][li] + L.onRedList;
 
@@ -70,6 +72,11 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
             {c.sci}
             {s.maya ? ` · Maya: ${s.maya}` : ''}
           </div>
+          {fam && (
+            <div style={{ fontSize: 13, color: 'var(--color-neutral-700)' }}>
+              {L.family}: {fam.name ? `${fam.name} (${fam.sci})` : fam.sci}
+            </div>
+          )}
           <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap', marginTop: 4 }}>
             <span className={'tag ' + (c.native ? 'is-native' : 'is-intro')}>{c.origin}</span>
             <span className="tag tag-neutral">{c.rarity}</span>
@@ -156,6 +163,18 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             <h4 style={{ margin: 0 }}>{L.about}</h4>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, textWrap: 'pretty' }}>{desc}</p>
+          </div>
+        )}
+
+        {role && (
+          <div className="sex-box" style={{ background: 'var(--color-accent-2-100)' }}>
+            <div className="sex-title">
+              <span className="sex-sym" style={{ background: 'var(--color-accent-2-200)', color: 'var(--color-accent-2-800)' }} aria-hidden="true">
+                🌿
+              </span>
+              <h4 style={{ margin: 0 }}>{L.roleTitle}</h4>
+            </div>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.55, textWrap: 'pretty' }}>{role}</p>
           </div>
         )}
 
