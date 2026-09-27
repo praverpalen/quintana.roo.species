@@ -64,11 +64,29 @@ function haystack(s: IndexEntry): string {
 // ---- Group search: "crab", "shark", "iguana" match every species in a group whose common name says so ----
 let GROUPS: Group[] = [];
 const groupWordCache = new Map<number, Set<string>>();
+/** Every group word in the catalog: a query that is a whole word somewhere never prefix-matches. */
+let ALL_WORDS = new Set<string>();
 
 /** Called once the catalog is loaded. */
 export function setGroups(groups: Group[] | undefined) {
   GROUPS = groups || [];
   groupWordCache.clear();
+  ALL_WORDS = new Set();
+  for (const g of GROUPS) for (const w of ownWords(g)) ALL_WORDS.add(w);
+}
+
+// "Sharks and Rays", "Iguanas and Allies", "Insectos, arácnidos y crustáceos": a mix of several
+// kinds, so its words would drag rays into "shark". A narrower plain group almost always exists.
+const MIXED = /\b(and|y|e)\b|,|allies|relatives|parientes|afines/;
+
+function ownWords(g: Group): string[] {
+  const out: string[] = [];
+  for (const name of [g.en, g.es]) {
+    const n = norm(name || '');
+    if (!n || MIXED.test(n)) continue;
+    for (const word of n.split(/[^a-z0-9]+/)) if (word.length > 1) out.push(word);
+  }
+  return out;
 }
 
 /** All words from the common names (EN + ES) of a group and all its parent groups. */
@@ -77,17 +95,28 @@ function groupWords(idx: number): Set<string> {
   if (w) return w;
   const g = GROUPS[idx];
   w = new Set(g.p != null ? groupWords(g.p) : []);
-  for (const name of [g.en, g.es]) for (const word of norm(name || '').split(/[^a-z0-9]+/)) if (word.length > 1) w.add(word);
+  for (const word of ownWords(g)) w.add(word);
   groupWordCache.set(idx, w);
   return w;
 }
 
-/** Word match that tolerates plurals ("crab" ~ "crabs", "tiburon" ~ "tiburones") and, from 4 letters, prefixes. */
+/** The query word and its singular/plural forms (EN + ES). */
+function forms(q: string): string[] {
+  const f = [q, q + 's', q + 'es'];
+  if (q.endsWith('es')) f.push(q.slice(0, -2));
+  if (q.endsWith('s')) f.push(q.slice(0, -1));
+  if (q.endsWith('y')) f.push(q.slice(0, -1) + 'ies');
+  if (q.endsWith('ies')) f.push(q.slice(0, -3) + 'y');
+  if (q.endsWith('z')) f.push(q.slice(0, -1) + 'ces');
+  return f;
+}
+
+/** Whole word or plural; a prefix only while still typing ("iguan"), never "dolphin" → "dolphinfishes". */
 function wordMatches(q: string, words: Set<string>): boolean {
-  if (words.has(q) || words.has(q + 's') || words.has(q + 'es')) return true;
-  if (q.endsWith('es') && words.has(q.slice(0, -2))) return true;
-  if (q.endsWith('s') && words.has(q.slice(0, -1))) return true;
-  if (q.length >= 4) for (const w of words) if (w.startsWith(q)) return true;
+  const f = forms(q);
+  if (f.some((x) => words.has(x))) return true;
+  if (q.length < 4 || f.some((x) => ALL_WORDS.has(x))) return false;
+  for (const w of words) if (w.startsWith(q)) return true;
   return false;
 }
 
