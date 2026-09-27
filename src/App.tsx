@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Catalog, CatKey } from './data/types';
 import { LABELS } from './i18n';
-import { buildCards, EMPTY_FILTERS, type ColSort, type Filters } from './model';
+import { buildCards, EMPTY_FILTERS, setGroups, type ColSort, type Filters } from './model';
 import { useCatalog } from './catalog';
 import { buildBackup, readBackup, saveBackup } from './backup';
 import { importMyPhotos } from './myPhotos';
@@ -37,6 +37,7 @@ export default function App() {
 
 function Explorer({ catalog, lang, spotted, setLang, toggleSpotted, mergeSpotted }: { catalog: Catalog } & ReturnType<typeof usePersisted>) {
   const L = LABELS[lang];
+  useMemo(() => setGroups(catalog.groups), [catalog]);
   const cards = useMemo(() => buildCards(catalog.species, spotted, lang), [catalog, spotted, lang]);
 
   const [tab, setTab] = useState<Tab>('home');

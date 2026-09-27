@@ -15,7 +15,7 @@ import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import type { Catalog, CatKey, CuratedSpecies, Detail } from '../src/data/types';
-import { buildCatalog, type Enrichment, type Gathered } from './catalog/pure';
+import { buildCatalog, type Enrichment, type Gathered, type Lineage } from './catalog/pure';
 import { addWikipedia, gatherInat, type WikiCache } from './catalog/sources';
 import { ClaudeContent, DEFAULT_MODEL, type Pending } from './catalog/claude';
 
@@ -48,6 +48,15 @@ function args() {
  * Reconstructs the gathered species from the published catalog, so an offline rebuild
  * (e.g. after editing data/trees.json or data/enrichment.json) works without the network cache.
  */
+function lineageOf(groups: NonNullable<Catalog['groups']>, idx: number): Lineage[] {
+  const out: Lineage[] = [];
+  for (let i: number | undefined = idx; i != null; i = groups[i].p) {
+    const g = groups[i];
+    out.unshift({ t: g.t, n: g.n, r: g.r, ...(g.en ? { en: g.en } : {}), ...(g.es ? { es: g.es } : {}) });
+  }
+  return out;
+}
+
 function gatheredFromPublished(): Gathered[] {
   const cat = readJSON<Catalog | null>(p('public/data/catalog.json'), null);
   if (!cat) return [];
@@ -70,6 +79,7 @@ function gatheredFromPublished(): Gathered[] {
         ...(d?.photo ? { photo: d.photo } : {}),
         ...(wiki('en', 0) ? { wikiEn: wiki('en', 0) } : {}),
         ...(wiki('es', 1) ? { wikiEs: wiki('es', 1) } : {}),
+        ...(e.g != null && cat.groups ? { lineage: lineageOf(cat.groups, e.g) } : {}),
       } as Gathered;
     });
 }
@@ -148,7 +158,7 @@ async function main() {
 
   // 4. Build and write the catalog.
   const out = buildCatalog({ gathered, curated, enrichment, trees, generated: new Date().toISOString() });
-  const catalog: Catalog = { generated: new Date().toISOString(), shards: out.shards, species: out.index };
+  const catalog: Catalog = { generated: new Date().toISOString(), shards: out.shards, species: out.index, ...(out.groups.length ? { groups: out.groups } : {}) };
   rmSync(p('public/data/details'), { recursive: true, force: true });
   writeJSON(p('public/data/catalog.json'), catalog, false);
   out.details.forEach((d, i) => writeJSON(p(`public/data/details/${i}.json`), d, false));

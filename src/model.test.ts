@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import curated from '../data/curated.json';
 import type { CuratedSpecies } from './data/types';
 import { buildCatalog } from '../scripts/catalog/pure';
-import { anyFilter, buildCards, EMPTY_FILTERS, filterCards, panelFilterCount, sortCards } from './model';
+import { anyFilter, buildCards, EMPTY_FILTERS, familyOf, filterCards, panelFilterCount, setGroups, sortCards } from './model';
 
 const SPECIES = buildCatalog({ gathered: [], curated: curated as CuratedSpecies[], enrichment: {}, trees: {}, generated: '' }).index;
 const cards = (spotted = {}) => buildCards(SPECIES, spotted, 'en');
@@ -81,5 +81,42 @@ describe('curated data', () => {
       expect(s.en).toHaveLength(3);
       expect(s.es).toHaveLength(3);
     }
+  });
+});
+
+describe('group search', () => {
+  // Decapoda > Brachyura (crabs) > Gecarcinidae (land crabs); Carcharhinidae (requiem sharks); Delphinidae (ocean dolphins)
+  const groups = [
+    { t: 1, n: 'Decapoda', r: 'order', en: 'Decapods', es: 'Decápodos' },
+    { t: 2, n: 'Brachyura', r: 'infraorder', en: 'True Crabs', es: 'Cangrejos', p: 0 },
+    { t: 3, n: 'Gecarcinidae', r: 'family', en: 'Land Crabs', es: 'Cangrejos terrestres', p: 1 },
+    { t: 4, n: 'Carcharhinidae', r: 'family', en: 'Requiem Sharks', es: 'Tiburones réquiem' },
+    { t: 5, n: 'Delphinidae', r: 'family', en: 'Ocean Dolphins', es: 'Delfines oceánicos' },
+    { t: 6, n: 'Coleoptera', r: 'order', en: 'Beetles', es: 'Escarabajos' },
+  ];
+  const e = (id: string, en: string, g?: number) => ({ id, cat: 'marine' as const, sci: id, en, es: en, n: 0 as const, nat: 1 as const, iucn: 'LC' as const, col: [], ...(g != null ? { g } : {}) });
+  const entries = [e('cardisoma', 'Blue Land Crab', 2), e('bull', 'Bull Shark', 3), e('tursiops', 'Common Bottlenose', 4), e('megasoma', 'Elephas', 5), e('none', 'Something')];
+  const find = (q: string) => filterCards(buildCards(entries, {}, 'en'), { ...EMPTY_FILTERS, q }).map((c) => c.id);
+
+  it('finds species through their group names, in English and Spanish, with plurals', () => {
+    setGroups(groups);
+    expect(find('dolphin')).toEqual(['tursiops']);
+    expect(find('delfin')).toEqual(['tursiops']);
+    expect(find('crab')).toEqual(['cardisoma']);
+    expect(find('cangrejo')).toEqual(['cardisoma']);
+    expect(find('sharks')).toEqual(['bull']);
+    expect(find('tiburon')).toEqual(['bull']);
+    expect(find('decapod')).toEqual(['cardisoma']); // parent groups count too
+  });
+  it('does not let short words match longer ones ("bee" is not "beetles")', () => {
+    setGroups(groups);
+    expect(find('bee')).toEqual([]);
+    expect(find('beetle')).toEqual(['megasoma']);
+  });
+  it('shows the family', () => {
+    setGroups(groups);
+    expect(familyOf(entries[0], 'es')).toEqual({ name: 'Cangrejos terrestres', sci: 'Gecarcinidae' });
+    expect(familyOf(entries[4], 'en')).toBeNull();
+    setGroups(undefined);
   });
 });

@@ -33,6 +33,8 @@ export interface CuratedSpecies {
   es: [string, string, string];
   /** How to tell males from females [en, es] */
   sex?: Pair;
+  /** Its role in nature [en, es] */
+  role?: Pair;
 }
 
 /** One row of public/data/catalog.json: everything the grid, search and filters need. */
@@ -58,6 +60,21 @@ export interface IndexEntry {
   cur?: 1;
   /** Photo: "<id>.<ext>" on iNaturalist open data, or a full URL. Credit lives in the Detail. */
   p?: string;
+  /** Lowest named taxonomic group (index into Catalog.groups); its parents follow via Group.p */
+  g?: number;
+}
+
+/** A named taxonomic group (order, family, genus…) used for group search: "crab", "shark", "iguana". */
+export interface Group {
+  /** iNaturalist taxon id */
+  t: number;
+  /** Scientific name and rank */
+  n: string;
+  r: string;
+  en?: string;
+  es?: string;
+  /** Parent group index */
+  p?: number;
 }
 
 export interface Catalog {
@@ -65,6 +82,8 @@ export interface Catalog {
   /** Number of detail shards in public/data/details/ */
   shards: number;
   species: IndexEntry[];
+  /** Taxonomic groups for group search (optional: older catalogs have none) */
+  groups?: Group[];
 }
 
 /** Heavier per-species content, loaded on demand from a detail shard. */
@@ -75,6 +94,8 @@ export interface Detail {
   hab?: HabitatKey[];
   /** How to tell males from females [en, es] */
   sex?: Pair;
+  /** Its role in nature [en, es] */
+  role?: Pair;
   photo?: Photo;
   /** Wikipedia article URLs used as the text source */
   wiki?: { en?: string; es?: string };

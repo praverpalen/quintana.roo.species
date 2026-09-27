@@ -1,4 +1,4 @@
-import type { CatKey, ColourKey, IndexEntry, Lang } from './data/types';
+import type { CatKey, ColourKey, Group, IndexEntry, Lang } from './data/types';
 import { CATS, COLOURS, IUCN, RARITY, catColours, fmtDate } from './i18n';
 
 export type Spotted = Record<string, string>;
@@ -61,6 +61,52 @@ function haystack(s: IndexEntry): string {
   return h;
 }
 
+// ---- Group search: "crab", "shark", "iguana" match every species in a group whose common name says so ----
+let GROUPS: Group[] = [];
+const groupWordCache = new Map<number, Set<string>>();
+
+/** Called once the catalog is loaded. */
+export function setGroups(groups: Group[] | undefined) {
+  GROUPS = groups || [];
+  groupWordCache.clear();
+}
+
+/** All words from the common names (EN + ES) of a group and all its parent groups. */
+function groupWords(idx: number): Set<string> {
+  let w = groupWordCache.get(idx);
+  if (w) return w;
+  const g = GROUPS[idx];
+  w = new Set(g.p != null ? groupWords(g.p) : []);
+  for (const name of [g.en, g.es]) for (const word of norm(name || '').split(/[^a-z0-9]+/)) if (word.length > 1) w.add(word);
+  groupWordCache.set(idx, w);
+  return w;
+}
+
+/** Word match that tolerates plurals ("crab" ~ "crabs", "tiburon" ~ "tiburones") and, from 4 letters, prefixes. */
+function wordMatches(q: string, words: Set<string>): boolean {
+  if (words.has(q) || words.has(q + 's') || words.has(q + 'es')) return true;
+  if (q.endsWith('es') && words.has(q.slice(0, -2))) return true;
+  if (q.endsWith('s') && words.has(q.slice(0, -1))) return true;
+  if (q.length >= 4) for (const w of words) if (w.startsWith(q)) return true;
+  return false;
+}
+
+export function inGroup(s: IndexEntry, q: string): boolean {
+  if (s.g == null || !GROUPS[s.g]) return false;
+  const words = groupWords(s.g);
+  const parts = q.split(/\s+/).filter(Boolean);
+  return parts.length > 0 && parts.every((p) => wordMatches(p, words));
+}
+
+/** The family (or nearest named group) of a species, for display. */
+export function familyOf(s: IndexEntry, lang: Lang): { name: string; sci: string } | null {
+  for (let i = s.g; i != null && GROUPS[i]; i = GROUPS[i].p) {
+    const g = GROUPS[i];
+    if (g.r === 'family') return { name: (lang === 'es' ? g.es || g.en : g.en || g.es) || '', sci: g.n };
+  }
+  return null;
+}
+
 export interface Filters {
   q: string;
   cat: CatKey | 'all';
@@ -86,7 +132,7 @@ export function sortCards(cards: Card[], by: Sort | ColSort): Card[] {
 export function filterCards(cards: Card[], f: Filters): Card[] {
   const q = norm(f.q.trim());
   const out = cards.filter(({ s, unlocked }) => {
-    if (q && !haystack(s).includes(q)) return false;
+    if (q && !haystack(s).includes(q) && !inGroup(s, q)) return false;
     if (f.cat !== 'all' && s.cat !== f.cat) return false;
     if (f.color !== 'all' && !s.col.includes(f.color)) return false;
     if (f.origin !== 'all' && (f.origin === 'native') !== !!s.nat) return false;

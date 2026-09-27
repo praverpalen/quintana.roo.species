@@ -33,10 +33,11 @@ The app loads its catalog at runtime from `public/data/`:
 `scripts/build-catalog.ts` generates both. For every species with research-grade iNaturalist observations in Quintana Roo, it:
 
 1. Takes the species list, observation counts, EN/ES names, the native/introduced flag and the global IUCN status from **iNaturalist**, plus an openly licensed (CC) photo: the default photo, else another of the taxon's photos, else the most-voted research-grade observation photo from Quintana Roo.
+   It also stores each species' family tree (order, family, genus… with English and Spanish common names), so searching "crab", "shark", "dolphin" or "iguana" finds every member of that group, and the species page shows its family.
 2. Takes the EN and ES summaries (CC BY-SA, credited in the app) from **Wikipedia**.
 3. Uses **Claude** (Batches API, half price) in two jobs:
    - It classifies plants as tree or not, 100 names per request.
-   - It writes a fun fact, size, colours, habitat and how to tell males from females for the most-observed species that don't have them yet, up to `--max-enrich` per run. Results are saved in `data/enrichment.json`, so every run continues where the last one stopped.
+   - It writes a fun fact, size, colours, habitat and how to tell males from females and its role in nature for the most-observed species that don't have them yet, up to `--max-enrich` per run. Results are saved in `data/enrichment.json`, so every run continues where the last one stopped.
 4. Computes rarity from observation counts within each category: the top 40% are Common, then 30% Uncommon, 20% Rare and 10% Legendary.
 5. Merges `data/curated.json` on top. These are the 29 hand-written species; they keep their text, Maya names and rarity, but take the IUCN status from iNaturalist.
 

@@ -25,6 +25,10 @@
    "Ceiba",
    "El árbol sagrado maya: sus raíces llegan al inframundo y su copa sostiene el cielo.",
    "Un gigante de la selva con tronco recto, contrafuertes y copa ancha y plana. Los troncos jóvenes tienen espinas cónicas y en la temporada seca sus vainas sueltan fibra de kapok."
+  ],
+  "role": [
+   "A giant that shelters a whole community: epiphytes, birds, bats and insects live in its crown, and bats pollinate its night flowers.",
+   "Un gigante que alberga a toda una comunidad: epífitas, aves, murciélagos e insectos viven en su copa, y los murciélagos polinizan sus flores nocturnas."
   ]
  },
  {
@@ -52,6 +56,10 @@
    "Chicozapote",
    "Su savia, el chicle, fue la base de los primeros chicles modernos. Los chicleros sangraban estos árboles por todo Quintana Roo.",
    "Un árbol alto de hojas brillantes y frutos cafés con sabor a piloncillo y pera. Las cicatrices en zigzag de los troncos viejos son de la extracción de chicle."
+  ],
+  "role": [
+   "Its fruit feeds monkeys, bats and birds, which spread its seeds through the forest.",
+   "Su fruto alimenta a monos, murciélagos y aves, que dispersan sus semillas por la selva."
   ]
  },
  {
@@ -81,6 +89,10 @@
    "Chacá",
    "Le dicen 'árbol del turista': su corteza roja y pelada parece piel quemada por el sol.",
    "Se reconoce por su corteza rojiza brillante que se desprende en láminas. Su savia se usa como remedio para las quemaduras del chechén, que suele crecer cerca."
+  ],
+  "role": [
+   "A fast-growing pioneer that helps forests recover after clearing or hurricanes; birds eat its fruits and spread the seeds.",
+   "Un pionero de crecimiento rápido que ayuda a la selva a recuperarse tras desmontes o huracanes; las aves comen sus frutos y dispersan las semillas."
   ]
  },
  {
@@ -109,6 +121,10 @@
    "Mangle rojo",
    "Sus raíces zancudas son una guardería: muchos peces del arrecife pasan su infancia escondidos ahí.",
    "Crece directamente en agua salada sobre raíces arqueadas. Los manglares protegen la costa de los huracanes y filtran el agua que llega al arrecife."
+  ],
+  "role": [
+   "Mangroves are nurseries for fish, filter water before it reaches the reef, store huge amounts of carbon and protect the coast from storms.",
+   "Los manglares son guarderías de peces, filtran el agua antes de que llegue al arrecife, guardan enormes cantidades de carbono y protegen la costa de las tormentas."
   ]
  },
  {
@@ -137,6 +153,10 @@
    "Palma de coco",
    "El coco flota y sobrevive meses en el mar. Así se extendió por los trópicos.",
    "La palmera de todas las postales, pero no es de aquí: el coco llegó al Caribe en barcos europeos en el siglo XVI. Después, largos tramos de esta costa se sembraron de cocoteros para producir copra."
+  ],
+  "role": [
+   "Its roots help hold beach sand, and its fruit has fed coastal people for centuries, though planted groves replaced native coastal forest.",
+   "Sus raíces ayudan a sujetar la arena de la playa y su fruto ha alimentado a la gente costera por siglos, aunque los cocotales reemplazaron selva costera nativa."
   ]
  },
  {
@@ -165,6 +185,10 @@
    "Flamboyán",
    "Viene de Madagascar y en mayo y junio pinta de rojo calles enteras.",
    "Árbol ornamental en forma de sombrilla, con hojas como helecho y largas vainas leñosas que suenan como maracas."
+  ],
+  "role": [
+   "Its flowers feed bees and other insects, and its wide crown gives shade in towns.",
+   "Sus flores alimentan abejas y otros insectos, y su copa ancha da sombra en las ciudades."
   ]
  },
  {
@@ -194,6 +218,10 @@
    "Flor de mayo",
    "Su aroma es más fuerte de noche para atraer polillas esfinge, pero las engaña: no tiene néctar.",
    "Arbolito de ramas gruesas y flores cerosas de cinco pétalos. Para los mayas, la flor de nikte' simbolizaba el amor y la belleza."
+  ],
+  "role": [
+   "Its flowers draw in night-flying sphinx moths, and its leaves feed the big caterpillars of the frangipani sphinx.",
+   "Sus flores atraen polillas esfinge nocturnas, y sus hojas alimentan a las grandes orugas de la esfinge de la flor de mayo."
   ]
  },
  {
@@ -221,6 +249,10 @@
    "Chaya",
    "La 'espinaca maya'. Hay que cocinarla siempre: cruda tiene compuestos tóxicos.",
    "Arbusto de crecimiento rápido con hojas grandes. Rica en proteína, hierro y calcio; se come en tamales, huevos y agua de chaya."
+  ],
+  "role": [
+   "A nutritious traditional food plant; its flowers feed bees and other insects.",
+   "Una planta alimenticia tradicional y nutritiva; sus flores alimentan abejas y otros insectos."
   ]
  },
  {
@@ -249,6 +281,10 @@
    "Orquídea cuerno de toro",
    "Sus pseudobulbos huecos albergan colonias de hormigas que, a cambio, la defienden.",
    "Orquídea epífita grande que crece sobre árboles y lanza varas florales que pueden medir varios metros con flores rosa-morado."
+  ],
+  "role": [
+   "It gives ants a home in exchange for protection, a partnership that benefits both.",
+   "Da hogar a las hormigas a cambio de protección, una alianza que beneficia a ambas."
   ]
  },
  {
@@ -282,6 +318,10 @@
   "sex": [
    "Males and females look alike.",
    "Machos y hembras se ven iguales."
+  ],
+  "role": [
+   "It controls insects and small lizards, and its nesting tunnels in cenote walls later shelter other animals.",
+   "Controla insectos y lagartijas pequeñas, y sus túneles en las paredes de los cenotes después dan refugio a otros animales."
   ]
  },
  {
@@ -314,6 +354,10 @@
   "sex": [
    "Males are bigger, with a larger blue head covered in more orange-red knobs and a fleshy crown on top; females are smaller and duller.",
    "Los machos son más grandes, con la cabeza azul más grande, más verrugas rojo-naranja y una corona carnosa; las hembras son más pequeñas y opacas."
+  ],
+  "role": [
+   "It eats insects and seeds on the forest floor and spreads seeds as it roams.",
+   "Come insectos y semillas en el suelo de la selva y dispersa semillas mientras camina."
   ]
  },
  {
@@ -346,6 +390,10 @@
   "sex": [
    "Males and females look alike; males tend to have slightly longer bills.",
    "Machos y hembras se ven iguales; los machos suelen tener el pico un poco más largo."
+  ],
+  "role": [
+   "A key seed disperser: it swallows fruits whole and drops the seeds far from the parent tree.",
+   "Un dispersor de semillas clave: traga los frutos enteros y deja las semillas lejos del árbol madre."
   ]
  },
  {
@@ -377,6 +425,10 @@
   "sex": [
    "Males and females look alike; males are usually a little taller.",
    "Machos y hembras se ven iguales; los machos suelen ser un poco más altos."
+  ],
+  "role": [
+   "Its feeding stirs up lagoon mud and recycles nutrients, and it's a sign of healthy shallow lagoons.",
+   "Al alimentarse remueve el lodo de las lagunas y recicla nutrientes; su presencia indica lagunas someras sanas."
   ]
  },
  {
@@ -408,6 +460,10 @@
   "sex": [
    "Easy: males are glossy blue-black with a very long, keel-shaped tail; females are smaller and brown.",
    "Fácil: los machos son negro-azulado brillante con cola muy larga en forma de quilla; las hembras son más pequeñas y cafés."
+  ],
+  "role": [
+   "It eats insects and scraps in towns, cleaning up leftovers.",
+   "Come insectos y sobras en las ciudades, limpiando desperdicios."
   ]
  },
  {
@@ -440,6 +496,10 @@
   "sex": [
    "Males are noticeably bigger and heavier, with a broader head; the coat is the same.",
    "Los machos son notablemente más grandes y pesados, con la cabeza más ancha; el pelaje es igual."
+  ],
+  "role": [
+   "A top predator that keeps populations of deer, peccaries and other prey in balance, which shapes the whole forest.",
+   "Un depredador tope que mantiene en equilibrio a venados, pecaríes y otras presas, y así moldea toda la selva."
   ]
  },
  {
@@ -471,6 +531,10 @@
   "sex": [
    "Adult males are larger and usually live alone; the noisy groups you see are females with their young.",
    "Los machos adultos son más grandes y suelen andar solos; los grupos ruidosos son hembras con sus crías."
+  ],
+  "role": [
+   "It eats fruit, insects and small animals and spreads many seeds through the forest.",
+   "Come fruta, insectos y animales pequeños, y dispersa muchas semillas por la selva."
   ]
  },
  {
@@ -501,6 +565,10 @@
   "sex": [
    "Adult males are clearly bigger than females; babies ride on their mother's back.",
    "Los machos adultos son claramente más grandes que las hembras; las crías viajan en la espalda de su madre."
+  ],
+  "role": [
+   "By eating leaves and fruit it prunes the canopy and spreads seeds in its droppings.",
+   "Al comer hojas y frutos poda el dosel y dispersa semillas en sus excrementos."
   ]
  },
  {
@@ -533,6 +601,10 @@
   "sex": [
    "Males and females look alike; a female's genital opening sits close to the tail, a male's near the navel.",
    "Machos y hembras se ven iguales; la abertura genital de la hembra está cerca de la cola y la del macho cerca del ombligo."
+  ],
+  "role": [
+   "By grazing seagrass it keeps meadows healthy, and its droppings recycle nutrients in bays and lagoons.",
+   "Al pastar mantiene sanas las praderas de pastos marinos, y sus excrementos reciclan nutrientes en bahías y lagunas."
   ]
  },
  {
@@ -565,6 +637,10 @@
   "sex": [
    "Males are larger, with a bigger head and a taller crest of spines along the back.",
    "Los machos son más grandes, con la cabeza más grande y una cresta de espinas más alta en el lomo."
+  ],
+  "role": [
+   "It eats insects, leaves and fruit, and is food for hawks and snakes.",
+   "Come insectos, hojas y frutos, y es alimento de halcones y serpientes."
   ]
  },
  {
@@ -597,6 +673,10 @@
   "sex": [
    "Males grow bigger with a heavier head; otherwise they are hard to tell apart.",
    "Los machos crecen más y tienen la cabeza más robusta; por lo demás es difícil distinguirlos."
+  ],
+  "role": [
+   "A top predator of mangroves and lagoons that removes sick fish and keeps prey populations in check.",
+   "Un depredador tope de manglares y lagunas que elimina peces enfermos y mantiene en equilibrio a sus presas."
   ]
  },
  {
@@ -628,6 +708,10 @@
   "sex": [
    "Males and females look alike; during courtship males turn darker.",
    "Machos y hembras se ven iguales; en el cortejo los machos se oscurecen."
+  ],
+  "role": [
+   "An invasive predator that eats young reef fish, including ones that keep algae off corals, so catching and eating it helps the reef.",
+   "Un depredador invasor que come peces jóvenes del arrecife, incluidos los que limpian de algas a los corales; pescarlo y comerlo ayuda al arrecife."
   ]
  },
  {
@@ -659,6 +743,10 @@
   "sex": [
    "Males and females look alike.",
    "Machos y hembras se ven iguales."
+  ],
+  "role": [
+   "It eats sponges, which keeps sponges from taking over space that corals need.",
+   "Come esponjas, lo que evita que ocupen el espacio que necesitan los corales."
   ]
  },
  {
@@ -690,6 +778,10 @@
   "sex": [
    "Males have two claspers, finger-like organs behind the pelvic fins, sometimes visible when snorkelling.",
    "Los machos tienen dos 'claspers', órganos como dedos detrás de las aletas pélvicas, a veces visibles al hacer snorkel."
+  ],
+  "role": [
+   "It feeds on plankton and fish eggs, and it moves nutrients across the ocean; it also supports eco-tourism jobs.",
+   "Se alimenta de plancton y huevos de peces, y mueve nutrientes por el océano; además sostiene empleos de ecoturismo."
   ]
  },
  {
@@ -722,6 +814,10 @@
   "sex": [
    "Adult males have a long, thick tail that reaches well past the shell and a curved claw on each front flipper.",
    "Los machos adultos tienen una cola larga y gruesa que sobresale del caparazón y una garra curva en cada aleta delantera."
+  ],
+  "role": [
+   "By grazing seagrass it keeps meadows short and healthy, like a lawnmower of the sea.",
+   "Al pastar mantiene las praderas de pastos marinos cortas y sanas, como una podadora del mar."
   ]
  },
  {
@@ -754,6 +850,10 @@
   "sex": [
    "Males have a pair of claspers near the base of the tail.",
    "Los machos tienen un par de 'claspers' cerca de la base de la cola."
+  ],
+  "role": [
+   "It digs up clams and snails from the sand, turning over the seafloor as it feeds.",
+   "Desentierra almejas y caracoles de la arena, removiendo el fondo mientras come."
   ]
  },
  {
@@ -785,6 +885,10 @@
   "sex": [
    "Each colony is both male and female: once a year it releases bundles of eggs and sperm together.",
    "Cada colonia es macho y hembra a la vez: una vez al año suelta paquetes de óvulos y esperma juntos."
+  ],
+  "role": [
+   "A reef builder: its branches break the force of waves, protecting the coast, and shelter countless fish.",
+   "Un constructor de arrecifes: sus ramas rompen la fuerza de las olas, protegen la costa y dan refugio a incontables peces."
   ]
  },
  {
@@ -817,6 +921,10 @@
   "sex": [
    "Males and females look alike.",
    "Machos y hembras se ven iguales."
+  ],
+  "role": [
+   "It pollinates flowers as it collects pollen and nectar.",
+   "Poliniza flores mientras recolecta polen y néctar."
   ]
  },
  {
@@ -848,6 +956,10 @@
   "sex": [
    "The large winged ants that swarm after rain are queens and males; the workers on the trail are all sterile females.",
    "Las hormigas grandes con alas que salen después de la lluvia son reinas y machos; las obreras del sendero son todas hembras estériles."
+  ],
+  "role": [
+   "It recycles huge amounts of leaves, loosens and fertilises the soil and mixes nutrients into it.",
+   "Recicla enormes cantidades de hojas, afloja y fertiliza el suelo y mezcla nutrientes en él."
   ]
  },
  {
@@ -880,6 +992,10 @@
   "sex": [
    "The bees you see flying are female workers; males are rarely seen.",
    "Las abejas que ves volando son obreras hembras; los machos casi no se ven."
+  ],
+  "role": [
+   "A native pollinator of forest plants and crops, and a living part of Maya culture.",
+   "Una polinizadora nativa de plantas de la selva y de cultivos, y parte viva de la cultura maya."
   ]
  }
 ]
