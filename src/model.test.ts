@@ -93,9 +93,13 @@ describe('group search', () => {
     { t: 4, n: 'Carcharhinidae', r: 'family', en: 'Requiem Sharks', es: 'Tiburones réquiem' },
     { t: 5, n: 'Delphinidae', r: 'family', en: 'Ocean Dolphins', es: 'Delfines oceánicos' },
     { t: 6, n: 'Coleoptera', r: 'order', en: 'Beetles', es: 'Escarabajos' },
+    { t: 7, n: 'Elasmobranchii', r: 'subclass', en: 'Sharks and Rays', es: 'Tiburones y rayas' },
+    { t: 8, n: 'Dasyatidae', r: 'family', en: 'Whiptail Stingrays', es: 'Rayas látigo', p: 6 },
+    { t: 9, n: 'Coryphaenidae', r: 'family', en: 'Dolphinfishes', es: 'Dorados' },
+    { t: 10, n: 'Papilionoidea', r: 'superfamily', en: 'Butterflies', es: 'Mariposas diurnas' },
   ];
   const e = (id: string, en: string, g?: number) => ({ id, cat: 'marine' as const, sci: id, en, es: en, n: 0 as const, nat: 1 as const, iucn: 'LC' as const, col: [], ...(g != null ? { g } : {}) });
-  const entries = [e('cardisoma', 'Blue Land Crab', 2), e('bull', 'Bull Shark', 3), e('tursiops', 'Common Bottlenose', 4), e('megasoma', 'Elephas', 5), e('none', 'Something')];
+  const entries = [e('cardisoma', 'Blue Land Crab', 2), e('bull', 'Bull Shark', 3), e('tursiops', 'Common Bottlenose', 4), e('megasoma', 'Elephas', 5), e('none', 'Something'), e('hypanus', 'Southern Ray', 7), e('coryphaena', 'Mahi-mahi', 8), e('dione', 'Gulf Fritillary', 9)];
   const find = (q: string) => filterCards(buildCards(entries, {}, 'en'), { ...EMPTY_FILTERS, q }).map((c) => c.id);
 
   it('finds species through their group names, in English and Spanish, with plurals', () => {
@@ -112,6 +116,15 @@ describe('group search', () => {
     setGroups(groups);
     expect(find('bee')).toEqual([]);
     expect(find('beetle')).toEqual(['megasoma']);
+  });
+  it('ignores mixed groups and full-word prefixes', () => {
+    setGroups(groups);
+    expect(find('shark')).toEqual(['bull']); // not the ray via "Sharks and Rays"
+    expect(find('ray')).toEqual(['hypanus']);
+    expect(find('dolphin')).toEqual(['tursiops']); // not the dolphinfish
+    expect(find('butterfly')).toEqual(['dione']);
+    expect(find('mariposa')).toEqual(['dione']);
+    expect(find('dolph')).toEqual(['tursiops', 'coryphaena']); // still typing: prefix
   });
   it('shows the family', () => {
     setGroups(groups);
