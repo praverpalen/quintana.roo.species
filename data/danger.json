@@ -79,6 +79,23 @@
   },
   {
    "match": [
+    "Diplocentridae",
+    "Diplocentrus"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "scorpion",
+   "speed": [
+    "A painful sting like a bee's; not dangerous. The dangerous scorpions here are the slender Centruroides.",
+    "Una picadura dolorosa como la de una abeja; no es peligrosa. Los alacranes peligrosos aquí son los Centruroides, delgados."
+   ],
+   "risk": [
+    "Children under 5: watch them closely and see a doctor if symptoms spread.",
+    "Niños menores de 5 años: vigílalos y ve al médico si los síntomas se extienden."
+   ]
+  },
+  {
+   "match": [
     "Scorpiones",
     "Centruroides",
     "Tityus",
