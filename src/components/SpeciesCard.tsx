@@ -6,6 +6,7 @@ import { useBlobUrl, useMyPhotos } from '../myPhotos';
 import { useDetail } from '../catalog';
 import { photoUrl } from '../data/shard';
 import { IconCheck } from './Icons';
+import { DangerPill } from './Danger';
 
 const W = 240;
 const H = 340;
@@ -100,6 +101,7 @@ function Unlocked({ c, L, open, onKey, label }: Inner) {
           ) : (
             <span className="sc-art-label">{c.name.toLowerCase()} photo</span>
           )}
+          <DangerPill d={c.s.d} L={L} />
         </div>
         <div className="sc-meta">
           <span className="sc-no">{c.no} · {c.cat}</span>
@@ -143,6 +145,7 @@ function Locked({ c, L, open, onKey, label }: Inner) {
         <div className="sc-art sc-art-locked">
           {photo && <img className="sc-art-grey" src={photo} alt="" loading="lazy" draggable={false} />}
           <span className={photo ? 'sc-art-q sc-art-q-small' : 'sc-art-q'}>?</span>
+          <DangerPill d={c.s.d} L={L} />
         </div>
         <div className="sc-no">{c.no} · {c.cat}</div>
         <div className="sc-unlock">{L.unlock}</div>

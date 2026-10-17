@@ -133,3 +133,20 @@ describe('group search', () => {
     setGroups(undefined);
   });
 });
+
+describe('danger', () => {
+  const e = (id: string, en: string, d?: { k: 'bite' | 'sting' | 'touch'; l: 0 | 1 | 2 | 3 }) => ({ id, cat: 'reptile' as const, sci: id, en, es: en, n: 0 as const, nat: 1 as const, iucn: 'LC' as const, col: [], ...(d ? { d } : {}) });
+  const entries = [e('viper', 'Terciopelo', { k: 'bite', l: 3 }), e('wasp', 'Paper Wasp', { k: 'sting', l: 1 }), e('wood', 'Chechem', { k: 'touch', l: 2 }), e('mimic', 'Milksnake', { k: 'bite', l: 0 }), e('kitten', 'Ocelot')];
+  const find = (f: Partial<typeof EMPTY_FILTERS>) => filterCards(buildCards(entries, {}, 'en'), { ...EMPTY_FILTERS, ...f }).map((c) => c.id);
+  it('filters venomous/poisonous and deadly species, leaving out harmless lookalikes', () => {
+    expect(find({ danger: 'any' })).toEqual(['viper', 'wasp', 'wood']);
+    expect(find({ danger: 'deadly' })).toEqual(['viper']);
+    expect(panelFilterCount({ ...EMPTY_FILTERS, danger: 'any' })).toBe(1);
+  });
+  it('finds them by searching in English or Spanish', () => {
+    expect(find({ q: 'venomous' })).toEqual(['viper', 'wasp']);
+    expect(find({ q: 'venenoso' })).toEqual(['viper', 'wasp', 'wood']);
+    expect(find({ q: 'poisonous' })).toEqual(['viper', 'wasp', 'wood']);
+    expect(find({ q: 'deadly' })).toEqual(['viper']);
+  });
+});

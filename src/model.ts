@@ -5,6 +5,7 @@ export type Spotted = Record<string, string>;
 export type Status = 'all' | 'spotted' | 'unspotted';
 export type Origin = 'all' | 'native' | 'introduced';
 export type Sort = 'no' | 'name' | 'rarity';
+export type DangerFilter = 'all' | 'any' | 'deadly';
 export type ColSort = 'recent' | 'name' | 'rarity';
 
 /** Everything a card face or list needs, already localised. Text content lives in the lazily loaded Detail. */
@@ -57,8 +58,17 @@ export const norm = (t: string) => (t || '').toLowerCase().normalize('NFD').repl
 const hay = new WeakMap<IndexEntry, string>();
 function haystack(s: IndexEntry): string {
   let h = hay.get(s);
-  if (h == null) hay.set(s, (h = [s.en, s.es, s.sci, s.maya ?? ''].map(norm).join('|')));
+  if (h == null) hay.set(s, (h = [s.en, s.es, s.sci, s.maya ?? '', dangerWords(s)].map(norm).join('|')));
   return h;
+}
+
+/** "venomous", "venenoso", "deadly"… find every tagged species. Harmless lookalikes (level 0) are left out. */
+function dangerWords(s: IndexEntry): string {
+  if (!s.d || s.d.l === 0) return '';
+  const w = ['dangerous', 'peligroso', 'peligrosa'];
+  w.push(...(s.d.k === 'touch' ? ['poisonous', 'toxic', 'toxico', 'toxica', 'venenoso', 'venenosa'] : ['venomous', 'venenoso', 'venenosa', 'poisonous']));
+  if (s.d.l === 3) w.push('deadly', 'mortal');
+  return w.join(' ');
 }
 
 // ---- Group search: "crab", "shark", "iguana" match every species in a group whose common name says so ----
@@ -142,10 +152,11 @@ export interface Filters {
   status: Status;
   origin: Origin;
   color: ColourKey | 'all';
+  danger: DangerFilter;
   sort: Sort;
 }
 
-export const EMPTY_FILTERS: Filters = { q: '', cat: 'all', status: 'all', origin: 'all', color: 'all', sort: 'no' };
+export const EMPTY_FILTERS: Filters = { q: '', cat: 'all', status: 'all', origin: 'all', color: 'all', danger: 'all', sort: 'no' };
 
 const sorters = {
   no: () => 0,
@@ -165,6 +176,7 @@ export function filterCards(cards: Card[], f: Filters): Card[] {
     if (f.cat !== 'all' && s.cat !== f.cat) return false;
     if (f.color !== 'all' && !s.col.includes(f.color)) return false;
     if (f.origin !== 'all' && (f.origin === 'native') !== !!s.nat) return false;
+    if (f.danger !== 'all' && (s.d?.l ?? 0) < (f.danger === 'deadly' ? 3 : 1)) return false;
     if (f.status === 'spotted' && !unlocked) return false;
     if (f.status === 'unspotted' && unlocked) return false;
     return true;
@@ -173,7 +185,7 @@ export function filterCards(cards: Card[], f: Filters): Card[] {
 }
 
 /** Count shown on the "Filters · n" button: only the settings inside the panel. */
-export const panelFilterCount = (f: Filters) => +(f.origin !== 'all') + +(f.color !== 'all') + +(f.sort !== 'no');
+export const panelFilterCount = (f: Filters) => +(f.origin !== 'all') + +(f.color !== 'all') + +(f.danger !== 'all') + +(f.sort !== 'no');
 export const anyFilter = (f: Filters) => !!(f.q.trim() || f.cat !== 'all' || f.status !== 'all' || panelFilterCount(f));
 
 export const colourName = (k: ColourKey, lang: Lang) => COLOURS[k][lang === 'es' ? 1 : 0];

@@ -8,6 +8,7 @@ import { addMyPhoto, deleteMyPhoto, useBlobUrl, useMyPhotos, type MyPhoto } from
 import { useDetail } from '../catalog';
 import { IconArrowLeft, IconCamera, IconCheck, IconTrash, IconX } from '../components/Icons';
 import { Dots, SpeciesCard } from '../components/SpeciesCard';
+import { DangerBox } from '../components/Danger';
 
 interface Props {
   c: Card | undefined;
@@ -85,6 +86,8 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
             </span>
           </div>
         </div>
+
+        {s.d && <DangerBox d={s.d} info={det?.danger} L={L} lang={lang} />}
 
         {c.unlocked ? (
           <div className="spotted-bar">

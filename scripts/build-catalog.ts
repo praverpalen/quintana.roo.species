@@ -7,14 +7,14 @@
  *   npm run build-catalog -- --max-enrich 500     # Claude-write content for up to 500 more species this run
  *   npm run build-catalog -- --model claude-sonnet-5 --wait-minutes 60 --only bird,fish
  *
- * Inputs (committed): data/curated.json, data/enrichment.json, data/trees.json, data/pending-batches.json
+ * Inputs (committed): data/curated.json, data/enrichment.json, data/trees.json, data/danger.json, data/pending-batches.json
  * Cache (not committed; kept by the GitHub Actions cache): data/.cache/
  * Needs network access to api.inaturalist.org, *.wikipedia.org and api.anthropic.com (ANTHROPIC_API_KEY).
  */
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import type { Catalog, CatKey, CuratedSpecies, Detail } from '../src/data/types';
+import type { Catalog, CatKey, CuratedSpecies, DangerRule, Detail } from '../src/data/types';
 import { buildCatalog, type Enrichment, type Gathered, type Lineage } from './catalog/pure';
 import { addWikipedia, gatherInat, type WikiCache } from './catalog/sources';
 import { ClaudeContent, DEFAULT_MODEL, type Pending } from './catalog/claude';
@@ -93,6 +93,7 @@ async function main() {
   const curated = readJSON<CuratedSpecies[]>(p('data/curated.json'), []);
   const enrichment = readJSON<Record<string, Enrichment>>(p('data/enrichment.json'), {});
   const trees = readJSON<Record<string, boolean>>(p('data/trees.json'), {});
+  const danger = readJSON<{ rules: DangerRule[] }>(p('data/danger.json'), { rules: [] }).rules;
   let pending = readJSON<Pending[]>(p('data/pending-batches.json'), []);
   const saveState = () => {
     writeJSON(p('data/enrichment.json'), sorted(enrichment));
@@ -157,7 +158,7 @@ async function main() {
   }
 
   // 4. Build and write the catalog.
-  const out = buildCatalog({ gathered, curated, enrichment, trees, generated: new Date().toISOString() });
+  const out = buildCatalog({ gathered, curated, enrichment, trees, danger, generated: new Date().toISOString() });
   const catalog: Catalog = { generated: new Date().toISOString(), shards: out.shards, species: out.index, ...(out.groups.length ? { groups: out.groups } : {}) };
   rmSync(p('public/data/details'), { recursive: true, force: true });
   writeJSON(p('public/data/catalog.json'), catalog, false);

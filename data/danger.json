@@ -1,0 +1,799 @@
+{
+ "_note": "Danger to people from a bite, sting or touch. First matching rule wins (species, genus or named ancestor), so exceptions go above broad rules. Food poisons are deliberately left out. Levels: 0 harmless lookalike, 1 painful, 2 serious, 3 can kill. Guides live in src/firstAid.ts.",
+ "rules": [
+  {
+   "match": [
+    "Micrurus",
+    "Elapidae"
+   ],
+   "kind": "bite",
+   "level": 3,
+   "guide": "snake",
+   "speed": [
+    "Hospital now, even if it barely hurts. Paralysis can start hours later and stop breathing.",
+    "Al hospital ya, aunque casi no duela. La parálisis puede empezar horas después y detener la respiración."
+   ],
+   "risk": [
+    "Harmless lookalikes exist. Don't trust colour rhymes: treat every banded red, black and yellow snake as deadly.",
+    "Hay imitadoras inofensivas. No te fíes de los colores: trata toda serpiente con anillos rojos, negros y amarillos como mortal."
+   ]
+  },
+  {
+   "match": [
+    "Lampropeltis",
+    "Pliocercus",
+    "Ninia sebae",
+    "Scaphiodontophis",
+    "Oxyrhopus"
+   ],
+   "kind": "bite",
+   "level": 0,
+   "speed": [
+    "Harmless to people, but it looks very like the deadly coral snake. Never pick up a banded snake to check.",
+    "Inofensiva para las personas, pero se parece mucho a la mortal coralillo. Nunca levantes una serpiente con anillos para comprobarlo."
+   ]
+  },
+  {
+   "match": [
+    "Xenodon"
+   ],
+   "kind": "bite",
+   "level": 0,
+   "speed": [
+    "Harmless to people, but it looks like the deadly Terciopelo (nauyaca). Keep your distance from any snake you can't identify.",
+    "Inofensiva para las personas, pero se parece a la mortal nauyaca. Mantén distancia de cualquier serpiente que no reconozcas."
+   ]
+  },
+  {
+   "match": [
+    "Viperidae",
+    "Bothrops",
+    "Crotalus",
+    "Porthidium",
+    "Agkistrodon",
+    "Bothriechis"
+   ],
+   "kind": "bite",
+   "level": 3,
+   "guide": "snake",
+   "speed": [
+    "Hospital now. Without antivenom a bite can kill within hours to days.",
+    "Al hospital ya. Sin antiveneno una mordida puede matar en horas o días."
+   ],
+   "risk": [
+    "Children get a bigger dose for their size. Even young snakes are dangerous.",
+    "Los niños reciben más veneno para su tamaño. Incluso las crías son peligrosas."
+   ]
+  },
+  {
+   "match": [
+    "Conophis"
+   ],
+   "kind": "bite",
+   "level": 1,
+   "guide": "bite",
+   "speed": [
+    "Mildly venomous: a bite causes painful swelling but isn't dangerous. See a doctor if the swelling keeps spreading.",
+    "Ligeramente venenosa: la mordida causa una hinchazón dolorosa pero no es peligrosa. Ve al médico si la hinchazón sigue creciendo."
+   ]
+  },
+  {
+   "match": [
+    "Scorpiones",
+    "Centruroides",
+    "Tityus",
+    "Vaejovis"
+   ],
+   "kind": "sting",
+   "level": 2,
+   "guide": "scorpion",
+   "speed": [
+    "Adults usually have pain and numbness for some hours. Watch for symptoms that spread beyond the sting.",
+    "Los adultos suelen tener dolor y adormecimiento unas horas. Vigila síntomas que vayan más allá de la picadura."
+   ],
+   "risk": [
+    "Children under 5 and older people: go to a clinic right away. Mexican hospitals and health centres carry scorpion antivenom.",
+    "Niños menores de 5 años y personas mayores: al centro de salud de inmediato. Los hospitales y centros de salud de México tienen antiveneno."
+   ]
+  },
+  {
+   "match": [
+    "Latrodectus"
+   ],
+   "kind": "bite",
+   "level": 2,
+   "guide": "bite",
+   "speed": [
+    "Painful muscle cramps, sweating and nausea can start within 1–2 hours. See a doctor.",
+    "Calambres dolorosos, sudor y náuseas pueden empezar en 1–2 horas. Ve al médico."
+   ],
+   "risk": [
+    "Children, older people and people with heart disease.",
+    "Niños, personas mayores y personas con enfermedades del corazón."
+   ]
+  },
+  {
+   "match": [
+    "Loxosceles",
+    "Sicariidae"
+   ],
+   "kind": "bite",
+   "level": 2,
+   "guide": "bite",
+   "speed": [
+    "The bite often doesn't hurt at first. A wound that turns dark or keeps growing over the next days needs a doctor.",
+    "La mordida a menudo no duele al principio. Una herida que se oscurece o crece en los días siguientes necesita un médico."
+   ],
+   "risk": [
+    "Children.",
+    "Niños."
+   ]
+  },
+  {
+   "match": [
+    "Theraphosidae"
+   ],
+   "kind": "bite",
+   "level": 1,
+   "guide": "bite",
+   "speed": [
+    "Painful bite, not dangerous. The hairs it flicks itch and can hurt your eyes.",
+    "Mordida dolorosa, no peligrosa. Los pelos que lanza dan comezón y pueden dañar los ojos."
+   ]
+  },
+  {
+   "match": [
+    "Scolopendromorpha",
+    "Scolopendra"
+   ],
+   "kind": "bite",
+   "level": 1,
+   "guide": "bite",
+   "speed": [
+    "A very painful bite with swelling, rarely dangerous.",
+    "Una mordida muy dolorosa con hinchazón, rara vez peligrosa."
+   ],
+   "risk": [
+    "Small children: see a doctor.",
+    "Niños pequeños: ve al médico."
+   ]
+  },
+  {
+   "match": [
+    "Amblypygi"
+   ],
+   "kind": "bite",
+   "level": 0,
+   "speed": [
+    "Looks scary but has no venom and doesn't bite people.",
+    "Da miedo, pero no tiene veneno y no muerde a las personas."
+   ]
+  },
+  {
+   "match": [
+    "Thelyphonida"
+   ],
+   "kind": "touch",
+   "level": 0,
+   "speed": [
+    "No venom. It can spray a vinegar-smelling acid that stings your eyes.",
+    "Sin veneno. Puede rociar un ácido con olor a vinagre que irrita los ojos."
+   ]
+  },
+  {
+   "match": [
+    "Solifugae"
+   ],
+   "kind": "bite",
+   "level": 0,
+   "speed": [
+    "No venom. A big one can give a painful pinch.",
+    "Sin veneno. Una grande puede dar un pellizco doloroso."
+   ]
+  },
+  {
+   "match": [
+    "Diplopoda"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "skin",
+   "speed": [
+    "Its defensive fluid can stain and burn the skin. Wash your hands after touching it.",
+    "Su líquido de defensa puede manchar y quemar la piel. Lávate las manos después de tocarlo."
+   ]
+  },
+  {
+   "match": [
+    "Meliponini"
+   ],
+   "kind": "sting",
+   "level": 0,
+   "speed": [
+    "Stingless: it can't sting, at most give a harmless nip.",
+    "Sin aguijón: no puede picar, a lo sumo da un mordisco inofensivo."
+   ]
+  },
+  {
+   "match": [
+    "Apis"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "sting",
+   "speed": [
+    "Painful but not dangerous for most people.",
+    "Dolorosa pero no peligrosa para la mayoría."
+   ],
+   "risk": [
+    "Allergic people can go into shock within minutes. Bees here are often Africanized: a disturbed hive attacks in large numbers, so run and get indoors.",
+    "Las personas alérgicas pueden entrar en choque en minutos. Aquí las abejas suelen ser africanizadas: una colmena molestada ataca en masa, así que corre y busca refugio."
+   ]
+  },
+  {
+   "match": [
+    "Polistinae",
+    "Polybia",
+    "Agelaia",
+    "Synoeca",
+    "Brachygastra",
+    "Polistes",
+    "Mischocyttarus",
+    "Parachartergus",
+    "Apoica"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "sting",
+   "speed": [
+    "Painful but not dangerous for most people.",
+    "Dolorosa pero no peligrosa para la mayoría."
+   ],
+   "risk": [
+    "Allergic people can go into shock within minutes. Stay away from nests: some species attack in swarms.",
+    "Las personas alérgicas pueden entrar en choque en minutos. Aléjate de los nidos: algunas especies atacan en enjambre."
+   ]
+  },
+  {
+   "match": [
+    "Mutillidae",
+    "Pepsis",
+    "Pompilidae"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "sting",
+   "speed": [
+    "One of the most painful stings there is, but not dangerous.",
+    "Una de las picaduras más dolorosas que existen, pero no es peligrosa."
+   ],
+   "risk": [
+    "Allergic people can go into shock within minutes: call 911 if the face or throat swells or breathing gets hard.",
+    "Las personas alérgicas pueden entrar en choque en minutos: llama al 911 si se hinchan la cara o la garganta o cuesta respirar."
+   ]
+  },
+  {
+   "match": [
+    "Vespidae",
+    "Apidae",
+    "Halictidae",
+    "Megachilidae",
+    "Sphecidae",
+    "Crabronidae",
+    "Bembicidae",
+    "Scoliidae"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "sting",
+   "speed": [
+    "Painful, not dangerous for most people. It rarely stings unless handled.",
+    "Dolorosa, no peligrosa para la mayoría. Rara vez pica si no la tocas."
+   ],
+   "risk": [
+    "Allergic people can go into shock within minutes: call 911 if the face or throat swells or breathing gets hard.",
+    "Las personas alérgicas pueden entrar en choque en minutos: llama al 911 si se hinchan la cara o la garganta o cuesta respirar."
+   ]
+  },
+  {
+   "match": [
+    "Solenopsis",
+    "Wasmannia"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "ants",
+   "speed": [
+    "Many burning stings at once, then itchy white blisters the next day.",
+    "Muchas picaduras ardientes a la vez y, al día siguiente, ampollas blancas que dan comezón."
+   ],
+   "risk": [
+    "Allergic people can go into shock within minutes: call 911 if the face or throat swells or breathing gets hard.",
+    "Las personas alérgicas pueden entrar en choque en minutos: llama al 911 si se hinchan la cara o la garganta o cuesta respirar."
+   ]
+  },
+  {
+   "match": [
+    "Ectatomma",
+    "Neoponera",
+    "Pachycondyla",
+    "Odontomachus",
+    "Anochetus",
+    "Pseudomyrmex",
+    "Leptogenys",
+    "Paraponera",
+    "Dinoponera"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "ants",
+   "speed": [
+    "A painful sting, not dangerous.",
+    "Una picadura dolorosa, no peligrosa."
+   ],
+   "risk": [
+    "Allergic people can go into shock within minutes: call 911 if the face or throat swells or breathing gets hard.",
+    "Las personas alérgicas pueden entrar en choque en minutos: llama al 911 si se hinchan la cara o la garganta o cuesta respirar."
+   ]
+  },
+  {
+   "match": [
+    "Eciton",
+    "Labidus",
+    "Nomamyrmex",
+    "Neivamyrmex"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "ants",
+   "speed": [
+    "Bites and stings if you stand in a raiding column. Just step away.",
+    "Muerde y pica si te paras en una columna de cacería. Simplemente apártate."
+   ],
+   "risk": [
+    "Allergic people can go into shock within minutes: call 911 if the face or throat swells or breathing gets hard.",
+    "Las personas alérgicas pueden entrar en choque en minutos: llama al 911 si se hinchan la cara o la garganta o cuesta respirar."
+   ]
+  },
+  {
+   "match": [
+    "Lonomia"
+   ],
+   "kind": "sting",
+   "level": 3,
+   "guide": "hairs",
+   "speed": [
+    "Hospital now if you touched the caterpillar, even without pain. Its venom stops blood from clotting and can kill.",
+    "Al hospital ya si tocaste la oruga, aunque no duela. Su veneno impide que la sangre coagule y puede matar."
+   ]
+  },
+  {
+   "match": [
+    "Megalopygidae",
+    "Megalopyge",
+    "Podalia",
+    "Trosia",
+    "Norape"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "hairs",
+   "speed": [
+    "Its furry caterpillar has one of the most painful stings there is; the pain can spread up the arm. The adult moth is harmless.",
+    "Su oruga peluda tiene una de las picaduras más dolorosas; el dolor puede subir por el brazo. La polilla adulta es inofensiva."
+   ],
+   "risk": [
+    "Children: see a doctor if the pain is severe.",
+    "Niños: ve al médico si el dolor es fuerte."
+   ]
+  },
+  {
+   "match": [
+    "Dalceridae",
+    "Acraga",
+    "Dalcerides"
+   ],
+   "none": true
+  },
+  {
+   "match": [
+    "Limacodidae",
+    "Automeris"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "hairs",
+   "speed": [
+    "Its caterpillar's spines sting and burn for hours. The adult moth is harmless.",
+    "Las espinas de su oruga pican y arden por horas. La polilla adulta es inofensiva."
+   ]
+  },
+  {
+   "match": [
+    "Hylesia"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "hairs",
+   "speed": [
+    "Both the caterpillar and the moth carry hairs that cause an itchy rash.",
+    "Tanto la oruga como la polilla tienen pelos que causan un salpullido con comezón."
+   ]
+  },
+  {
+   "match": [
+    "Triatoma",
+    "Panstrongylus",
+    "Rhodnius",
+    "Eratyrus"
+   ],
+   "kind": "bite",
+   "level": 2,
+   "guide": "chagas",
+   "speed": [
+    "The bite is painless. The danger is Chagas disease from its droppings, which can damage the heart years later. Get a blood test.",
+    "La picadura no duele. El peligro es el mal de Chagas por sus heces, que puede dañar el corazón años después. Hazte un análisis de sangre."
+   ]
+  },
+  {
+   "match": [
+    "Reduviidae"
+   ],
+   "kind": "bite",
+   "level": 1,
+   "guide": "bite",
+   "speed": [
+    "A very painful bite if you handle it, not dangerous.",
+    "Una picadura muy dolorosa si lo agarras, no peligrosa."
+   ]
+  },
+  {
+   "match": [
+    "Meloidae"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "skin",
+   "speed": [
+    "Its body fluid raises blisters within hours. Don't crush it on your skin.",
+    "Su líquido corporal levanta ampollas en pocas horas. No lo aplastes sobre la piel."
+   ]
+  },
+  {
+   "match": [
+    "Paederus"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "skin",
+   "speed": [
+    "Crushing it on your skin causes a burning, blistering line about a day later.",
+    "Aplastarlo sobre la piel causa una línea ardiente con ampollas un día después."
+   ]
+  },
+  {
+   "match": [
+    "Physalia"
+   ],
+   "kind": "sting",
+   "level": 2,
+   "guide": "jelly",
+   "speed": [
+    "Intense pain and red welts. Get help if pain is severe or breathing is affected. Even washed-up ones still sting.",
+    "Dolor intenso y ronchas rojas. Busca ayuda si el dolor es fuerte o cuesta respirar. Incluso varadas en la playa siguen picando."
+   ],
+   "risk": [
+    "Children, allergic people and people with heart disease.",
+    "Niños, personas alérgicas y personas con enfermedades del corazón."
+   ]
+  },
+  {
+   "match": [
+    "Cubozoa",
+    "Alatina",
+    "Carybdea",
+    "Tamoya",
+    "Chiropsalmus"
+   ],
+   "kind": "sting",
+   "level": 2,
+   "guide": "jelly",
+   "speed": [
+    "Very painful. Rarely, cramps, sweating and a racing heart start an hour or so later: then go to hospital.",
+    "Muy dolorosa. En pocos casos, calambres, sudor y corazón acelerado empiezan una hora después: entonces ve al hospital."
+   ],
+   "risk": [
+    "Children, allergic people and people with heart disease.",
+    "Niños, personas alérgicas y personas con enfermedades del corazón."
+   ]
+  },
+  {
+   "match": [
+    "Palythoa"
+   ],
+   "kind": "touch",
+   "level": 2,
+   "guide": "skin",
+   "speed": [
+    "Contains palytoxin, one of the strongest natural poisons. Safe to look at; don't touch it, especially with cuts, and never rub your eyes.",
+    "Contiene palitoxina, uno de los venenos naturales más fuertes. Mirarla es seguro; no la toques, sobre todo con heridas, y nunca te frotes los ojos."
+   ]
+  },
+  {
+   "match": [
+    "Millepora"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "jelly",
+   "speed": [
+    "Not a true coral: touching it gives a burning sting and a rash that heals in days.",
+    "No es un coral verdadero: tocarlo causa ardor y un salpullido que sana en días."
+   ]
+  },
+  {
+   "match": [
+    "Linuche"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "jelly",
+   "speed": [
+    "Its tiny larvae cause 'sea lice': an itchy rash under your swimsuit. Shower and change soon after swimming.",
+    "Sus larvas diminutas causan 'piojos de mar': salpullido con comezón bajo el traje de baño. Báñate y cámbiate pronto después de nadar."
+   ]
+  },
+  {
+   "match": [
+    "Cassiopea",
+    "Drymonema",
+    "Aurelia",
+    "Macrorhynchia",
+    "Lebrunia",
+    "Stichodactyla",
+    "Bunodeopsis",
+    "Rhizophysa"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "jelly",
+   "speed": [
+    "A mild to painful sting that settles within hours.",
+    "Una picadura de leve a dolorosa que se calma en unas horas."
+   ]
+  },
+  {
+   "match": [
+    "Mobulidae",
+    "Mobula",
+    "Narcine"
+   ],
+   "none": true
+  },
+  {
+   "match": [
+    "Gymnura"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "spines",
+   "speed": [
+    "A small tail spine: painful if stepped on, not dangerous.",
+    "Una espina pequeña en la cola: dolorosa si la pisas, no peligrosa."
+   ]
+  },
+  {
+   "match": [
+    "Dasyatidae",
+    "Urotrygonidae",
+    "Potamotrygonidae",
+    "Myliobatidae",
+    "Aetobatidae",
+    "Rhinopteridae",
+    "Urobatis",
+    "Hypanus",
+    "Styracura",
+    "Aetobatus",
+    "Rhinoptera"
+   ],
+   "kind": "sting",
+   "level": 2,
+   "guide": "spines",
+   "speed": [
+    "Severe pain and a deep wound that needs a doctor. Rarely deadly if the spine hits the chest or belly. Shuffle your feet in shallow sand.",
+    "Dolor intenso y una herida profunda que necesita médico. Rara vez mortal si la espina entra en el pecho o el abdomen. Arrastra los pies en la arena poco profunda."
+   ]
+  },
+  {
+   "match": [
+    "Scorpaenidae",
+    "Pterois",
+    "Scorpaena",
+    "Scorpaenodes"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "spines",
+   "speed": [
+    "Extreme pain for hours; hot water is the best relief. Rarely dangerous.",
+    "Dolor extremo por horas; el agua caliente es el mejor alivio. Rara vez peligroso."
+   ],
+   "risk": [
+    "Allergic people and people with heart disease.",
+    "Personas alérgicas y personas con enfermedades del corazón."
+   ]
+  },
+  {
+   "match": [
+    "Ariidae",
+    "Ariopsis",
+    "Bagre",
+    "Rhamdia"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "spines",
+   "speed": [
+    "Its fin spines give a painful sting, and the wound often gets infected.",
+    "Las espinas de sus aletas dan una picadura dolorosa y la herida suele infectarse."
+   ]
+  },
+  {
+   "match": [
+    "Diadema",
+    "Echinometra",
+    "Astropyga"
+   ],
+   "kind": "sting",
+   "level": 1,
+   "guide": "urchin",
+   "speed": [
+    "Its spines break off in the skin and hurt for days.",
+    "Sus espinas se rompen dentro de la piel y duelen por días."
+   ]
+  },
+  {
+   "match": [
+    "Rhinella"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "toad",
+   "speed": [
+    "Its skin poison burns eyes and mouth. Wash your hands after touching it.",
+    "Su veneno de la piel arde en ojos y boca. Lávate las manos después de tocarlo."
+   ],
+   "risk": [
+    "Dogs: biting it can kill a dog within an hour. Rinse its mouth and go to a vet right away.",
+    "Perros: morderlo puede matar a un perro en menos de una hora. Enjuágale la boca y ve al veterinario de inmediato."
+   ]
+  },
+  {
+   "match": [
+    "Incilius"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "toad",
+   "speed": [
+    "Its skin poison irritates eyes and mouth. Wash your hands after touching it.",
+    "Su veneno de la piel irrita ojos y boca. Lávate las manos después de tocarlo."
+   ],
+   "risk": [
+    "Dogs that bite it drool and get sick: rinse its mouth and call a vet.",
+    "Los perros que lo muerden babean y se enferman: enjuágale la boca y llama al veterinario."
+   ]
+  },
+  {
+   "match": [
+    "Trachycephalus"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "skin",
+   "speed": [
+    "Its sticky, milky skin secretion burns eyes and cuts. Wash your hands after touching it.",
+    "Su secreción lechosa y pegajosa arde en ojos y heridas. Lávate las manos después de tocarla."
+   ]
+  },
+  {
+   "match": [
+    "Metopium"
+   ],
+   "kind": "touch",
+   "level": 2,
+   "guide": "plant",
+   "speed": [
+    "Its sap (the black spots on the bark) causes a severe blistering rash 1–2 days later.",
+    "Su savia (las manchas negras de la corteza) causa un salpullido fuerte con ampollas 1–2 días después."
+   ],
+   "risk": [
+    "Never burn it: the smoke harms eyes and lungs.",
+    "Nunca lo quemes: el humo daña ojos y pulmones."
+   ]
+  },
+  {
+   "match": [
+    "Hippomane"
+   ],
+   "kind": "touch",
+   "level": 2,
+   "guide": "plant",
+   "speed": [
+    "Its sap, rain dripping off it and its smoke burn skin and eyes and can cause temporary blindness. Don't shelter under it.",
+    "Su savia, la lluvia que escurre de él y su humo queman la piel y los ojos, y pueden causar ceguera temporal. No te refugies debajo."
+   ]
+  },
+  {
+   "match": [
+    "Toxicodendron"
+   ],
+   "kind": "touch",
+   "level": 2,
+   "guide": "plant",
+   "speed": [
+    "Its oil causes an itchy, blistering rash 1–2 days later, and it sticks to clothes, tools and pets.",
+    "Su aceite causa un salpullido con ampollas y comezón 1–2 días después, y se queda en ropa, herramientas y mascotas."
+   ]
+  },
+  {
+   "match": [
+    "Euphorbia tirucalli"
+   ],
+   "kind": "touch",
+   "level": 2,
+   "guide": "plant",
+   "speed": [
+    "Its milky sap burns skin and can seriously injure eyes.",
+    "Su savia lechosa quema la piel y puede dañar gravemente los ojos."
+   ]
+  },
+  {
+   "match": [
+    "Cnidoscolus aconitifolius"
+   ],
+   "none": true
+  },
+  {
+   "match": [
+    "Cnidoscolus",
+    "Tragia",
+    "Dalechampia",
+    "Urera"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "plant",
+   "speed": [
+    "Stinging hairs: burning pain and welts for hours.",
+    "Pelos urticantes: dolor ardiente y ronchas por horas."
+   ]
+  },
+  {
+   "match": [
+    "Mucuna"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "plant",
+   "speed": [
+    "The hairs on its pods cause intense itching.",
+    "Los pelos de sus vainas causan una comezón intensa."
+   ]
+  },
+  {
+   "match": [
+    "Euphorbia tithymaloides",
+    "Hura",
+    "Calotropis"
+   ],
+   "kind": "touch",
+   "level": 1,
+   "guide": "plant",
+   "speed": [
+    "Its milky sap irritates skin and eyes.",
+    "Su savia lechosa irrita la piel y los ojos."
+   ]
+  }
+ ]
+}

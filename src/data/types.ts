@@ -62,6 +62,32 @@ export interface IndexEntry {
   p?: string;
   /** Lowest named taxonomic group (index into Catalog.groups); its parents follow via Group.p */
   g?: number;
+  /** Danger to people: how it hurts you and how badly (only set for species with a danger note) */
+  d?: DangerTag;
+}
+
+/** bite / sting: venomous; touch: poisonous to touch. Food poisons are deliberately left out. */
+export type DangerKind = 'bite' | 'sting' | 'touch';
+/** 0 harmless (a lookalike worth a note) · 1 painful · 2 serious · 3 can kill */
+export type DangerLevel = 0 | 1 | 2 | 3;
+export type GuideKey = 'snake' | 'scorpion' | 'bite' | 'sting' | 'ants' | 'jelly' | 'spines' | 'urchin' | 'hairs' | 'plant' | 'skin' | 'toad' | 'chagas';
+export interface DangerTag {
+  k: DangerKind;
+  l: DangerLevel;
+}
+
+/** One rule of data/danger.json: the first rule whose `match` hits the species, its genus or a named ancestor wins. */
+export interface DangerRule {
+  match: string[];
+  /** Matches but sets nothing: carves an exception out of a broader rule below it */
+  none?: true;
+  kind?: DangerKind;
+  level?: DangerLevel;
+  guide?: GuideKey;
+  /** How fast it gets bad and what to do first [en, es] */
+  speed?: Pair;
+  /** Who is most at risk [en, es] */
+  risk?: Pair;
 }
 
 /** A named taxonomic group (order, family, genus…) used for group search: "crab", "shark", "iguana". */
@@ -97,6 +123,8 @@ export interface Detail {
   /** Its role in nature [en, es] */
   role?: Pair;
   photo?: Photo;
+  /** First-aid guide and danger notes; the tag itself is IndexEntry.d */
+  danger?: { guide?: GuideKey; speed?: Pair; risk?: Pair };
   /** Wikipedia article URLs used as the text source */
   wiki?: { en?: string; es?: string };
   /** Where fact/size/colours/habitat came from */

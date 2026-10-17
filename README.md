@@ -61,6 +61,10 @@ Claude batches usually finish within an hour but can take up to 24. If a run sto
 
 To correct or improve a species, add it to `data/curated.json`, matched by scientific name. Curated entries always win.
 
+## Danger to people
+
+`data/danger.json` tags species that can hurt you by a **bite, sting or touch** (food poisons are left out on purpose), on a 4-step scale: harmless lookalike · painful · serious · can kill. The first rule whose `match` names the species, its genus or a named ancestor wins, so exceptions (stingless bees, mantas) sit above broad rules. The pipeline copies the tag into `catalog.json` (`d`) and the notes into the detail shards. First-aid guides per kind of injury live in `src/firstAid.ts` (bundled, so they work offline). Written by Claude from current first-aid guidance; not medical advice.
+
 ## Your own photos
 
 On a species page, **Add my photo** opens the camera or photo library. Photos are downscaled to 1600 px and stored **only on this phone** (IndexedDB); they are never uploaded. Adding a photo marks the species as spotted, and your newest photo replaces the stock photo on the card. Deleting the app or clearing its site data deletes them.

@@ -235,3 +235,34 @@ input::placeholder { color: var(--color-neutral-600); }
 .lightbox-bar { display: flex; gap: 8px; margin-top: 12px; align-items: center; color: #f5ead8; font-size: 11.5px; text-align: center; max-width: 340px; }
 .lightbox .lb-btn { display: inline-flex; align-items: center; gap: 6px; border: 0; border-radius: 999px; padding: 10px 16px; font: 600 14px var(--font-body); cursor: pointer; background: #f5ead8; color: var(--color-text); }
 .lightbox .lb-close { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: 12px; width: 42px; height: 42px; border-radius: 50%; border: 0; display: grid; place-items: center; background: #f5ead8; color: var(--color-text); cursor: pointer; }
+
+/* Danger to people: card pill, species-page box with level scale and first aid */
+.dl-0 { --dz: oklch(0.55 0.11 150); --dz-bg: oklch(0.95 0.035 150); }
+.dl-1 { --dz: oklch(0.58 0.13 75); --dz-bg: oklch(0.95 0.05 85); }
+.dl-2 { --dz: oklch(0.58 0.17 45); --dz-bg: oklch(0.94 0.05 50); }
+.dl-3 { --dz: oklch(0.52 0.2 27); --dz-bg: oklch(0.93 0.05 25); }
+.sc-danger {
+  position: absolute; top: 6px; left: 6px; z-index: 2; display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px 2px 6px; border-radius: 999px; font-size: 10px; font-weight: 800; line-height: 1.5;
+  background: var(--dz); color: #fff; box-shadow: var(--shadow-sm);
+}
+.danger-box { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 24px; background: var(--dz-bg); border: 2px solid var(--dz); }
+.danger-head { display: flex; align-items: center; gap: 12px; }
+.danger-sym { width: 40px; height: 40px; flex: none; border-radius: 50%; display: grid; place-items: center; font-size: 20px; background: var(--dz); color: #fff; }
+.danger-kind { font-size: 13px; font-weight: 700; color: var(--dz); }
+.danger-scale { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+.danger-step {
+  padding: 6px 2px; border-radius: 999px; text-align: center; font-size: 11px; font-weight: 700;
+  background: var(--color-neutral-200); color: var(--color-neutral-600);
+}
+.danger-step.on { background: var(--dz); color: #fff; transform: scale(1.06); }
+.danger-speed { margin: 0; font-size: 15.5px; line-height: 1.45; font-weight: 700; text-wrap: pretty; }
+.danger-risk { margin: 0; font-size: 14px; line-height: 1.5; text-wrap: pretty; }
+.first-aid { background: var(--color-neutral-100); border-radius: 16px; padding: 10px 14px; }
+.first-aid summary { cursor: pointer; font-weight: 800; font-size: 14.5px; color: var(--dz); }
+.first-aid ol, .first-aid ul { margin: 8px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; line-height: 1.45; }
+.fa-k { margin-top: 10px; font-size: 11px; letter-spacing: .1em; font-weight: 800; text-transform: uppercase; color: var(--dz); }
+.fa-dont li::marker { content: '✕  '; color: var(--dz); }
+.fa-911 { margin: 10px 0 0; font-size: 14px; line-height: 1.45; }
+.call-911 { align-self: flex-start; height: 44px; gap: 6px; padding: 0 18px; font-weight: 800; background: var(--dz); color: #fff; text-decoration: none; }
+.fa-note { margin: 0; font-size: 11.5px; color: var(--color-neutral-700); }

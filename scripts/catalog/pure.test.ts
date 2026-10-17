@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import type { CuratedSpecies } from '../../src/data/types';
+import type { CuratedSpecies, DangerRule } from '../../src/data/types';
 import { compactPhoto, photoUrl, shardOf } from '../../src/data/shard';
-import { buildCatalog, firstSentence, iucnFromStatuses, rarityByRank, slug, type Gathered } from './pure';
+import { buildCatalog, dangerFor, firstSentence, iucnFromStatuses, rarityByRank, slug, type Gathered } from './pure';
 
 const g = (over: Partial<Gathered>): Gathered => ({ taxonId: 1, sci: 'X y', cat: 'bird', obs: 1, introduced: false, iucn: null, ...over });
 
@@ -92,5 +92,45 @@ describe('buildCatalog', () => {
   it('shards every detail exactly once', () => {
     expect(out.shards).toBe(3);
     expect(out.details.flatMap((d) => Object.keys(d)).sort()).toEqual(out.index.map((e) => e.id).sort());
+  });
+});
+
+describe('danger rules', () => {
+  const rules: DangerRule[] = [
+    { match: ['Meliponini'], kind: 'sting', level: 0 },
+    { match: ['Mobula'], none: true },
+    { match: ['Apidae'], kind: 'sting', level: 1, guide: 'sting', risk: ['Allergic people', 'Alérgicos'] },
+    { match: ['Viperidae'], kind: 'bite', level: 3, guide: 'snake' },
+    { match: ['Myliobatiformes'], kind: 'sting', level: 2, guide: 'spines' },
+  ];
+  it('matches species, genus or a named ancestor, first rule wins', () => {
+    expect(dangerFor('Bothrops asper', ['Serpentes', 'Viperidae'], rules)?.tag).toEqual({ k: 'bite', l: 3 });
+    expect(dangerFor('Apis mellifera', ['Apidae'], rules)).toEqual({ tag: { k: 'sting', l: 1 }, detail: { guide: 'sting', risk: ['Allergic people', 'Alérgicos'] } });
+    expect(dangerFor('Melipona beecheii', ['Apidae', 'Meliponini'], rules)?.tag.l).toBe(0); // exception above the broad rule
+    expect(dangerFor('Mobula yarae', ['Myliobatiformes'], rules)).toBeNull(); // mantas have no sting
+    expect(dangerFor('Panthera onca', ['Felidae'], rules)).toBeNull();
+  });
+  it('sets the tag on the index and the notes on the detail', () => {
+    const out = buildCatalog({
+      gathered: [g({ taxonId: 9, sci: 'Bothrops asper', cat: 'reptile', obs: 1, lineage: [{ t: 1, n: 'Viperidae', r: 'family', en: 'Vipers' }] })],
+      curated: [], enrichment: {}, trees: {}, danger: rules, generated: '',
+    });
+    expect(out.index[0].d).toEqual({ k: 'bite', l: 3 });
+    expect(out.details[0][out.index[0].id].danger).toEqual({ guide: 'snake' });
+    expect(out.stats['danger.deadly']).toBe(1);
+  });
+  it('every rule in data/danger.json is complete and every guide exists', async () => {
+    const { readFileSync } = await import('node:fs');
+    const { GUIDES } = await import('../../src/firstAid');
+    const file: { rules: DangerRule[] } = JSON.parse(readFileSync('data/danger.json', 'utf8'));
+    for (const r of file.rules) {
+      expect(r.match.length).toBeGreaterThan(0);
+      if (r.none) continue;
+      expect(['bite', 'sting', 'touch']).toContain(r.kind);
+      expect([0, 1, 2, 3]).toContain(r.level);
+      if (r.level! > 0) expect(r.guide, r.match.join()).toBeTruthy();
+      if (r.guide) expect(GUIDES.en[r.guide] && GUIDES.es[r.guide]).toBeTruthy();
+      for (const p of [r.speed, r.risk]) if (p) expect(p[0] && p[1]).toBeTruthy();
+    }
   });
 });
