@@ -1,6 +1,6 @@
 # Catalog build report
 
-Built 2026-10-17 22:20 UTC from iNaturalist research-grade observations in Quintana Roo + Wikipedia.
+Built 2026-10-17 22:23 UTC from cached data (offline).
 
 | | Species |
 | --- | ---: |
@@ -8,8 +8,8 @@ Built 2026-10-17 22:20 UTC from iNaturalist research-grade observations in Quint
 | claude | 800 |
 | wikipedia | 3237 |
 | noText | 1494 |
-| danger.serious | 32 |
-| danger.painful | 232 |
+| danger.serious | 27 |
+| danger.painful | 237 |
 | danger.deadly | 8 |
 | danger.harmless | 22 |
 | Category: tree | 251 |
