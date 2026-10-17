@@ -17,6 +17,13 @@ const en = {
   backupLast: 'Last backup:', backupNever: 'No backup yet.', exportBtn: 'Export backup', importBtn: 'Import backup',
   exported: 'Backup saved', importConfirm: 'Import this backup from {date}? It adds {spotted} spotted cards and {photos} photos. Nothing already in the app is removed.',
   imported: 'Imported {spotted} cards and {photos} photos', importBad: "That file isn't a Species Explorer backup.", exportFail: "Couldn't create the backup.",
+  danger: 'Danger', dangerTitle: 'Danger to people', dangerAny: 'Venomous or poisonous', dangerDeadly: 'Can kill',
+  dangerLevels: ['Harmless', 'Painful', 'Serious', 'Can kill'] as [string, string, string, string],
+  kindBite: 'Venomous bite', kindSting: 'Venomous sting', kindTouch: 'Poisonous to touch', kindNone: 'No danger to people',
+  tagVenomous: 'Venomous', tagPoisonous: 'Poisonous', tagDeadly: 'Can kill',
+  riskTitle: 'Most at risk', doBite: 'What to do if bitten', doSting: 'What to do if stung', doTouch: 'What to do if you touched it',
+  dontTitle: "Don't", call911If: 'Call 911 at once if', call911: 'Call 911',
+  firstAidNote: 'First aid written by Claude (AI) from current first-aid guidance. It is not medical advice: when in doubt, call 911.',
 };
 export type Labels = typeof en;
 
@@ -37,6 +44,13 @@ const es: Labels = {
   backupLast: 'Último respaldo:', backupNever: 'Aún no hay respaldo.', exportBtn: 'Exportar respaldo', importBtn: 'Importar respaldo',
   exported: 'Respaldo guardado', importConfirm: '¿Importar este respaldo del {date}? Agrega {spotted} cartas avistadas y {photos} fotos. No se borra nada de lo que ya tienes.',
   imported: 'Se importaron {spotted} cartas y {photos} fotos', importBad: 'Ese archivo no es un respaldo de Species Explorer.', exportFail: 'No se pudo crear el respaldo.',
+  danger: 'Peligro', dangerTitle: 'Peligro para las personas', dangerAny: 'Venenosos o tóxicos', dangerDeadly: 'Pueden matar',
+  dangerLevels: ['Inofensivo', 'Doloroso', 'Grave', 'Puede matar'],
+  kindBite: 'Mordida venenosa', kindSting: 'Picadura venenosa', kindTouch: 'Tóxico al tacto', kindNone: 'Sin peligro para las personas',
+  tagVenomous: 'Venenoso', tagPoisonous: 'Tóxico', tagDeadly: 'Puede matar',
+  riskTitle: 'Más en riesgo', doBite: 'Qué hacer si te muerde', doSting: 'Qué hacer si te pica', doTouch: 'Qué hacer si lo tocaste',
+  dontTitle: 'No hagas esto', call911If: 'Llama al 911 de inmediato si', call911: 'Llamar al 911',
+  firstAidNote: 'Primeros auxilios escritos por Claude (IA) según las recomendaciones actuales. No es consejo médico: si tienes dudas, llama al 911.',
 };
 
 export const LABELS: Record<Lang, Labels> = { en, es };
@@ -50,7 +64,7 @@ export const CATS: { key: CatKey; en: string; es: string; one: [string, string];
   { key: 'reptile', en: 'Reptiles & amphibians', es: 'Reptiles y anfibios', one: ['Reptile', 'Reptil'], h: 105 },
   { key: 'fish', en: 'Fish', es: 'Peces', one: ['Fish', 'Pez'], h: 250 },
   { key: 'marine', en: 'Other marine', es: 'Otros marinos', one: ['Marine', 'Marino'], h: 215 },
-  { key: 'insect', en: 'Insects', es: 'Insectos', one: ['Insect', 'Insecto'], h: 305 },
+  { key: 'insect', en: 'Insects & spiders', es: 'Insectos y arañas', one: ['Bug', 'Bicho'], h: 305 },
 ];
 
 export const catColours = (h: number) => ({

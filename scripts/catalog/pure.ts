@@ -1,5 +1,5 @@
 /** Pure catalog logic, kept free of network access so it can be unit-tested. */
-import type { CatKey, ColourKey, CuratedSpecies, Detail, Group, HabitatKey, IndexEntry, Iucn, Pair, Photo } from '../../src/data/types';
+import type { CatKey, ColourKey, CuratedSpecies, DangerRule, DangerTag, Detail, Group, HabitatKey, IndexEntry, Iucn, Pair, Photo } from '../../src/data/types';
 import { compactPhoto, shardOf } from '../../src/data/shard';
 
 /**
@@ -13,7 +13,7 @@ export const CATEGORY_TAXA: { cat: CatKey; include: string[]; exclude?: string[]
   { cat: 'mammal', include: ['Mammalia'] },
   { cat: 'reptile', include: ['Reptilia', 'Amphibia'], exclude: ['Chelonioidea'] },
   { cat: 'fish', include: ['Actinopterygii', 'Elasmobranchii'] },
-  { cat: 'insect', include: ['Insecta'] },
+  { cat: 'insect', include: ['Insecta', 'Arachnida', 'Myriapoda'] },
   { cat: 'plant', include: ['Plantae'] },
 ];
 
@@ -118,6 +118,8 @@ export interface BuildInput {
   enrichment: Record<string, Enrichment>;
   /** Scientific name → true when the plant is a tree */
   trees: Record<string, boolean>;
+  /** data/danger.json */
+  danger?: DangerRule[];
   generated: string;
   speciesPerShard?: number;
 }
@@ -130,9 +132,24 @@ export interface BuildOutput {
   stats: Record<string, number>;
 }
 
+/**
+ * The danger rule for a species: the first rule naming the species, its genus or one of its named
+ * ancestors (family, order…) wins, so specific rules and exceptions go above broad ones.
+ */
+export function dangerFor(sci: string, ancestors: string[], rules: DangerRule[]): { tag: DangerTag; detail: NonNullable<Detail['danger']> } | null {
+  const names = new Set([sci, sci.split(' ')[0], ...ancestors]);
+  const rule = rules.find((r) => r.match.some((m) => names.has(m)));
+  if (!rule || rule.none || !rule.kind || rule.level == null) return null;
+  return {
+    tag: { k: rule.kind, l: rule.level },
+    detail: { ...(rule.guide ? { guide: rule.guide } : {}), ...(rule.speed ? { speed: rule.speed } : {}), ...(rule.risk ? { risk: rule.risk } : {}) },
+  };
+}
+
+const DANGER_STAT = ['harmless', 'painful', 'serious', 'deadly'];
 const CAT_ORDER: CatKey[] = ['tree', 'plant', 'bird', 'mammal', 'reptile', 'fish', 'marine', 'insect'];
 
-export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerShard = 40 }: BuildInput): BuildOutput {
+export function buildCatalog({ gathered, curated, enrichment, trees, danger = [], speciesPerShard = 40 }: BuildInput): BuildOutput {
   const curatedBySci = new Map(curated.map((c) => [c.sci.toLowerCase(), c]));
   const seen = new Set<string>();
 
@@ -245,6 +262,13 @@ export function buildCatalog({ gathered, curated, enrichment, trees, speciesPerS
   for (const r of rows) {
     const p = compactPhoto(r.detail.photo?.url);
     if (p) r.entry.p = p;
+    const d = dangerFor(r.entry.sci, (r.lineage || []).map((l) => l.n), danger);
+    if (d) {
+      r.entry.d = d.tag;
+      r.detail.danger = d.detail;
+      const k = `danger.${DANGER_STAT[d.tag.l]}`;
+      stats[k] = (stats[k] ?? 0) + 1;
+    }
   }
 
   const shards = Math.max(1, Math.ceil(rows.length / speciesPerShard));

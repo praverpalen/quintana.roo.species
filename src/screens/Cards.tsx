@@ -1,7 +1,7 @@
 import { useDeferredValue, useMemo, type RefObject } from 'react';
 import type { ColourKey, Lang } from '../data/types';
 import { ANY_SWATCH, CATS, COLOURS, catColours, type Labels } from '../i18n';
-import { anyFilter, colourName, EMPTY_FILTERS, filterCards, panelFilterCount, type Card, type Filters, type Origin, type Sort, type Status } from '../model';
+import { anyFilter, colourName, EMPTY_FILTERS, filterCards, panelFilterCount, type Card, type Filters, type DangerFilter, type Origin, type Sort, type Status } from '../model';
 import { IconSearch, IconSliders, IconX } from '../components/Icons';
 import { SpeciesCard } from '../components/SpeciesCard';
 import { Paged } from '../components/Paged';
@@ -29,6 +29,7 @@ export function CardsScreen({ cards, L, lang, f, setF, showFilters, setShowFilte
   const chips = [{ key: 'all' as const, label: L.all, dot: 'var(--color-neutral-500)' }, ...CATS.map((c) => ({ key: c.key, label: li ? c.es : c.en, dot: catColours(c.h).col }))];
   const statuses: [Status, string][] = [['all', L.all], ['spotted', L.spottedF], ['unspotted', L.toFind]];
   const origins: [Origin, string][] = [['all', L.all], ['native', L.native], ['introduced', L.introduced]];
+  const dangers: [DangerFilter, string][] = [['all', L.all], ['any', L.dangerAny], ['deadly', L.dangerDeadly]];
   const sorts: [Sort, string][] = [['no', L.number], ['name', 'A–Z'], ['rarity', L.rarity]];
   const colours: [ColourKey | 'all', string, string][] = [['all', L.any, ANY_SWATCH], ...(Object.entries(COLOURS) as [ColourKey, [string, string, string]][]).map(([k, v]) => [k, v[li], v[2]] as [ColourKey, string, string])];
 
@@ -87,6 +88,14 @@ export function CardsScreen({ cards, L, lang, f, setF, showFilters, setShowFilte
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               {colours.map(([k, label, sw]) => (
                 <button key={k} className={'swatch' + (f.color === k ? ' on' : '')} title={label} aria-label={label} aria-pressed={f.color === k} style={{ background: sw }} onClick={() => setF({ color: k })} />
+              ))}
+            </div>
+          </div>
+          <div className="panel-group">
+            <span className="section-k">{L.danger}</span>
+            <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+              {dangers.map(([k, label]) => (
+                <button key={k} className={pill(f.danger === k)} aria-pressed={f.danger === k} onClick={() => setF({ danger: k })}>{label}</button>
               ))}
             </div>
           </div>

@@ -190,3 +190,38 @@ test('species page explains its role in nature', async ({ page }) => {
   await role.scrollIntoViewIfNeeded();
   await page.screenshot({ path: 'test-results/shots/13-role.png' });
 });
+
+test('danger: card tag, scale, first aid and filter', async ({ page }) => {
+  await page.goto('/');
+  await page.getByRole('button', { name: 'Cards', exact: true }).click();
+  await page.getByRole('searchbox').fill('terciopelo');
+  const card = page.getByRole('button', { name: /^Terciopelo, #/ });
+  await expect(card.locator('.sc-danger')).toHaveText(/Can kill/);
+  await card.click();
+  const box = page.locator('.detail.open .danger-box');
+  await expect(box).toContainText('Danger to people');
+  await expect(box.locator('.danger-step.on')).toHaveText('Can kill');
+  await expect(box).toContainText('Without antivenom');
+  await expect(box.locator('details')).toHaveAttribute('open', ''); // deadly: first aid already open
+  await expect(box).toContainText('No tourniquet');
+  await expect(box.getByRole('link', { name: /Call 911/ })).toHaveAttribute('href', 'tel:911');
+  await page.screenshot({ path: 'test-results/shots/14-danger-viper.png' });
+  await page.goBack();
+
+  // A painful one keeps first aid folded; harmless lookalikes get no card tag.
+  await page.getByRole('searchbox').fill('honey bee');
+  await page.getByRole('button', { name: /^Western Honey Bee, #/ }).click();
+  await expect(page.locator('.detail.open .danger-step.on')).toHaveText('Painful');
+  await expect(page.locator('.detail.open .danger-box')).toContainText('Allergic people');
+  await page.locator('.detail.open .first-aid summary').click();
+  await expect(page.locator('.detail.open .first-aid')).toContainText('scrape it out');
+  await page.locator('.detail.open .danger-box').scrollIntoViewIfNeeded();
+  await page.screenshot({ path: 'test-results/shots/15-danger-bee.png' });
+  await page.goBack();
+
+  await page.getByRole('searchbox').fill('');
+  await page.getByRole('button', { name: /^Filters/ }).click();
+  await page.getByRole('button', { name: 'Can kill', exact: true }).click();
+  await expect(page.getByText(`${count((s) => (s as { d?: { l: number } }).d?.l === 3)} species`, { exact: true })).toBeVisible();
+  await page.screenshot({ path: 'test-results/shots/16-danger-filter.png' });
+});
