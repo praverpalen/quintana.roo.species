@@ -77,7 +77,7 @@ test('search, filters and language', async ({ page }) => {
   await page.screenshot(shot('7-collection-es'));
 });
 
-test('photos: greyed on locked cards, large on the species page, and your own', async ({ page }) => {
+test('photos: in colour on locked cards, large on the species page, and your own', async ({ page }) => {
   // Serve a stand-in for every iNaturalist photo (the test runner may be offline).
   const fake = await (async () => {
     await page.setContent('<meta name="viewport" content="width=device-width,initial-scale=1"><body style="margin:0"><div style="width:360px;height:240px;background:radial-gradient(circle at 60% 45%,#f6a06b 0 22%,#7a8a5e 23% 60%,#3d472b 61%)"></div>');
@@ -89,7 +89,9 @@ test('photos: greyed on locked cards, large on the species page, and your own', 
   await page.getByRole('button', { name: 'Cards', exact: true }).click();
   await page.getByRole('searchbox').fill('great kiskadee');
   const card = page.getByRole('button', { name: /^Great Kiskadee, #/ });
-  await expect(card.locator('img.sc-art-grey')).toBeVisible();
+  const locked = card.locator('img.sc-art-photo');
+  await expect(locked).toBeVisible();
+  expect(await locked.evaluate((el) => [getComputedStyle(el).filter, getComputedStyle(el).opacity])).toEqual(['none', '1']);
   await card.click();
   const bigPhoto = page.locator('.detail.open .d-photo img');
   await expect(bigPhoto).toBeVisible();

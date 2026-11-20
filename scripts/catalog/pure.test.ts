@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { CuratedSpecies, DangerRule } from '../../src/data/types';
 import { compactPhoto, photoUrl, shardOf } from '../../src/data/shard';
-import { buildCatalog, dangerFor, firstSentence, iucnFromStatuses, rarityByRank, slug, type Gathered } from './pure';
+import { buildCatalog, dangerFor, firstSentence, wikiMixups, iucnFromStatuses, rarityByRank, slug, type Gathered } from './pure';
 
 const g = (over: Partial<Gathered>): Gathered => ({ taxonId: 1, sci: 'X y', cat: 'bird', obs: 1, introduced: false, iucn: null, ...over });
 
@@ -132,5 +132,36 @@ describe('danger rules', () => {
       if (r.guide) expect(GUIDES.en[r.guide] && GUIDES.es[r.guide]).toBeTruthy();
       for (const p of [r.speed, r.risk]) if (p) expect(p[0] && p[1]).toBeTruthy();
     }
+  });
+});
+
+describe('Wikipedia mix-ups', () => {
+  const w = (title: string) => ({ title, extract: `${title} text.`, url: `https://en.wikipedia.org/wiki/${title.replace(/ /g, '_')}` });
+  const list: Gathered[] = [
+    g({ taxonId: 1, sci: 'Anoba trigonoides', cat: 'insect', obs: 2, wikiEn: w('Anoba trigonoides') }),
+    g({ taxonId: 2, sci: 'Anoba pohli', cat: 'insect', obs: 11, nameEn: 'Anoba trigonoides', wikiEn: w('Anoba trigonoides') }),
+    g({ taxonId: 3, sci: 'Artibeus lituratus', cat: 'mammal', obs: 99, nameEn: 'Great Fruit-eating Bat', wikiEn: w('Great fruit-eating bat') }),
+    g({ taxonId: 4, sci: 'Artibeus intermedius', cat: 'mammal', obs: 2, nameEn: 'Intermediate Fruit-eating Bat', wikiEn: w('Great fruit-eating bat') }),
+    g({ taxonId: 5, sci: 'Agave vivipara', cat: 'plant', obs: 22, nameEn: 'Agave angustifolia', wikiEn: w('Agave angustifolia') }),
+    g({ taxonId: 6, sci: 'Moringa oleifera', cat: 'plant', obs: 5, nameEn: 'Moringa tree', wikiEn: w('Moringa oleifera') }),
+    g({ taxonId: 7, sci: 'Iguana iguana', cat: 'reptile', obs: 5, nameEn: 'Green Iguana', nameEs: 'Iguana verde', wikiEn: w('Green iguana') }),
+  ];
+  const fix = wikiMixups(list);
+  const by = (sci: string) => fix(list.find((x) => x.sci === sci)!);
+  it("drops another species' article and the name copied from it", () => {
+    expect(by('Anoba pohli').wikiEn).toBeUndefined();
+    expect(by('Anoba pohli').nameEn).toBeUndefined();
+    expect(by('Artibeus intermedius').wikiEn).toBeUndefined();
+    expect(by('Artibeus intermedius').nameEn).toBe('Intermediate Fruit-eating Bat');
+  });
+  it('keeps the rightful owners, common names that look Latin-ish, and Spanish names', () => {
+    expect(by('Anoba trigonoides').wikiEn).toBeDefined();
+    expect(by('Artibeus lituratus').wikiEn).toBeDefined();
+    expect(by('Moringa oleifera').nameEn).toBe('Moringa tree');
+    expect(by('Iguana iguana').nameEs).toBe('Iguana verde');
+  });
+  it('replaces a name that is a synonym taken from the article title', () => {
+    expect(by('Agave vivipara').nameEn).toBe('Agave vivipara');
+    expect(by('Agave vivipara').wikiEn).toBeDefined(); // the article itself may still be about this plant
   });
 });

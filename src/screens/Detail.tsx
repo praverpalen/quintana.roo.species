@@ -114,7 +114,7 @@ export function Detail({ c, open, L, lang, onClose, onToggle }: Props) {
 
         {photo && (
           <div>
-            <button className={'d-photo' + (c.unlocked ? '' : ' grey')} onClick={() => setViewer({ url: photo.url, caption: credit })} aria-label={L.enlarge}>
+            <button className="d-photo" onClick={() => setViewer({ url: photo.url, caption: credit })} aria-label={L.enlarge}>
               <img src={photo.url} alt={c.name} loading="lazy" />
             </button>
             {credit && <div className="d-photo-credit">{credit}</div>}
