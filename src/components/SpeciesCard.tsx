@@ -132,7 +132,7 @@ function Unlocked({ c, L, open, onKey, label }: Inner) {
 }
 
 function Locked({ c, L, open, onKey, label }: Inner) {
-  // Locked cards show the species photo greyed out so you know what to look for.
+  // Locked cards stay grey, but show the species photo in colour so you know what to look for.
   const photo = c.s.p ? photoUrl(c.s.p) : undefined;
   return (
     <div className="sc sc-locked" role="button" tabIndex={0} aria-label={label} onClick={open} onKeyDown={onKey}>
@@ -143,7 +143,7 @@ function Locked({ c, L, open, onKey, label }: Inner) {
         </div>
         <div className="sc-sci">{c.sci}</div>
         <div className="sc-art sc-art-locked">
-          {photo && <img className="sc-art-grey" src={photo} alt="" loading="lazy" draggable={false} />}
+          {photo && <img className="sc-art-photo" src={photo} alt="" loading="lazy" draggable={false} />}
           <span className={photo ? 'sc-art-q sc-art-q-small' : 'sc-art-q'}>?</span>
           <DangerPill d={c.s.d} L={L} />
         </div>

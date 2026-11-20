@@ -1,13 +1,13 @@
 # Catalog build report
 
-Built 2026-10-17 22:23 UTC from cached data (offline).
+Built 2026-11-20 23:21 UTC from cached data (offline).
 
 | | Species |
 | --- | ---: |
 | curated | 29 |
 | claude | 800 |
-| wikipedia | 3237 |
-| noText | 1494 |
+| wikipedia | 3231 |
+| noText | 1500 |
 | danger.serious | 27 |
 | danger.painful | 237 |
 | danger.deadly | 8 |

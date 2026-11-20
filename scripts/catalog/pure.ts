@@ -146,12 +146,60 @@ export function dangerFor(sci: string, ancestors: string[], rules: DangerRule[])
   };
 }
 
+const wikiTitle = (url: string) => decodeURIComponent(url.split('/wiki/')[1] || '').replace(/_/g, ' ').trim();
+
+/**
+ * Wikipedia often redirects a little-known species to a relative's article ("Anoba pohli" → "Anoba trigonoides"),
+ * which made a species look like a duplicate of its relative: same name, same text.
+ * - An English article that belongs to another species in the catalog (its scientific or common name) is dropped.
+ * - A name taken from such an article title ("Agave angustifolia" on Agave vivipara) falls back to the species' own.
+ */
+export function wikiMixups(gathered: Gathered[]): (g: Gathered) => Gathered {
+  const genera = new Set(gathered.map((g) => g.sci.split(' ')[0]));
+  const COMMON_NOUN = /^(tree|palm|vine|plant|bush|shrub|grass|fern|flower|lily|cactus|orchid|weed|moth|butterfly|bee|wasp|ant|fly|beetle|bug|snail|crab|fish|ray|shark|frog|toad|snake|lizard|bird|bat|mouse|rat)$/;
+  const looksScientific = (name: string) =>
+    /^[A-Z][a-z]+ \([^)]+\)$/.test(name) || (/^[A-Z][a-z]+ [a-z-]+$/.test(name) && genera.has(name.split(' ')[0]) && !COMMON_NOUN.test(name.split(' ')[1]));
+  const owners = new Map<string, Set<string>>();
+  const own = (name: string | undefined, sci: string) => {
+    if (!name) return;
+    const k = name.toLowerCase();
+    owners.set(k, (owners.get(k) || new Set()).add(sci));
+  };
+  for (const g of gathered) {
+    own(g.sci, g.sci);
+    // A name that is really some other scientific name ("Anoba trigonoides" on Anoba pohli) proves nothing.
+    if (g.nameEn && !looksScientific(g.nameEn)) own(g.nameEn, g.sci);
+  }
+
+  return (g) => {
+    let out = g;
+    if (g.wikiEn) {
+      const t = wikiTitle(g.wikiEn.url).toLowerCase();
+      const others = [...(owners.get(t) || [])].filter((sci) => sci !== g.sci);
+      if (t !== g.sci.toLowerCase() && others.length) {
+        const { wikiEn: _drop, ...rest } = out;
+        out = { ...rest, ...(g.nameEn?.toLowerCase() === t ? { nameEn: undefined } : {}) };
+      }
+    }
+    // A name copied from an article title that is some other scientific name.
+    const titles = [g.wikiEn, g.wikiEs].filter((w): w is NonNullable<typeof w> => !!w).map((w) => wikiTitle(w.url).toLowerCase());
+    // Spanish common names often look binomial ("Iguana verde"), so for Spanish only another species' name counts.
+    const otherSci = (n: string) => [...(owners.get(n.toLowerCase()) || [])].some((sci) => sci !== g.sci && sci.toLowerCase() === n.toLowerCase());
+    if (out.nameEn && out.nameEn !== g.sci && looksScientific(out.nameEn) && titles.includes(out.nameEn.toLowerCase())) out = { ...out, nameEn: undefined };
+    if (out.nameEs && out.nameEs !== g.sci && (otherSci(out.nameEs) || /\(.+\)$/.test(out.nameEs))) out = { ...out, nameEs: undefined };
+    // Without a name of its own the species would fall back to the article title; don't let it.
+    if (!out.nameEn && out.wikiEn && looksScientific(out.wikiEn.title) && out.wikiEn.title !== g.sci) out = { ...out, nameEn: g.sci };
+    return out;
+  };
+}
+
 const DANGER_STAT = ['harmless', 'painful', 'serious', 'deadly'];
 const CAT_ORDER: CatKey[] = ['tree', 'plant', 'bird', 'mammal', 'reptile', 'fish', 'marine', 'insect'];
 
 export function buildCatalog({ gathered, curated, enrichment, trees, danger = [], speciesPerShard = 40 }: BuildInput): BuildOutput {
   const curatedBySci = new Map(curated.map((c) => [c.sci.toLowerCase(), c]));
   const seen = new Set<string>();
+  const wikiFix = wikiMixups(gathered);
 
   interface Row {
     entry: IndexEntry;
@@ -161,12 +209,13 @@ export function buildCatalog({ gathered, curated, enrichment, trees, danger = []
   const rows: Row[] = [];
   const stats: Record<string, number> = { curated: 0, claude: 0, wikipedia: 0, noText: 0 };
 
-  for (const g of gathered) {
+  for (let g of gathered) {
     const key = g.sci.toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);
     const cur = curatedBySci.get(key);
     const enr = enrichment[g.sci];
+    g = wikiFix(g);
     let cat: CatKey = g.cat === 'plant' && trees[g.sci] ? 'tree' : g.cat;
     const wiki = { ...(g.wikiEn ? { en: g.wikiEn.url } : {}), ...(g.wikiEs ? { es: g.wikiEs.url } : {}) };
     const wikiEsName = g.wikiEs && g.wikiEs.title.toLowerCase() !== key ? g.wikiEs.title : undefined;
